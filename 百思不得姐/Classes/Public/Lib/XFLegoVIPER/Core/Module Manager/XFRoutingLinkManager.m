@@ -38,6 +38,11 @@ static NSMutableArray *_keyArr;
     [_keyArr addObject:key];
 }
 
++ (void)resetSubRoutings:(NSArray *)subRoutings parentRouting:(XFRouting *)parent
+{
+    
+}
+
 + (void)removeRouting:(XFRouting *)routing {
     NSString *key = _prefix ? [self moduleNameForRouting:routing] : NSStringFromClass([routing class]);
     [_mapTable removeObjectForKey:key];
@@ -99,13 +104,14 @@ static NSMutableArray *_keyArr;
 
 + (BOOL)verifyModuleLinkForList:(NSArray<NSString *> *)modules
 {
-    XFRouting *preRouting = [self findRoutingForModuleName:modules[XF_Index_First]];
-    if (!preRouting) {
-        return NO;
-    }
     // 只有一个路由，直接返回
     if (modules.count == 1) {
         return YES;
+    }
+
+    XFRouting *preRouting = [self findRoutingForModuleName:modules[XF_Index_First]];
+    if (!preRouting) {
+        return NO;
     }
     for (int i = XF_Index_Second; i < modules.count; i++) {
         XFRouting *nextRouting = [self findRoutingForModuleName:modules[i]];
@@ -164,36 +170,40 @@ static BOOL _enableLog = NO;
         
         NSMutableString *logStrM = [NSMutableString string];
         NSUInteger count = _keyArr.count;
-        NSUInteger routingDepthCount = 0;
+        NSUInteger routingCount = 0;
+        NSUInteger subRoutingCount = 0;
         for (int i = 0; i < count; i++) {
             XFRouting *routing = [_mapTable objectForKey:_keyArr[i]];
+            // 过滤掉非根路由
             if (routing.previousRouting) {
                 break;
             }
-            NSString *firstFix = [NSString stringWithFormat:@"\nRoot Routing(%zd): (\n\t%@",routingDepthCount,NSStringFromClass([routing class])];
-            if (routing.parentRouting.subRoute) {
-                firstFix = [NSString stringWithFormat:@"\nSub Root from %@(%zd): (\n\t%@",NSStringFromClass([routing.parentRouting class]),routingDepthCount,NSStringFromClass([routing class])];
+            NSString *firstFix = [NSString stringWithFormat:@"\nRoot Routing(%zd): (\n\t%@",routingCount,NSStringFromClass([routing class])];;
+            routingCount++;
+            if (routing.isSubRoute && routing.parentRouting) {
+                firstFix = [NSString stringWithFormat:@"\nSub Routing from %@(%zd): (\n\t%@",NSStringFromClass([routing.parentRouting class]),subRoutingCount,NSStringFromClass([routing class])];
+                routingCount--;
+                subRoutingCount++;
             }
             [logStrM appendString:firstFix];
-            routingDepthCount++;
             
             XFRouting *nextRouting = routing;
             NSUInteger subRoutingDepthCount = 1;
             do {
                 // 打印子路由
-                NSArray<XFRouting *> *subRoutes = [nextRouting valueForKey:@"_subRoutes"];
-                if (subRoutes) {
+                NSArray<XFRouting *> *childRoutings = [nextRouting valueForKey:@"_childRoutings"];
+                if (childRoutings) {
                     [logStrM appendString:@"\n"];
                     for (NSUInteger t = 0; t < subRoutingDepthCount; t++) {
                         [logStrM appendString:@"\t"];
                     }
                     [logStrM appendString:@"Sub Routing: ("];
-                    for (XFRouting *subRoute in subRoutes) {
+                    for (XFRouting *subRouting in childRoutings) {
                         [logStrM appendString:@"\n"];
                         for (NSUInteger t = 0; t < subRoutingDepthCount * 2; t++) {
                             [logStrM appendString:@"\t"];
                         }
-                        [logStrM appendString:[NSString stringWithFormat:@"%@",NSStringFromClass([subRoute class])]];
+                        [logStrM appendString:[NSString stringWithFormat:@"%@",NSStringFromClass([subRouting class])]];
                     }
                     [logStrM appendString:@"\n"];
                     for (NSUInteger t = 0; t < subRoutingDepthCount; t++) {

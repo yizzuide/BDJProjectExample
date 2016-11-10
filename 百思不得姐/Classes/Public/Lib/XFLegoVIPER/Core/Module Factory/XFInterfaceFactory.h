@@ -46,4 +46,12 @@
  *  @return VIPER视图
  */
 + (__kindof id<XFUserInterfacePort>)createUInterfaceForMVxFromModuleName:(NSString *)moduleName asChildViewController:(BOOL)asChild;
+
+/**
+ *  重新构建父子视图关系链
+ *
+ *  @param subUserInterfaces   所有子视图
+ *  @param parentUserInterface 父视图
+ */
++ (void)resetSubRoutingFromSubUserInterfaces:(NSArray *)subUserInterfaces forParentActivity:(__kindof id<XFUserInterfacePort>)parentUserInterface;
 @end

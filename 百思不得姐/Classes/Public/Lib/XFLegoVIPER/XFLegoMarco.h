@@ -14,7 +14,7 @@
 // 转到新的子接口类型或子对象
 #define LEGORealPort(nowPort,oldPort) ((nowPort)(oldPort))
 
-// 定时运行
+// 即时运行等待时间
 #define LEGONextStep 0.0151
 
 // 索引

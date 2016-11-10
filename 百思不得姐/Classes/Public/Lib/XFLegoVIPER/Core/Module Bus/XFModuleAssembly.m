@@ -9,6 +9,8 @@
 #import "XFModuleAssembly.h"
 #import "XFRoutingLinkManager.h"
 #import "XFRouting.h"
+#import "NSObject+XFLegoInvokeMethod.h"
+#import "XFUserInterfacePort.h"
 
 @implementation XFModuleAssembly
 
@@ -70,7 +72,7 @@
     Class clazz = NSClassFromString(interface);
     // 如果是Class
     if (clazz) {
-        activity = [[NSClassFromString(interface) alloc] init];
+        activity = [[clazz alloc] init];
     }else{
         NSArray<NSString *> *comps = [interface componentsSeparatedByString:@"-"];
         // 如果是xib
@@ -133,14 +135,14 @@
             }
         }
     }
-    
+
     // 如果有事件处理层
     if (self.fromRouting.uiOperator) {
         // 添加到路由管理中心
         [XFRoutingLinkManager addRouting:self.fromRouting];
          dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
              // 打印当前路由
-             if (!(self.fromRouting.subRoute || self.fromRouting.parentRouting)) {
+             if (!(self.fromRouting.isSubRoute || self.fromRouting.parentRouting)) {
                  // 打印路由关系链
                  [XFRoutingLinkManager log];
              }

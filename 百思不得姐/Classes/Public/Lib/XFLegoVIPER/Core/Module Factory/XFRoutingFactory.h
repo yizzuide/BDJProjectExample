@@ -35,4 +35,11 @@
  *  @return 子路由
  */
 + (XFRouting *)createSubRoutingFromModuleName:(NSString *)moduleName forParentRouting:(XFRouting *)parentRouting;
+/**
+ *  重新构建父子路由关系链
+ *
+ *  @param subRoutings   所有子路由
+ *  @param parentRouting 父路由
+ */
++ (void)resetSubRoutings:(NSArray *)subRoutings forParentRouting:(XFRouting *)parentRouting;
 @end

@@ -16,7 +16,7 @@
  */
 + (void)initURLGroup:(id)urlGroup;
 /**
- *  初始化单个URL组件
+ *  初始化单个URL组件，如：xf://user/register
  *
  *  @param url URLString
  */
@@ -34,15 +34,9 @@
  *  @param url URLString
  */
 + (void)remove:(NSString *)url;
+
 /**
- *  打一个URL组件
- *
- *  @param url URLString
- *
- *  @return 打开是否成功
- */
-/**
- *  打一个URL组件
+ *  打一个URL组件,如：xf://user/register?usrid=123
  *
  *  @param url             URLString
  *  @param transitionBlock 界面切换代码

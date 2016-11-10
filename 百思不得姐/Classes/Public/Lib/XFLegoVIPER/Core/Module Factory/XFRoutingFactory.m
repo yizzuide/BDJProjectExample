@@ -9,6 +9,7 @@
 #import "XFRoutingFactory.h"
 #import "XFRoutingLinkManager.h"
 
+
 @implementation XFRoutingFactory
 
 + (XFRouting *)createRouingFromModuleName:(NSString *)moduleName {
@@ -51,7 +52,15 @@
             }
         } while (1);
     }
+    // 为防止父路由未创建下，先把它标识为子路由
+    subRouting.subRoute = YES;
     [parentRouting addSubRouting:subRouting asChildViewController:NO];
     return subRouting;
+}
+
++ (void)resetSubRoutings:(NSArray *)subRoutings forParentRouting:(XFRouting *)parentRouting {
+    for (XFRouting *subRouting in subRoutings) {
+        [parentRouting addSubRouting:subRouting asChildViewController:NO];
+    }
 }
 @end

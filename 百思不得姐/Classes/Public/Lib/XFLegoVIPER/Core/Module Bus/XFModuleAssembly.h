@@ -30,7 +30,7 @@
  *
  *  @param navName               导航
  *  @param ibSymbol              ibSymbol
- *  @param DataManagerName 数据管理名
+ *  @param dataManagerName       数据管理名
  *
  *  @return Routing
  */

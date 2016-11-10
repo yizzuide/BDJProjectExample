@@ -18,13 +18,13 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
-    
+    self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [XFRoutingLinkManager enableLog];
     [XFRoutingLinkManager setModulePrefix:@"XF"];
-    // 注册URL
+    // 注册APP的所有URL
     [XFAppURLRegister urlRegister];
-    XF_ShowURLComponent2Window_(@"xgm://indexTab", {})
+    // 根据URL显示组件
+    XF_ShowURLComponent2Window_Fast(@"xmg://indexTab")
     return YES;
 }
 

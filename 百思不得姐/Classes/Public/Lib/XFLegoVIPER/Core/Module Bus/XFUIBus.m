@@ -72,7 +72,7 @@
     }
     id navigator = self.rootRouting.realNavigator;
     if (navigator) {
-        mainWindow.rootViewController = LEGORealInterface(navigator);
+        mainWindow.rootViewController = navigator;
     }else{
         mainWindow.rootViewController = self.rootRouting.realInterface;
     }

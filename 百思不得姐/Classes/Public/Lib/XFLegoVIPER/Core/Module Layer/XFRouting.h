@@ -168,7 +168,7 @@ XF_Present_VCForMVx_(UIViewControllerClass,{})
 /**
  *  子路由
  */
-@property (nonatomic, strong, readonly) NSMutableArray<__kindof XFRouting *> *subRoutes;
+@property (nonatomic, strong, readonly) NSMutableArray<__kindof XFRouting *> *childRoutings;
 
 /**
  *  组装当前路由
@@ -183,7 +183,6 @@ XF_Present_VCForMVx_(UIViewControllerClass,{})
  *  @param subRouting 子路由
  *  @param asChild    是否自动添加子控制器
  *
- *  @return 视图
  */
 - (void)addSubRouting:(XFRouting *)subRouting asChildViewController:(BOOL)asChild;
 

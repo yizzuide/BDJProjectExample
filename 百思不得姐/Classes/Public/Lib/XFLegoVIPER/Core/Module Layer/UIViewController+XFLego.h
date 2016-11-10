@@ -46,6 +46,10 @@ view.frame = frame;
 @property (nonatomic, strong, readonly) __kindof id<XFEventHandlerPort> eventHandler;
 
 /**
+ *  针对TabBarViewController的框架视图加载完成方法
+ */
+- (void)xfLego_ViewDidLoadForTabBarViewController;
+/**
  *  从指定模块加载子视图
  *  @param moduleName 模块名
  *

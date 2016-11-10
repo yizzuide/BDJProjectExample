@@ -41,7 +41,7 @@
 /**
  *  子路由
  */
-@property (nonatomic, strong, readwrite) NSMutableArray<XFRouting *> *subRoutes;
+@property (nonatomic, strong, readwrite) NSMutableArray<XFRouting *> *childRoutings;
 
 /**
  *  事件层
@@ -82,7 +82,7 @@
     if (asChild) {
         [MainActivity addChildViewController:LEGORealInterface(subRouting.realInterface)];
     }
-    [self.subRoutes addObject:subRouting];
+    [self.childRoutings addObject:subRouting];
     subRouting.parentRouting = self;
 }
 
@@ -139,18 +139,18 @@
     [routing.eventBus removeObservers];
     
     // 释放子路由
-    if (routing->_subRoutes) {
-        for (XFRouting *subRoute in routing->_subRoutes) {
-            [self xfLego_releaseRouting:subRoute];
+    if (routing->_childRoutings) {
+        for (XFRouting *subRouting in routing->_childRoutings) {
+            [self xfLego_releaseRouting:subRouting];
         }
         // 删除所有子路由
-        [routing->_subRoutes removeAllObjects];
-        routing->_subRoutes = nil;
+        [routing->_childRoutings removeAllObjects];
+        routing->_childRoutings = nil;
     }
     
     // 从路由管理中心移除
     [XFRoutingLinkManager removeRouting:routing];
-    if (!(routing.subRoute || routing.parentRouting)) {
+    if (!(routing.isSubRoute || routing.parentRouting)) {
         // 打印路由关系链
         [XFRoutingLinkManager log];
     }
@@ -161,17 +161,17 @@
 - (void)dealloc
 {
     // 释放添加到MVx父控制器里的VIPER子模块为子控制器的情况
-    if (self.subRoute && !self.hadReleaseSuff && !self.parentRouting) {
+    if (self.isSubRoute && !self.hadReleaseSuff && !self.parentRouting) {
         [self.uiBus invokeMethod:@"xfLego_startRemoveModuleWithTransitionBlock:" param:nil];
     }
 }
 
 #pragma mark - 懒加载
-- (NSMutableArray<XFRouting *> *)subRoutes
+- (NSMutableArray<XFRouting *> *)childRoutings
 {
-    if (_subRoutes == nil) {
-        _subRoutes = [NSMutableArray array];
+    if (_childRoutings == nil) {
+        _childRoutings = [NSMutableArray array];
     }
-    return _subRoutes;
+    return _childRoutings;
 }
 @end

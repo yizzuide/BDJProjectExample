@@ -14,7 +14,7 @@
 + (void)urlRegister
 {
     [XFURLManager initURLGroup:@[
-                                 @"xgm://indexTab",
+                                 @"xmg://indexTab",
                                  ]];
 }
 @end

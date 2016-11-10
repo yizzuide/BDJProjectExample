@@ -32,12 +32,32 @@
 		404874671DD35C1B00388087 /* NSObject+XFLegoCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048744E1DD35C1B00388087 /* NSObject+XFLegoCopy.m */; };
 		404874681DD35C1B00388087 /* NSObject+XFLegoInvokeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874501DD35C1B00388087 /* NSObject+XFLegoInvokeMethod.m */; };
 		404874691DD35C1B00388087 /* XFURLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874521DD35C1B00388087 /* XFURLParse.m */; };
-		404874861DD35C6200388087 /* XFIndexTabDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874701DD35C6200388087 /* XFIndexTabDataManager.m */; };
-		404874871DD35C6200388087 /* XFIndexTabInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874731DD35C6200388087 /* XFIndexTabInteractor.m */; };
-		404874881DD35C6200388087 /* XFIndexTabPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048747F1DD35C6200388087 /* XFIndexTabPresenter.m */; };
-		404874891DD35C6200388087 /* XFIndexTabActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874821DD35C6200388087 /* XFIndexTabActivity.m */; };
-		4048748A1DD35C6200388087 /* XFIndexTabRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874851DD35C6200388087 /* XFIndexTabRouting.m */; };
 		4048748D1DD35C7A00388087 /* XFAppURLRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048748C1DD35C7A00388087 /* XFAppURLRegister.m */; };
+		404874AC1DD3631600388087 /* XFIndexTabDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874941DD3631600388087 /* XFIndexTabDataManager.m */; };
+		404874AD1DD3631600388087 /* XFIndexTabInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874971DD3631600388087 /* XFIndexTabInteractor.m */; };
+		404874AE1DD3631600388087 /* XFIndexTabPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A31DD3631600388087 /* XFIndexTabPresenter.m */; };
+		404874AF1DD3631600388087 /* XFIndexTabActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A61DD3631600388087 /* XFIndexTabActivity.m */; };
+		404874B01DD3631600388087 /* XFIndexTabRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A91DD3631600388087 /* XFIndexTabRouting.m */; };
+		404874CD1DD3634E00388087 /* XFEssenceDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874B71DD3634E00388087 /* XFEssenceDataManager.m */; };
+		404874CE1DD3634E00388087 /* XFEssenceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874BA1DD3634E00388087 /* XFEssenceInteractor.m */; };
+		404874CF1DD3634E00388087 /* XFEssencePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874C61DD3634E00388087 /* XFEssencePresenter.m */; };
+		404874D01DD3634E00388087 /* XFEssenceActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874C91DD3634E00388087 /* XFEssenceActivity.m */; };
+		404874D11DD3634E00388087 /* XFEssenceRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874CC1DD3634E00388087 /* XFEssenceRouting.m */; };
+		404874EE1DD3658E00388087 /* XFNewDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874D81DD3658E00388087 /* XFNewDataManager.m */; };
+		404874EF1DD3658E00388087 /* XFNewInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874DB1DD3658E00388087 /* XFNewInteractor.m */; };
+		404874F01DD3658E00388087 /* XFNewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874E71DD3658E00388087 /* XFNewPresenter.m */; };
+		404874F11DD3658E00388087 /* XFNewActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874EA1DD3658E00388087 /* XFNewActivity.m */; };
+		404874F21DD3658E00388087 /* XFNewRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874ED1DD3658E00388087 /* XFNewRouting.m */; };
+		4048750F1DD3664100388087 /* XFFriendTrendsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874F91DD3664100388087 /* XFFriendTrendsDataManager.m */; };
+		404875101DD3664100388087 /* XFFriendTrendsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874FC1DD3664100388087 /* XFFriendTrendsInteractor.m */; };
+		404875111DD3664100388087 /* XFFriendTrendsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404875081DD3664100388087 /* XFFriendTrendsPresenter.m */; };
+		404875121DD3664100388087 /* XFFriendTrendsActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048750B1DD3664100388087 /* XFFriendTrendsActivity.m */; };
+		404875131DD3664100388087 /* XFFriendTrendsRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048750E1DD3664100388087 /* XFFriendTrendsRouting.m */; };
+		404875301DD3666B00388087 /* XFMeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048751A1DD3666B00388087 /* XFMeDataManager.m */; };
+		404875311DD3666B00388087 /* XFMeInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048751D1DD3666B00388087 /* XFMeInteractor.m */; };
+		404875321DD3666B00388087 /* XFMePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404875291DD3666B00388087 /* XFMePresenter.m */; };
+		404875331DD3666B00388087 /* XFMeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752C1DD3666B00388087 /* XFMeActivity.m */; };
+		404875341DD3666B00388087 /* XFMeRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752F1DD3666B00388087 /* XFMeRouting.m */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -102,23 +122,83 @@
 		404874521DD35C1B00388087 /* XFURLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLParse.m; sourceTree = "<group>"; };
 		404874531DD35C1B00388087 /* XFLegoMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoMarco.h; sourceTree = "<group>"; };
 		404874541DD35C1B00388087 /* XFLegoVIPER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoVIPER.h; sourceTree = "<group>"; };
-		4048746F1DD35C6200388087 /* XFIndexTabDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabDataManager.h; sourceTree = "<group>"; };
-		404874701DD35C6200388087 /* XFIndexTabDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabDataManager.m; sourceTree = "<group>"; };
-		404874721DD35C6200388087 /* XFIndexTabInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabInteractor.h; sourceTree = "<group>"; };
-		404874731DD35C6200388087 /* XFIndexTabInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabInteractor.m; sourceTree = "<group>"; };
-		404874761DD35C6200388087 /* XFIndexTabDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabDataManagerPort.h; sourceTree = "<group>"; };
-		404874771DD35C6200388087 /* XFIndexTabEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabEventHandlerPort.h; sourceTree = "<group>"; };
-		404874781DD35C6200388087 /* XFIndexTabInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabInteractorPort.h; sourceTree = "<group>"; };
-		404874791DD35C6200388087 /* XFIndexTabUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabUserInterfacePort.h; sourceTree = "<group>"; };
-		4048747A1DD35C6200388087 /* XFIndexTabWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabWireframePort.h; sourceTree = "<group>"; };
-		4048747E1DD35C6200388087 /* XFIndexTabPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabPresenter.h; sourceTree = "<group>"; };
-		4048747F1DD35C6200388087 /* XFIndexTabPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabPresenter.m; sourceTree = "<group>"; };
-		404874811DD35C6200388087 /* XFIndexTabActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabActivity.h; sourceTree = "<group>"; };
-		404874821DD35C6200388087 /* XFIndexTabActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabActivity.m; sourceTree = "<group>"; };
-		404874841DD35C6200388087 /* XFIndexTabRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabRouting.h; sourceTree = "<group>"; };
-		404874851DD35C6200388087 /* XFIndexTabRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabRouting.m; sourceTree = "<group>"; };
 		4048748B1DD35C7A00388087 /* XFAppURLRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFAppURLRegister.h; sourceTree = "<group>"; };
 		4048748C1DD35C7A00388087 /* XFAppURLRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFAppURLRegister.m; sourceTree = "<group>"; };
+		404874931DD3631600388087 /* XFIndexTabDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabDataManager.h; sourceTree = "<group>"; };
+		404874941DD3631600388087 /* XFIndexTabDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabDataManager.m; sourceTree = "<group>"; };
+		404874961DD3631600388087 /* XFIndexTabInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabInteractor.h; sourceTree = "<group>"; };
+		404874971DD3631600388087 /* XFIndexTabInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabInteractor.m; sourceTree = "<group>"; };
+		4048749A1DD3631600388087 /* XFIndexTabDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabDataManagerPort.h; sourceTree = "<group>"; };
+		4048749B1DD3631600388087 /* XFIndexTabEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabEventHandlerPort.h; sourceTree = "<group>"; };
+		4048749C1DD3631600388087 /* XFIndexTabInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabInteractorPort.h; sourceTree = "<group>"; };
+		4048749D1DD3631600388087 /* XFIndexTabUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabUserInterfacePort.h; sourceTree = "<group>"; };
+		4048749E1DD3631600388087 /* XFIndexTabWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabWireframePort.h; sourceTree = "<group>"; };
+		404874A21DD3631600388087 /* XFIndexTabPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabPresenter.h; sourceTree = "<group>"; };
+		404874A31DD3631600388087 /* XFIndexTabPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabPresenter.m; sourceTree = "<group>"; };
+		404874A51DD3631600388087 /* XFIndexTabActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabActivity.h; sourceTree = "<group>"; };
+		404874A61DD3631600388087 /* XFIndexTabActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabActivity.m; sourceTree = "<group>"; };
+		404874A81DD3631600388087 /* XFIndexTabRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabRouting.h; sourceTree = "<group>"; };
+		404874A91DD3631600388087 /* XFIndexTabRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabRouting.m; sourceTree = "<group>"; };
+		404874B61DD3634E00388087 /* XFEssenceDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceDataManager.h; sourceTree = "<group>"; };
+		404874B71DD3634E00388087 /* XFEssenceDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceDataManager.m; sourceTree = "<group>"; };
+		404874B91DD3634E00388087 /* XFEssenceInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceInteractor.h; sourceTree = "<group>"; };
+		404874BA1DD3634E00388087 /* XFEssenceInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceInteractor.m; sourceTree = "<group>"; };
+		404874BD1DD3634E00388087 /* XFEssenceDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceDataManagerPort.h; sourceTree = "<group>"; };
+		404874BE1DD3634E00388087 /* XFEssenceEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceEventHandlerPort.h; sourceTree = "<group>"; };
+		404874BF1DD3634E00388087 /* XFEssenceInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceInteractorPort.h; sourceTree = "<group>"; };
+		404874C01DD3634E00388087 /* XFEssenceUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceUserInterfacePort.h; sourceTree = "<group>"; };
+		404874C11DD3634E00388087 /* XFEssenceWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceWireframePort.h; sourceTree = "<group>"; };
+		404874C51DD3634E00388087 /* XFEssencePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssencePresenter.h; sourceTree = "<group>"; };
+		404874C61DD3634E00388087 /* XFEssencePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssencePresenter.m; sourceTree = "<group>"; };
+		404874C81DD3634E00388087 /* XFEssenceActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceActivity.h; sourceTree = "<group>"; };
+		404874C91DD3634E00388087 /* XFEssenceActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceActivity.m; sourceTree = "<group>"; };
+		404874CB1DD3634E00388087 /* XFEssenceRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceRouting.h; sourceTree = "<group>"; };
+		404874CC1DD3634E00388087 /* XFEssenceRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceRouting.m; sourceTree = "<group>"; };
+		404874D71DD3658E00388087 /* XFNewDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewDataManager.h; sourceTree = "<group>"; };
+		404874D81DD3658E00388087 /* XFNewDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewDataManager.m; sourceTree = "<group>"; };
+		404874DA1DD3658E00388087 /* XFNewInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewInteractor.h; sourceTree = "<group>"; };
+		404874DB1DD3658E00388087 /* XFNewInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewInteractor.m; sourceTree = "<group>"; };
+		404874DE1DD3658E00388087 /* XFNewDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewDataManagerPort.h; sourceTree = "<group>"; };
+		404874DF1DD3658E00388087 /* XFNewEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewEventHandlerPort.h; sourceTree = "<group>"; };
+		404874E01DD3658E00388087 /* XFNewInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewInteractorPort.h; sourceTree = "<group>"; };
+		404874E11DD3658E00388087 /* XFNewUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewUserInterfacePort.h; sourceTree = "<group>"; };
+		404874E21DD3658E00388087 /* XFNewWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewWireframePort.h; sourceTree = "<group>"; };
+		404874E61DD3658E00388087 /* XFNewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewPresenter.h; sourceTree = "<group>"; };
+		404874E71DD3658E00388087 /* XFNewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewPresenter.m; sourceTree = "<group>"; };
+		404874E91DD3658E00388087 /* XFNewActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewActivity.h; sourceTree = "<group>"; };
+		404874EA1DD3658E00388087 /* XFNewActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewActivity.m; sourceTree = "<group>"; };
+		404874EC1DD3658E00388087 /* XFNewRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewRouting.h; sourceTree = "<group>"; };
+		404874ED1DD3658E00388087 /* XFNewRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewRouting.m; sourceTree = "<group>"; };
+		404874F81DD3664100388087 /* XFFriendTrendsDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsDataManager.h; sourceTree = "<group>"; };
+		404874F91DD3664100388087 /* XFFriendTrendsDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsDataManager.m; sourceTree = "<group>"; };
+		404874FB1DD3664100388087 /* XFFriendTrendsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsInteractor.h; sourceTree = "<group>"; };
+		404874FC1DD3664100388087 /* XFFriendTrendsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsInteractor.m; sourceTree = "<group>"; };
+		404874FF1DD3664100388087 /* XFFriendTrendsDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsDataManagerPort.h; sourceTree = "<group>"; };
+		404875001DD3664100388087 /* XFFriendTrendsEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsEventHandlerPort.h; sourceTree = "<group>"; };
+		404875011DD3664100388087 /* XFFriendTrendsInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsInteractorPort.h; sourceTree = "<group>"; };
+		404875021DD3664100388087 /* XFFriendTrendsUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsUserInterfacePort.h; sourceTree = "<group>"; };
+		404875031DD3664100388087 /* XFFriendTrendsWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsWireframePort.h; sourceTree = "<group>"; };
+		404875071DD3664100388087 /* XFFriendTrendsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsPresenter.h; sourceTree = "<group>"; };
+		404875081DD3664100388087 /* XFFriendTrendsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsPresenter.m; sourceTree = "<group>"; };
+		4048750A1DD3664100388087 /* XFFriendTrendsActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsActivity.h; sourceTree = "<group>"; };
+		4048750B1DD3664100388087 /* XFFriendTrendsActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsActivity.m; sourceTree = "<group>"; };
+		4048750D1DD3664100388087 /* XFFriendTrendsRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsRouting.h; sourceTree = "<group>"; };
+		4048750E1DD3664100388087 /* XFFriendTrendsRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsRouting.m; sourceTree = "<group>"; };
+		404875191DD3666B00388087 /* XFMeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeDataManager.h; sourceTree = "<group>"; };
+		4048751A1DD3666B00388087 /* XFMeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeDataManager.m; sourceTree = "<group>"; };
+		4048751C1DD3666B00388087 /* XFMeInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeInteractor.h; sourceTree = "<group>"; };
+		4048751D1DD3666B00388087 /* XFMeInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeInteractor.m; sourceTree = "<group>"; };
+		404875201DD3666B00388087 /* XFMeDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeDataManagerPort.h; sourceTree = "<group>"; };
+		404875211DD3666B00388087 /* XFMeEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeEventHandlerPort.h; sourceTree = "<group>"; };
+		404875221DD3666B00388087 /* XFMeInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeInteractorPort.h; sourceTree = "<group>"; };
+		404875231DD3666B00388087 /* XFMeUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeUserInterfacePort.h; sourceTree = "<group>"; };
+		404875241DD3666B00388087 /* XFMeWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeWireframePort.h; sourceTree = "<group>"; };
+		404875281DD3666B00388087 /* XFMePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMePresenter.h; sourceTree = "<group>"; };
+		404875291DD3666B00388087 /* XFMePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMePresenter.m; sourceTree = "<group>"; };
+		4048752B1DD3666B00388087 /* XFMeActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeActivity.h; sourceTree = "<group>"; };
+		4048752C1DD3666B00388087 /* XFMeActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeActivity.m; sourceTree = "<group>"; };
+		4048752E1DD3666B00388087 /* XFMeRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeRouting.h; sourceTree = "<group>"; };
+		4048752F1DD3666B00388087 /* XFMeRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeRouting.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -291,7 +371,11 @@
 		404874171DD3544900388087 /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				4048746C1DD35C6200388087 /* XFIndexTab */,
+				404874901DD3631600388087 /* IndexTab */,
+				4048748E1DD3631600388087 /* Essence */,
+				404874AB1DD3631600388087 /* New */,
+				4048748F1DD3631600388087 /* FriendTrends */,
+				404874AA1DD3631600388087 /* Me */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -417,104 +501,544 @@
 			path = Util;
 			sourceTree = "<group>";
 		};
-		4048746C1DD35C6200388087 /* XFIndexTab */ = {
+		4048748E1DD3631600388087 /* Essence */ = {
 			isa = PBXGroup;
 			children = (
-				4048746D1DD35C6200388087 /* Application Logic */,
-				404874751DD35C6200388087 /* Module Interface */,
-				4048747B1DD35C6200388087 /* User Interface */,
+				404874B31DD3634E00388087 /* Essence */,
 			);
-			path = XFIndexTab;
+			path = Essence;
 			sourceTree = "<group>";
 		};
-		4048746D1DD35C6200388087 /* Application Logic */ = {
+		4048748F1DD3631600388087 /* FriendTrends */ = {
 			isa = PBXGroup;
 			children = (
-				4048746E1DD35C6200388087 /* DataManager */,
-				404874711DD35C6200388087 /* Interactor */,
-				404874741DD35C6200388087 /* Provider */,
+				404874F51DD3664100388087 /* FriendTrends */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		404874901DD3631600388087 /* IndexTab */ = {
+			isa = PBXGroup;
+			children = (
+				404874911DD3631600388087 /* Application Logic */,
+				404874991DD3631600388087 /* Module Interface */,
+				4048749F1DD3631600388087 /* User Interface */,
+			);
+			path = IndexTab;
+			sourceTree = "<group>";
+		};
+		404874911DD3631600388087 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				404874921DD3631600388087 /* DataManager */,
+				404874951DD3631600388087 /* Interactor */,
+				404874981DD3631600388087 /* Provider */,
 			);
 			path = "Application Logic";
 			sourceTree = "<group>";
 		};
-		4048746E1DD35C6200388087 /* DataManager */ = {
+		404874921DD3631600388087 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				4048746F1DD35C6200388087 /* XFIndexTabDataManager.h */,
-				404874701DD35C6200388087 /* XFIndexTabDataManager.m */,
+				404874931DD3631600388087 /* XFIndexTabDataManager.h */,
+				404874941DD3631600388087 /* XFIndexTabDataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
 		};
-		404874711DD35C6200388087 /* Interactor */ = {
+		404874951DD3631600388087 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				404874721DD35C6200388087 /* XFIndexTabInteractor.h */,
-				404874731DD35C6200388087 /* XFIndexTabInteractor.m */,
+				404874961DD3631600388087 /* XFIndexTabInteractor.h */,
+				404874971DD3631600388087 /* XFIndexTabInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
 		};
-		404874741DD35C6200388087 /* Provider */ = {
+		404874981DD3631600388087 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Provider;
 			sourceTree = "<group>";
 		};
-		404874751DD35C6200388087 /* Module Interface */ = {
+		404874991DD3631600388087 /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
-				404874761DD35C6200388087 /* XFIndexTabDataManagerPort.h */,
-				404874771DD35C6200388087 /* XFIndexTabEventHandlerPort.h */,
-				404874781DD35C6200388087 /* XFIndexTabInteractorPort.h */,
-				404874791DD35C6200388087 /* XFIndexTabUserInterfacePort.h */,
-				4048747A1DD35C6200388087 /* XFIndexTabWireframePort.h */,
+				4048749A1DD3631600388087 /* XFIndexTabDataManagerPort.h */,
+				4048749B1DD3631600388087 /* XFIndexTabEventHandlerPort.h */,
+				4048749C1DD3631600388087 /* XFIndexTabInteractorPort.h */,
+				4048749D1DD3631600388087 /* XFIndexTabUserInterfacePort.h */,
+				4048749E1DD3631600388087 /* XFIndexTabWireframePort.h */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
 		};
-		4048747B1DD35C6200388087 /* User Interface */ = {
+		4048749F1DD3631600388087 /* User Interface */ = {
 			isa = PBXGroup;
 			children = (
-				4048747C1DD35C6200388087 /* Express */,
-				4048747D1DD35C6200388087 /* Presenter */,
-				404874801DD35C6200388087 /* View */,
-				404874831DD35C6200388087 /* Wireframe */,
+				404874A01DD3631600388087 /* Express */,
+				404874A11DD3631600388087 /* Presenter */,
+				404874A41DD3631600388087 /* View */,
+				404874A71DD3631600388087 /* Wireframe */,
 			);
 			path = "User Interface";
 			sourceTree = "<group>";
 		};
-		4048747C1DD35C6200388087 /* Express */ = {
+		404874A01DD3631600388087 /* Express */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Express;
 			sourceTree = "<group>";
 		};
-		4048747D1DD35C6200388087 /* Presenter */ = {
+		404874A11DD3631600388087 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				4048747E1DD35C6200388087 /* XFIndexTabPresenter.h */,
-				4048747F1DD35C6200388087 /* XFIndexTabPresenter.m */,
+				404874A21DD3631600388087 /* XFIndexTabPresenter.h */,
+				404874A31DD3631600388087 /* XFIndexTabPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
 		};
-		404874801DD35C6200388087 /* View */ = {
+		404874A41DD3631600388087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				404874811DD35C6200388087 /* XFIndexTabActivity.h */,
-				404874821DD35C6200388087 /* XFIndexTabActivity.m */,
+				404874A51DD3631600388087 /* XFIndexTabActivity.h */,
+				404874A61DD3631600388087 /* XFIndexTabActivity.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
 		};
-		404874831DD35C6200388087 /* Wireframe */ = {
+		404874A71DD3631600388087 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				404874841DD35C6200388087 /* XFIndexTabRouting.h */,
-				404874851DD35C6200388087 /* XFIndexTabRouting.m */,
+				404874A81DD3631600388087 /* XFIndexTabRouting.h */,
+				404874A91DD3631600388087 /* XFIndexTabRouting.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		404874AA1DD3631600388087 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				404875161DD3666B00388087 /* Me */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		404874AB1DD3631600388087 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				404874D41DD3658E00388087 /* New */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		404874B31DD3634E00388087 /* Essence */ = {
+			isa = PBXGroup;
+			children = (
+				404874B41DD3634E00388087 /* Application Logic */,
+				404874BC1DD3634E00388087 /* Module Interface */,
+				404874C21DD3634E00388087 /* User Interface */,
+			);
+			path = Essence;
+			sourceTree = "<group>";
+		};
+		404874B41DD3634E00388087 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				404874B51DD3634E00388087 /* DataManager */,
+				404874B81DD3634E00388087 /* Interactor */,
+				404874BB1DD3634E00388087 /* Provider */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		404874B51DD3634E00388087 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				404874B61DD3634E00388087 /* XFEssenceDataManager.h */,
+				404874B71DD3634E00388087 /* XFEssenceDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		404874B81DD3634E00388087 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				404874B91DD3634E00388087 /* XFEssenceInteractor.h */,
+				404874BA1DD3634E00388087 /* XFEssenceInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		404874BB1DD3634E00388087 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		404874BC1DD3634E00388087 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404874BD1DD3634E00388087 /* XFEssenceDataManagerPort.h */,
+				404874BE1DD3634E00388087 /* XFEssenceEventHandlerPort.h */,
+				404874BF1DD3634E00388087 /* XFEssenceInteractorPort.h */,
+				404874C01DD3634E00388087 /* XFEssenceUserInterfacePort.h */,
+				404874C11DD3634E00388087 /* XFEssenceWireframePort.h */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		404874C21DD3634E00388087 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404874C31DD3634E00388087 /* Express */,
+				404874C41DD3634E00388087 /* Presenter */,
+				404874C71DD3634E00388087 /* View */,
+				404874CA1DD3634E00388087 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		404874C31DD3634E00388087 /* Express */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		404874C41DD3634E00388087 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				404874C51DD3634E00388087 /* XFEssencePresenter.h */,
+				404874C61DD3634E00388087 /* XFEssencePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		404874C71DD3634E00388087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				404874C81DD3634E00388087 /* XFEssenceActivity.h */,
+				404874C91DD3634E00388087 /* XFEssenceActivity.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		404874CA1DD3634E00388087 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				404874CB1DD3634E00388087 /* XFEssenceRouting.h */,
+				404874CC1DD3634E00388087 /* XFEssenceRouting.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		404874D41DD3658E00388087 /* New */ = {
+			isa = PBXGroup;
+			children = (
+				404874D51DD3658E00388087 /* Application Logic */,
+				404874DD1DD3658E00388087 /* Module Interface */,
+				404874E31DD3658E00388087 /* User Interface */,
+			);
+			path = New;
+			sourceTree = "<group>";
+		};
+		404874D51DD3658E00388087 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				404874D61DD3658E00388087 /* DataManager */,
+				404874D91DD3658E00388087 /* Interactor */,
+				404874DC1DD3658E00388087 /* Provider */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		404874D61DD3658E00388087 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				404874D71DD3658E00388087 /* XFNewDataManager.h */,
+				404874D81DD3658E00388087 /* XFNewDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		404874D91DD3658E00388087 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				404874DA1DD3658E00388087 /* XFNewInteractor.h */,
+				404874DB1DD3658E00388087 /* XFNewInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		404874DC1DD3658E00388087 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		404874DD1DD3658E00388087 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404874DE1DD3658E00388087 /* XFNewDataManagerPort.h */,
+				404874DF1DD3658E00388087 /* XFNewEventHandlerPort.h */,
+				404874E01DD3658E00388087 /* XFNewInteractorPort.h */,
+				404874E11DD3658E00388087 /* XFNewUserInterfacePort.h */,
+				404874E21DD3658E00388087 /* XFNewWireframePort.h */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		404874E31DD3658E00388087 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404874E41DD3658E00388087 /* Express */,
+				404874E51DD3658E00388087 /* Presenter */,
+				404874E81DD3658E00388087 /* View */,
+				404874EB1DD3658E00388087 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		404874E41DD3658E00388087 /* Express */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		404874E51DD3658E00388087 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				404874E61DD3658E00388087 /* XFNewPresenter.h */,
+				404874E71DD3658E00388087 /* XFNewPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		404874E81DD3658E00388087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				404874E91DD3658E00388087 /* XFNewActivity.h */,
+				404874EA1DD3658E00388087 /* XFNewActivity.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		404874EB1DD3658E00388087 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				404874EC1DD3658E00388087 /* XFNewRouting.h */,
+				404874ED1DD3658E00388087 /* XFNewRouting.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		404874F51DD3664100388087 /* FriendTrends */ = {
+			isa = PBXGroup;
+			children = (
+				404874F61DD3664100388087 /* Application Logic */,
+				404874FE1DD3664100388087 /* Module Interface */,
+				404875041DD3664100388087 /* User Interface */,
+			);
+			path = FriendTrends;
+			sourceTree = "<group>";
+		};
+		404874F61DD3664100388087 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				404874F71DD3664100388087 /* DataManager */,
+				404874FA1DD3664100388087 /* Interactor */,
+				404874FD1DD3664100388087 /* Provider */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		404874F71DD3664100388087 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				404874F81DD3664100388087 /* XFFriendTrendsDataManager.h */,
+				404874F91DD3664100388087 /* XFFriendTrendsDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		404874FA1DD3664100388087 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				404874FB1DD3664100388087 /* XFFriendTrendsInteractor.h */,
+				404874FC1DD3664100388087 /* XFFriendTrendsInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		404874FD1DD3664100388087 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		404874FE1DD3664100388087 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404874FF1DD3664100388087 /* XFFriendTrendsDataManagerPort.h */,
+				404875001DD3664100388087 /* XFFriendTrendsEventHandlerPort.h */,
+				404875011DD3664100388087 /* XFFriendTrendsInteractorPort.h */,
+				404875021DD3664100388087 /* XFFriendTrendsUserInterfacePort.h */,
+				404875031DD3664100388087 /* XFFriendTrendsWireframePort.h */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		404875041DD3664100388087 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404875051DD3664100388087 /* Express */,
+				404875061DD3664100388087 /* Presenter */,
+				404875091DD3664100388087 /* View */,
+				4048750C1DD3664100388087 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		404875051DD3664100388087 /* Express */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		404875061DD3664100388087 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				404875071DD3664100388087 /* XFFriendTrendsPresenter.h */,
+				404875081DD3664100388087 /* XFFriendTrendsPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		404875091DD3664100388087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4048750A1DD3664100388087 /* XFFriendTrendsActivity.h */,
+				4048750B1DD3664100388087 /* XFFriendTrendsActivity.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4048750C1DD3664100388087 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				4048750D1DD3664100388087 /* XFFriendTrendsRouting.h */,
+				4048750E1DD3664100388087 /* XFFriendTrendsRouting.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
+		404875161DD3666B00388087 /* Me */ = {
+			isa = PBXGroup;
+			children = (
+				404875171DD3666B00388087 /* Application Logic */,
+				4048751F1DD3666B00388087 /* Module Interface */,
+				404875251DD3666B00388087 /* User Interface */,
+			);
+			path = Me;
+			sourceTree = "<group>";
+		};
+		404875171DD3666B00388087 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				404875181DD3666B00388087 /* DataManager */,
+				4048751B1DD3666B00388087 /* Interactor */,
+				4048751E1DD3666B00388087 /* Provider */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		404875181DD3666B00388087 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				404875191DD3666B00388087 /* XFMeDataManager.h */,
+				4048751A1DD3666B00388087 /* XFMeDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		4048751B1DD3666B00388087 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				4048751C1DD3666B00388087 /* XFMeInteractor.h */,
+				4048751D1DD3666B00388087 /* XFMeInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		4048751E1DD3666B00388087 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		4048751F1DD3666B00388087 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404875201DD3666B00388087 /* XFMeDataManagerPort.h */,
+				404875211DD3666B00388087 /* XFMeEventHandlerPort.h */,
+				404875221DD3666B00388087 /* XFMeInteractorPort.h */,
+				404875231DD3666B00388087 /* XFMeUserInterfacePort.h */,
+				404875241DD3666B00388087 /* XFMeWireframePort.h */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		404875251DD3666B00388087 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				404875261DD3666B00388087 /* Express */,
+				404875271DD3666B00388087 /* Presenter */,
+				4048752A1DD3666B00388087 /* View */,
+				4048752D1DD3666B00388087 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		404875261DD3666B00388087 /* Express */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		404875271DD3666B00388087 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				404875281DD3666B00388087 /* XFMePresenter.h */,
+				404875291DD3666B00388087 /* XFMePresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4048752A1DD3666B00388087 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4048752B1DD3666B00388087 /* XFMeActivity.h */,
+				4048752C1DD3666B00388087 /* XFMeActivity.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4048752D1DD3666B00388087 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				4048752E1DD3666B00388087 /* XFMeRouting.h */,
+				4048752F1DD3666B00388087 /* XFMeRouting.m */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -659,34 +1183,54 @@
 			buildActionMask = 2147483647;
 			files = (
 				404874181DD3544900388087 /* AppDelegate.m in Sources */,
-				404874871DD35C6200388087 /* XFIndexTabInteractor.m in Sources */,
 				404874661DD35C1B00388087 /* XFURLManager.m in Sources */,
+				404875111DD3664100388087 /* XFFriendTrendsPresenter.m in Sources */,
+				404875321DD3666B00388087 /* XFMePresenter.m in Sources */,
 				404874611DD35C1B00388087 /* XFDataManager.m in Sources */,
+				404874F21DD3658E00388087 /* XFNewRouting.m in Sources */,
+				404874EF1DD3658E00388087 /* XFNewInteractor.m in Sources */,
+				404875121DD3664100388087 /* XFFriendTrendsActivity.m in Sources */,
+				404874AD1DD3631600388087 /* XFIndexTabInteractor.m in Sources */,
 				404874621DD35C1B00388087 /* XFInteractor.m in Sources */,
+				404875341DD3666B00388087 /* XFMeRouting.m in Sources */,
 				4048745A1DD35C1B00388087 /* XFRenderData.m in Sources */,
 				404874581DD35C1B00388087 /* XFExpressPack.m in Sources */,
+				404874D01DD3634E00388087 /* XFEssenceActivity.m in Sources */,
 				4048745E1DD35C1B00388087 /* UIView+XFLego.m in Sources */,
+				404874D11DD3634E00388087 /* XFEssenceRouting.m in Sources */,
 				404874561DD35C1B00388087 /* XFModuleAssembly.m in Sources */,
 				404874591DD35C1B00388087 /* XFExpressPiece.m in Sources */,
+				404875131DD3664100388087 /* XFFriendTrendsRouting.m in Sources */,
 				404874191DD3544900388087 /* main.m in Sources */,
+				404874CF1DD3634E00388087 /* XFEssencePresenter.m in Sources */,
+				404874F01DD3658E00388087 /* XFNewPresenter.m in Sources */,
+				404875101DD3664100388087 /* XFFriendTrendsInteractor.m in Sources */,
+				404875331DD3666B00388087 /* XFMeActivity.m in Sources */,
 				4048745F1DD35C1B00388087 /* UIViewController+XFLego.m in Sources */,
+				404874F11DD3658E00388087 /* XFNewActivity.m in Sources */,
+				404874AC1DD3631600388087 /* XFIndexTabDataManager.m in Sources */,
+				404874AF1DD3631600388087 /* XFIndexTabActivity.m in Sources */,
 				404874571DD35C1B00388087 /* XFUIBus.m in Sources */,
-				404874881DD35C6200388087 /* XFIndexTabPresenter.m in Sources */,
 				404874671DD35C1B00388087 /* NSObject+XFLegoCopy.m in Sources */,
 				404874551DD35C1B00388087 /* XFEventBus.m in Sources */,
+				404874CE1DD3634E00388087 /* XFEssenceInteractor.m in Sources */,
+				4048750F1DD3664100388087 /* XFFriendTrendsDataManager.m in Sources */,
 				404874631DD35C1B00388087 /* XFPresenter.m in Sources */,
+				404874B01DD3631600388087 /* XFIndexTabRouting.m in Sources */,
 				404874601DD35C1B00388087 /* XFActivity.m in Sources */,
 				404874641DD35C1B00388087 /* XFRouting.m in Sources */,
 				404874691DD35C1B00388087 /* XFURLParse.m in Sources */,
 				404874651DD35C1B00388087 /* XFRoutingLinkManager.m in Sources */,
+				404874AE1DD3631600388087 /* XFIndexTabPresenter.m in Sources */,
+				404875301DD3666B00388087 /* XFMeDataManager.m in Sources */,
+				404875311DD3666B00388087 /* XFMeInteractor.m in Sources */,
+				404874CD1DD3634E00388087 /* XFEssenceDataManager.m in Sources */,
 				4048745C1DD35C1B00388087 /* XFInterfaceFactory.m in Sources */,
-				404874861DD35C6200388087 /* XFIndexTabDataManager.m in Sources */,
 				4048748D1DD35C7A00388087 /* XFAppURLRegister.m in Sources */,
 				4048745D1DD35C1B00388087 /* XFRoutingFactory.m in Sources */,
 				4048745B1DD35C1B00388087 /* XFRenderItem.m in Sources */,
-				404874891DD35C6200388087 /* XFIndexTabActivity.m in Sources */,
 				404874681DD35C1B00388087 /* NSObject+XFLegoInvokeMethod.m in Sources */,
-				4048748A1DD35C6200388087 /* XFIndexTabRouting.m in Sources */,
+				404874EE1DD3658E00388087 /* XFNewDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -801,7 +1345,7 @@
 				DEVELOPMENT_TEAM = W7Y2AH8S44;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.xgm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.xmg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -815,7 +1359,7 @@
 				DEVELOPMENT_TEAM = W7Y2AH8S44;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.xgm;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.xmg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

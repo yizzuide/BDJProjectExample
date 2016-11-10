@@ -121,7 +121,7 @@ typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
 /**
  *  自定义展示一个界面
  *
- *  @param nextRouting    下一个路由
+ *  @param moduleName    下一个路由
  *  @param trasitionBlock 视图切换代码
  *  @param intentData     意图数据（没有可以传nil）
  *  @param customCodeBlock  自定义配制代码Block
