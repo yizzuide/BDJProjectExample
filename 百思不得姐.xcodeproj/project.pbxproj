@@ -59,6 +59,9 @@
 		404875331DD3666B00388087 /* XMGMeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752C1DD3666B00388087 /* XMGMeActivity.m */; };
 		404875341DD3666B00388087 /* XMGMeRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752F1DD3666B00388087 /* XMGMeRouting.m */; };
 		40AFB89E1DD5751C00FC80FA /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */; };
+		40C529561DD5A9C9007E76D7 /* XFPlusTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C529551DD5A9C9007E76D7 /* XFPlusTabBar.m */; };
+		40C5295A1DD5B229007E76D7 /* UIView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C529591DD5B229007E76D7 /* UIView+Extention.m */; };
+		40C529621DD5B794007E76D7 /* RACSignal+ErrorAlter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5295E1DD5B794007E76D7 /* RACSignal+ErrorAlter.m */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -202,6 +205,13 @@
 		4048752F1DD3666B00388087 /* XMGMeRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeRouting.m; sourceTree = "<group>"; };
 		40AFB89C1DD5751C00FC80FA /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
 		40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
+		40C529541DD5A9C9007E76D7 /* XFPlusTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPlusTabBar.h; sourceTree = "<group>"; };
+		40C529551DD5A9C9007E76D7 /* XFPlusTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPlusTabBar.m; sourceTree = "<group>"; };
+		40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		40C529581DD5B229007E76D7 /* UIView+Extention.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Extention.h"; sourceTree = "<group>"; };
+		40C529591DD5B229007E76D7 /* UIView+Extention.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Extention.m"; sourceTree = "<group>"; };
+		40C5295D1DD5B794007E76D7 /* RACSignal+ErrorAlter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "RACSignal+ErrorAlter.h"; sourceTree = "<group>"; };
+		40C5295E1DD5B794007E76D7 /* RACSignal+ErrorAlter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+ErrorAlter.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -249,6 +259,7 @@
 				404873FB1DD3515E00388087 /* Assets.xcassets */,
 				404873FD1DD3515E00388087 /* LaunchScreen.storyboard */,
 				404874001DD3515E00388087 /* Info.plist */,
+				40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -259,6 +270,7 @@
 				404874071DD3544900388087 /* Main */,
 				404874131DD3544900388087 /* Viper */,
 				4048740A1DD3544900388087 /* Other */,
+				40C529521DD5A8F8007E76D7 /* Project */,
 				4048740E1DD3544900388087 /* Public */,
 			);
 			path = Classes;
@@ -304,6 +316,7 @@
 		4048740E1DD3544900388087 /* Public */ = {
 			isa = PBXGroup;
 			children = (
+				40C5295B1DD5B794007E76D7 /* PluginExtension */,
 				4048740F1DD3544900388087 /* Category */,
 				404874101DD3544900388087 /* Lib */,
 				404874111DD3544900388087 /* Tool */,
@@ -315,6 +328,8 @@
 		4048740F1DD3544900388087 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				40C529581DD5B229007E76D7 /* UIView+Extention.h */,
+				40C529591DD5B229007E76D7 /* UIView+Extention.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -337,6 +352,8 @@
 		404874121DD3544900388087 /* UIComponents */ = {
 			isa = PBXGroup;
 			children = (
+				40C529541DD5A9C9007E76D7 /* XFPlusTabBar.h */,
+				40C529551DD5A9C9007E76D7 /* XFPlusTabBar.m */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -1048,6 +1065,38 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		40C529521DD5A8F8007E76D7 /* Project */ = {
+			isa = PBXGroup;
+			children = (
+				40C529531DD5A8F8007E76D7 /* UIComponents */,
+			);
+			path = Project;
+			sourceTree = "<group>";
+		};
+		40C529531DD5A8F8007E76D7 /* UIComponents */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = UIComponents;
+			sourceTree = "<group>";
+		};
+		40C5295B1DD5B794007E76D7 /* PluginExtension */ = {
+			isa = PBXGroup;
+			children = (
+				40C5295C1DD5B794007E76D7 /* ReactiveCocoa */,
+			);
+			path = PluginExtension;
+			sourceTree = "<group>";
+		};
+		40C5295C1DD5B794007E76D7 /* ReactiveCocoa */ = {
+			isa = PBXGroup;
+			children = (
+				40C5295D1DD5B794007E76D7 /* RACSignal+ErrorAlter.h */,
+				40C5295E1DD5B794007E76D7 /* RACSignal+ErrorAlter.m */,
+			);
+			path = ReactiveCocoa;
+			sourceTree = "<group>";
+		};
 		81C032B40B4AB21DB0B68124 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -1196,12 +1245,14 @@
 				404874F21DD3658E00388087 /* XMGNewRouting.m in Sources */,
 				404874EF1DD3658E00388087 /* XMGNewInteractor.m in Sources */,
 				404875121DD3664100388087 /* XMGFriendTrendsActivity.m in Sources */,
+				40C529561DD5A9C9007E76D7 /* XFPlusTabBar.m in Sources */,
 				404874AD1DD3631600388087 /* XMGIndexTabInteractor.m in Sources */,
 				404874621DD35C1B00388087 /* XFInteractor.m in Sources */,
 				404875341DD3666B00388087 /* XMGMeRouting.m in Sources */,
 				4048745A1DD35C1B00388087 /* XFRenderData.m in Sources */,
 				404874581DD35C1B00388087 /* XFExpressPack.m in Sources */,
 				404874D01DD3634E00388087 /* XMGEssenceActivity.m in Sources */,
+				40C5295A1DD5B229007E76D7 /* UIView+Extention.m in Sources */,
 				4048745E1DD35C1B00388087 /* UIView+XFLego.m in Sources */,
 				404874D11DD3634E00388087 /* XMGEssenceRouting.m in Sources */,
 				404874561DD35C1B00388087 /* XFModuleAssembly.m in Sources */,
@@ -1223,6 +1274,7 @@
 				4048750F1DD3664100388087 /* XMGFriendTrendsDataManager.m in Sources */,
 				404874631DD35C1B00388087 /* XFPresenter.m in Sources */,
 				404874B01DD3631600388087 /* XMGIndexTabRouting.m in Sources */,
+				40C529621DD5B794007E76D7 /* RACSignal+ErrorAlter.m in Sources */,
 				404874601DD35C1B00388087 /* XFActivity.m in Sources */,
 				404874641DD35C1B00388087 /* XFRouting.m in Sources */,
 				404874691DD35C1B00388087 /* XFURLParse.m in Sources */,
@@ -1285,6 +1337,7 @@
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -1330,6 +1383,7 @@
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "百思不得姐/PrefixHeader.pch";
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
 				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
 				GCC_WARN_UNDECLARED_SELECTOR = YES;

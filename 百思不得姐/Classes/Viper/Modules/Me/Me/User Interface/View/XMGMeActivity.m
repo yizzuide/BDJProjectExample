@@ -21,8 +21,9 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor grayColor];
+    self.view.backgroundColor = RandomColor;
     self.navigationItem.title = @"我的";
+
     
     // 初始化视图
     [self setUpViews];

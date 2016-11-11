@@ -10,6 +10,7 @@
 #import "XMGIndexTabEventHandlerPort.h"
 #import "NSObject+XFLegoInvokeMethod.h"
 #import "XFActivity.h"
+#import "XFPlusTabBar.h"
 
 #define EventHandler  XFConvertPresenterToType(id<XFIndexTabEventHandlerPort>)
 
@@ -38,6 +39,10 @@
     // 全局应用文本样式 只有后面带UI_APPEARANCE_SELECTOR宏的方法才可以就用appearance
     UITabBarItem *tabBarItem = [UITabBarItem appearance];
     [tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];
+    
+    // 添加中间发布按钮
+    XFPlusTabBar *plusTabBar = [XFPlusTabBar plusTabBarWithBkImage:@"tabBar_publish_icon" selBkImage:@"tabBar_publish_click_icon"];
+    [self setValue:plusTabBar forKeyPath:@"tabBar"];
 }
 
 // 添加子控制器

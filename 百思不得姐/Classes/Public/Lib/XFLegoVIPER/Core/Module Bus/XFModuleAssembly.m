@@ -89,9 +89,15 @@
                 if (activityClass) {
                     activity = [[activityClass alloc] initWithNibName:comps[XF_Index_Second] bundle:nil];
                 }else{
+#ifdef LogError
+                    LogError(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
+                    LogError(@"!!!!!!!!!!!!!! ActivityClass加载错误 !!!!!!!!!!!!!!");
+                    LogError(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+#elif (defined DEBUG)
                     NSLog(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
                     NSLog(@"!!!!!!!!!!!!!! ActivityClass加载错误 !!!!!!!!!!!!!!");
                     NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+#endif
                     NSAssert(NO, @"ActivityClass加载错误！");
                     return nil;
                 }
@@ -102,11 +108,19 @@
             UIStoryboard *storyboard = [UIStoryboard storyboardWithName:comps[XF_Index_Second] bundle:nil];
             activity = [storyboard instantiateViewControllerWithIdentifier:comps[XF_Index_Third]];
         }else{
+#ifdef LogError
+            LogError(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
+            LogError(@"!! 从xib或storyboard加载视图错误 !!!!!!!!!!!!!!!!!!!!");
+            LogError(@"请检查字符串标识，\n\nxib方式: x-xibName[-activityClass]\n \
+                  storyboard方式: s-storyboardName-controllerIdentifier");
+            LogError(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+#elif (defined DEBUG)
             NSLog(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
             NSLog(@"!! 从xib或storyboard加载视图错误 !!!!!!!!!!!!!!!!!!!!");
             NSLog(@"请检查字符串标识，\n\nxib方式: x-xibName[-activityClass]\n \
                   storyboard方式: s-storyboardName-controllerIdentifier");
             NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+#endif
             NSAssert(NO, @"从xib或storyboard加载视图错误！");
             return nil;
         }

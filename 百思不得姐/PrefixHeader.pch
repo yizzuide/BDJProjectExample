@@ -1,0 +1,68 @@
+//
+//  PrefixHeader.pch
+//  百思不得姐
+//
+//  Created by 付星 on 2016/11/11.
+//  Copyright © 2016年 yizzuide. All rights reserved.
+//
+
+#import "UIView+Extention.h"
+
+#define XF_SetFrame_(view,ExecuteCode) \
+CGRect frame = view.frame; \
+ExecuteCode \
+view.frame = frame;
+
+#define XF_SetCenter_(view,ExecuteCode) \
+CGPoint center = view.center; \
+ExecuteCode \
+view.center = center;
+
+#define IOS7 ([[UIDevice currentDevice].systemVersion doubleValue] >= 7.0)
+#define ScreenBounds [UIScreen mainScreen].bounds
+#define ScreenSize [UIScreen mainScreen].bounds.size
+#define UIColorFromRGB(rgbValue) [UIColor colorWithRed:((float)((rgbValue & 0xFF0000) >> 16))/255.0 green:((float)((rgbValue & 0xFF00) >> 8))/255.0 blue:((float)(rgbValue & 0xFF))/255.0 alpha:1.0]
+#define UIColorFromARGB(argbValue) [UIColor colorWithRed:((float)((argbValue & 0xFF0000) >> 16))/255.0 green:((float)((argbValue & 0xFF00) >> 8))/255.0 blue:((float)(argbValue & 0xFF))/255.0 alpha:((float)((argbValue & 0xFF000000) >> 24))/255.0]
+#define RandomColor [UIColor colorWithHue:(arc4random() % 256 / 256.0) saturation:(arc4random() % 128 / 256.0) brightness:(arc4random() % 128 / 256.0) alpha:1];
+
+
+// 日志打印
+#define XCODE_COLORS_ESCAPE_MAC @"\033["
+#define XCODE_COLORS_ESCAPE_IOS @"\xC2\xA0["
+
+#if 0
+#define XCODE_COLORS_ESCAPE XCODE_COLORS_ESCAPE_IOS
+#else
+#define XCODE_COLORS_ESCAPE XCODE_COLORS_ESCAPE_MAC
+#endif
+
+#define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
+#define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
+#define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
+#ifdef DEBUG // 处于开发阶段
+// 默认打印
+#define NSLog(...) NSLog(__VA_ARGS__)
+// white
+#define LogVerbose(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+// green
+#define LogDebug(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+// cyan
+#define LogInfo(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,255,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+// Yellow
+#define LogWarning(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+// Red
+#define LogError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#else // 处于发布阶段
+// 默认打印
+#define NSLog(...)
+// white
+#define LogVerbose(frmt, ...)
+// green
+#define LogDebug(frmt, ...)
+// cyan
+#define LogInfo(frmt, ...)
+// Yellow
+#define LogWarning(frmt, ...)
+// Red
+#define LogError(frmt, ...)
+#endif

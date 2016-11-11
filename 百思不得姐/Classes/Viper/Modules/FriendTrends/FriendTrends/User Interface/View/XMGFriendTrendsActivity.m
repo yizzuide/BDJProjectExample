@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor purpleColor];
+    self.view.backgroundColor = RandomColor;
     self.navigationItem.title = @"我的关注";
     
     // 初始化视图

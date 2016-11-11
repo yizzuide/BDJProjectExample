@@ -148,10 +148,17 @@ static NSString *_prefix;
 + (NSString *)modulePrefix
 {
     if (_prefix == nil) {
+#ifdef LogError
+        LogError(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
+        LogError(@"!! 模块没有设置过前辍！请在应用初始完成方法里调用：!!!!!!!!");
+        LogError(@"!! [XFRouttingLinkManager setModulePrefix:] !!!!!!");
+        LogError(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+#elif (defined DEBUG)
         NSLog(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
         NSLog(@"!! 模块没有设置过前辍！请在应用初始完成方法里调用：!!!!!!!!");
         NSLog(@"!! [XFRouttingLinkManager setModulePrefix:] !!!!!!");
         NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
+#endif
     }
     NSAssert(_prefix, @"当前使用的功能正在访问前辍，但没有设置过模块前辍！");
     return _prefix;
@@ -164,9 +171,15 @@ static BOOL _enableLog = NO;
 }
 
 + (void)log {
+#ifdef DEBUG
     if (_enableLog) {
+#ifdef LogDebug
+        LogDebug(@"current routing count: %zd",_mapTable.count);
+        LogDebug(@"Routing link:");
+#elif (defined DEBUG)
         NSLog(@"current routing count: %zd",_mapTable.count);
         NSLog(@"Routing link:");
+#endif
         
         NSMutableString *logStrM = [NSMutableString string];
         NSUInteger count = _keyArr.count;
@@ -223,8 +236,13 @@ static BOOL _enableLog = NO;
                 [logStrM appendString:@"\n)"];
             } while (nextRouting != nil);
         }
+#ifdef LogDebug
+        LogDebug(@"%@",logStrM);
+#elif (defined DEBUG)
         NSLog(@"%@",logStrM);
+#endif
     }
+#endif
 }
 
 @end
