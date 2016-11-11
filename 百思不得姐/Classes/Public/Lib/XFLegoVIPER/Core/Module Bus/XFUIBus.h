@@ -7,7 +7,6 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XFRouting.h"
 
 #define Activity __kindof UIViewController
 
@@ -29,6 +28,7 @@ XF_ShowRootRouting2Window_(ModuleName,{})
 #define XF_ShowURLComponent2Window_Fast(url) \
 XF_ShowURLComponent2Window_(url,{})
 
+@class XFRouting;
 typedef void(^TransitionBlock)(Activity *thisInterface, Activity *nextInterface);
 typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
 
@@ -121,9 +121,9 @@ typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
 /**
  *  自定义展示一个界面
  *
- *  @param moduleName    下一个路由
- *  @param trasitionBlock 视图切换代码
- *  @param intentData     意图数据（没有可以传nil）
+ *  @param moduleName       下一个路由
+ *  @param trasitionBlock   视图切换代码
+ *  @param intentData       意图数据（没有可以传nil）
  *  @param customCodeBlock  自定义配制代码Block
  */
 - (void)putModule:(NSString *)moduleName withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock;

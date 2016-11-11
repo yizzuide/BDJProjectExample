@@ -153,7 +153,7 @@ static NSString *_prefix;
         NSLog(@"!! [XFRouttingLinkManager setModulePrefix:] !!!!!!");
         NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
     }
-    NSAssert(_prefix, @"模块没有设置过前辍！");
+    NSAssert(_prefix, @"当前使用的功能正在访问前辍，但没有设置过模块前辍！");
     return _prefix;
 }
 

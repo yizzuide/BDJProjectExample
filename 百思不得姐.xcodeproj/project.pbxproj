@@ -32,32 +32,33 @@
 		404874671DD35C1B00388087 /* NSObject+XFLegoCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048744E1DD35C1B00388087 /* NSObject+XFLegoCopy.m */; };
 		404874681DD35C1B00388087 /* NSObject+XFLegoInvokeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874501DD35C1B00388087 /* NSObject+XFLegoInvokeMethod.m */; };
 		404874691DD35C1B00388087 /* XFURLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874521DD35C1B00388087 /* XFURLParse.m */; };
-		4048748D1DD35C7A00388087 /* XFAppURLRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048748C1DD35C7A00388087 /* XFAppURLRegister.m */; };
-		404874AC1DD3631600388087 /* XFIndexTabDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874941DD3631600388087 /* XFIndexTabDataManager.m */; };
-		404874AD1DD3631600388087 /* XFIndexTabInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874971DD3631600388087 /* XFIndexTabInteractor.m */; };
-		404874AE1DD3631600388087 /* XFIndexTabPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A31DD3631600388087 /* XFIndexTabPresenter.m */; };
-		404874AF1DD3631600388087 /* XFIndexTabActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A61DD3631600388087 /* XFIndexTabActivity.m */; };
-		404874B01DD3631600388087 /* XFIndexTabRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A91DD3631600388087 /* XFIndexTabRouting.m */; };
-		404874CD1DD3634E00388087 /* XFEssenceDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874B71DD3634E00388087 /* XFEssenceDataManager.m */; };
-		404874CE1DD3634E00388087 /* XFEssenceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874BA1DD3634E00388087 /* XFEssenceInteractor.m */; };
-		404874CF1DD3634E00388087 /* XFEssencePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874C61DD3634E00388087 /* XFEssencePresenter.m */; };
-		404874D01DD3634E00388087 /* XFEssenceActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874C91DD3634E00388087 /* XFEssenceActivity.m */; };
-		404874D11DD3634E00388087 /* XFEssenceRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874CC1DD3634E00388087 /* XFEssenceRouting.m */; };
-		404874EE1DD3658E00388087 /* XFNewDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874D81DD3658E00388087 /* XFNewDataManager.m */; };
-		404874EF1DD3658E00388087 /* XFNewInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874DB1DD3658E00388087 /* XFNewInteractor.m */; };
-		404874F01DD3658E00388087 /* XFNewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874E71DD3658E00388087 /* XFNewPresenter.m */; };
-		404874F11DD3658E00388087 /* XFNewActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874EA1DD3658E00388087 /* XFNewActivity.m */; };
-		404874F21DD3658E00388087 /* XFNewRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874ED1DD3658E00388087 /* XFNewRouting.m */; };
-		4048750F1DD3664100388087 /* XFFriendTrendsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874F91DD3664100388087 /* XFFriendTrendsDataManager.m */; };
-		404875101DD3664100388087 /* XFFriendTrendsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874FC1DD3664100388087 /* XFFriendTrendsInteractor.m */; };
-		404875111DD3664100388087 /* XFFriendTrendsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404875081DD3664100388087 /* XFFriendTrendsPresenter.m */; };
-		404875121DD3664100388087 /* XFFriendTrendsActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048750B1DD3664100388087 /* XFFriendTrendsActivity.m */; };
-		404875131DD3664100388087 /* XFFriendTrendsRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048750E1DD3664100388087 /* XFFriendTrendsRouting.m */; };
-		404875301DD3666B00388087 /* XFMeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048751A1DD3666B00388087 /* XFMeDataManager.m */; };
-		404875311DD3666B00388087 /* XFMeInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048751D1DD3666B00388087 /* XFMeInteractor.m */; };
-		404875321DD3666B00388087 /* XFMePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404875291DD3666B00388087 /* XFMePresenter.m */; };
-		404875331DD3666B00388087 /* XFMeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752C1DD3666B00388087 /* XFMeActivity.m */; };
-		404875341DD3666B00388087 /* XFMeRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752F1DD3666B00388087 /* XFMeRouting.m */; };
+		4048748D1DD35C7A00388087 /* XMGAppURLRegister.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048748C1DD35C7A00388087 /* XMGAppURLRegister.m */; };
+		404874AC1DD3631600388087 /* XMGIndexTabDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874941DD3631600388087 /* XMGIndexTabDataManager.m */; };
+		404874AD1DD3631600388087 /* XMGIndexTabInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874971DD3631600388087 /* XMGIndexTabInteractor.m */; };
+		404874AE1DD3631600388087 /* XMGIndexTabPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A31DD3631600388087 /* XMGIndexTabPresenter.m */; };
+		404874AF1DD3631600388087 /* XMGIndexTabActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A61DD3631600388087 /* XMGIndexTabActivity.m */; };
+		404874B01DD3631600388087 /* XMGIndexTabRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874A91DD3631600388087 /* XMGIndexTabRouting.m */; };
+		404874CD1DD3634E00388087 /* XMGEssenceDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874B71DD3634E00388087 /* XMGEssenceDataManager.m */; };
+		404874CE1DD3634E00388087 /* XMGEssenceInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874BA1DD3634E00388087 /* XMGEssenceInteractor.m */; };
+		404874CF1DD3634E00388087 /* XMGEssencePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874C61DD3634E00388087 /* XMGEssencePresenter.m */; };
+		404874D01DD3634E00388087 /* XMGEssenceActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874C91DD3634E00388087 /* XMGEssenceActivity.m */; };
+		404874D11DD3634E00388087 /* XMGEssenceRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874CC1DD3634E00388087 /* XMGEssenceRouting.m */; };
+		404874EE1DD3658E00388087 /* XMGNewDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874D81DD3658E00388087 /* XMGNewDataManager.m */; };
+		404874EF1DD3658E00388087 /* XMGNewInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874DB1DD3658E00388087 /* XMGNewInteractor.m */; };
+		404874F01DD3658E00388087 /* XMGNewPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874E71DD3658E00388087 /* XMGNewPresenter.m */; };
+		404874F11DD3658E00388087 /* XMGNewActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874EA1DD3658E00388087 /* XMGNewActivity.m */; };
+		404874F21DD3658E00388087 /* XMGNewRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874ED1DD3658E00388087 /* XMGNewRouting.m */; };
+		4048750F1DD3664100388087 /* XMGFriendTrendsDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874F91DD3664100388087 /* XMGFriendTrendsDataManager.m */; };
+		404875101DD3664100388087 /* XMGFriendTrendsInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 404874FC1DD3664100388087 /* XMGFriendTrendsInteractor.m */; };
+		404875111DD3664100388087 /* XMGFriendTrendsPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404875081DD3664100388087 /* XMGFriendTrendsPresenter.m */; };
+		404875121DD3664100388087 /* XMGFriendTrendsActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048750B1DD3664100388087 /* XMGFriendTrendsActivity.m */; };
+		404875131DD3664100388087 /* XMGFriendTrendsRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048750E1DD3664100388087 /* XMGFriendTrendsRouting.m */; };
+		404875301DD3666B00388087 /* XMGMeDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048751A1DD3666B00388087 /* XMGMeDataManager.m */; };
+		404875311DD3666B00388087 /* XMGMeInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048751D1DD3666B00388087 /* XMGMeInteractor.m */; };
+		404875321DD3666B00388087 /* XMGMePresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 404875291DD3666B00388087 /* XMGMePresenter.m */; };
+		404875331DD3666B00388087 /* XMGMeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752C1DD3666B00388087 /* XMGMeActivity.m */; };
+		404875341DD3666B00388087 /* XMGMeRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752F1DD3666B00388087 /* XMGMeRouting.m */; };
+		40AFB89E1DD5751C00FC80FA /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 /* End PBXBuildFile section */
 
@@ -122,83 +123,85 @@
 		404874521DD35C1B00388087 /* XFURLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLParse.m; sourceTree = "<group>"; };
 		404874531DD35C1B00388087 /* XFLegoMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoMarco.h; sourceTree = "<group>"; };
 		404874541DD35C1B00388087 /* XFLegoVIPER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoVIPER.h; sourceTree = "<group>"; };
-		4048748B1DD35C7A00388087 /* XFAppURLRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFAppURLRegister.h; sourceTree = "<group>"; };
-		4048748C1DD35C7A00388087 /* XFAppURLRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFAppURLRegister.m; sourceTree = "<group>"; };
-		404874931DD3631600388087 /* XFIndexTabDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabDataManager.h; sourceTree = "<group>"; };
-		404874941DD3631600388087 /* XFIndexTabDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabDataManager.m; sourceTree = "<group>"; };
-		404874961DD3631600388087 /* XFIndexTabInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabInteractor.h; sourceTree = "<group>"; };
-		404874971DD3631600388087 /* XFIndexTabInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabInteractor.m; sourceTree = "<group>"; };
-		4048749A1DD3631600388087 /* XFIndexTabDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabDataManagerPort.h; sourceTree = "<group>"; };
-		4048749B1DD3631600388087 /* XFIndexTabEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabEventHandlerPort.h; sourceTree = "<group>"; };
-		4048749C1DD3631600388087 /* XFIndexTabInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabInteractorPort.h; sourceTree = "<group>"; };
-		4048749D1DD3631600388087 /* XFIndexTabUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabUserInterfacePort.h; sourceTree = "<group>"; };
-		4048749E1DD3631600388087 /* XFIndexTabWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabWireframePort.h; sourceTree = "<group>"; };
-		404874A21DD3631600388087 /* XFIndexTabPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabPresenter.h; sourceTree = "<group>"; };
-		404874A31DD3631600388087 /* XFIndexTabPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabPresenter.m; sourceTree = "<group>"; };
-		404874A51DD3631600388087 /* XFIndexTabActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabActivity.h; sourceTree = "<group>"; };
-		404874A61DD3631600388087 /* XFIndexTabActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabActivity.m; sourceTree = "<group>"; };
-		404874A81DD3631600388087 /* XFIndexTabRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFIndexTabRouting.h; sourceTree = "<group>"; };
-		404874A91DD3631600388087 /* XFIndexTabRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFIndexTabRouting.m; sourceTree = "<group>"; };
-		404874B61DD3634E00388087 /* XFEssenceDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceDataManager.h; sourceTree = "<group>"; };
-		404874B71DD3634E00388087 /* XFEssenceDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceDataManager.m; sourceTree = "<group>"; };
-		404874B91DD3634E00388087 /* XFEssenceInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceInteractor.h; sourceTree = "<group>"; };
-		404874BA1DD3634E00388087 /* XFEssenceInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceInteractor.m; sourceTree = "<group>"; };
-		404874BD1DD3634E00388087 /* XFEssenceDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceDataManagerPort.h; sourceTree = "<group>"; };
-		404874BE1DD3634E00388087 /* XFEssenceEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceEventHandlerPort.h; sourceTree = "<group>"; };
-		404874BF1DD3634E00388087 /* XFEssenceInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceInteractorPort.h; sourceTree = "<group>"; };
-		404874C01DD3634E00388087 /* XFEssenceUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceUserInterfacePort.h; sourceTree = "<group>"; };
-		404874C11DD3634E00388087 /* XFEssenceWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceWireframePort.h; sourceTree = "<group>"; };
-		404874C51DD3634E00388087 /* XFEssencePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssencePresenter.h; sourceTree = "<group>"; };
-		404874C61DD3634E00388087 /* XFEssencePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssencePresenter.m; sourceTree = "<group>"; };
-		404874C81DD3634E00388087 /* XFEssenceActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceActivity.h; sourceTree = "<group>"; };
-		404874C91DD3634E00388087 /* XFEssenceActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceActivity.m; sourceTree = "<group>"; };
-		404874CB1DD3634E00388087 /* XFEssenceRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEssenceRouting.h; sourceTree = "<group>"; };
-		404874CC1DD3634E00388087 /* XFEssenceRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEssenceRouting.m; sourceTree = "<group>"; };
-		404874D71DD3658E00388087 /* XFNewDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewDataManager.h; sourceTree = "<group>"; };
-		404874D81DD3658E00388087 /* XFNewDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewDataManager.m; sourceTree = "<group>"; };
-		404874DA1DD3658E00388087 /* XFNewInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewInteractor.h; sourceTree = "<group>"; };
-		404874DB1DD3658E00388087 /* XFNewInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewInteractor.m; sourceTree = "<group>"; };
-		404874DE1DD3658E00388087 /* XFNewDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewDataManagerPort.h; sourceTree = "<group>"; };
-		404874DF1DD3658E00388087 /* XFNewEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewEventHandlerPort.h; sourceTree = "<group>"; };
-		404874E01DD3658E00388087 /* XFNewInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewInteractorPort.h; sourceTree = "<group>"; };
-		404874E11DD3658E00388087 /* XFNewUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewUserInterfacePort.h; sourceTree = "<group>"; };
-		404874E21DD3658E00388087 /* XFNewWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewWireframePort.h; sourceTree = "<group>"; };
-		404874E61DD3658E00388087 /* XFNewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewPresenter.h; sourceTree = "<group>"; };
-		404874E71DD3658E00388087 /* XFNewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewPresenter.m; sourceTree = "<group>"; };
-		404874E91DD3658E00388087 /* XFNewActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewActivity.h; sourceTree = "<group>"; };
-		404874EA1DD3658E00388087 /* XFNewActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewActivity.m; sourceTree = "<group>"; };
-		404874EC1DD3658E00388087 /* XFNewRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFNewRouting.h; sourceTree = "<group>"; };
-		404874ED1DD3658E00388087 /* XFNewRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFNewRouting.m; sourceTree = "<group>"; };
-		404874F81DD3664100388087 /* XFFriendTrendsDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsDataManager.h; sourceTree = "<group>"; };
-		404874F91DD3664100388087 /* XFFriendTrendsDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsDataManager.m; sourceTree = "<group>"; };
-		404874FB1DD3664100388087 /* XFFriendTrendsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsInteractor.h; sourceTree = "<group>"; };
-		404874FC1DD3664100388087 /* XFFriendTrendsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsInteractor.m; sourceTree = "<group>"; };
-		404874FF1DD3664100388087 /* XFFriendTrendsDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsDataManagerPort.h; sourceTree = "<group>"; };
-		404875001DD3664100388087 /* XFFriendTrendsEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsEventHandlerPort.h; sourceTree = "<group>"; };
-		404875011DD3664100388087 /* XFFriendTrendsInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsInteractorPort.h; sourceTree = "<group>"; };
-		404875021DD3664100388087 /* XFFriendTrendsUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsUserInterfacePort.h; sourceTree = "<group>"; };
-		404875031DD3664100388087 /* XFFriendTrendsWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsWireframePort.h; sourceTree = "<group>"; };
-		404875071DD3664100388087 /* XFFriendTrendsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsPresenter.h; sourceTree = "<group>"; };
-		404875081DD3664100388087 /* XFFriendTrendsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsPresenter.m; sourceTree = "<group>"; };
-		4048750A1DD3664100388087 /* XFFriendTrendsActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsActivity.h; sourceTree = "<group>"; };
-		4048750B1DD3664100388087 /* XFFriendTrendsActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsActivity.m; sourceTree = "<group>"; };
-		4048750D1DD3664100388087 /* XFFriendTrendsRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFFriendTrendsRouting.h; sourceTree = "<group>"; };
-		4048750E1DD3664100388087 /* XFFriendTrendsRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFFriendTrendsRouting.m; sourceTree = "<group>"; };
-		404875191DD3666B00388087 /* XFMeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeDataManager.h; sourceTree = "<group>"; };
-		4048751A1DD3666B00388087 /* XFMeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeDataManager.m; sourceTree = "<group>"; };
-		4048751C1DD3666B00388087 /* XFMeInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeInteractor.h; sourceTree = "<group>"; };
-		4048751D1DD3666B00388087 /* XFMeInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeInteractor.m; sourceTree = "<group>"; };
-		404875201DD3666B00388087 /* XFMeDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeDataManagerPort.h; sourceTree = "<group>"; };
-		404875211DD3666B00388087 /* XFMeEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeEventHandlerPort.h; sourceTree = "<group>"; };
-		404875221DD3666B00388087 /* XFMeInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeInteractorPort.h; sourceTree = "<group>"; };
-		404875231DD3666B00388087 /* XFMeUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeUserInterfacePort.h; sourceTree = "<group>"; };
-		404875241DD3666B00388087 /* XFMeWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeWireframePort.h; sourceTree = "<group>"; };
-		404875281DD3666B00388087 /* XFMePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMePresenter.h; sourceTree = "<group>"; };
-		404875291DD3666B00388087 /* XFMePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMePresenter.m; sourceTree = "<group>"; };
-		4048752B1DD3666B00388087 /* XFMeActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeActivity.h; sourceTree = "<group>"; };
-		4048752C1DD3666B00388087 /* XFMeActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeActivity.m; sourceTree = "<group>"; };
-		4048752E1DD3666B00388087 /* XFMeRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFMeRouting.h; sourceTree = "<group>"; };
-		4048752F1DD3666B00388087 /* XFMeRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFMeRouting.m; sourceTree = "<group>"; };
+		4048748B1DD35C7A00388087 /* XMGAppURLRegister.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAppURLRegister.h; sourceTree = "<group>"; };
+		4048748C1DD35C7A00388087 /* XMGAppURLRegister.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAppURLRegister.m; sourceTree = "<group>"; };
+		404874931DD3631600388087 /* XMGIndexTabDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabDataManager.h; sourceTree = "<group>"; };
+		404874941DD3631600388087 /* XMGIndexTabDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGIndexTabDataManager.m; sourceTree = "<group>"; };
+		404874961DD3631600388087 /* XMGIndexTabInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabInteractor.h; sourceTree = "<group>"; };
+		404874971DD3631600388087 /* XMGIndexTabInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGIndexTabInteractor.m; sourceTree = "<group>"; };
+		4048749A1DD3631600388087 /* XMGIndexTabDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabDataManagerPort.h; sourceTree = "<group>"; };
+		4048749B1DD3631600388087 /* XMGIndexTabEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabEventHandlerPort.h; sourceTree = "<group>"; };
+		4048749C1DD3631600388087 /* XMGIndexTabInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabInteractorPort.h; sourceTree = "<group>"; };
+		4048749D1DD3631600388087 /* XMGIndexTabUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabUserInterfacePort.h; sourceTree = "<group>"; };
+		4048749E1DD3631600388087 /* XMGIndexTabWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabWireframePort.h; sourceTree = "<group>"; };
+		404874A21DD3631600388087 /* XMGIndexTabPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabPresenter.h; sourceTree = "<group>"; };
+		404874A31DD3631600388087 /* XMGIndexTabPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGIndexTabPresenter.m; sourceTree = "<group>"; };
+		404874A51DD3631600388087 /* XMGIndexTabActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabActivity.h; sourceTree = "<group>"; };
+		404874A61DD3631600388087 /* XMGIndexTabActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGIndexTabActivity.m; sourceTree = "<group>"; };
+		404874A81DD3631600388087 /* XMGIndexTabRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGIndexTabRouting.h; sourceTree = "<group>"; };
+		404874A91DD3631600388087 /* XMGIndexTabRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGIndexTabRouting.m; sourceTree = "<group>"; };
+		404874B61DD3634E00388087 /* XMGEssenceDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceDataManager.h; sourceTree = "<group>"; };
+		404874B71DD3634E00388087 /* XMGEssenceDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceDataManager.m; sourceTree = "<group>"; };
+		404874B91DD3634E00388087 /* XMGEssenceInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceInteractor.h; sourceTree = "<group>"; };
+		404874BA1DD3634E00388087 /* XMGEssenceInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceInteractor.m; sourceTree = "<group>"; };
+		404874BD1DD3634E00388087 /* XMGEssenceDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceDataManagerPort.h; sourceTree = "<group>"; };
+		404874BE1DD3634E00388087 /* XMGEssenceEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceEventHandlerPort.h; sourceTree = "<group>"; };
+		404874BF1DD3634E00388087 /* XMGEssenceInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceInteractorPort.h; sourceTree = "<group>"; };
+		404874C01DD3634E00388087 /* XMGEssenceUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceUserInterfacePort.h; sourceTree = "<group>"; };
+		404874C11DD3634E00388087 /* XMGEssenceWireFramePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceWireFramePort.h; sourceTree = "<group>"; };
+		404874C51DD3634E00388087 /* XMGEssencePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssencePresenter.h; sourceTree = "<group>"; };
+		404874C61DD3634E00388087 /* XMGEssencePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssencePresenter.m; sourceTree = "<group>"; };
+		404874C81DD3634E00388087 /* XMGEssenceActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceActivity.h; sourceTree = "<group>"; };
+		404874C91DD3634E00388087 /* XMGEssenceActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceActivity.m; sourceTree = "<group>"; };
+		404874CB1DD3634E00388087 /* XMGEssenceRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGEssenceRouting.h; sourceTree = "<group>"; };
+		404874CC1DD3634E00388087 /* XMGEssenceRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGEssenceRouting.m; sourceTree = "<group>"; };
+		404874D71DD3658E00388087 /* XMGNewDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewDataManager.h; sourceTree = "<group>"; };
+		404874D81DD3658E00388087 /* XMGNewDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewDataManager.m; sourceTree = "<group>"; };
+		404874DA1DD3658E00388087 /* XMGNewInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewInteractor.h; sourceTree = "<group>"; };
+		404874DB1DD3658E00388087 /* XMGNewInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewInteractor.m; sourceTree = "<group>"; };
+		404874DE1DD3658E00388087 /* XMGNewDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewDataManagerPort.h; sourceTree = "<group>"; };
+		404874DF1DD3658E00388087 /* XMGNewEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewEventHandlerPort.h; sourceTree = "<group>"; };
+		404874E01DD3658E00388087 /* XMGNewInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewInteractorPort.h; sourceTree = "<group>"; };
+		404874E11DD3658E00388087 /* XMGNewUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewUserInterfacePort.h; sourceTree = "<group>"; };
+		404874E21DD3658E00388087 /* XMGNewWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewWireframePort.h; sourceTree = "<group>"; };
+		404874E61DD3658E00388087 /* XMGNewPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewPresenter.h; sourceTree = "<group>"; };
+		404874E71DD3658E00388087 /* XMGNewPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewPresenter.m; sourceTree = "<group>"; };
+		404874E91DD3658E00388087 /* XMGNewActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewActivity.h; sourceTree = "<group>"; };
+		404874EA1DD3658E00388087 /* XMGNewActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewActivity.m; sourceTree = "<group>"; };
+		404874EC1DD3658E00388087 /* XMGNewRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNewRouting.h; sourceTree = "<group>"; };
+		404874ED1DD3658E00388087 /* XMGNewRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNewRouting.m; sourceTree = "<group>"; };
+		404874F81DD3664100388087 /* XMGFriendTrendsDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsDataManager.h; sourceTree = "<group>"; };
+		404874F91DD3664100388087 /* XMGFriendTrendsDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendsDataManager.m; sourceTree = "<group>"; };
+		404874FB1DD3664100388087 /* XMGFriendTrendsInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsInteractor.h; sourceTree = "<group>"; };
+		404874FC1DD3664100388087 /* XMGFriendTrendsInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendsInteractor.m; sourceTree = "<group>"; };
+		404874FF1DD3664100388087 /* XMGFriendTrendsDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsDataManagerPort.h; sourceTree = "<group>"; };
+		404875001DD3664100388087 /* XMGFriendTrendsEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsEventHandlerPort.h; sourceTree = "<group>"; };
+		404875011DD3664100388087 /* XMGFriendTrendsInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsInteractorPort.h; sourceTree = "<group>"; };
+		404875021DD3664100388087 /* XMGFriendTrendsUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsUserInterfacePort.h; sourceTree = "<group>"; };
+		404875031DD3664100388087 /* XMGFriendTrendsWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsWireframePort.h; sourceTree = "<group>"; };
+		404875071DD3664100388087 /* XMGFriendTrendsPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsPresenter.h; sourceTree = "<group>"; };
+		404875081DD3664100388087 /* XMGFriendTrendsPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendsPresenter.m; sourceTree = "<group>"; };
+		4048750A1DD3664100388087 /* XMGFriendTrendsActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsActivity.h; sourceTree = "<group>"; };
+		4048750B1DD3664100388087 /* XMGFriendTrendsActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendsActivity.m; sourceTree = "<group>"; };
+		4048750D1DD3664100388087 /* XMGFriendTrendsRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGFriendTrendsRouting.h; sourceTree = "<group>"; };
+		4048750E1DD3664100388087 /* XMGFriendTrendsRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGFriendTrendsRouting.m; sourceTree = "<group>"; };
+		404875191DD3666B00388087 /* XMGMeDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeDataManager.h; sourceTree = "<group>"; };
+		4048751A1DD3666B00388087 /* XMGMeDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeDataManager.m; sourceTree = "<group>"; };
+		4048751C1DD3666B00388087 /* XMGMeInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeInteractor.h; sourceTree = "<group>"; };
+		4048751D1DD3666B00388087 /* XMGMeInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeInteractor.m; sourceTree = "<group>"; };
+		404875201DD3666B00388087 /* XMGMeDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeDataManagerPort.h; sourceTree = "<group>"; };
+		404875211DD3666B00388087 /* XMGMeEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeEventHandlerPort.h; sourceTree = "<group>"; };
+		404875221DD3666B00388087 /* XMGMeInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeInteractorPort.h; sourceTree = "<group>"; };
+		404875231DD3666B00388087 /* XMGMeUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeUserInterfacePort.h; sourceTree = "<group>"; };
+		404875241DD3666B00388087 /* XMGMeWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeWireframePort.h; sourceTree = "<group>"; };
+		404875281DD3666B00388087 /* XMGMePresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMePresenter.h; sourceTree = "<group>"; };
+		404875291DD3666B00388087 /* XMGMePresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMePresenter.m; sourceTree = "<group>"; };
+		4048752B1DD3666B00388087 /* XMGMeActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeActivity.h; sourceTree = "<group>"; };
+		4048752C1DD3666B00388087 /* XMGMeActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeActivity.m; sourceTree = "<group>"; };
+		4048752E1DD3666B00388087 /* XMGMeRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMeRouting.h; sourceTree = "<group>"; };
+		4048752F1DD3666B00388087 /* XMGMeRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeRouting.m; sourceTree = "<group>"; };
+		40AFB89C1DD5751C00FC80FA /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
+		40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -273,8 +276,8 @@
 		404874081DD3544900388087 /* Config */ = {
 			isa = PBXGroup;
 			children = (
-				4048748B1DD35C7A00388087 /* XFAppURLRegister.h */,
-				4048748C1DD35C7A00388087 /* XFAppURLRegister.m */,
+				4048748B1DD35C7A00388087 /* XMGAppURLRegister.h */,
+				4048748C1DD35C7A00388087 /* XMGAppURLRegister.m */,
 			);
 			path = Config;
 			sourceTree = "<group>";
@@ -282,6 +285,8 @@
 		404874091DD3544900388087 /* UIFrame */ = {
 			isa = PBXGroup;
 			children = (
+				40AFB89C1DD5751C00FC80FA /* XMGNavigationController.h */,
+				40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */,
 			);
 			path = UIFrame;
 			sourceTree = "<group>";
@@ -540,8 +545,8 @@
 		404874921DD3631600388087 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				404874931DD3631600388087 /* XFIndexTabDataManager.h */,
-				404874941DD3631600388087 /* XFIndexTabDataManager.m */,
+				404874931DD3631600388087 /* XMGIndexTabDataManager.h */,
+				404874941DD3631600388087 /* XMGIndexTabDataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -549,8 +554,8 @@
 		404874951DD3631600388087 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				404874961DD3631600388087 /* XFIndexTabInteractor.h */,
-				404874971DD3631600388087 /* XFIndexTabInteractor.m */,
+				404874961DD3631600388087 /* XMGIndexTabInteractor.h */,
+				404874971DD3631600388087 /* XMGIndexTabInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -565,11 +570,11 @@
 		404874991DD3631600388087 /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
-				4048749A1DD3631600388087 /* XFIndexTabDataManagerPort.h */,
-				4048749B1DD3631600388087 /* XFIndexTabEventHandlerPort.h */,
-				4048749C1DD3631600388087 /* XFIndexTabInteractorPort.h */,
-				4048749D1DD3631600388087 /* XFIndexTabUserInterfacePort.h */,
-				4048749E1DD3631600388087 /* XFIndexTabWireframePort.h */,
+				4048749A1DD3631600388087 /* XMGIndexTabDataManagerPort.h */,
+				4048749B1DD3631600388087 /* XMGIndexTabEventHandlerPort.h */,
+				4048749C1DD3631600388087 /* XMGIndexTabInteractorPort.h */,
+				4048749D1DD3631600388087 /* XMGIndexTabUserInterfacePort.h */,
+				4048749E1DD3631600388087 /* XMGIndexTabWireframePort.h */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
@@ -595,8 +600,8 @@
 		404874A11DD3631600388087 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				404874A21DD3631600388087 /* XFIndexTabPresenter.h */,
-				404874A31DD3631600388087 /* XFIndexTabPresenter.m */,
+				404874A21DD3631600388087 /* XMGIndexTabPresenter.h */,
+				404874A31DD3631600388087 /* XMGIndexTabPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -604,8 +609,8 @@
 		404874A41DD3631600388087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				404874A51DD3631600388087 /* XFIndexTabActivity.h */,
-				404874A61DD3631600388087 /* XFIndexTabActivity.m */,
+				404874A51DD3631600388087 /* XMGIndexTabActivity.h */,
+				404874A61DD3631600388087 /* XMGIndexTabActivity.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -613,8 +618,8 @@
 		404874A71DD3631600388087 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				404874A81DD3631600388087 /* XFIndexTabRouting.h */,
-				404874A91DD3631600388087 /* XFIndexTabRouting.m */,
+				404874A81DD3631600388087 /* XMGIndexTabRouting.h */,
+				404874A91DD3631600388087 /* XMGIndexTabRouting.m */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -658,8 +663,8 @@
 		404874B51DD3634E00388087 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				404874B61DD3634E00388087 /* XFEssenceDataManager.h */,
-				404874B71DD3634E00388087 /* XFEssenceDataManager.m */,
+				404874B61DD3634E00388087 /* XMGEssenceDataManager.h */,
+				404874B71DD3634E00388087 /* XMGEssenceDataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -667,8 +672,8 @@
 		404874B81DD3634E00388087 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				404874B91DD3634E00388087 /* XFEssenceInteractor.h */,
-				404874BA1DD3634E00388087 /* XFEssenceInteractor.m */,
+				404874B91DD3634E00388087 /* XMGEssenceInteractor.h */,
+				404874BA1DD3634E00388087 /* XMGEssenceInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -683,11 +688,11 @@
 		404874BC1DD3634E00388087 /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
-				404874BD1DD3634E00388087 /* XFEssenceDataManagerPort.h */,
-				404874BE1DD3634E00388087 /* XFEssenceEventHandlerPort.h */,
-				404874BF1DD3634E00388087 /* XFEssenceInteractorPort.h */,
-				404874C01DD3634E00388087 /* XFEssenceUserInterfacePort.h */,
-				404874C11DD3634E00388087 /* XFEssenceWireframePort.h */,
+				404874BD1DD3634E00388087 /* XMGEssenceDataManagerPort.h */,
+				404874BE1DD3634E00388087 /* XMGEssenceEventHandlerPort.h */,
+				404874BF1DD3634E00388087 /* XMGEssenceInteractorPort.h */,
+				404874C01DD3634E00388087 /* XMGEssenceUserInterfacePort.h */,
+				404874C11DD3634E00388087 /* XMGEssenceWireFramePort.h */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
@@ -713,8 +718,8 @@
 		404874C41DD3634E00388087 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				404874C51DD3634E00388087 /* XFEssencePresenter.h */,
-				404874C61DD3634E00388087 /* XFEssencePresenter.m */,
+				404874C51DD3634E00388087 /* XMGEssencePresenter.h */,
+				404874C61DD3634E00388087 /* XMGEssencePresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -722,8 +727,8 @@
 		404874C71DD3634E00388087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				404874C81DD3634E00388087 /* XFEssenceActivity.h */,
-				404874C91DD3634E00388087 /* XFEssenceActivity.m */,
+				404874C81DD3634E00388087 /* XMGEssenceActivity.h */,
+				404874C91DD3634E00388087 /* XMGEssenceActivity.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -731,8 +736,8 @@
 		404874CA1DD3634E00388087 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				404874CB1DD3634E00388087 /* XFEssenceRouting.h */,
-				404874CC1DD3634E00388087 /* XFEssenceRouting.m */,
+				404874CB1DD3634E00388087 /* XMGEssenceRouting.h */,
+				404874CC1DD3634E00388087 /* XMGEssenceRouting.m */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -760,8 +765,8 @@
 		404874D61DD3658E00388087 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				404874D71DD3658E00388087 /* XFNewDataManager.h */,
-				404874D81DD3658E00388087 /* XFNewDataManager.m */,
+				404874D71DD3658E00388087 /* XMGNewDataManager.h */,
+				404874D81DD3658E00388087 /* XMGNewDataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -769,8 +774,8 @@
 		404874D91DD3658E00388087 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				404874DA1DD3658E00388087 /* XFNewInteractor.h */,
-				404874DB1DD3658E00388087 /* XFNewInteractor.m */,
+				404874DA1DD3658E00388087 /* XMGNewInteractor.h */,
+				404874DB1DD3658E00388087 /* XMGNewInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -785,11 +790,11 @@
 		404874DD1DD3658E00388087 /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
-				404874DE1DD3658E00388087 /* XFNewDataManagerPort.h */,
-				404874DF1DD3658E00388087 /* XFNewEventHandlerPort.h */,
-				404874E01DD3658E00388087 /* XFNewInteractorPort.h */,
-				404874E11DD3658E00388087 /* XFNewUserInterfacePort.h */,
-				404874E21DD3658E00388087 /* XFNewWireframePort.h */,
+				404874DE1DD3658E00388087 /* XMGNewDataManagerPort.h */,
+				404874DF1DD3658E00388087 /* XMGNewEventHandlerPort.h */,
+				404874E01DD3658E00388087 /* XMGNewInteractorPort.h */,
+				404874E11DD3658E00388087 /* XMGNewUserInterfacePort.h */,
+				404874E21DD3658E00388087 /* XMGNewWireframePort.h */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
@@ -815,8 +820,8 @@
 		404874E51DD3658E00388087 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				404874E61DD3658E00388087 /* XFNewPresenter.h */,
-				404874E71DD3658E00388087 /* XFNewPresenter.m */,
+				404874E61DD3658E00388087 /* XMGNewPresenter.h */,
+				404874E71DD3658E00388087 /* XMGNewPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -824,8 +829,8 @@
 		404874E81DD3658E00388087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				404874E91DD3658E00388087 /* XFNewActivity.h */,
-				404874EA1DD3658E00388087 /* XFNewActivity.m */,
+				404874E91DD3658E00388087 /* XMGNewActivity.h */,
+				404874EA1DD3658E00388087 /* XMGNewActivity.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -833,8 +838,8 @@
 		404874EB1DD3658E00388087 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				404874EC1DD3658E00388087 /* XFNewRouting.h */,
-				404874ED1DD3658E00388087 /* XFNewRouting.m */,
+				404874EC1DD3658E00388087 /* XMGNewRouting.h */,
+				404874ED1DD3658E00388087 /* XMGNewRouting.m */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -862,8 +867,8 @@
 		404874F71DD3664100388087 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				404874F81DD3664100388087 /* XFFriendTrendsDataManager.h */,
-				404874F91DD3664100388087 /* XFFriendTrendsDataManager.m */,
+				404874F81DD3664100388087 /* XMGFriendTrendsDataManager.h */,
+				404874F91DD3664100388087 /* XMGFriendTrendsDataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -871,8 +876,8 @@
 		404874FA1DD3664100388087 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				404874FB1DD3664100388087 /* XFFriendTrendsInteractor.h */,
-				404874FC1DD3664100388087 /* XFFriendTrendsInteractor.m */,
+				404874FB1DD3664100388087 /* XMGFriendTrendsInteractor.h */,
+				404874FC1DD3664100388087 /* XMGFriendTrendsInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -887,11 +892,11 @@
 		404874FE1DD3664100388087 /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
-				404874FF1DD3664100388087 /* XFFriendTrendsDataManagerPort.h */,
-				404875001DD3664100388087 /* XFFriendTrendsEventHandlerPort.h */,
-				404875011DD3664100388087 /* XFFriendTrendsInteractorPort.h */,
-				404875021DD3664100388087 /* XFFriendTrendsUserInterfacePort.h */,
-				404875031DD3664100388087 /* XFFriendTrendsWireframePort.h */,
+				404874FF1DD3664100388087 /* XMGFriendTrendsDataManagerPort.h */,
+				404875001DD3664100388087 /* XMGFriendTrendsEventHandlerPort.h */,
+				404875011DD3664100388087 /* XMGFriendTrendsInteractorPort.h */,
+				404875021DD3664100388087 /* XMGFriendTrendsUserInterfacePort.h */,
+				404875031DD3664100388087 /* XMGFriendTrendsWireframePort.h */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
@@ -917,8 +922,8 @@
 		404875061DD3664100388087 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				404875071DD3664100388087 /* XFFriendTrendsPresenter.h */,
-				404875081DD3664100388087 /* XFFriendTrendsPresenter.m */,
+				404875071DD3664100388087 /* XMGFriendTrendsPresenter.h */,
+				404875081DD3664100388087 /* XMGFriendTrendsPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -926,8 +931,8 @@
 		404875091DD3664100388087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4048750A1DD3664100388087 /* XFFriendTrendsActivity.h */,
-				4048750B1DD3664100388087 /* XFFriendTrendsActivity.m */,
+				4048750A1DD3664100388087 /* XMGFriendTrendsActivity.h */,
+				4048750B1DD3664100388087 /* XMGFriendTrendsActivity.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -935,8 +940,8 @@
 		4048750C1DD3664100388087 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				4048750D1DD3664100388087 /* XFFriendTrendsRouting.h */,
-				4048750E1DD3664100388087 /* XFFriendTrendsRouting.m */,
+				4048750D1DD3664100388087 /* XMGFriendTrendsRouting.h */,
+				4048750E1DD3664100388087 /* XMGFriendTrendsRouting.m */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -964,8 +969,8 @@
 		404875181DD3666B00388087 /* DataManager */ = {
 			isa = PBXGroup;
 			children = (
-				404875191DD3666B00388087 /* XFMeDataManager.h */,
-				4048751A1DD3666B00388087 /* XFMeDataManager.m */,
+				404875191DD3666B00388087 /* XMGMeDataManager.h */,
+				4048751A1DD3666B00388087 /* XMGMeDataManager.m */,
 			);
 			path = DataManager;
 			sourceTree = "<group>";
@@ -973,8 +978,8 @@
 		4048751B1DD3666B00388087 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
-				4048751C1DD3666B00388087 /* XFMeInteractor.h */,
-				4048751D1DD3666B00388087 /* XFMeInteractor.m */,
+				4048751C1DD3666B00388087 /* XMGMeInteractor.h */,
+				4048751D1DD3666B00388087 /* XMGMeInteractor.m */,
 			);
 			path = Interactor;
 			sourceTree = "<group>";
@@ -989,11 +994,11 @@
 		4048751F1DD3666B00388087 /* Module Interface */ = {
 			isa = PBXGroup;
 			children = (
-				404875201DD3666B00388087 /* XFMeDataManagerPort.h */,
-				404875211DD3666B00388087 /* XFMeEventHandlerPort.h */,
-				404875221DD3666B00388087 /* XFMeInteractorPort.h */,
-				404875231DD3666B00388087 /* XFMeUserInterfacePort.h */,
-				404875241DD3666B00388087 /* XFMeWireframePort.h */,
+				404875201DD3666B00388087 /* XMGMeDataManagerPort.h */,
+				404875211DD3666B00388087 /* XMGMeEventHandlerPort.h */,
+				404875221DD3666B00388087 /* XMGMeInteractorPort.h */,
+				404875231DD3666B00388087 /* XMGMeUserInterfacePort.h */,
+				404875241DD3666B00388087 /* XMGMeWireframePort.h */,
 			);
 			path = "Module Interface";
 			sourceTree = "<group>";
@@ -1019,8 +1024,8 @@
 		404875271DD3666B00388087 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				404875281DD3666B00388087 /* XFMePresenter.h */,
-				404875291DD3666B00388087 /* XFMePresenter.m */,
+				404875281DD3666B00388087 /* XMGMePresenter.h */,
+				404875291DD3666B00388087 /* XMGMePresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1028,8 +1033,8 @@
 		4048752A1DD3666B00388087 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				4048752B1DD3666B00388087 /* XFMeActivity.h */,
-				4048752C1DD3666B00388087 /* XFMeActivity.m */,
+				4048752B1DD3666B00388087 /* XMGMeActivity.h */,
+				4048752C1DD3666B00388087 /* XMGMeActivity.m */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1037,8 +1042,8 @@
 		4048752D1DD3666B00388087 /* Wireframe */ = {
 			isa = PBXGroup;
 			children = (
-				4048752E1DD3666B00388087 /* XFMeRouting.h */,
-				4048752F1DD3666B00388087 /* XFMeRouting.m */,
+				4048752E1DD3666B00388087 /* XMGMeRouting.h */,
+				4048752F1DD3666B00388087 /* XMGMeRouting.m */,
 			);
 			path = Wireframe;
 			sourceTree = "<group>";
@@ -1089,6 +1094,7 @@
 		404873E41DD3515E00388087 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				CLASSPREFIX = XMG;
 				LastUpgradeCheck = 0800;
 				ORGANIZATIONNAME = yizzuide;
 				TargetAttributes = {
@@ -1184,53 +1190,54 @@
 			files = (
 				404874181DD3544900388087 /* AppDelegate.m in Sources */,
 				404874661DD35C1B00388087 /* XFURLManager.m in Sources */,
-				404875111DD3664100388087 /* XFFriendTrendsPresenter.m in Sources */,
-				404875321DD3666B00388087 /* XFMePresenter.m in Sources */,
+				404875111DD3664100388087 /* XMGFriendTrendsPresenter.m in Sources */,
+				404875321DD3666B00388087 /* XMGMePresenter.m in Sources */,
 				404874611DD35C1B00388087 /* XFDataManager.m in Sources */,
-				404874F21DD3658E00388087 /* XFNewRouting.m in Sources */,
-				404874EF1DD3658E00388087 /* XFNewInteractor.m in Sources */,
-				404875121DD3664100388087 /* XFFriendTrendsActivity.m in Sources */,
-				404874AD1DD3631600388087 /* XFIndexTabInteractor.m in Sources */,
+				404874F21DD3658E00388087 /* XMGNewRouting.m in Sources */,
+				404874EF1DD3658E00388087 /* XMGNewInteractor.m in Sources */,
+				404875121DD3664100388087 /* XMGFriendTrendsActivity.m in Sources */,
+				404874AD1DD3631600388087 /* XMGIndexTabInteractor.m in Sources */,
 				404874621DD35C1B00388087 /* XFInteractor.m in Sources */,
-				404875341DD3666B00388087 /* XFMeRouting.m in Sources */,
+				404875341DD3666B00388087 /* XMGMeRouting.m in Sources */,
 				4048745A1DD35C1B00388087 /* XFRenderData.m in Sources */,
 				404874581DD35C1B00388087 /* XFExpressPack.m in Sources */,
-				404874D01DD3634E00388087 /* XFEssenceActivity.m in Sources */,
+				404874D01DD3634E00388087 /* XMGEssenceActivity.m in Sources */,
 				4048745E1DD35C1B00388087 /* UIView+XFLego.m in Sources */,
-				404874D11DD3634E00388087 /* XFEssenceRouting.m in Sources */,
+				404874D11DD3634E00388087 /* XMGEssenceRouting.m in Sources */,
 				404874561DD35C1B00388087 /* XFModuleAssembly.m in Sources */,
 				404874591DD35C1B00388087 /* XFExpressPiece.m in Sources */,
-				404875131DD3664100388087 /* XFFriendTrendsRouting.m in Sources */,
+				404875131DD3664100388087 /* XMGFriendTrendsRouting.m in Sources */,
 				404874191DD3544900388087 /* main.m in Sources */,
-				404874CF1DD3634E00388087 /* XFEssencePresenter.m in Sources */,
-				404874F01DD3658E00388087 /* XFNewPresenter.m in Sources */,
-				404875101DD3664100388087 /* XFFriendTrendsInteractor.m in Sources */,
-				404875331DD3666B00388087 /* XFMeActivity.m in Sources */,
+				404874CF1DD3634E00388087 /* XMGEssencePresenter.m in Sources */,
+				404874F01DD3658E00388087 /* XMGNewPresenter.m in Sources */,
+				404875101DD3664100388087 /* XMGFriendTrendsInteractor.m in Sources */,
+				404875331DD3666B00388087 /* XMGMeActivity.m in Sources */,
 				4048745F1DD35C1B00388087 /* UIViewController+XFLego.m in Sources */,
-				404874F11DD3658E00388087 /* XFNewActivity.m in Sources */,
-				404874AC1DD3631600388087 /* XFIndexTabDataManager.m in Sources */,
-				404874AF1DD3631600388087 /* XFIndexTabActivity.m in Sources */,
+				404874F11DD3658E00388087 /* XMGNewActivity.m in Sources */,
+				404874AC1DD3631600388087 /* XMGIndexTabDataManager.m in Sources */,
+				404874AF1DD3631600388087 /* XMGIndexTabActivity.m in Sources */,
 				404874571DD35C1B00388087 /* XFUIBus.m in Sources */,
 				404874671DD35C1B00388087 /* NSObject+XFLegoCopy.m in Sources */,
 				404874551DD35C1B00388087 /* XFEventBus.m in Sources */,
-				404874CE1DD3634E00388087 /* XFEssenceInteractor.m in Sources */,
-				4048750F1DD3664100388087 /* XFFriendTrendsDataManager.m in Sources */,
+				404874CE1DD3634E00388087 /* XMGEssenceInteractor.m in Sources */,
+				4048750F1DD3664100388087 /* XMGFriendTrendsDataManager.m in Sources */,
 				404874631DD35C1B00388087 /* XFPresenter.m in Sources */,
-				404874B01DD3631600388087 /* XFIndexTabRouting.m in Sources */,
+				404874B01DD3631600388087 /* XMGIndexTabRouting.m in Sources */,
 				404874601DD35C1B00388087 /* XFActivity.m in Sources */,
 				404874641DD35C1B00388087 /* XFRouting.m in Sources */,
 				404874691DD35C1B00388087 /* XFURLParse.m in Sources */,
+				40AFB89E1DD5751C00FC80FA /* XMGNavigationController.m in Sources */,
 				404874651DD35C1B00388087 /* XFRoutingLinkManager.m in Sources */,
-				404874AE1DD3631600388087 /* XFIndexTabPresenter.m in Sources */,
-				404875301DD3666B00388087 /* XFMeDataManager.m in Sources */,
-				404875311DD3666B00388087 /* XFMeInteractor.m in Sources */,
-				404874CD1DD3634E00388087 /* XFEssenceDataManager.m in Sources */,
+				404874AE1DD3631600388087 /* XMGIndexTabPresenter.m in Sources */,
+				404875301DD3666B00388087 /* XMGMeDataManager.m in Sources */,
+				404875311DD3666B00388087 /* XMGMeInteractor.m in Sources */,
+				404874CD1DD3634E00388087 /* XMGEssenceDataManager.m in Sources */,
 				4048745C1DD35C1B00388087 /* XFInterfaceFactory.m in Sources */,
-				4048748D1DD35C7A00388087 /* XFAppURLRegister.m in Sources */,
+				4048748D1DD35C7A00388087 /* XMGAppURLRegister.m in Sources */,
 				4048745D1DD35C1B00388087 /* XFRoutingFactory.m in Sources */,
 				4048745B1DD35C1B00388087 /* XFRenderItem.m in Sources */,
 				404874681DD35C1B00388087 /* NSObject+XFLegoInvokeMethod.m in Sources */,
-				404874EE1DD3658E00388087 /* XFNewDataManager.m in Sources */,
+				404874EE1DD3658E00388087 /* XMGNewDataManager.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

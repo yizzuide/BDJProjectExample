@@ -7,6 +7,7 @@
 //
 
 #import "XFInterfaceFactory.h"
+#import "XFRouting.h"
 #import "XFRoutingFactory.h"
 #import "XFLegoMarco.h"
 #import "NSObject+XFLegoInvokeMethod.h"
@@ -32,7 +33,13 @@
 + (void)resetSubRoutingFromSubUserInterfaces:(NSArray *)subUserInterfaces forParentActivity:(__kindof id<XFUserInterfacePort>)parentUserInterface {
     NSMutableArray *subRoutings = @[].mutableCopy;
     for (__kindof id<XFUserInterfacePort> userInterface in subUserInterfaces) {
-        XFRouting *subRouting = [[userInterface eventHandler] valueForKey:@"_routing"];
+        XFActivity *subActivity = userInterface;
+        // 如果子控制器是导航栏，取出顶部视图
+        if ([userInterface isKindOfClass:[UINavigationController class]]) {
+            UINavigationController *subNav = userInterface;
+            subActivity = (id)subNav.topViewController;
+        }
+        XFRouting *subRouting = [[subActivity eventHandler] valueForKey:@"_routing"];
         [subRoutings addObject:subRouting];
     }
     XFRouting *parentRouting = [[parentUserInterface eventHandler] valueForKey:@"_routing"];

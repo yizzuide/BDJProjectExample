@@ -36,9 +36,9 @@
 /**
  *  VIPER架构里对多模块间通信
  *
- *  @param eventName       事件名
- *  @param intentData 消息数据
- *  @param modulesName 业务模块名数组
+ *  @param eventName    事件名
+ *  @param intentData   消息数据
+ *  @param modulesName  业务模块名数组
  */
 - (void)sendEventName:(NSString *)eventName intentData:(id)intentData forModulesName:(NSArray<NSString *> *)modulesName;
 

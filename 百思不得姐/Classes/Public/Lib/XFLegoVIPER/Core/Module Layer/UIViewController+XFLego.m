@@ -40,24 +40,19 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
 #pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
 - (void)viewDidLoad
 {
-    // 如果当前控制器是在当前框架
-    if (self.eventHandler) {
-        [self setPoppingProgrammatically:[NSNumber numberWithBool:NO]];
-        // 绑定当前视图引用到事件处理
-        [self.eventHandler invokeMethod:@"xfLego_bindView:" param:self];
-    }
+    // 初始化事件处理
+    [self _xfLego_initEventHandlerWithAdditionWorkBlock:nil];
     // 由于[[UITabBarController alloc] init]执行会立即调用当前viewDidLoad方法，所以这里要单独处理
     if ([self isKindOfClass:[UITabBarController class]]) {
+        XF_Define_Weak
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-            if (self.eventHandler) {
-                [self setPoppingProgrammatically:[NSNumber numberWithBool:NO]];
-                // 绑定当前视图引用到事件处理
-                [self.eventHandler invokeMethod:@"xfLego_bindView:" param:self];
+            XF_Define_Strong
+            [self _xfLego_initEventHandlerWithAdditionWorkBlock:^{
                 // 调用自定义加载完成方法
                 [self xfLego_ViewDidLoadForTabBarViewController];
                 // 重置父子模块关系
                 [XFInterfaceFactory resetSubRoutingFromSubUserInterfaces:self.childViewControllers forParentActivity:self];
-            }
+            }];
         });
     }
 }
@@ -97,7 +92,18 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
 }
 #pragma clang diagnostic pop
 
-
+- (void)_xfLego_initEventHandlerWithAdditionWorkBlock:(void(^)())additionWorkBlock
+{
+    // 如果当前控制器是在当前框架
+    if (self.eventHandler) {
+        [self setPoppingProgrammatically:[NSNumber numberWithBool:NO]];
+        // 绑定当前视图引用到事件处理
+        [self.eventHandler invokeMethod:@"xfLego_bindView:" param:self];
+        if (additionWorkBlock) {
+            additionWorkBlock();
+        }
+    }
+}
 - (void)xfLego_ViewDidLoadForTabBarViewController
 {
 }

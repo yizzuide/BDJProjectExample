@@ -15,7 +15,7 @@
 /**
  *  快速任意填充数据
  */
-@property (nonatomic, strong) id expressData NS_DEPRECATED_IOS(0.0.1,3.0,"Use 'expressPack' instead.");
+@property (nonatomic, strong) id expressData NS_DEPRECATED_IOS(0.0.1,3.0.0,"Use 'expressPack' instead.");
 /**
  * 视图表达对象
  *

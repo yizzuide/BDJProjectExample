@@ -7,8 +7,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XFRouting.h"
 
+@class XFRouting;
 @interface XFRoutingFactory : NSObject
 /**
  *  根据模块名创建一个路由对象（带缓存）

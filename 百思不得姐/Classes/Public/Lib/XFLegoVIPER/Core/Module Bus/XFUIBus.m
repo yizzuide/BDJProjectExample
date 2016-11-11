@@ -8,6 +8,7 @@
 
 #import "NSObject+XFLegoInvokeMethod.h"
 #import "XFUIBus.h"
+#import "XFRouting.h"
 #import "XFRoutingFactory.h"
 #import "XFURLManager.h"
 
@@ -67,6 +68,7 @@
 - (void)showModule:(NSString *)moduleName onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock
 {
     self.rootRouting = [XFRoutingFactory createRoutingFastFromModuleName:moduleName];
+    NSAssert(self.rootRouting, @"模块创建失败！请检测模块名是否正确！(注意：使用帕斯卡命名法<首字母大写>）");
     if (customCodeBlock) {
         customCodeBlock(self.rootRouting);
     }
@@ -113,6 +115,7 @@
 - (void)putModule:(NSString *)moduleName withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock {
     // 初始化一个Routing
     XFRouting *nextRouting = [XFRoutingFactory createRoutingFastFromModuleName:moduleName];
+    NSAssert(nextRouting, @"模块创建失败！请检测模块名是否正确！(注意：使用帕斯卡命名法<首字母大写>）");
     //  调用自定义代码
     if (customCodeBlock) {
         customCodeBlock(nextRouting);

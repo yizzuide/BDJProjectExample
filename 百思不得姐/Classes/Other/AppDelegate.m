@@ -8,7 +8,7 @@
 
 #import "AppDelegate.h"
 #import "XFLegoVIPER.h"
-#import "XFAppURLRegister.h"
+#import "XMGAppURLRegister.h"
 
 @interface AppDelegate ()
 
@@ -20,9 +20,9 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
     [XFRoutingLinkManager enableLog];
-    [XFRoutingLinkManager setModulePrefix:@"XF"];
+    [XFRoutingLinkManager setModulePrefix:@"XMG"];
     // 注册APP的所有URL
-    [XFAppURLRegister urlRegister];
+    [XMGAppURLRegister urlRegister];
     // 根据URL显示组件
     XF_ShowURLComponent2Window_Fast(@"xmg://indexTab")
     return YES;

@@ -8,7 +8,7 @@
 
 #import "XFRoutingFactory.h"
 #import "XFRoutingLinkManager.h"
-
+#import "XFRouting.h"
 
 @implementation XFRoutingFactory
 
