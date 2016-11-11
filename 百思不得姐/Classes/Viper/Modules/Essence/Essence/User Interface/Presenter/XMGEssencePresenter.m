@@ -39,11 +39,11 @@
 // 初始化命令
 - (void)initCommand
 {
-    /*XF_CEXE_Begin
+    XF_CEXE_Begin
     // 当命令触发时执行代码
-    XF_CEXE_(self.command, {
-        // TODO
-    })*/
+    XF_CEXE_(self.tagCommand, {
+        NSLog(@"tagButtonClick!");
+    })
 }
 
 // 注册MVx通知

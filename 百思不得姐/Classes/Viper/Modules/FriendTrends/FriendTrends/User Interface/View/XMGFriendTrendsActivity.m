@@ -8,6 +8,7 @@
 
 #import "XMGFriendTrendsActivity.h"
 #import "XMGFriendTrendsEventHandlerPort.h"
+#import "UIBarButtonItem+XMGExtension.h"
 
 #define EventHandler  XFConvertPresenterToType(id<XMGFriendTrendsEventHandlerPort>)
 
@@ -21,9 +22,9 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = RandomColor;
-    self.navigationItem.title = @"我的关注";
+    self.view.backgroundColor = UIColorFromRGB(R_Color_GlobalBkg);
     
+    [self configNav];
     // 初始化视图
     [self setUpViews];
     // 绑定视图数据
@@ -31,6 +32,11 @@
 }
 
 #pragma mark - 初始化
+- (void)configNav
+{
+    self.navigationItem.title = @"我的关注";
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" imageSel:@"friendsRecommentIcon-click"];
+}
 - (void)setUpViews {
     
 }

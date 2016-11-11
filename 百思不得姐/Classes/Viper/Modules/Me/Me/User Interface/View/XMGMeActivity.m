@@ -8,6 +8,7 @@
 
 #import "XMGMeActivity.h"
 #import "XMGMeEventHandlerPort.h"
+#import "UIBarButtonItem+XMGExtension.h"
 
 #define EventHandler  XFConvertPresenterToType(id<XMGMeEventHandlerPort>)
 
@@ -21,10 +22,9 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = RandomColor;
-    self.navigationItem.title = @"我的";
+    self.view.backgroundColor = UIColorFromRGB(R_Color_GlobalBkg);
 
-    
+    [self configNav];
     // 初始化视图
     [self setUpViews];
     // 绑定视图数据
@@ -32,6 +32,16 @@
 }
 
 #pragma mark - 初始化
+- (void)configNav
+{
+    self.navigationItem.title = @"我的";
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" imageSel:@"mine-setting-icon-click"];
+    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" imageSel:@"mine-moon-icon-click"];
+    self.navigationItem.rightBarButtonItems = @[
+                                              settingItem,
+                                              moonItem
+                                               ];
+}
 - (void)setUpViews {
     
 }

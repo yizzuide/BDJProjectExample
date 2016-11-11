@@ -33,7 +33,7 @@
 {
     NSDictionary *textHeightLightAttr = @{
                                           NSForegroundColorAttributeName:[UIColor darkGrayColor],
-                                          NSFontAttributeName:[UIFont systemFontOfSize:15]
+                                          NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
                                           };
     /*[essenceActivity.tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];*/
     // 全局应用文本样式 只有后面带UI_APPEARANCE_SELECTOR宏的方法才可以就用appearance
@@ -41,16 +41,17 @@
     [tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];
     
     // 添加中间发布按钮
-    XFPlusTabBar *plusTabBar = [XFPlusTabBar plusTabBarWithBkImage:@"tabBar_publish_icon" selBkImage:@"tabBar_publish_click_icon"];
+    XFPlusTabBar *plusTabBar = [XFPlusTabBar plusTabBarWithBkImage:R_Image_PlusButton selBkImage:R_Image_PlusButtonSel];
+    [plusTabBar setBackgroundImage:[UIImage imageNamed:R_Image_TabBarBkg]];
     [self setValue:plusTabBar forKeyPath:@"tabBar"];
 }
 
 // 添加子控制器
 - (void)setUpChildActivitys {
-    [self addChildActivity:XF_SubUInterface_(@"Essence") title:@"精华" image:@"tabBar_essence_icon" selImage:@"tabBar_essence_click_icon"];
-    [self addChildActivity:XF_SubUInterface_(@"New") title:@"新帖" image:@"tabBar_new_icon" selImage:@"tabBar_new_click_icon"];
-    [self addChildActivity:XF_SubUInterface_(@"FriendTrends") title:@"关注" image:@"tabBar_friendTrends_icon" selImage:@"tabBar_friendTrends_click_icon"];
-    [self addChildActivity:XF_SubUInterface_(@"Me") title:@"我" image:@"tabBar_me_icon" selImage:@"tabBar_me_click_icon"];
+    [self addChildActivity:XF_SubUInterface_(@"Essence") title:@"精华" image:R_Image_TabBarEssence selImage:R_Image_TabBarEssenceSel];
+    [self addChildActivity:XF_SubUInterface_(@"New") title:@"新帖" image:R_Image_TabBarNew selImage:R_Image_TabBarNewSel];
+    [self addChildActivity:XF_SubUInterface_(@"FriendTrends") title:@"关注" image:R_Image_TabBarFriendTrend selImage:R_Image_TabBarFriendTrendSel];
+    [self addChildActivity:XF_SubUInterface_(@"Me") title:@"我" image:R_Image_TabBarMe selImage:R_Image_TabBarMeSel];
 }
 
 - (void)addChildActivity:(XFActivity *)activity title:(NSString *)title image:(NSString *)image selImage:(NSString *)selImage

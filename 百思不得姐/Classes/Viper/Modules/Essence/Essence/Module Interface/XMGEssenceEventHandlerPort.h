@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "XFEventHandlerPort.h"
 
+@class RACCommand;
 @protocol XMGEssenceEventHandlerPort <XFEventHandlerPort>
 
+@property (nonatomic, strong) RACCommand *tagCommand;
 @end

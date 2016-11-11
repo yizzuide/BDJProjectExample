@@ -12,5 +12,5 @@
 
 @interface XMGEssencePresenter : XFPresenter <XMGEssenceEventHandlerPort>
 
-
+@property (nonatomic, strong) RACCommand *tagCommand;
 @end

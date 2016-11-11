@@ -30,6 +30,7 @@
 #define XF_CEXE_(commandRef, ExecuteCode) \
 commandRef = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) { \
     XF_Define_Strong \
+    [self self]; \
     ExecuteCode \
     return [RACSignal empty]; \
 }];
@@ -37,6 +38,7 @@ commandRef = [[RACCommand alloc] initWithSignalBlock:^RACSignal *(id input) { \
 #define XF_CEXE_Enable_(commandRef, enableSignal, ExecuteCode)\
 commandRef = [[RACCommand alloc] initWithEnabled:enableSignal signalBlock:^RACSignal *(id input) {\
     XF_Define_Strong \
+    [self self]; \
     ExecuteCode \
     return [RACSignal empty]; \
 }];

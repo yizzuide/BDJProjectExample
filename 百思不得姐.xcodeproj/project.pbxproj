@@ -59,6 +59,10 @@
 		404875331DD3666B00388087 /* XMGMeActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752C1DD3666B00388087 /* XMGMeActivity.m */; };
 		404875341DD3666B00388087 /* XMGMeRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048752F1DD3666B00388087 /* XMGMeRouting.m */; };
 		40AFB89E1DD5751C00FC80FA /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */; };
+		40B526B21DD6106D00EBE619 /* XMGRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B526B11DD6106D00EBE619 /* XMGRColor.m */; };
+		40B526B51DD6108A00EBE619 /* XMGRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B526B41DD6108A00EBE619 /* XMGRImage.m */; };
+		40B526B81DD610A300EBE619 /* XMGRMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B526B71DD610A300EBE619 /* XMGRMetric.m */; };
+		40B526BB1DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 40B526BA1DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.m */; };
 		40C529561DD5A9C9007E76D7 /* XFPlusTabBar.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C529551DD5A9C9007E76D7 /* XFPlusTabBar.m */; };
 		40C5295A1DD5B229007E76D7 /* UIView+Extention.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C529591DD5B229007E76D7 /* UIView+Extention.m */; };
 		40C529621DD5B794007E76D7 /* RACSignal+ErrorAlter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C5295E1DD5B794007E76D7 /* RACSignal+ErrorAlter.m */; };
@@ -205,6 +209,14 @@
 		4048752F1DD3666B00388087 /* XMGMeRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMeRouting.m; sourceTree = "<group>"; };
 		40AFB89C1DD5751C00FC80FA /* XMGNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGNavigationController.h; sourceTree = "<group>"; };
 		40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGNavigationController.m; sourceTree = "<group>"; };
+		40B526B01DD6106D00EBE619 /* XMGRColor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRColor.h; sourceTree = "<group>"; };
+		40B526B11DD6106D00EBE619 /* XMGRColor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRColor.m; sourceTree = "<group>"; };
+		40B526B31DD6108A00EBE619 /* XMGRImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRImage.h; sourceTree = "<group>"; };
+		40B526B41DD6108A00EBE619 /* XMGRImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRImage.m; sourceTree = "<group>"; };
+		40B526B61DD610A300EBE619 /* XMGRMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRMetric.h; sourceTree = "<group>"; };
+		40B526B71DD610A300EBE619 /* XMGRMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRMetric.m; sourceTree = "<group>"; };
+		40B526B91DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIBarButtonItem+XMGExtension.h"; sourceTree = "<group>"; };
+		40B526BA1DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIBarButtonItem+XMGExtension.m"; sourceTree = "<group>"; };
 		40C529541DD5A9C9007E76D7 /* XFPlusTabBar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPlusTabBar.h; sourceTree = "<group>"; };
 		40C529551DD5A9C9007E76D7 /* XFPlusTabBar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPlusTabBar.m; sourceTree = "<group>"; };
 		40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
@@ -279,6 +291,7 @@
 		404874071DD3544900388087 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				40B526AC1DD6101100EBE619 /* R */,
 				404874081DD3544900388087 /* Config */,
 				404874091DD3544900388087 /* UIFrame */,
 			);
@@ -330,6 +343,8 @@
 			children = (
 				40C529581DD5B229007E76D7 /* UIView+Extention.h */,
 				40C529591DD5B229007E76D7 /* UIView+Extention.m */,
+				40B526B91DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.h */,
+				40B526BA1DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1065,6 +1080,43 @@
 			path = Wireframe;
 			sourceTree = "<group>";
 		};
+		40B526AC1DD6101100EBE619 /* R */ = {
+			isa = PBXGroup;
+			children = (
+				40B526AD1DD6101100EBE619 /* Color */,
+				40B526AE1DD6101100EBE619 /* Image */,
+				40B526AF1DD6101100EBE619 /* Metric */,
+			);
+			path = R;
+			sourceTree = "<group>";
+		};
+		40B526AD1DD6101100EBE619 /* Color */ = {
+			isa = PBXGroup;
+			children = (
+				40B526B01DD6106D00EBE619 /* XMGRColor.h */,
+				40B526B11DD6106D00EBE619 /* XMGRColor.m */,
+			);
+			path = Color;
+			sourceTree = "<group>";
+		};
+		40B526AE1DD6101100EBE619 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				40B526B31DD6108A00EBE619 /* XMGRImage.h */,
+				40B526B41DD6108A00EBE619 /* XMGRImage.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
+		40B526AF1DD6101100EBE619 /* Metric */ = {
+			isa = PBXGroup;
+			children = (
+				40B526B61DD610A300EBE619 /* XMGRMetric.h */,
+				40B526B71DD610A300EBE619 /* XMGRMetric.m */,
+			);
+			path = Metric;
+			sourceTree = "<group>";
+		};
 		40C529521DD5A8F8007E76D7 /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -1246,6 +1298,7 @@
 				404874EF1DD3658E00388087 /* XMGNewInteractor.m in Sources */,
 				404875121DD3664100388087 /* XMGFriendTrendsActivity.m in Sources */,
 				40C529561DD5A9C9007E76D7 /* XFPlusTabBar.m in Sources */,
+				40B526B81DD610A300EBE619 /* XMGRMetric.m in Sources */,
 				404874AD1DD3631600388087 /* XMGIndexTabInteractor.m in Sources */,
 				404874621DD35C1B00388087 /* XFInteractor.m in Sources */,
 				404875341DD3666B00388087 /* XMGMeRouting.m in Sources */,
@@ -1255,6 +1308,7 @@
 				40C5295A1DD5B229007E76D7 /* UIView+Extention.m in Sources */,
 				4048745E1DD35C1B00388087 /* UIView+XFLego.m in Sources */,
 				404874D11DD3634E00388087 /* XMGEssenceRouting.m in Sources */,
+				40B526B51DD6108A00EBE619 /* XMGRImage.m in Sources */,
 				404874561DD35C1B00388087 /* XFModuleAssembly.m in Sources */,
 				404874591DD35C1B00388087 /* XFExpressPiece.m in Sources */,
 				404875131DD3664100388087 /* XMGFriendTrendsRouting.m in Sources */,
@@ -1280,7 +1334,9 @@
 				404874691DD35C1B00388087 /* XFURLParse.m in Sources */,
 				40AFB89E1DD5751C00FC80FA /* XMGNavigationController.m in Sources */,
 				404874651DD35C1B00388087 /* XFRoutingLinkManager.m in Sources */,
+				40B526B21DD6106D00EBE619 /* XMGRColor.m in Sources */,
 				404874AE1DD3631600388087 /* XMGIndexTabPresenter.m in Sources */,
+				40B526BB1DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.m in Sources */,
 				404875301DD3666B00388087 /* XMGMeDataManager.m in Sources */,
 				404875311DD3666B00388087 /* XMGMeInteractor.m in Sources */,
 				404874CD1DD3634E00388087 /* XMGEssenceDataManager.m in Sources */,

@@ -21,7 +21,7 @@
 {
     [super viewDidLoad];
     
-    self.view.backgroundColor = RandomColor;
+    self.view.backgroundColor = UIColorFromRGB(R_Color_GlobalBkg);
     
     // 初始化视图
     [self setUpViews];
