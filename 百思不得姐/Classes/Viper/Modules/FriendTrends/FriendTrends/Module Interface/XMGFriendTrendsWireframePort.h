@@ -11,4 +11,5 @@
 
 @protocol XMGFriendTrendsWireFramePort <XFWireFramePort>
 
+- (void)transition2FriendsRecomment;
 @end

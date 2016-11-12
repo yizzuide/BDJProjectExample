@@ -9,6 +9,11 @@
 #import "XMGRImage.h"
 
 DefConstString R_Image_NavBkg = @"navigationbarBackgroundWhite";
+DefConstString R_Image_NavFriendsRecomment = @"friendsRecommentIcon";
+DefConstString R_Image_NavFriendsRecommentSel = @"friendsRecommentIcon-click";
+DefConstString R_Image_NavButtonReturn = @"navigationButtonReturn";
+DefConstString R_Image_NavButtonReturnSel = @"navigationButtonReturnClick";
+
 DefConstString R_Image_PlusButton = @"tabBar_publish_icon";
 DefConstString R_Image_PlusButtonSel = @"tabBar_publish_click_icon";
 DefConstString R_Image_TabBarEssence = @"tabBar_essence_icon";

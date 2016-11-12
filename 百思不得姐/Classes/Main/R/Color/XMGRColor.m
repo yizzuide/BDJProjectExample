@@ -9,6 +9,8 @@
 #import "XMGRColor.h"
 
 DefConstInt R_Color_GlobalBkg = 0xe9e9e9;
+DefConstInt R_Color_TextMain = 0x000000;
+DefConstInt R_Color_TextSel = 0xff0000;
 
 
 

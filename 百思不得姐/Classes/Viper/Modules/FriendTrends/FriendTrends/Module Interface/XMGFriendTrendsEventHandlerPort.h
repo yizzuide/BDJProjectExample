@@ -11,4 +11,5 @@
 
 @protocol XMGFriendTrendsEventHandlerPort <XFEventHandlerPort>
 
+@property (nonatomic, strong) RACCommand *friendsRecommentCommand;
 @end

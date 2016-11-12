@@ -20,25 +20,17 @@
 
 @implementation XMGIndexTabActivity
 
++ (void)initialize
+{
+    [self configTabBar];
+}
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     
-    [self configTabBar];
+    // 添加子视图
     [self setUpChildActivitys];
-}
-
-#pragma mark - 初始化
-- (void)configTabBar
-{
-    NSDictionary *textHeightLightAttr = @{
-                                          NSForegroundColorAttributeName:[UIColor darkGrayColor],
-                                          NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
-                                          };
-    /*[essenceActivity.tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];*/
-    // 全局应用文本样式 只有后面带UI_APPEARANCE_SELECTOR宏的方法才可以就用appearance
-    UITabBarItem *tabBarItem = [UITabBarItem appearance];
-    [tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];
     
     // 添加中间发布按钮
     XFPlusTabBar *plusTabBar = [XFPlusTabBar plusTabBarWithBkImage:R_Image_PlusButton selBkImage:R_Image_PlusButtonSel];
@@ -46,7 +38,24 @@
     [self setValue:plusTabBar forKeyPath:@"tabBar"];
 }
 
-// 添加子控制器
+#pragma mark - 初始化
++ (void)configTabBar
+{
+    NSDictionary *textAttr = @{
+                                          NSForegroundColorAttributeName:[UIColor grayColor],
+                                          NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
+                                          };
+    NSDictionary *textHeightLightAttr = @{
+                                          NSForegroundColorAttributeName:[UIColor darkGrayColor],
+                                          NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
+                                          };
+    /*[essenceActivity.tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];*/
+    // 全局应用文本样式 只有后面带UI_APPEARANCE_SELECTOR宏的方法才可以就用appearance
+    UITabBarItem *tabBarItem = [UITabBarItem appearance];
+    [tabBarItem setTitleTextAttributes:textAttr forState:UIControlStateNormal];
+    [tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];
+}
+
 - (void)setUpChildActivitys {
     [self addChildActivity:XF_SubUInterface_(@"Essence") title:@"精华" image:R_Image_TabBarEssence selImage:R_Image_TabBarEssenceSel];
     [self addChildActivity:XF_SubUInterface_(@"New") title:@"新帖" image:R_Image_TabBarNew selImage:R_Image_TabBarNewSel];

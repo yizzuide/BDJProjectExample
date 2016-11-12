@@ -8,7 +8,7 @@
 
 #import "XMGRMetric.h"
 
-DefConstInt R_Size_Font_TabBarTitle = 15.f;
+DefConstInt R_Size_Font_TabBarTitle = 12.f;
 
 
 

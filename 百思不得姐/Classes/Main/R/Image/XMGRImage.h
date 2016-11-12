@@ -8,7 +8,14 @@
 
 #import <Foundation/Foundation.h>
 
+/* ---------------- Nav ---------------- */
 extern DefConstString R_Image_NavBkg;
+extern DefConstString R_Image_NavFriendsRecomment;
+extern DefConstString R_Image_NavFriendsRecommentSel;
+extern DefConstString R_Image_NavButtonReturn;
+extern DefConstString R_Image_NavButtonReturnSel;
+
+/* ---------------- TabBar ---------------- */
 extern DefConstString R_Image_PlusButton;
 extern DefConstString R_Image_PlusButtonSel;
 extern DefConstString R_Image_TabBarEssence;

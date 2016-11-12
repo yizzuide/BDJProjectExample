@@ -14,6 +14,7 @@
 
 @interface XMGFriendTrendsActivity ()
 
+@property (nonatomic, weak) UIButton *friendsRecommentButton;
 @end
 
 @implementation XMGFriendTrendsActivity
@@ -35,7 +36,8 @@
 - (void)configNav
 {
     self.navigationItem.title = @"我的关注";
-    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:@"friendsRecommentIcon" imageSel:@"friendsRecommentIcon-click"];
+    self.navigationItem.leftBarButtonItem = [UIBarButtonItem itemWithImage:R_Image_NavFriendsRecomment imageSel:R_Image_NavFriendsRecommentSel];
+    self.friendsRecommentButton = self.navigationItem.leftBarButtonItem.customView;
 }
 - (void)setUpViews {
     
@@ -45,7 +47,7 @@
     // 双向数据绑定
     //XF_$_(self.textField, text, EventHandler, text)
     // 绑定事件层按钮命令
-    //XF_C_(self.btn, EventHandler, Command)
+    XF_C_(self.friendsRecommentButton, EventHandler, friendsRecommentCommand)
 }
 
 

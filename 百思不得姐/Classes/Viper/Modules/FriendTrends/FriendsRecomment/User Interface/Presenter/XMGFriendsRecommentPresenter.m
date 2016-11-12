@@ -1,27 +1,27 @@
 //
-//  XMGFriendTrendsPresenter.m
+//  XMGFriendsRecommentPresenter.m
 //  百思不得姐
 //
-//  Created by 付星 on 2016/11/9.
+//  Created by 付星 on 2016/11/12.
 //    Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import "XMGFriendTrendsPresenter.h"
-#import "XMGFriendTrendsWireframePort.h"
-#import "XMGFriendTrendsUserInterfacePort.h"
-#import "XMGFriendTrendsInteractorPort.h"
+#import "XMGFriendsRecommentPresenter.h"
+#import "XMGFriendsRecommentWireframePort.h"
+#import "XMGFriendsRecommentUserInterfacePort.h"
+#import "XMGFriendsRecommentInteractorPort.h"
 #import "ReactiveCocoa.h"
 
 
-#define Interactor XFConvertInteractorToType(id<XMGFriendTrendsInteractorPort>)
-#define Interface XFConvertUserInterfaceToType(id<XMGFriendTrendsUserInterfacePort>)
-#define Routing XFConvertRoutingToType(id<XMGFriendTrendsWireFramePort>)
+#define Interactor XFConvertInteractorToType(id<XMGFriendsRecommentInteractorPort>)
+#define Interface XFConvertUserInterfaceToType(id<XMGFriendsRecommentUserInterfacePort>)
+#define Routing XFConvertRoutingToType(id<XMGFriendsRecommentWireFramePort>)
 
-@interface XMGFriendTrendsPresenter ()
+@interface XMGFriendsRecommentPresenter ()
 
 @end
 
-@implementation XMGFriendTrendsPresenter
+@implementation XMGFriendsRecommentPresenter
 
 #pragma mark - lifeCycle
 // 绑定视图层后调用
@@ -39,11 +39,11 @@
 // 初始化命令
 - (void)initCommand
 {
-    XF_CEXE_Begin
+    /*XF_CEXE_Begin
     // 当命令触发时执行代码
-    XF_CEXE_(self.friendsRecommentCommand, {
-        [Routing transition2FriendsRecomment];
-    })
+    XF_CEXE_(self.command, {
+        // TODO
+    })*/
 }
 
 // 注册MVx通知

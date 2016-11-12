@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 
 extern DefConstInt R_Color_GlobalBkg;
-
+extern DefConstInt R_Color_TextMain;
+extern DefConstInt R_Color_TextSel;
 
 
 

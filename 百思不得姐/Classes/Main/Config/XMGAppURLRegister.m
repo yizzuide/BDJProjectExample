@@ -15,6 +15,7 @@
 {
     [XFURLManager initURLGroup:@[
                                  @"xmg://indexTab",
+                                 @"xmg://friendTrends/friendsRecomment"
                                  ]];
 }
 @end
