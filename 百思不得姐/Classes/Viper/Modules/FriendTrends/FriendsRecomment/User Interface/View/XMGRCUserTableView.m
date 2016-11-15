@@ -85,9 +85,7 @@ static NSString * const Identifier = @"RCUserCell";
 #pragma mark - RenderAction
 - (void)beginHeaderRefreshing
 {
-    /**
-     *  重置上拉状态
-     */
+    // 重置上拉状态
     [self checkFooterRefreshState];
     // 取消上一次请求信号
     [self.disposable dispose];
@@ -98,6 +96,8 @@ static NSString * const Identifier = @"RCUserCell";
     // 开始请求数据
     self.disposable = [[EventHandler actionDidHeaderRefresh] subscribeNext:^(id x) {
         [self reloadData];
+        // 加载数据后再新检测上拉状态
+        [self checkFooterRefreshState];
         [self.mj_header endRefreshing];
     }];
 }
