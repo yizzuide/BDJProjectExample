@@ -85,8 +85,10 @@ static NSString * const Identifier = @"RCUserCell";
 #pragma mark - RenderAction
 - (void)beginHeaderRefreshing
 {
-    // 重置上拉状态
-    [self checkFooterRefreshState];
+    // 重置上拉状态，这里一定要先判断是否在上拉，否则下面加载完成后再次调用checkFooterRefreshState方法，会造成状态错乱问题
+    if (self.mj_footer.isRefreshing) {
+        [self checkFooterRefreshState];
+    }
     // 取消上一次请求信号
     [self.disposable dispose];
     // 清空旧列表显示
