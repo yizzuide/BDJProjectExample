@@ -11,4 +11,8 @@
 
 @protocol XMGFriendsRecommentUserInterfacePort <XFUserInterfacePort>
 
+/**
+ *  准备加载数据的UI状态
+ */
+- (void)prepareForLoadDataUIState;
 @end

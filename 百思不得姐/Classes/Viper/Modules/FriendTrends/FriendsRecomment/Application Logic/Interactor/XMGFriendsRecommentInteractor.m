@@ -59,8 +59,8 @@
 
 - (RACSignal *)_loadUsersForCategory:(XMGRecommendCategoryModel *)recommendCategoryModel
 {
-    return [[DataManager grabRecommendUserForCategoryID:recommendCategoryModel.ID atPage:recommendCategoryModel.currentPage] map:^id(XMGRecommandUserGroupModel *userGroupModel) {
-        NSLog(@"数据从网络中加载。。");
+    NSInteger categoryID = recommendCategoryModel.ID;
+    return [[DataManager grabRecommendUserForCategoryID:categoryID atPage:recommendCategoryModel.currentPage] map:^id(XMGRecommandUserGroupModel *userGroupModel) {
         // 跟踪当前分类页数信息
         recommendCategoryModel.total = userGroupModel.total;
         recommendCategoryModel.next_page = userGroupModel.next_page;

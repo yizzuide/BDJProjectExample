@@ -40,12 +40,10 @@ static NSString * const Identifier = @"RCCategoryCell";
     [RACObserve(self.eventHandler,expressData) subscribeNext:^(id renderList) {
         XF_Define_Strong
         if (renderList) {
-            dispatch_async(dispatch_get_main_queue(), ^{
-                [SVProgressHUD dismiss];
-                [self reloadData];
-                NSIndexPath *ip = [NSIndexPath indexPathForRow:0 inSection:0];
-                [self selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
-            });
+            [SVProgressHUD dismiss];
+            [self reloadData];
+            NSIndexPath *ip = [NSIndexPath indexPathForRow:0 inSection:0];
+            [self selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
         }
     }];
 }

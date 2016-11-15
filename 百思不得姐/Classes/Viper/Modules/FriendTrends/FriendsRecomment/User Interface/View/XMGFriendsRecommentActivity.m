@@ -9,13 +9,15 @@
 #import "XMGFriendsRecommentActivity.h"
 #import "XMGFriendsRecommentEventHandlerPort.h"
 #import "SVProgressHUD.h"
+#import "XMGRCCategoryTableView.h"
+#import "XMGRCUserTableView.h"
 
 #define EventHandler  XFConvertPresenterToType(id<XMGFriendsRecommentEventHandlerPort>)
 
 @interface XMGFriendsRecommentActivity ()
 
-@property (weak, nonatomic) IBOutlet UITableView *categoryTableView;
-@property (weak, nonatomic) IBOutlet UITableView *userTableView;
+@property (weak, nonatomic) IBOutlet XMGRCCategoryTableView *categoryTableView;
+@property (weak, nonatomic) IBOutlet XMGRCUserTableView *userTableView;
 
 @end
 
@@ -31,10 +33,6 @@
     
     
     [self config];
-    // 初始化视图
-    [self setUpViews];
-    // 绑定视图数据
-    [self bindViewData];
 }
 
 #pragma mark - 初始化
@@ -46,25 +44,12 @@
     self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     self.userTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
 }
-- (void)setUpViews {
-    
+
+#pragma mark - Render Event
+// 准备加载数据的UI状态
+- (void)prepareForLoadDataUIState
+{
+    [self.userTableView beginHeaderRefreshing];
 }
-
-- (void)bindViewData {
-    // 双向数据绑定
-    //XF_$_(self.textField, text, EventHandler, text)
-    // 绑定事件层按钮命令
-    //XF_C_(self.btn, EventHandler, Command)
-    
-}
-
-#pragma mark - UIControlDelegate
-
-
-
-
-#pragma mark - Getter
-
-
 
 @end

@@ -71,10 +71,18 @@
 {
     // 记录当前选择分类
     self.selectedCategoryIndex = index;
-    NSLog(@"selected index: %zd",index);
-    [[Interactor fetchRecommendUserForCategoryIndex:index] subscribeNext:^(XFRenderData *renderData) {
-        //        NSLog(@"%@",x);
-        XF_SetExpressPack_Fast(renderData);
+    
+    // 清空旧数据
+    XF_ExpressPack_Clean()
+    
+    // 通知子视图显示下拉状态，准备加载数据
+    [Interface prepareForLoadDataUIState];
+}
+
+- (RACSignal *)actionDidHeaderRefresh
+{
+    return [[Interactor fetchRecommendUserForCategoryIndex:self.selectedCategoryIndex] doNext:^(id renderData) {
+        XF_SetExpressPack_Fast(renderData)
     }];
 }
 

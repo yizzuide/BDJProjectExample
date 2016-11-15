@@ -17,7 +17,12 @@
  */
 - (void)actionDidSelectCategoryAtIndex:(NSInteger)index;
 /**
- *  下拉刷新事件
+ *  上拉刷新事件
+ *
+ */
+- (RACSignal *)actionDidHeaderRefresh;
+/**
+ *  上拉刷新事件
  */
 - (RACSignal *)actionDidFooterRefresh;
 @end

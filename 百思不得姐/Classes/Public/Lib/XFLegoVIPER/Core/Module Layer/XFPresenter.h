@@ -77,6 +77,10 @@ XF_SetExpressPack_(XFExpressPack,RenderData)
 NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, RenderData.list.count)]; \
 [self.expressPack.renderData.list insertObjects:RenderData.list atIndexes:indexSet]; \
 [self.expressPack measureFrameWithList:RenderData.list appendType:XFExpressPieceAppendTypeTop];
+// 清空渲染数据
+#define XF_ExpressPack_Clean() \
+[self.expressPack.renderData.list removeAllObjects]; \
+[self.expressPack.expressPieces removeAllObjects];
 
 @interface XFPresenter : NSObject <XFEventHandlerPort,XFUIOperatorPort>
 /**

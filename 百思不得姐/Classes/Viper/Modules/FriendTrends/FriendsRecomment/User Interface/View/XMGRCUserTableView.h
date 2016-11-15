@@ -9,5 +9,8 @@
 #import <UIKit/UIKit.h>
 
 @interface XMGRCUserTableView : UITableView
-
+/**
+ *  触发下拉效果
+ */
+- (void)beginHeaderRefreshing;
 @end
