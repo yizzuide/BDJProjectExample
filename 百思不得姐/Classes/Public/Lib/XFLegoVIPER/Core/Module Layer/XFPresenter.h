@@ -13,6 +13,8 @@
 #import "XFInteractorPort.h"
 #import "XFUIOperatorPort.h"
 #import "XFLegoMarco.h"
+#import "XFExpressPack.h"
+#import "XFRenderData.h"
 
 #define XFConvertInteractorToType(type) LEGORealPort(type, self.interactor)
 #define XFConvertRoutingToType(type) LEGORealPort(type, self.routing)
@@ -96,11 +98,11 @@ NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, Ren
 @property (nonatomic, copy) id intentData;
 
 /**
- *  快速任意填充数据
+ *  快速填充简单数据
  */
-@property (nonatomic, strong) id expressData NS_DEPRECATED_IOS(0.0.1,3.0.0,"Use 'expressPack' instead.");
+@property (nonatomic, strong) id expressData;
 /**
- * 视图表达对象（渲染数据的包装类）
+ *  填充列表复杂数据（RenderData渲染数据的包装类）
  *
  */
 @property (nonatomic, strong) __kindof XFExpressPack *expressPack;

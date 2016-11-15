@@ -28,6 +28,14 @@ static void * xfViewRender_eventHandler_porpertyKey = (void *)@"xfViewRender_eve
     [self xfLogo_bindEventHandler];
 }
 
+// 从xib加完成后，再检测一次是否有绑定好事件层
+- (void)awakeFromNib
+{
+    [super awakeFromNib];
+    if (self.eventHandler) return;
+    [self xfLogo_bindEventHandler];
+}
+
 - (void)xfLogo_bindEventHandler {
     UIViewController *activity = [self xfLogo_getCurrentViewController];
     self.eventHandler = [activity performSelector:@selector(eventHandler)];
@@ -42,6 +50,10 @@ static void * xfViewRender_eventHandler_porpertyKey = (void *)@"xfViewRender_eve
     } else {
         return nil;
     }
+}
+
+- (void)xfLego_viewWillPopOrDismiss {
+	
 }
 
 

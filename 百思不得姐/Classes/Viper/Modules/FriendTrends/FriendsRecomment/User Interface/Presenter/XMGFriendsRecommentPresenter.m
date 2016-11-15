@@ -10,7 +10,7 @@
 #import "XMGFriendsRecommentWireframePort.h"
 #import "XMGFriendsRecommentUserInterfacePort.h"
 #import "XMGFriendsRecommentInteractorPort.h"
-#import "ReactiveCocoa.h"
+#import "XMGRCUserRenderData.h"
 
 
 #define Interactor XFConvertInteractorToType(id<XMGFriendsRecommentInteractorPort>)
@@ -19,6 +19,7 @@
 
 @interface XMGFriendsRecommentPresenter ()
 
+@property (nonatomic, assign) NSInteger selectedCategoryIndex;
 @end
 
 @implementation XMGFriendsRecommentPresenter
@@ -34,6 +35,8 @@
 {
     // 填充绑定的ViewData
     //self.viewData = [Interactor fetchData];
+    // 加载推荐分类
+    [self requestFillCategoryList];
 }
 
 // 初始化命令
@@ -64,7 +67,46 @@
 }
 
 #pragma mark - DoAction
+- (void)actionDidSelectCategoryAtIndex:(NSInteger)index
+{
+    // 记录当前选择分类
+    self.selectedCategoryIndex = index;
+    NSLog(@"selected index: %zd",index);
+    [[Interactor fetchRecommendUserForCategoryIndex:index] subscribeNext:^(XFRenderData *renderData) {
+        //        NSLog(@"%@",x);
+        XF_SetExpressPack_Fast(renderData);
+    }];
+}
 
+- (RACSignal *)actionDidFooterRefresh
+{
+    return [[Interactor fetchNextPageRecommendUserForCategoryIndex:self.selectedCategoryIndex] map:^id(XMGRCUserRenderData *renderData) {
+        // 记录上一次的数据个数
+        NSUInteger lastPicturesCount = self.expressPack.expressPieces.count;
+        // 修改加载完成状态
+        XMGRCUserRenderData *lastRenderData = self.expressPack.renderData;
+        lastRenderData.loadFinish = renderData.loadFinish;
+        // 添加新数据
+        XF_AddExpressPack_Last(renderData)
+        // 创建列表视图布局刷新的IndexPath
+        NSMutableArray *indexPaths = [NSMutableArray array];
+        NSUInteger count = renderData.list.count;
+        for (int i = 0; i < count; i++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastPicturesCount + i inSection:0];
+            [indexPaths addObject:indexPath];
+        }
+        return indexPaths;
+    }];
+}
+
+#pragma mark - Request
+- (void)requestFillCategoryList
+{
+    [[Interactor fetchRecommendCategory] subscribeNext:^(NSArray *renderList) {
+//        NSLog(@"%@",x);
+        self.expressData = renderList;
+    }];
+}
 
 
 #pragma mark - ValidData

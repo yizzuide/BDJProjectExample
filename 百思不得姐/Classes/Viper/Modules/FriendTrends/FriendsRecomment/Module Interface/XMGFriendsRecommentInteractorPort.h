@@ -9,6 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "XFInteractorPort.h"
 
+@class RACSignal;
 @protocol XMGFriendsRecommentInteractorPort <XFInteractorPort>
 
+- (RACSignal *)fetchRecommendCategory;
+- (RACSignal *)fetchRecommendUserForCategoryIndex:(NSInteger)index;
+- (RACSignal *)fetchNextPageRecommendUserForCategoryIndex:(NSInteger)index;
 @end

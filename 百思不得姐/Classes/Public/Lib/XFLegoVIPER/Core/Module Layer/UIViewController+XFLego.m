@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "NSObject+XFLegoInvokeMethod.h"
 #import "XFInterfaceFactory.h"
+#import "UIView+XFLego.h"
 
 @implementation UIViewController (XFLego)
 
@@ -49,7 +50,7 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
             XF_Define_Strong
             [self _xfLego_initEventHandlerWithAdditionWorkBlock:^{
                 // 调用自定义加载完成方法
-                [self xfLego_ViewDidLoadForTabBarViewController];
+                [self xfLego_viewDidLoadForTabBarViewController];
                 // 重置父子模块关系
                 [XFInterfaceFactory resetSubRoutingFromSubUserInterfaces:self.childViewControllers forParentActivity:self];
             }];
@@ -75,11 +76,16 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
 {
     if (self.eventHandler) {
         [self.eventHandler invokeMethod:@"viewWillDisappear"];
-        // 如果当前视图被pop或dismiss，且不是通过框架方法
-        if ((self.isMovingFromParentViewController || self.isBeingDismissed)
-            && !self.isPoppingProgrammatically) {
-            // 通知事件层当前视图将消失
-            [self.eventHandler invokeMethod:@"xfLego_viewWillDisappear"];
+        // 如果当前视图被pop或dismiss
+        if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+            // 调用视图层，视图将被移除方法
+            [self _xfLego_viewWillPopOrDismiss];
+            // 如果不是通过框架方法
+            if (!self.isPoppingProgrammatically) {
+                // 通知事件层当前视图将移除
+                [self.eventHandler invokeMethod:@"xfLego_viewWillPopOrDismiss"];
+                
+            }
         }
     }
 }
@@ -104,9 +110,24 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
         }
     }
 }
-- (void)xfLego_ViewDidLoadForTabBarViewController
+
+- (void)xfLego_viewDidLoadForTabBarViewController
 {
 }
+
+// 通知所有子视图当前Activity将被移除
+- (void)_xfLego_viewWillPopOrDismiss
+{
+    for (UIView *view in self.view.subviews) {
+        [view xfLego_viewWillPopOrDismiss];
+    }
+    [self xfLego_viewWillPopOrDismiss];
+}
+
+- (void)xfLego_viewWillPopOrDismiss
+{
+}
+
 - (__kindof id<XFUserInterfacePort>)xfLego_subUInterfaceFromModuleName:(NSString *)moduleName
 {
     return [XFInterfaceFactory createSubUInterfaceFromModuleName:moduleName parentUInterface:self];

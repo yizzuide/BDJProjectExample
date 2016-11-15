@@ -48,7 +48,11 @@ view.frame = frame;
 /**
  *  针对TabBarViewController的框架视图加载完成方法
  */
-- (void)xfLego_ViewDidLoadForTabBarViewController;
+- (void)xfLego_viewDidLoadForTabBarViewController;
+/**
+ *  当前视图将被Pop或Dismiss
+ */
+- (void)xfLego_viewWillPopOrDismiss;
 /**
  *  从指定模块加载子视图
  *  @param moduleName 模块名

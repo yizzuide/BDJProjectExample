@@ -42,11 +42,11 @@
 + (void)configTabBar
 {
     NSDictionary *textAttr = @{
-                                          NSForegroundColorAttributeName:[UIColor grayColor],
+                                          NSForegroundColorAttributeName:UIColorFromRGB(R_Color_SectionText),
                                           NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
                                           };
     NSDictionary *textHeightLightAttr = @{
-                                          NSForegroundColorAttributeName:[UIColor darkGrayColor],
+                                          NSForegroundColorAttributeName:UIColorFromRGB(R_Color_SectionTextSel),
                                           NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
                                           };
     /*[essenceActivity.tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];*/
@@ -71,7 +71,7 @@
     [self addChildViewController:activity.navigationController];
 }
 
-- (void)xfLego_ViewDidLoadForTabBarViewController
+- (void)xfLego_viewDidLoadForTabBarViewController
 {
     [self bindViewData];
 }

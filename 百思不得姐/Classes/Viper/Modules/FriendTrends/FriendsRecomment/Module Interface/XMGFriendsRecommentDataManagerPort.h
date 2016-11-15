@@ -11,5 +11,6 @@
 
 @protocol XMGFriendsRecommentDataManagerPort <XFDataManagerPort>
 
-
+- (RACSignal *)grabRecommendCategory;
+- (RACSignal *)grabRecommendUserForCategoryID:(NSInteger)CategoryID atPage:(NSInteger)pageNumber;
 @end

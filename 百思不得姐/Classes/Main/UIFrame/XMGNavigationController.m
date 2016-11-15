@@ -39,8 +39,8 @@
         [leftBackButton setImage:[UIImage imageNamed:R_Image_NavButtonReturn] forState:UIControlStateNormal];
         [leftBackButton setImage:[UIImage imageNamed:R_Image_NavButtonReturnSel] forState:UIControlStateHighlighted];
         [leftBackButton setTitle:@"返回" forState:UIControlStateNormal];
-        [leftBackButton setTitleColor:UIColorFromRGB(R_Color_TextMain) forState:UIControlStateNormal];
-        [leftBackButton setTitleColor:UIColorFromRGB(R_Color_TextSel) forState:UIControlStateHighlighted];
+        [leftBackButton setTitleColor:UIColorFromRGB(R_Color_TextMainTitle) forState:UIControlStateNormal];
+        [leftBackButton setTitleColor:UIColorFromRGB(R_Color_Front) forState:UIControlStateHighlighted];
         //        [leftBackButton sizeToFit]; // 内容适合大小，还是有点靠右
         leftBackButton.size = CGSizeMake(70, 20);
         // 使内容靠左排

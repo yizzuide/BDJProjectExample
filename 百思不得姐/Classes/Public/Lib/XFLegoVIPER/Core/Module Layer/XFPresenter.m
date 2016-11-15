@@ -42,7 +42,7 @@
     [self initRenderView];
 }
 
-- (void)xfLego_viewWillDisappear
+- (void)xfLego_viewWillPopOrDismiss
 {
     [self.routing invokeMethod:@"xfLego_removeRouting"];
 }

@@ -28,6 +28,8 @@ extern DefConstString R_Image_TabBarMe;
 extern DefConstString R_Image_TabBarMeSel;
 extern DefConstString R_Image_TabBarBkg;
 
+extern DefConstString R_Image_UserDefault;
+
 
 
 
