@@ -44,6 +44,8 @@ static NSString * const Identifier = @"RCCategoryCell";
             [self reloadData];
             NSIndexPath *ip = [NSIndexPath indexPathForRow:0 inSection:0];
             [self selectRowAtIndexPath:ip animated:YES scrollPosition:UITableViewScrollPositionBottom];
+            // 通知事件层选择了第一个分类
+            [EventHandler actionDidSelectCategoryAtIndex:0];
         }
     }];
 }
