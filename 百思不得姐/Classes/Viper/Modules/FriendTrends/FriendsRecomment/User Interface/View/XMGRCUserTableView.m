@@ -19,7 +19,8 @@
 
 @interface XMGRCUserTableView () <UITableViewDataSource,UITableViewDelegate>
 
-@property (nonatomic, strong) RACDisposable *disposable;
+@property (nonatomic, strong) RACDisposable *signalDisposable;
+@property (nonatomic, assign, getter=isProgrammingRefresh) BOOL programmingRefresh;
 @end
 
 @implementation XMGRCUserTableView
@@ -45,8 +46,15 @@ static NSString * const Identifier = @"RCUserCell";
         }];
     }];
     
-    // 下拉加载（这里Block没有写请求代码的原因：在多个分类点击时，这个加载状态就不控制，导致这个Block有时不能执行）
+    // 下拉加载
     self.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        XF_Define_Strong
+        // 如果是程序刷新，直接返回
+        if (self.isProgrammingRefresh) {
+            self.programmingRefresh = !self.programmingRefresh;
+            return;
+        }
+        [self _sendActionForHeaderRefresh];
     }];
 }
 
@@ -75,10 +83,14 @@ static NSString * const Identifier = @"RCUserCell";
         [self.mj_footer endRefreshingWithNoMoreData];
         return;
     }
+    // 如果正在刷新
     if (self.mj_footer.isRefreshing) {
         [self.mj_footer endRefreshing];
     }
-    [self.mj_footer resetNoMoreData];
+    // 重置没有更多内容
+    if (self.mj_footer.state == MJRefreshStateNoMoreData) {
+        [self.mj_footer resetNoMoreData];
+    }
     
 }
 
@@ -89,14 +101,23 @@ static NSString * const Identifier = @"RCUserCell";
     if (self.mj_footer.isRefreshing) {
         [self checkFooterRefreshState];
     }
-    // 取消上一次请求信号
-    [self.disposable dispose];
     // 清空旧列表显示
     [self reloadData];
+    
+    // 标识为程序刷新
+    self.programmingRefresh = YES;
     // 开始刷新
     [self.mj_header beginRefreshing];
+    [self _sendActionForHeaderRefresh];
+}
+
+// 开始请求数据
+- (void)_sendActionForHeaderRefresh
+{
+    // 取消上一次请求信号
+    [self.signalDisposable dispose];
     // 开始请求数据
-    self.disposable = [[EventHandler actionDidHeaderRefresh] subscribeNext:^(id x) {
+    self.signalDisposable = [[EventHandler actionDidHeaderRefresh] subscribeNext:^(id x) {
         [self reloadData];
         // 加载数据后再新检测上拉状态
         [self checkFooterRefreshState];
