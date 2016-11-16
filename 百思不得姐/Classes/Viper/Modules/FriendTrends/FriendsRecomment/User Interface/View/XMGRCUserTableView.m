@@ -34,6 +34,7 @@ static NSString * const Identifier = @"RCUserCell";
     self.dataSource = self;
     self.delegate = self;
     self.rowHeight = 75;
+    self.backgroundColor = [UIColor clearColor];
     [self registerNib:[UINib nibWithNibName:@"XMGRecommendUserCell" bundle:nil] forCellReuseIdentifier:Identifier];
     
     XF_Define_Weak

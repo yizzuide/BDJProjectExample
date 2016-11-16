@@ -37,7 +37,7 @@
     _renderItem = renderItem;
     [self.headPortraitImage sd_setImageWithURL:renderItem.headPortraitURL placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
     self.nikeNameLabel.text = renderItem.nikeName;
-    self.fansLabel.text = [NSString stringWithFormat:@"%@人关注", renderItem.fansCount];
+    self.fansLabel.text = renderItem.fansCount;
     
 }
 @end

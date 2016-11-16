@@ -10,6 +10,6 @@
 
 @interface XMGRCUserRenderItem : XFRenderItem
 @property (nonatomic, copy) NSString *nikeName;
-@property (nonatomic, assign) NSString *fansCount;
+@property (nonatomic, copy) NSString *fansCount;
 @property (nonatomic, strong) NSURL *headPortraitURL;
 @end

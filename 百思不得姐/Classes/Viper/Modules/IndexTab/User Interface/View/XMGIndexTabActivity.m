@@ -11,6 +11,7 @@
 #import "NSObject+XFLegoInvokeMethod.h"
 #import "XFActivity.h"
 #import "XFPlusTabBar.h"
+#import <SVProgressHUD.h>
 
 #define EventHandler  XFConvertPresenterToType(id<XFIndexTabEventHandlerPort>)
 
@@ -23,6 +24,7 @@
 + (void)initialize
 {
     [self configTabBar];
+    [self configDialog];
 }
 
 - (void)viewDidLoad {
@@ -54,6 +56,14 @@
     UITabBarItem *tabBarItem = [UITabBarItem appearance];
     [tabBarItem setTitleTextAttributes:textAttr forState:UIControlStateNormal];
     [tabBarItem setTitleTextAttributes:textHeightLightAttr forState:UIControlStateSelected];
+}
+
++ (void)configDialog
+{
+    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
+    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
+    [SVProgressHUD setForegroundColor:UIColorFromRGB(R_Color_Front)];
+    [SVProgressHUD setBackgroundColor:UIColorFromRGB(R_Color_CellBkg)];
 }
 
 - (void)setUpChildActivitys {

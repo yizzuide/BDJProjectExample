@@ -17,6 +17,16 @@
 		402647471DD9F7D4002EDD00 /* XMGRCUserTableView.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647461DD9F7D4002EDD00 /* XMGRCUserTableView.m */; };
 		4026474A1DDAADC0002EDD00 /* XMGRCUserRenderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647491DDAADC0002EDD00 /* XMGRCUserRenderData.m */; };
 		4026474D1DDAAE03002EDD00 /* XMGRecommandUserGroupModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026474C1DDAAE03002EDD00 /* XMGRecommandUserGroupModel.m */; };
+		4026476A1DDC07D8002EDD00 /* XMGRecommendTagDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647541DDC07D8002EDD00 /* XMGRecommendTagDataManager.m */; };
+		4026476B1DDC07D8002EDD00 /* XMGRecommendTagInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647571DDC07D8002EDD00 /* XMGRecommendTagInteractor.m */; };
+		4026476C1DDC07D8002EDD00 /* XMGRecommendTagPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647631DDC07D8002EDD00 /* XMGRecommendTagPresenter.m */; };
+		4026476D1DDC07D8002EDD00 /* XMGRecommendTagActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647661DDC07D8002EDD00 /* XMGRecommendTagActivity.m */; };
+		4026476E1DDC07D8002EDD00 /* XMGRecommendTagRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647691DDC07D8002EDD00 /* XMGRecommendTagRouting.m */; };
+		402647711DDC0B0A002EDD00 /* XMGRecommendTagModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647701DDC0B0A002EDD00 /* XMGRecommendTagModel.m */; };
+		402647751DDC1156002EDD00 /* XMGRCTagCellTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647731DDC1156002EDD00 /* XMGRCTagCellTableViewCell.m */; };
+		402647761DDC1156002EDD00 /* XMGRCTagCellTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402647741DDC1156002EDD00 /* XMGRCTagCellTableViewCell.xib */; };
+		402647791DDC3A47002EDD00 /* XMGRecommendTagProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647781DDC3A47002EDD00 /* XMGRecommendTagProvider.m */; };
+		4026477C1DDC3A6D002EDD00 /* XMGRCTagRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026477B1DDC3A6D002EDD00 /* XMGRCTagRenderItem.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
 		404874181DD3544900388087 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048740C1DD3544900388087 /* AppDelegate.m */; };
@@ -114,6 +124,30 @@
 		402647491DDAADC0002EDD00 /* XMGRCUserRenderData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRCUserRenderData.m; sourceTree = "<group>"; };
 		4026474B1DDAAE03002EDD00 /* XMGRecommandUserGroupModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommandUserGroupModel.h; sourceTree = "<group>"; };
 		4026474C1DDAAE03002EDD00 /* XMGRecommandUserGroupModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommandUserGroupModel.m; sourceTree = "<group>"; };
+		402647531DDC07D8002EDD00 /* XMGRecommendTagDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagDataManager.h; sourceTree = "<group>"; };
+		402647541DDC07D8002EDD00 /* XMGRecommendTagDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagDataManager.m; sourceTree = "<group>"; };
+		402647561DDC07D8002EDD00 /* XMGRecommendTagInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagInteractor.h; sourceTree = "<group>"; };
+		402647571DDC07D8002EDD00 /* XMGRecommendTagInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagInteractor.m; sourceTree = "<group>"; };
+		4026475A1DDC07D8002EDD00 /* XMGRecommendTagDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagDataManagerPort.h; sourceTree = "<group>"; };
+		4026475B1DDC07D8002EDD00 /* XMGRecommendTagEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagEventHandlerPort.h; sourceTree = "<group>"; };
+		4026475C1DDC07D8002EDD00 /* XMGRecommendTagInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagInteractorPort.h; sourceTree = "<group>"; };
+		4026475D1DDC07D8002EDD00 /* XMGRecommendTagUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagUserInterfacePort.h; sourceTree = "<group>"; };
+		4026475E1DDC07D8002EDD00 /* XMGRecommendTagWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagWireframePort.h; sourceTree = "<group>"; };
+		402647621DDC07D8002EDD00 /* XMGRecommendTagPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagPresenter.h; sourceTree = "<group>"; };
+		402647631DDC07D8002EDD00 /* XMGRecommendTagPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagPresenter.m; sourceTree = "<group>"; };
+		402647651DDC07D8002EDD00 /* XMGRecommendTagActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagActivity.h; sourceTree = "<group>"; };
+		402647661DDC07D8002EDD00 /* XMGRecommendTagActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagActivity.m; sourceTree = "<group>"; };
+		402647681DDC07D8002EDD00 /* XMGRecommendTagRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagRouting.h; sourceTree = "<group>"; };
+		402647691DDC07D8002EDD00 /* XMGRecommendTagRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagRouting.m; sourceTree = "<group>"; };
+		4026476F1DDC0B0A002EDD00 /* XMGRecommendTagModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagModel.h; sourceTree = "<group>"; };
+		402647701DDC0B0A002EDD00 /* XMGRecommendTagModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagModel.m; sourceTree = "<group>"; };
+		402647721DDC1156002EDD00 /* XMGRCTagCellTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRCTagCellTableViewCell.h; sourceTree = "<group>"; };
+		402647731DDC1156002EDD00 /* XMGRCTagCellTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRCTagCellTableViewCell.m; sourceTree = "<group>"; };
+		402647741DDC1156002EDD00 /* XMGRCTagCellTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGRCTagCellTableViewCell.xib; sourceTree = "<group>"; };
+		402647771DDC3A47002EDD00 /* XMGRecommendTagProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRecommendTagProvider.h; sourceTree = "<group>"; };
+		402647781DDC3A47002EDD00 /* XMGRecommendTagProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRecommendTagProvider.m; sourceTree = "<group>"; };
+		4026477A1DDC3A6D002EDD00 /* XMGRCTagRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGRCTagRenderItem.h; sourceTree = "<group>"; };
+		4026477B1DDC3A6D002EDD00 /* XMGRCTagRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGRCTagRenderItem.m; sourceTree = "<group>"; };
 		404873EC1DD3515E00388087 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -308,6 +342,117 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		402647501DDC07D8002EDD00 /* RecommendTag */ = {
+			isa = PBXGroup;
+			children = (
+				402647511DDC07D8002EDD00 /* Application Logic */,
+				402647591DDC07D8002EDD00 /* Module Interface */,
+				4026475F1DDC07D8002EDD00 /* User Interface */,
+			);
+			path = RecommendTag;
+			sourceTree = "<group>";
+		};
+		402647511DDC07D8002EDD00 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				402647521DDC07D8002EDD00 /* DataManager */,
+				402647551DDC07D8002EDD00 /* Interactor */,
+				402647581DDC07D8002EDD00 /* Provider */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		402647521DDC07D8002EDD00 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				402647531DDC07D8002EDD00 /* XMGRecommendTagDataManager.h */,
+				402647541DDC07D8002EDD00 /* XMGRecommendTagDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		402647551DDC07D8002EDD00 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				402647561DDC07D8002EDD00 /* XMGRecommendTagInteractor.h */,
+				402647571DDC07D8002EDD00 /* XMGRecommendTagInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		402647581DDC07D8002EDD00 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+				4026476F1DDC0B0A002EDD00 /* XMGRecommendTagModel.h */,
+				402647701DDC0B0A002EDD00 /* XMGRecommendTagModel.m */,
+				402647771DDC3A47002EDD00 /* XMGRecommendTagProvider.h */,
+				402647781DDC3A47002EDD00 /* XMGRecommendTagProvider.m */,
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		402647591DDC07D8002EDD00 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4026475A1DDC07D8002EDD00 /* XMGRecommendTagDataManagerPort.h */,
+				4026475B1DDC07D8002EDD00 /* XMGRecommendTagEventHandlerPort.h */,
+				4026475C1DDC07D8002EDD00 /* XMGRecommendTagInteractorPort.h */,
+				4026475D1DDC07D8002EDD00 /* XMGRecommendTagUserInterfacePort.h */,
+				4026475E1DDC07D8002EDD00 /* XMGRecommendTagWireframePort.h */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		4026475F1DDC07D8002EDD00 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				402647601DDC07D8002EDD00 /* Express */,
+				402647611DDC07D8002EDD00 /* Presenter */,
+				402647641DDC07D8002EDD00 /* View */,
+				402647671DDC07D8002EDD00 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		402647601DDC07D8002EDD00 /* Express */ = {
+			isa = PBXGroup;
+			children = (
+				4026477A1DDC3A6D002EDD00 /* XMGRCTagRenderItem.h */,
+				4026477B1DDC3A6D002EDD00 /* XMGRCTagRenderItem.m */,
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		402647611DDC07D8002EDD00 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				402647621DDC07D8002EDD00 /* XMGRecommendTagPresenter.h */,
+				402647631DDC07D8002EDD00 /* XMGRecommendTagPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		402647641DDC07D8002EDD00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				402647651DDC07D8002EDD00 /* XMGRecommendTagActivity.h */,
+				402647661DDC07D8002EDD00 /* XMGRecommendTagActivity.m */,
+				402647721DDC1156002EDD00 /* XMGRCTagCellTableViewCell.h */,
+				402647731DDC1156002EDD00 /* XMGRCTagCellTableViewCell.m */,
+				402647741DDC1156002EDD00 /* XMGRCTagCellTableViewCell.xib */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		402647671DDC07D8002EDD00 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				402647681DDC07D8002EDD00 /* XMGRecommendTagRouting.h */,
+				402647691DDC07D8002EDD00 /* XMGRecommendTagRouting.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 		404873E31DD3515E00388087 = {
 			isa = PBXGroup;
 			children = (
@@ -616,6 +761,7 @@
 			isa = PBXGroup;
 			children = (
 				404874B31DD3634E00388087 /* Essence */,
+				402647501DDC07D8002EDD00 /* RecommendTag */,
 			);
 			path = Essence;
 			sourceTree = "<group>";
@@ -1450,6 +1596,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402647761DDC1156002EDD00 /* XMGRCTagCellTableViewCell.xib in Resources */,
 				404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */,
 				40B526FD1DD81DBB00EBE619 /* XMGFriendTrendsActivity.xib in Resources */,
 				408E1AF11DD8A37400D324B3 /* XMGFriendsRecommentActivity.xib in Resources */,
@@ -1521,6 +1668,7 @@
 				404875111DD3664100388087 /* XMGFriendTrendsPresenter.m in Sources */,
 				404875321DD3666B00388087 /* XMGMePresenter.m in Sources */,
 				402647371DD95AA3002EDD00 /* XMGRecommendUserCell.m in Sources */,
+				402647751DDC1156002EDD00 /* XMGRCTagCellTableViewCell.m in Sources */,
 				40B526F81DD75E1A00EBE619 /* XMGFriendsRecommentInteractor.m in Sources */,
 				404874611DD35C1B00388087 /* XFDataManager.m in Sources */,
 				4026474A1DDAADC0002EDD00 /* XMGRCUserRenderData.m in Sources */,
@@ -1546,13 +1694,17 @@
 				40B526FB1DD75E1A00EBE619 /* XMGFriendsRecommentRouting.m in Sources */,
 				40B526B51DD6108A00EBE619 /* XMGRImage.m in Sources */,
 				40B527001DD821C700EBE619 /* XMGHttpRequest.m in Sources */,
+				4026476A1DDC07D8002EDD00 /* XMGRecommendTagDataManager.m in Sources */,
 				404874561DD35C1B00388087 /* XFModuleAssembly.m in Sources */,
+				4026476E1DDC07D8002EDD00 /* XMGRecommendTagRouting.m in Sources */,
 				404874591DD35C1B00388087 /* XFExpressPiece.m in Sources */,
 				404875131DD3664100388087 /* XMGFriendTrendsRouting.m in Sources */,
 				404874191DD3544900388087 /* main.m in Sources */,
+				4026476B1DDC07D8002EDD00 /* XMGRecommendTagInteractor.m in Sources */,
 				404874CF1DD3634E00388087 /* XMGEssencePresenter.m in Sources */,
 				404874F01DD3658E00388087 /* XMGNewPresenter.m in Sources */,
 				404875101DD3664100388087 /* XMGFriendTrendsInteractor.m in Sources */,
+				402647711DDC0B0A002EDD00 /* XMGRecommendTagModel.m in Sources */,
 				404875331DD3666B00388087 /* XMGMeActivity.m in Sources */,
 				4048745F1DD35C1B00388087 /* UIViewController+XFLego.m in Sources */,
 				404874F11DD3658E00388087 /* XMGNewActivity.m in Sources */,
@@ -1562,15 +1714,19 @@
 				404874671DD35C1B00388087 /* NSObject+XFLegoCopy.m in Sources */,
 				4026474D1DDAAE03002EDD00 /* XMGRecommandUserGroupModel.m in Sources */,
 				404874551DD35C1B00388087 /* XFEventBus.m in Sources */,
+				402647791DDC3A47002EDD00 /* XMGRecommendTagProvider.m in Sources */,
 				404874CE1DD3634E00388087 /* XMGEssenceInteractor.m in Sources */,
+				4026476D1DDC07D8002EDD00 /* XMGRecommendTagActivity.m in Sources */,
 				4048750F1DD3664100388087 /* XMGFriendTrendsDataManager.m in Sources */,
 				404874631DD35C1B00388087 /* XFPresenter.m in Sources */,
+				4026476C1DDC07D8002EDD00 /* XMGRecommendTagPresenter.m in Sources */,
 				404874B01DD3631600388087 /* XMGIndexTabRouting.m in Sources */,
 				40C529621DD5B794007E76D7 /* RACSignal+ErrorAlter.m in Sources */,
 				40B526F91DD75E1A00EBE619 /* XMGFriendsRecommentPresenter.m in Sources */,
 				402647471DD9F7D4002EDD00 /* XMGRCUserTableView.m in Sources */,
 				404874601DD35C1B00388087 /* XFActivity.m in Sources */,
 				404874641DD35C1B00388087 /* XFRouting.m in Sources */,
+				4026477C1DDC3A6D002EDD00 /* XMGRCTagRenderItem.m in Sources */,
 				4026473E1DD964EF002EDD00 /* XMGRCCategoryTableView.m in Sources */,
 				404874691DD35C1B00388087 /* XFURLParse.m in Sources */,
 				40AFB89E1DD5751C00FC80FA /* XMGNavigationController.m in Sources */,

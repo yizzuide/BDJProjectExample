@@ -42,7 +42,9 @@
     XF_CEXE_Begin
     // 当命令触发时执行代码
     XF_CEXE_(self.tagCommand, {
-        NSLog(@"tagButtonClick!");
+//        NSLog(@"tagButtonClick!");
+        [Routing transition2RecommendTag];
+        
     })
 }
 

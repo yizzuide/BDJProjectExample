@@ -1,15 +1,14 @@
 //
-//  XMGEssenceWireframePort.h
+//  XMGRecommendTagWireframePort.h
 //  百思不得姐
 //
-//  Created by 付星 on 2016/11/9.
+//  Created by 付星 on 2016/11/16.
 //    Copyright © 2016年 yizzuide. All rights reserved.
 //
 
 #import <Foundation/Foundation.h>
 #import "XFWireFramePort.h"
 
-@protocol XMGEssenceWireFramePort <XFWireFramePort>
+@protocol XMGRecommendTagWireFramePort <XFWireFramePort>
 
-- (void)transition2RecommendTag;
 @end

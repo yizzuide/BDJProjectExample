@@ -30,12 +30,7 @@ static NSString * const Identifier = @"RCCategoryCell";
     self.delegate = self;
     [self registerNib:[UINib nibWithNibName:@"XMGRecommendCategoryCell" bundle:nil] forCellReuseIdentifier:Identifier];
     
-    [SVProgressHUD setDefaultAnimationType:SVProgressHUDAnimationTypeNative];
-    [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
-    [SVProgressHUD setForegroundColor:UIColorFromRGB(R_Color_Front)];
-    [SVProgressHUD setBackgroundColor:UIColorFromRGB(R_Color_GlobalBkg)];
     [SVProgressHUD show];
-    
     [RACObserve(self.eventHandler,expressData) subscribeNext:^(id renderList) {
         if (renderList) {
             [SVProgressHUD dismiss];

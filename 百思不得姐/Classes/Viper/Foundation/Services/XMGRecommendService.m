@@ -12,6 +12,7 @@
 #import "MJExtension.h"
 #import "XMGRecommendCategoryModel.h"
 #import "XMGRecommandUserGroupModel.h"
+#import "XMGRecommendTagModel.h"
 
 @implementation XMGRecommendService
 
@@ -37,6 +38,19 @@
                                          }]
             map:^id(RACTuple *tuple) {
                 return [XMGRecommandUserGroupModel mj_objectWithKeyValues:tuple.first];
+            }];
+}
+
+- (RACSignal *)pullRecommendTag
+{
+    return [[XMGHttpRequest getWithURL:API_Main
+                                params:@{
+                                         @"a":@"tag_recommend",
+                                         @"action":@"sub",
+                                         @"c":@"topic",
+                                         }]
+            map:^id(RACTuple *tuple) {
+                return [XMGRecommendTagModel mj_objectArrayWithKeyValuesArray:tuple.first];
             }];
 }
 

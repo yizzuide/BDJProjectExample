@@ -12,4 +12,5 @@
 
 - (RACSignal *)pullRecommendCategory;
 - (RACSignal *)pullRecommendUserForCategoryID:(NSInteger)CategoryID atPage:(NSInteger)pageNumber;
+- (RACSignal *)pullRecommendTag;
 @end
