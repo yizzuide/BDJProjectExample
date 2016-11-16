@@ -101,7 +101,8 @@ static NSString * const Identifier = @"RCUserCell";
     if (self.mj_footer.isRefreshing) {
         [self checkFooterRefreshState];
     }
-    // 清空旧列表显示
+    
+    // 清空旧列表数据，先显示空白
     [self reloadData];
     
     // 标识为程序刷新
@@ -123,6 +124,11 @@ static NSString * const Identifier = @"RCUserCell";
         [self checkFooterRefreshState];
         [self.mj_header endRefreshing];
     }];
+}
+
+- (void)dealloc
+{
+    XF_Debug_M();
 }
 
 @end

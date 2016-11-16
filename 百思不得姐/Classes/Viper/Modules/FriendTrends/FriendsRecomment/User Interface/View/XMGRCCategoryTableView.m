@@ -36,9 +36,7 @@ static NSString * const Identifier = @"RCCategoryCell";
     [SVProgressHUD setBackgroundColor:UIColorFromRGB(R_Color_GlobalBkg)];
     [SVProgressHUD show];
     
-    XF_Define_Weak
     [RACObserve(self.eventHandler,expressData) subscribeNext:^(id renderList) {
-        XF_Define_Strong
         if (renderList) {
             [SVProgressHUD dismiss];
             [self reloadData];
@@ -72,5 +70,10 @@ static NSString * const Identifier = @"RCCategoryCell";
 - (void)xfLego_viewWillPopOrDismiss
 {
     [SVProgressHUD popActivity];
+}
+
+- (void)dealloc
+{
+    XF_Debug_M();
 }
 @end

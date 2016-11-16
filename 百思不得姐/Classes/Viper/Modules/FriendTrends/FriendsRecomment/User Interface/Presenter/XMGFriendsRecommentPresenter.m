@@ -46,7 +46,7 @@
     self.selectedCategoryIndex = index;
     
     // 清空旧数据
-    XF_ExpressPack_Clean()
+    XF_ExpressPack_Clean();
     
     // 通知子视图显示下拉状态，准备加载数据
     [Interface prepareForLoadDataUIState];
@@ -64,7 +64,7 @@
     return [[Interactor fetchNextPageRecommendUserForCategoryIndex:self.selectedCategoryIndex] map:^id(XMGRCUserRenderData *renderData) {
         // 记录上一次的数据个数
         NSUInteger lastPicturesCount = self.expressPack.expressPieces.count;
-        // 修改加载完成状态
+        // 同步数据：修改加载完成状态
         XMGRCUserRenderData *lastRenderData = self.expressPack.renderData;
         lastRenderData.loadFinish = renderData.loadFinish;
         // 添加新数据
@@ -93,4 +93,8 @@
 #pragma mark - ValidData
 
 
+- (void)dealloc
+{
+    XF_Debug_M();
+}
 @end

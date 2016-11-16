@@ -30,8 +30,6 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    
-    
     [self config];
 }
 
@@ -40,7 +38,7 @@
 {
     self.view.backgroundColor = UIColorFromRGB(R_Color_GlobalBkg);
     // 当控制器有多UITableView视图时，系统随机只调整一个，当有两个时就要手动设置
-    self.automaticallyAdjustsScrollViewInsets = NO;
+    self.automaticallyAdjustsScrollViewInsets = NO; // 取消自动调整
     self.categoryTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
     self.userTableView.contentInset = UIEdgeInsetsMake(64, 0, 0, 0);
 }
@@ -50,6 +48,11 @@
 - (void)prepareForLoadDataUIState
 {
     [self.userTableView beginHeaderRefreshing];
+}
+
+- (void)dealloc
+{
+    XF_Debug_M();
 }
 
 @end

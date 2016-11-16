@@ -66,9 +66,14 @@ view.center = center;
 #define XCODE_COLORS_RESET_FG  XCODE_COLORS_ESCAPE @"fg;" // Clear any foreground color
 #define XCODE_COLORS_RESET_BG  XCODE_COLORS_ESCAPE @"bg;" // Clear any background color
 #define XCODE_COLORS_RESET     XCODE_COLORS_ESCAPE @";"   // Clear any foreground or background color
+// 使用fprintf打印比NSLog更高效
+#ifdef DEBUG
+#define NSLog(FORMAT, ...) do {fprintf(stderr,"%s:%d %s\n",[[[NSString stringWithUTF8String:__FILE__] lastPathComponent] UTF8String], __LINE__, [[NSString stringWithFormat:FORMAT, ##__VA_ARGS__] UTF8String]);} while(0)
+#else
+#define NSSLog(...)
+#endif
+
 #ifdef DEBUG // 处于开发阶段
-// 默认打印
-#define NSLog(...) NSLog(__VA_ARGS__)
 // white
 #define LogVerbose(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 // green
@@ -80,8 +85,6 @@ view.center = center;
 // Red
 #define LogError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 #else // 处于发布阶段
-// 默认打印
-#define NSLog(...)
 // white
 #define LogVerbose(frmt, ...)
 // green
