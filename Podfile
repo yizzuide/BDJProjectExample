@@ -11,6 +11,7 @@ target '百思不得姐' do
     pod 'MJExtension'
     pod 'MJRefresh'
     pod 'SVProgressHUD'
+    pod 'Canvas', '~> 0.1.2'
 end
 
 target '百思不得姐Tests' do

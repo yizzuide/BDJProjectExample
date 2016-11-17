@@ -28,6 +28,10 @@
 		402647791DDC3A47002EDD00 /* XMGRecommendTagProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647781DDC3A47002EDD00 /* XMGRecommendTagProvider.m */; };
 		4026477C1DDC3A6D002EDD00 /* XMGRCTagRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026477B1DDC3A6D002EDD00 /* XMGRCTagRenderItem.m */; };
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
+		402647971DDD8984002EDD00 /* XMGSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647951DDD8984002EDD00 /* XMGSignInViewController.m */; };
+		402647981DDD8984002EDD00 /* XMGSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402647961DDD8984002EDD00 /* XMGSignInViewController.xib */; };
+		4026479B1DDDA2C0002EDD00 /* XFVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026479A1DDDA2C0002EDD00 /* XFVerticalButton.m */; };
+		4026479E1DDDACBC002EDD00 /* XFPHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026479D1DDDACBC002EDD00 /* XFPHTextField.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
 		404874181DD3544900388087 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048740C1DD3544900388087 /* AppDelegate.m */; };
@@ -165,6 +169,13 @@
 		402647831DDD45B3002EDD00 /* MainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTests.m; sourceTree = "<group>"; };
 		402647851DDD45B3002EDD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4026478B1DDD47B8002EDD00 /* libPods-百思不得姐.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = "libPods-百思不得姐.a"; path = "../../../../../Library/Developer/Xcode/DerivedData/百思不得姐-edcteqfmxcehgoaoyvwzxqtjkhwf/Build/Products/Debug-iphonesimulator/libPods-百思不得姐.a"; sourceTree = "<group>"; };
+		402647941DDD8984002EDD00 /* XMGSignInViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGSignInViewController.h; sourceTree = "<group>"; };
+		402647951DDD8984002EDD00 /* XMGSignInViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGSignInViewController.m; sourceTree = "<group>"; };
+		402647961DDD8984002EDD00 /* XMGSignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGSignInViewController.xib; sourceTree = "<group>"; };
+		402647991DDDA2C0002EDD00 /* XFVerticalButton.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVerticalButton.h; sourceTree = "<group>"; };
+		4026479A1DDDA2C0002EDD00 /* XFVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVerticalButton.m; sourceTree = "<group>"; };
+		4026479C1DDDACBC002EDD00 /* XFPHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPHTextField.h; sourceTree = "<group>"; };
+		4026479D1DDDACBC002EDD00 /* XFPHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPHTextField.m; sourceTree = "<group>"; };
 		404873EC1DD3515E00388087 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -489,6 +500,24 @@
 			path = "百思不得姐Tests";
 			sourceTree = "<group>";
 		};
+		4026478D1DDD8902002EDD00 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				402647931DDD8984002EDD00 /* SignIn */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		402647931DDD8984002EDD00 /* SignIn */ = {
+			isa = PBXGroup;
+			children = (
+				402647941DDD8984002EDD00 /* XMGSignInViewController.h */,
+				402647951DDD8984002EDD00 /* XMGSignInViewController.m */,
+				402647961DDD8984002EDD00 /* XMGSignInViewController.xib */,
+			);
+			path = SignIn;
+			sourceTree = "<group>";
+		};
 		404873E31DD3515E00388087 = {
 			isa = PBXGroup;
 			children = (
@@ -533,6 +562,7 @@
 			isa = PBXGroup;
 			children = (
 				404874071DD3544900388087 /* Main */,
+				4026478D1DDD8902002EDD00 /* MVC */,
 				404874131DD3544900388087 /* Viper */,
 				4048740A1DD3544900388087 /* Other */,
 				40C529521DD5A8F8007E76D7 /* Project */,
@@ -623,6 +653,10 @@
 			children = (
 				40C529541DD5A9C9007E76D7 /* XFPlusTabBar.h */,
 				40C529551DD5A9C9007E76D7 /* XFPlusTabBar.m */,
+				402647991DDDA2C0002EDD00 /* XFVerticalButton.h */,
+				4026479A1DDDA2C0002EDD00 /* XFVerticalButton.m */,
+				4026479C1DDDACBC002EDD00 /* XFPHTextField.h */,
+				4026479D1DDDACBC002EDD00 /* XFPHTextField.m */,
 			);
 			path = UIComponents;
 			sourceTree = "<group>";
@@ -1679,6 +1713,7 @@
 				404873FC1DD3515E00388087 /* Assets.xcassets in Resources */,
 				402647381DD95AA3002EDD00 /* XMGRecommendUserCell.xib in Resources */,
 				402647311DD8C1E6002EDD00 /* XMGRecommendCategoryCell.xib in Resources */,
+				402647981DDD8984002EDD00 /* XMGSignInViewController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1821,6 +1856,7 @@
 				402647301DD8C1E6002EDD00 /* XMGRecommendCategoryCell.m in Sources */,
 				40B526FA1DD75E1A00EBE619 /* XMGFriendsRecommentActivity.m in Sources */,
 				40B526FB1DD75E1A00EBE619 /* XMGFriendsRecommentRouting.m in Sources */,
+				402647971DDD8984002EDD00 /* XMGSignInViewController.m in Sources */,
 				40B526B51DD6108A00EBE619 /* XMGRImage.m in Sources */,
 				40B527001DD821C700EBE619 /* XMGHttpRequest.m in Sources */,
 				4026476A1DDC07D8002EDD00 /* XMGRecommendTagDataManager.m in Sources */,
@@ -1847,6 +1883,7 @@
 				404874CE1DD3634E00388087 /* XMGEssenceInteractor.m in Sources */,
 				4026476D1DDC07D8002EDD00 /* XMGRecommendTagActivity.m in Sources */,
 				4048750F1DD3664100388087 /* XMGFriendTrendsDataManager.m in Sources */,
+				4026479B1DDDA2C0002EDD00 /* XFVerticalButton.m in Sources */,
 				404874631DD35C1B00388087 /* XFPresenter.m in Sources */,
 				4026476C1DDC07D8002EDD00 /* XMGRecommendTagPresenter.m in Sources */,
 				404874B01DD3631600388087 /* XMGIndexTabRouting.m in Sources */,
@@ -1861,6 +1898,7 @@
 				40AFB89E1DD5751C00FC80FA /* XMGNavigationController.m in Sources */,
 				404874651DD35C1B00388087 /* XFRoutingLinkManager.m in Sources */,
 				40B526B21DD6106D00EBE619 /* XMGRColor.m in Sources */,
+				4026479E1DDDACBC002EDD00 /* XFPHTextField.m in Sources */,
 				408E1AF41DD8A6EC00D324B3 /* XMGRecommendCategoryModel.m in Sources */,
 				404874AE1DD3631600388087 /* XMGIndexTabPresenter.m in Sources */,
 				40B526BB1DD61C0A00EBE619 /* UIBarButtonItem+XMGExtension.m in Sources */,

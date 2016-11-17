@@ -13,4 +13,5 @@
 @interface XMGFriendTrendsPresenter : XFPresenter <XMGFriendTrendsEventHandlerPort>
 
 @property (nonatomic, strong) RACCommand *friendsRecommentCommand;
+@property (nonatomic, strong) RACCommand *signInCommand;
 @end

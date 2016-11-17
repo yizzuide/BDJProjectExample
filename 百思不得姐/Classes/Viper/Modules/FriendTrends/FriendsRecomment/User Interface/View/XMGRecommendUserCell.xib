@@ -68,7 +68,7 @@
                 <outlet property="headPortraitImage" destination="pYW-72-0d3" id="P3W-66-m6t"/>
                 <outlet property="nikeNameLabel" destination="WaH-pW-EKi" id="Rep-z8-bkX"/>
             </connections>
-            <point key="canvasLocation" x="-171" y="36"/>
+            <point key="canvasLocation" x="-164" y="45"/>
         </tableViewCell>
     </objects>
     <resources>

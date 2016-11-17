@@ -8,6 +8,7 @@
 
 
 #import "XMGFriendTrendsRouting.h"
+#import "XMGSignInViewController.h"
 
 @implementation XMGFriendTrendsRouting
 
@@ -18,5 +19,10 @@ XF_AutoAssemblyModule_FastNav(@"XMG")
 - (void)transition2FriendsRecomment
 {
     XF_PUSH_URLComponent_Fast(@"xmg://friendTrends/friendsRecomment")
+}
+
+- (void)transition2SignIn
+{
+    XF_Present_VCForMVx_Fast(XMGSignInViewController)
 }
 @end

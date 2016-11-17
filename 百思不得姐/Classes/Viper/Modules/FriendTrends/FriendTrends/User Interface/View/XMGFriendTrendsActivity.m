@@ -15,6 +15,7 @@
 @interface XMGFriendTrendsActivity ()
 
 @property (nonatomic, weak) UIButton *friendsRecommentButton;
+@property (weak, nonatomic) IBOutlet UIButton *signInButton;
 @end
 
 @implementation XMGFriendTrendsActivity
@@ -48,6 +49,7 @@
     //XF_$_(self.textField, text, EventHandler, text)
     // 绑定事件层按钮命令
     XF_C_(self.friendsRecommentButton, EventHandler, friendsRecommentCommand)
+    XF_C_(self.signInButton, EventHandler, signInCommand)
 }
 
 

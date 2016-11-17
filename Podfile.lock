@@ -23,6 +23,7 @@ PODS:
   - AFNetworking/UIKit (2.5.4):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
+  - Canvas (0.1.2)
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - ReactiveCocoa (2.5):
@@ -39,6 +40,7 @@ PODS:
 
 DEPENDENCIES:
   - AFNetworking-RACExtensions
+  - Canvas (~> 0.1.2)
   - MJExtension
   - MJRefresh
   - SDWebImage
@@ -47,12 +49,13 @@ DEPENDENCIES:
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
   AFNetworking-RACExtensions: a043c6b492fa892395ceb9d20bc4c94e96e08a57
+  Canvas: eb861e3b555d032648146c8ffda1a5dea40059ca
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: 4dd095f4b3eb1b93f30c0c77ad9cb6a663e0e6da
+PODFILE CHECKSUM: 1435aa07cc431aad5e11545651021df3fcc958a9
 
 COCOAPODS: 1.1.0.rc.3

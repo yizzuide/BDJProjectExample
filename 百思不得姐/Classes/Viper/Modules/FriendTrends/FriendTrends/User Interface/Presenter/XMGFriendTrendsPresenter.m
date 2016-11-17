@@ -44,6 +44,9 @@
     XF_CEXE_(self.friendsRecommentCommand, {
         [Routing transition2FriendsRecomment];
     })
+    XF_CEXE_(self.signInCommand, {
+        [Routing transition2SignIn];
+    })
 }
 
 // 注册MVx通知
