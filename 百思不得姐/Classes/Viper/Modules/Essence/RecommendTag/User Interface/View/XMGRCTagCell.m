@@ -6,11 +6,11 @@
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import "XMGRCTagCellTableViewCell.h"
+#import "XMGRCTagCell.h"
 #import <UIImageView+WebCache.h>
 #import "XMGRCTagRenderItem.h"
 
-@interface XMGRCTagCellTableViewCell ()
+@interface XMGRCTagCell ()
 
 @property (weak, nonatomic) IBOutlet UIImageView *tagimageView;
 @property (weak, nonatomic) IBOutlet UILabel *tagLabel;
@@ -18,7 +18,7 @@
 
 @end
 
-@implementation XMGRCTagCellTableViewCell
+@implementation XMGRCTagCell
 
 - (void)awakeFromNib {
     [super awakeFromNib];

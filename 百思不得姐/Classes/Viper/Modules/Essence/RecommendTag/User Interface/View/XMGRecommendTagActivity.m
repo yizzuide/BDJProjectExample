@@ -8,7 +8,7 @@
 
 #import "XMGRecommendTagActivity.h"
 #import "XMGRecommendTagEventHandlerPort.h"
-#import "XMGRCTagCellTableViewCell.h"
+#import "XMGRCTagCell.h"
 #import <SVProgressHUD.h>
 #import "XMGRCTagRenderItem.h"
 
@@ -41,7 +41,7 @@ static NSString * const Identifier = @"RCTagCell";
     self.tableView.rowHeight = 70.f;
     self.tableView.dataSource = self;
     self.tableView.delegate = self;
-    [self.tableView registerNib:[UINib nibWithNibName:@"XMGRCTagCellTableViewCell" bundle:nil] forCellReuseIdentifier:Identifier];
+    [self.tableView registerNib:[UINib nibWithNibName:@"XMGRCTagCell" bundle:nil] forCellReuseIdentifier:Identifier];
 }
 - (void)setUpViews {
     
@@ -70,7 +70,7 @@ static NSString * const Identifier = @"RCTagCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
-    XMGRCTagCellTableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    XMGRCTagCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
     XMGRCTagRenderItem *renderItem = self.eventHandler.expressPack.expressPieces[indexPath.row].renderItem;
     cell.renderItem = renderItem;
     return cell;
@@ -82,7 +82,6 @@ static NSString * const Identifier = @"RCTagCell";
 
 
 #pragma mark - Getter
-
 
 - (void)xfLego_viewWillPopOrDismiss
 {

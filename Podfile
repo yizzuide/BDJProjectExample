@@ -12,3 +12,7 @@ target '百思不得姐' do
     pod 'MJRefresh'
     pod 'SVProgressHUD'
 end
+
+target '百思不得姐Tests' do
+
+end

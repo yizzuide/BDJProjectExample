@@ -19,10 +19,10 @@
 /** 标签名 */
 @property (nonatomic, copy) NSString* theme_name;
 
-/** 是否订阅 */
+/** 是否含有子标签 */
 @property (nonatomic, assign) NSInteger  is_sub;
 
-/** 默认 */
+/** 是否是默认的推荐标签 */
 @property (nonatomic, assign) NSInteger  is_default;
 
 /** 订阅数量 */

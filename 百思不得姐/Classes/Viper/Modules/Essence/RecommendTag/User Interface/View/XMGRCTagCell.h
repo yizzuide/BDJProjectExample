@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 
 @class XMGRCTagRenderItem;
-@interface XMGRCTagCellTableViewCell : UITableViewCell
+@interface XMGRCTagCell : UITableViewCell
 
 @property (nonatomic, weak) XMGRCTagRenderItem *renderItem;
 @end
