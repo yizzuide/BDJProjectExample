@@ -10,6 +10,7 @@
 #import "XFURLParse.h"
 #import "XFLegoMarco.h"
 #import "XFRoutingLinkManager.h"
+#import "XFControllerFactory.h"
 
 @implementation XFURLManager
 
@@ -49,21 +50,12 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
 + (void)register:(NSString *)url forComponent:(NSString *)componentName
 {
     // 验证是否是控制器组件
-    if ([self isViewControllerComponent:componentName]){
+    if ([XFControllerFactory isViewControllerComponent:componentName]){
         [_mapTable setObject:componentName forKey:url];
     }else{
         NSAssert([XFRoutingLinkManager verifyModule:componentName], @"模块验证失败！找不到此模块！");
         [_mapTable setObject:componentName forKey:url];
     }
-}
-
-+ (BOOL)isViewControllerComponent:(NSString *)componentName
-{
-    NSString *clazzName = [NSString stringWithFormat:@"%@%@%@",[XFRoutingLinkManager modulePrefix],componentName,@"ViewController"];
-    if (NSClassFromString(clazzName)) {
-        return YES;
-    }
-    return NO;
 }
 
 + (void)remove:(NSString *)url
@@ -84,7 +76,7 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
     if(transitionBlock)
         transitionBlock(componentName,params);
     
-    if ([self isViewControllerComponent:componentName]) return YES;
+    if ([XFControllerFactory isViewControllerComponent:componentName]) return YES;
     // 异步检测URL路径的正确性
     if ([XFRoutingLinkManager count]) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{

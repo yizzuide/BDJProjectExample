@@ -36,14 +36,6 @@
 + (void)remove:(NSString *)url;
 
 /**
- *  是否控制器组件
- *
- *  @param componentName 组件名
- *
- */
-+ (BOOL)isViewControllerComponent:(NSString *)componentName;
-
-/**
  *  打一个URL组件,如：xf://user/register?usrid=123
  *
  *  @param url             URLString
