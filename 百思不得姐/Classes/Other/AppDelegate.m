@@ -9,6 +9,7 @@
 #import "AppDelegate.h"
 #import "XFLegoVIPER.h"
 #import "XMGAppURLRegister.h"
+#import "XMGAPPLoader.h"
 
 @interface AppDelegate ()
 
@@ -19,12 +20,16 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
+    
     [XFRoutingLinkManager enableLog];
     [XFRoutingLinkManager setModulePrefix:@"XMG"];
     // 注册APP的所有URL
     [XMGAppURLRegister urlRegister];
     // 根据URL显示组件
     XF_ShowURLComponent2Window_Fast(@"xmg://indexTab")
+    
+    // 启动加载器
+    [XMGAPPLoader loadForWindow:self.window];
     return YES;
 }
 

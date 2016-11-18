@@ -20,6 +20,7 @@
 @interface XMGFriendsRecommentPresenter ()
 
 @property (nonatomic, assign) NSInteger selectedCategoryIndex;
+@property (nonatomic, strong) RACDisposable *signalDisposable;
 @end
 
 @implementation XMGFriendsRecommentPresenter
@@ -83,8 +84,7 @@
 #pragma mark - Request
 - (void)requestFillCategoryList
 {
-    [[Interactor fetchRecommendCategory] subscribeNext:^(NSArray *renderList) {
-//        NSLog(@"%@",x);
+   self.signalDisposable = [[Interactor fetchRecommendCategory] subscribeNext:^(NSArray *renderList) {
         self.expressData = renderList;
     }];
 }
@@ -92,6 +92,11 @@
 
 #pragma mark - ValidData
 
+- (void)viewWillResignFocus
+{
+    // 当前视图移除时取消请求的信号
+    [self.signalDisposable dispose];
+}
 
 - (void)dealloc
 {

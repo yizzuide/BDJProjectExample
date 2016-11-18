@@ -32,6 +32,10 @@
 		402647981DDD8984002EDD00 /* XMGSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402647961DDD8984002EDD00 /* XMGSignInViewController.xib */; };
 		4026479B1DDDA2C0002EDD00 /* XFVerticalButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026479A1DDDA2C0002EDD00 /* XFVerticalButton.m */; };
 		4026479E1DDDACBC002EDD00 /* XFPHTextField.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026479D1DDDACBC002EDD00 /* XFPHTextField.m */; };
+		402647A11DDEA331002EDD00 /* XMGPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647A01DDEA330002EDD00 /* XMGPushGuideView.m */; };
+		402647A31DDEA34F002EDD00 /* XMGPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 402647A21DDEA34F002EDD00 /* XMGPushGuideView.xib */; };
+		402647A71DDEA5B0002EDD00 /* XMGAPPLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647A61DDEA5B0002EDD00 /* XMGAPPLoader.m */; };
+		402647AA1DDEA670002EDD00 /* XMGPushGuideLoader.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647A91DDEA670002EDD00 /* XMGPushGuideLoader.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
 		404874181DD3544900388087 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4048740C1DD3544900388087 /* AppDelegate.m */; };
@@ -176,6 +180,13 @@
 		4026479A1DDDA2C0002EDD00 /* XFVerticalButton.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVerticalButton.m; sourceTree = "<group>"; };
 		4026479C1DDDACBC002EDD00 /* XFPHTextField.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPHTextField.h; sourceTree = "<group>"; };
 		4026479D1DDDACBC002EDD00 /* XFPHTextField.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPHTextField.m; sourceTree = "<group>"; };
+		4026479F1DDEA330002EDD00 /* XMGPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPushGuideView.h; sourceTree = "<group>"; };
+		402647A01DDEA330002EDD00 /* XMGPushGuideView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPushGuideView.m; sourceTree = "<group>"; };
+		402647A21DDEA34F002EDD00 /* XMGPushGuideView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPushGuideView.xib; sourceTree = "<group>"; };
+		402647A51DDEA5B0002EDD00 /* XMGAPPLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAPPLoader.h; sourceTree = "<group>"; };
+		402647A61DDEA5B0002EDD00 /* XMGAPPLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAPPLoader.m; sourceTree = "<group>"; };
+		402647A81DDEA670002EDD00 /* XMGPushGuideLoader.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPushGuideLoader.h; sourceTree = "<group>"; };
+		402647A91DDEA670002EDD00 /* XMGPushGuideLoader.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPushGuideLoader.m; sourceTree = "<group>"; };
 		404873EC1DD3515E00388087 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -518,6 +529,17 @@
 			path = SignIn;
 			sourceTree = "<group>";
 		};
+		402647A41DDEA593002EDD00 /* Loader */ = {
+			isa = PBXGroup;
+			children = (
+				402647A51DDEA5B0002EDD00 /* XMGAPPLoader.h */,
+				402647A61DDEA5B0002EDD00 /* XMGAPPLoader.m */,
+				402647A81DDEA670002EDD00 /* XMGPushGuideLoader.h */,
+				402647A91DDEA670002EDD00 /* XMGPushGuideLoader.m */,
+			);
+			path = Loader;
+			sourceTree = "<group>";
+		};
 		404873E31DD3515E00388087 = {
 			isa = PBXGroup;
 			children = (
@@ -574,6 +596,7 @@
 		404874071DD3544900388087 /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				402647A41DDEA593002EDD00 /* Loader */,
 				40B527051DD8366600EBE619 /* KeyAPI */,
 				40B526AC1DD6101100EBE619 /* R */,
 				404874081DD3544900388087 /* Config */,
@@ -596,6 +619,9 @@
 			children = (
 				40AFB89C1DD5751C00FC80FA /* XMGNavigationController.h */,
 				40AFB89D1DD5751C00FC80FA /* XMGNavigationController.m */,
+				4026479F1DDEA330002EDD00 /* XMGPushGuideView.h */,
+				402647A01DDEA330002EDD00 /* XMGPushGuideView.m */,
+				402647A21DDEA34F002EDD00 /* XMGPushGuideView.xib */,
 			);
 			path = UIFrame;
 			sourceTree = "<group>";
@@ -1706,6 +1732,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				402647A31DDEA34F002EDD00 /* XMGPushGuideView.xib in Resources */,
 				402647761DDC1156002EDD00 /* XMGRCTagCell.xib in Resources */,
 				404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */,
 				40B526FD1DD81DBB00EBE619 /* XMGFriendTrendsActivity.xib in Resources */,
@@ -1832,12 +1859,15 @@
 				404875111DD3664100388087 /* XMGFriendTrendsPresenter.m in Sources */,
 				404875321DD3666B00388087 /* XMGMePresenter.m in Sources */,
 				402647371DD95AA3002EDD00 /* XMGRecommendUserCell.m in Sources */,
+				402647AA1DDEA670002EDD00 /* XMGPushGuideLoader.m in Sources */,
 				402647751DDC1156002EDD00 /* XMGRCTagCell.m in Sources */,
 				40B526F81DD75E1A00EBE619 /* XMGFriendsRecommentInteractor.m in Sources */,
+				402647A71DDEA5B0002EDD00 /* XMGAPPLoader.m in Sources */,
 				404874611DD35C1B00388087 /* XFDataManager.m in Sources */,
 				4026474A1DDAADC0002EDD00 /* XMGRCUserRenderData.m in Sources */,
 				404874F21DD3658E00388087 /* XMGNewRouting.m in Sources */,
 				40B527041DD8236700EBE619 /* XMGRecommendService.m in Sources */,
+				402647A11DDEA331002EDD00 /* XMGPushGuideView.m in Sources */,
 				404874EF1DD3658E00388087 /* XMGNewInteractor.m in Sources */,
 				404875121DD3664100388087 /* XMGFriendTrendsActivity.m in Sources */,
 				40C529561DD5A9C9007E76D7 /* XFPlusTabBar.m in Sources */,

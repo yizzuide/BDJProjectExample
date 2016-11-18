@@ -74,16 +74,11 @@ view.center = center;
 #endif
 
 #ifdef DEBUG // 处于开发阶段
-// white
-#define LogVerbose(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
-// green
-#define LogDebug(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
-// cyan
-#define LogInfo(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg0,255,255;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
-// Yellow
-#define LogWarning(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,255,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
-// Red
-#define LogError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,0,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogVerbose(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg187,187,187;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogDebug(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg33,150,243;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogInfo(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg76,175,80;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogWarning(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg255,152,0;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
+#define LogError(frmt, ...) NSLog((XCODE_COLORS_ESCAPE @"fg244,67,54;" frmt XCODE_COLORS_RESET), ##__VA_ARGS__)
 #else // 处于发布阶段
 // white
 #define LogVerbose(frmt, ...)
