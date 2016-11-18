@@ -8,7 +8,6 @@
 
 
 #import "XMGFriendTrendsRouting.h"
-#import "XMGSignInViewController.h"
 
 @implementation XMGFriendTrendsRouting
 
@@ -23,6 +22,6 @@ XF_AutoAssemblyModule_FastNav(@"XMG")
 
 - (void)transition2SignIn
 {
-    XF_Present_VCForMVx_Fast(XMGSignInViewController)
+    XF_Present_URLComponent_Fast(@"xmg://userCenter/signIn")
 }
 @end

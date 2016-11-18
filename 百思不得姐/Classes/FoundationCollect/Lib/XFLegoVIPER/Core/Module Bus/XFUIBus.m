@@ -11,6 +11,7 @@
 #import "XFRouting.h"
 #import "XFRoutingFactory.h"
 #import "XFURLManager.h"
+#import "XFRoutingLinkManager.h"
 
 @interface XFUIBus ()
 /**
@@ -84,6 +85,15 @@
 // Modal方式
 - (void)presentModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
+    if ([XFURLManager isViewControllerComponent:moduleName]) {
+        NSString *clazzName = [NSString stringWithFormat:@"%@%@%@",[XFRoutingLinkManager modulePrefix],moduleName,@"ViewController"];
+        UIViewController *viewController = [[NSClassFromString(clazzName) alloc] init];
+        if (customCodeBlock) {
+            customCodeBlock(nil);
+        }
+        [self presentMVxViewController:viewController];
+        return;
+    }
     [self putModule:moduleName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
         [thisInterface presentViewController:nextInterface animated:YES completion:nil];
     } intent:intentData customCode:customCodeBlock];
@@ -99,6 +109,15 @@
 // PUSH方式
 - (void)pushModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
+    if ([XFURLManager isViewControllerComponent:moduleName]) {
+        NSString *clazzName = [NSString stringWithFormat:@"%@%@%@",[XFRoutingLinkManager modulePrefix],moduleName,@"ViewController"];
+        UIViewController *viewController = [[NSClassFromString(clazzName) alloc] init];
+        if (customCodeBlock) {
+            customCodeBlock(nil);
+        }
+        [self pushMVxViewController:viewController];
+        return;
+    }
     [self putModule:moduleName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
         [thisInterface.navigationController pushViewController:nextInterface animated:YES];
     } intent:intentData customCode:customCodeBlock];

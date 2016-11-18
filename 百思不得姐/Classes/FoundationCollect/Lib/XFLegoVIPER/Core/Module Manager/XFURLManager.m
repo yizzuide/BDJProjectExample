@@ -40,16 +40,30 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
     NSString *lcModuleName = [XFURLParse lastPathComponentForURL:url];
     if (lcModuleName.length > 2) {
         NSString *moduleName = [NSString stringWithFormat:@"%@%@",[lcModuleName substringToIndex:XF_Index_Second].uppercaseString,[lcModuleName substringFromIndex:XF_Index_Second]];
-        [self register:url forModule:moduleName];
+        [self register:url forComponent:moduleName];
     } else {
-        [self register:url forModule:lcModuleName.uppercaseString];
+        [self register:url forComponent:lcModuleName.uppercaseString];
     }
 }
 
-+ (void)register:(NSString *)url forModule:(NSString *)moduleName
++ (void)register:(NSString *)url forComponent:(NSString *)componentName
 {
-    NSAssert([XFRoutingLinkManager verifyModule:moduleName], @"模块验证失败！找不到此模块！");
-    [_mapTable setObject:moduleName forKey:url];
+    // 验证是否是控制器组件
+    if ([self isViewControllerComponent:componentName]){
+        [_mapTable setObject:componentName forKey:url];
+    }else{
+        NSAssert([XFRoutingLinkManager verifyModule:componentName], @"模块验证失败！找不到此模块！");
+        [_mapTable setObject:componentName forKey:url];
+    }
+}
+
++ (BOOL)isViewControllerComponent:(NSString *)componentName
+{
+    NSString *clazzName = [NSString stringWithFormat:@"%@%@%@",[XFRoutingLinkManager modulePrefix],componentName,@"ViewController"];
+    if (NSClassFromString(clazzName)) {
+        return YES;
+    }
+    return NO;
 }
 
 + (void)remove:(NSString *)url
@@ -57,19 +71,20 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
     [_mapTable removeObjectForKey:url];
 }
 
-+ (BOOL)open:(NSString *)url transitionBlock:(void(^)(NSString *moduleName,NSDictionary *params))transitionBlock
++ (BOOL)open:(NSString *)url transitionBlock:(void(^)(NSString *componentName,NSDictionary *params))transitionBlock
 {
     NSString *path = [XFURLParse pathForURL:url];
-    NSString *moduleName = [_mapTable objectForKey:path];
-    NSAssert(moduleName || ![moduleName isEqualToString:@""], @"当前URL未注册任何组件！");
+    NSString *componentName = [_mapTable objectForKey:path];
+    NSAssert(componentName || ![componentName isEqualToString:@""], @"当前URL组件未注册！");
     NSDictionary *params;
     if([url hasPrefix:@"http"])
         params = @{@"url":url};
     else
         params = [XFURLParse paramsForURL:url];
     if(transitionBlock)
-        transitionBlock(moduleName,params);
+        transitionBlock(componentName,params);
     
+    if ([self isViewControllerComponent:componentName]) return YES;
     // 异步检测URL路径的正确性
     if ([XFRoutingLinkManager count]) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -83,6 +98,6 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
             NSAssert(isURLComponentLinkOk, @"URL子路径关系链错误！");
         });
     }
-    return !!moduleName;
+    return !!componentName;
 }
 @end

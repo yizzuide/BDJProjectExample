@@ -24,16 +24,24 @@
 /**
  *  初始化单个URL组件
  *
- *  @param url        URLString
- *  @param moduleName 绑定的模块名
+ *  @param url           URLString
+ *  @param componentName 组件名
  */
-+ (void)register:(NSString *)url forModule:(NSString *)moduleName;
++ (void)register:(NSString *)url forComponent:(NSString *)componentName;
 /**
  *  移除单个URL组件
  *
  *  @param url URLString
  */
 + (void)remove:(NSString *)url;
+
+/**
+ *  是否控制器组件
+ *
+ *  @param componentName 组件名
+ *
+ */
++ (BOOL)isViewControllerComponent:(NSString *)componentName;
 
 /**
  *  打一个URL组件,如：xf://user/register?usrid=123
@@ -43,5 +51,5 @@
  *
  *  @return 打开是否成功
  */
-+ (BOOL)open:(NSString *)url transitionBlock:(void(^)(NSString *moduleName,NSDictionary *params))transitionBlock;
++ (BOOL)open:(NSString *)url transitionBlock:(void(^)(NSString *componentName,NSDictionary *params))transitionBlock;
 @end

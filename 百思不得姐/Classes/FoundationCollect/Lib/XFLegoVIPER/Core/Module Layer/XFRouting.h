@@ -71,6 +71,19 @@ XF_Define_Weak \
 #define XF_PUSH_Routing_Fast(ModuleName) \
 XF_PUSH_Routing_(ModuleName,{})
 
+// Present一个模块宏
+#define XF_Present_Routing_(ModuleName,ExecuteCode) \
+XF_Define_Weak \
+[self.uiBus presentModule:ModuleName intent:self.uiOperator.intentData customCode:^(__kindof XFRouting *routing) { \
+XF_Define_Strong \
+ExecuteCode \
+[self self]; \
+}];
+// 快速Present一个模块
+#define XF_Present_Routing_Fast(ModuleName) \
+XF_Present_Routing_(ModuleName,{})
+
+
 // Push一个URL组件
 #define XF_PUSH_URLComponent_(urlString,ExecuteCode) \
 XF_Define_Weak \
@@ -83,18 +96,6 @@ XF_Define_Weak \
 #define XF_PUSH_URLComponent_Fast(urlString) \
 XF_PUSH_URLComponent_(urlString,{})
 
-// Present一个模块宏
-#define XF_Present_Routing_(ModuleName,ExecuteCode) \
-XF_Define_Weak \
-[self.uiBus presentModule:ModuleName intent:self.uiOperator.intentData customCode:^(__kindof XFRouting *routing) { \
-    XF_Define_Strong \
-    ExecuteCode \
-    [self self]; \
-}];
-// 快速Present一个模块
-#define XF_Present_Routing_Fast(ModuleName) \
-XF_Present_Routing_(ModuleName,{})
-
 // Present一个URL组件
 #define XF_Present_URLComponent_(urlString,ExecuteCode) \
 XF_Define_Weak \
@@ -106,24 +107,6 @@ XF_Define_Weak \
 // 快速Present一个URL组件
 #define XF_Present_URLComponent_Fast(urlString) \
 XF_Present_URLComponent_(urlString,{})
-
-// PUSH一个MVx构架控制器
-#define XF_PUSH_VCForMVx_(UIViewControllerClass,ExecuteCode) \
-UIViewControllerClass *viewController = [[UIViewControllerClass alloc] init]; \
-    ExecuteCode \
-[self.uiBus pushMVxViewController:viewController];
-// 快速PUSH一个MVx构架控制器
-#define XF_PUSH_VCForMVx_Fast(UIViewControllerClass) \
-XF_PUSH_VCForMVx_(UIViewControllerClass,{})
-
-// Present一个MVx构架控制器
-#define XF_Present_VCForMVx_(UIViewControllerClass,ExecuteCode) \
-UIViewControllerClass *viewController = [[UIViewControllerClass alloc] init]; \
-    ExecuteCode \
-[self.uiBus presentMVxViewController:viewController];
-// 快速Present一个MVx构架控制器
-#define XF_Present_VCForMVx_Fast(UIViewControllerClass) \
-XF_Present_VCForMVx_(UIViewControllerClass,{})
 
 @class XFUIBus;
 @interface XFRouting : NSObject <XFWireFramePort>

@@ -36,7 +36,7 @@ typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
 @interface XFUIBus : NSObject
 
 /**
- *  路由
+ *  当前路由
  */
 @property (nonatomic, weak) XFRouting *fromRouting;
 
