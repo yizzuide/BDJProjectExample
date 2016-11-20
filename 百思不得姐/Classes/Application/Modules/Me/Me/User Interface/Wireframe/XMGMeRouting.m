@@ -12,7 +12,7 @@
 @implementation XMGMeRouting
 
 // 组装模块
-XF_AutoAssemblyModuleWithNav(@"XMG")
+XF_AutoAssemblyModuleWithNav_Fast
 
 // 跳转模块
 /*- (void)transition2XXModule

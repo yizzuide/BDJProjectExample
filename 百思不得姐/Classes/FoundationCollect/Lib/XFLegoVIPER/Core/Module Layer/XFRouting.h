@@ -53,6 +53,12 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 // 自动组装一个有Nav模块成分
 #define XF_AutoAssemblyModuleWithNav_ShareDM(NavName,ShareDataManagerName) XF_AutoAssemblyModule(NavName,nil,ShareDataManagerName)
 #define XF_AutoAssemblyModuleWithNav(NavName) XF_AutoAssemblyModuleWithNav_ShareDM(NavName,nil)
+// 根据项目模块前辍自动组装一个有Nav模块成分
+#define XF_AutoAssemblyModuleWithNav_Fast \
++ (instancetype)routing \
+{ \
+    return [[super routing].assembly autoAssemblyModuleWithPrefixNav]; \
+}
 
 // 自动组装一个IBSymbol的模块成分
 #define XF_AutoAssemblyModuleFormIB_ShareDM(IBSymbol,ShareDataManagerName) XF_AutoAssemblyModule(nil,IBSymbol,ShareDataManagerName)

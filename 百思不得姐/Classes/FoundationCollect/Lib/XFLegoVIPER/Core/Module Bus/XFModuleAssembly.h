@@ -35,6 +35,12 @@
  *  @return Routing
  */
 - (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName;
+/**
+ *  通过自定义项目前辍的Nav名快速组建一个模块
+ *
+ *  @return Routing
+ */
+- (__kindof XFRouting *)autoAssemblyModuleWithPrefixNav;
 
 /**
  *  基于其它模块的视图、事件、数据处理、数据管理层类型创建一个模块

@@ -23,15 +23,20 @@
     return self;
 }
 
-- (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName
+- (__kindof XFRouting *)autoAssemblyModuleWithPrefixNav
 {
-    NSString *moduleName = [XFRoutingLinkManager moduleNameForRouting:self.fromRouting];
-    return [self _autoAssemblyModuleWithModuleName:moduleName navName:navName ibSymbol:ibSymbol shareDataManagerName:shareDataManagerName];
+    return [self autoAssemblyModuleWithNav:[XFRoutingLinkManager modulePrefix] ibSymbol:nil shareDataManagerName:nil];
 }
 
 - (__kindof XFRouting *)autoAssemblyModuleFromShareModuleName:(NSString *)moduleName
 {
     return [self _autoAssemblyModuleWithModuleName:moduleName navName:nil ibSymbol:nil shareDataManagerName:nil];
+}
+
+- (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName
+{
+    NSString *moduleName = [XFRoutingLinkManager moduleNameForRouting:self.fromRouting];
+    return [self _autoAssemblyModuleWithModuleName:moduleName navName:navName ibSymbol:ibSymbol shareDataManagerName:shareDataManagerName];
 }
 
 - (__kindof XFRouting *)_autoAssemblyModuleWithModuleName:(NSString *)moduleName navName:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName

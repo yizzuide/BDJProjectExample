@@ -8,7 +8,6 @@
 
 #import "XMGIndexTabActivity.h"
 #import "XMGIndexTabEventHandlerPort.h"
-#import "NSObject+XFLegoInvokeMethod.h"
 #import "XFActivity.h"
 #import "XFPlusTabBar.h"
 #import <SVProgressHUD.h>
