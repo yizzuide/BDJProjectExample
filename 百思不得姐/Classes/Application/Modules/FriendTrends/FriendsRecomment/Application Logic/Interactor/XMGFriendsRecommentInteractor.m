@@ -54,7 +54,10 @@
     XMGRecommendCategoryModel *recommendCategoryModel = self.categorys[index];
     // 增加页数
     recommendCategoryModel.currentPage++;
-    return [self _loadUsersForCategory:recommendCategoryModel];
+    return [[self _loadUsersForCategory:recommendCategoryModel] doError:^(NSError *error) {
+        // 错误时恢复页数
+        recommendCategoryModel.currentPage--;
+    }];
 }
 
 - (RACSignal *)_loadUsersForCategory:(XMGRecommendCategoryModel *)recommendCategoryModel

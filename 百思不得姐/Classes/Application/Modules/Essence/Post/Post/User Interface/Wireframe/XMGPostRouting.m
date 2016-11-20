@@ -1,18 +1,18 @@
 //
-//  XMGNewRouting.m
+//  XMGPostRouting.m
 //  百思不得姐
 //
-//  Created by 付星 on 2016/11/9.
+//  Created by 付星 on 2016/11/18.
 //    Copyright © 2016年 yizzuide. All rights reserved.
 //
 
 
-#import "XMGNewRouting.h"
+#import "XMGPostRouting.h"
 
-@implementation XMGNewRouting
+@implementation XMGPostRouting
 
 // 组装模块
-XF_AutoAssemblyModuleWithNav(@"XMG")
+XF_AutoAssemblyModule_Fast
 
 // 跳转模块
 /*- (void)transition2XXModule

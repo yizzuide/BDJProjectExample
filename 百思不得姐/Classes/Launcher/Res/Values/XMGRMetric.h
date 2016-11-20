@@ -10,7 +10,12 @@
 
 extern DefConstInt R_Size_Font_TabBarTitle;
 
-
+extern DefConstInt R_Height_StautsBar;
+extern DefConstInt R_Height_NavBar;
+extern DefConstInt R_Height_StautsWithNavBar;
+extern DefConstInt R_Height_TabBar;
+extern DefConstInt R_Height_PostHeaderTabs;
+extern DefConstInt R_MaxY_PostHeaderTabs;
 
 
 

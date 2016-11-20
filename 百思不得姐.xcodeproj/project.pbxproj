@@ -107,6 +107,26 @@
 		402649711DDEE7A2002EDD00 /* XMGSignInViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026496D1DDEE7A2002EDD00 /* XMGSignInViewController.m */; };
 		402649721DDEE7A2002EDD00 /* XMGSignInViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4026496E1DDEE7A2002EDD00 /* XMGSignInViewController.xib */; };
 		402649751DDEED85002EDD00 /* XFControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649741DDEED84002EDD00 /* XFControllerFactory.m */; };
+		402649941DDF5800002EDD00 /* XMGPostDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026497E1DDF5800002EDD00 /* XMGPostDataManager.m */; };
+		402649951DDF5800002EDD00 /* XMGPostInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649811DDF5800002EDD00 /* XMGPostInteractor.m */; };
+		402649961DDF5800002EDD00 /* XMGPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026498D1DDF5800002EDD00 /* XMGPostPresenter.m */; };
+		402649971DDF5800002EDD00 /* XMGPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649901DDF5800002EDD00 /* XMGPostActivity.m */; };
+		402649981DDF5800002EDD00 /* XMGPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649931DDF5800002EDD00 /* XMGPostRouting.m */; };
+		4026499B1DDF6273002EDD00 /* XMGAllPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026499A1DDF6273002EDD00 /* XMGAllPostActivity.m */; };
+		4026499E1DDF6296002EDD00 /* XMGVideoPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026499D1DDF6296002EDD00 /* XMGVideoPostActivity.m */; };
+		402649A11DDF62BE002EDD00 /* XMGPictruePostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A01DDF62BE002EDD00 /* XMGPictruePostActivity.m */; };
+		402649A41DDF62E1002EDD00 /* XMGVoicePostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A31DDF62E1002EDD00 /* XMGVoicePostActivity.m */; };
+		402649A71DDF635F002EDD00 /* XMGWordsPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A61DDF635F002EDD00 /* XMGWordsPostActivity.m */; };
+		402649AA1DDF63A0002EDD00 /* XMGAllPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A91DDF63A0002EDD00 /* XMGAllPostRouting.m */; };
+		402649AD1DDF63AF002EDD00 /* XMGVideoPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649AC1DDF63AF002EDD00 /* XMGVideoPostRouting.m */; };
+		402649B01DDF63BD002EDD00 /* XMGVoicePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649AF1DDF63BD002EDD00 /* XMGVoicePostRouting.m */; };
+		402649B31DDF63CD002EDD00 /* XMGPictruePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B21DDF63CD002EDD00 /* XMGPictruePostRouting.m */; };
+		402649B61DDF641D002EDD00 /* XMGWordsPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B51DDF641D002EDD00 /* XMGWordsPostRouting.m */; };
+		402649B91DDF64F3002EDD00 /* XMGAllPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B81DDF64F3002EDD00 /* XMGAllPostPresenter.m */; };
+		402649BC1DDF6502002EDD00 /* XMGVideoPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649BB1DDF6502002EDD00 /* XMGVideoPostPresenter.m */; };
+		402649BF1DDF651E002EDD00 /* XMGVoicePostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649BE1DDF651E002EDD00 /* XMGVoicePostPresenter.m */; };
+		402649C21DDF6536002EDD00 /* XMGPictruePostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649C11DDF6536002EDD00 /* XMGPictruePostPresenter.m */; };
+		402649C51DDF6548002EDD00 /* XMGWordsPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649C41DDF6548002EDD00 /* XMGWordsPostPresenter.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
@@ -365,6 +385,51 @@
 		4026496E1DDEE7A2002EDD00 /* XMGSignInViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGSignInViewController.xib; sourceTree = "<group>"; };
 		402649731DDEED84002EDD00 /* XFControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerFactory.h; sourceTree = "<group>"; };
 		402649741DDEED84002EDD00 /* XFControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerFactory.m; sourceTree = "<group>"; };
+		4026497D1DDF5800002EDD00 /* XMGPostDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostDataManager.h; sourceTree = "<group>"; };
+		4026497E1DDF5800002EDD00 /* XMGPostDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostDataManager.m; sourceTree = "<group>"; };
+		402649801DDF5800002EDD00 /* XMGPostInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostInteractor.h; sourceTree = "<group>"; };
+		402649811DDF5800002EDD00 /* XMGPostInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostInteractor.m; sourceTree = "<group>"; };
+		402649841DDF5800002EDD00 /* XMGPostDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostDataManagerPort.h; sourceTree = "<group>"; };
+		402649851DDF5800002EDD00 /* XMGPostEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostEventHandlerPort.h; sourceTree = "<group>"; };
+		402649861DDF5800002EDD00 /* XMGPostInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostInteractorPort.h; sourceTree = "<group>"; };
+		402649871DDF5800002EDD00 /* XMGPostUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostUserInterfacePort.h; sourceTree = "<group>"; };
+		402649881DDF5800002EDD00 /* XMGPostWireframePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostWireframePort.h; sourceTree = "<group>"; };
+		4026498C1DDF5800002EDD00 /* XMGPostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostPresenter.h; sourceTree = "<group>"; };
+		4026498D1DDF5800002EDD00 /* XMGPostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostPresenter.m; sourceTree = "<group>"; };
+		4026498F1DDF5800002EDD00 /* XMGPostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostActivity.h; sourceTree = "<group>"; };
+		402649901DDF5800002EDD00 /* XMGPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostActivity.m; sourceTree = "<group>"; };
+		402649921DDF5800002EDD00 /* XMGPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostRouting.h; sourceTree = "<group>"; };
+		402649931DDF5800002EDD00 /* XMGPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostRouting.m; sourceTree = "<group>"; };
+		402649991DDF6273002EDD00 /* XMGAllPostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllPostActivity.h; sourceTree = "<group>"; };
+		4026499A1DDF6273002EDD00 /* XMGAllPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAllPostActivity.m; sourceTree = "<group>"; };
+		4026499C1DDF6296002EDD00 /* XMGVideoPostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVideoPostActivity.h; sourceTree = "<group>"; };
+		4026499D1DDF6296002EDD00 /* XMGVideoPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVideoPostActivity.m; sourceTree = "<group>"; };
+		4026499F1DDF62BE002EDD00 /* XMGPictruePostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictruePostActivity.h; sourceTree = "<group>"; };
+		402649A01DDF62BE002EDD00 /* XMGPictruePostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostActivity.m; sourceTree = "<group>"; };
+		402649A21DDF62E1002EDD00 /* XMGVoicePostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVoicePostActivity.h; sourceTree = "<group>"; };
+		402649A31DDF62E1002EDD00 /* XMGVoicePostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVoicePostActivity.m; sourceTree = "<group>"; };
+		402649A51DDF635F002EDD00 /* XMGWordsPostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordsPostActivity.h; sourceTree = "<group>"; };
+		402649A61DDF635F002EDD00 /* XMGWordsPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordsPostActivity.m; sourceTree = "<group>"; };
+		402649A81DDF63A0002EDD00 /* XMGAllPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllPostRouting.h; sourceTree = "<group>"; };
+		402649A91DDF63A0002EDD00 /* XMGAllPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAllPostRouting.m; sourceTree = "<group>"; };
+		402649AB1DDF63AF002EDD00 /* XMGVideoPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVideoPostRouting.h; sourceTree = "<group>"; };
+		402649AC1DDF63AF002EDD00 /* XMGVideoPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVideoPostRouting.m; sourceTree = "<group>"; };
+		402649AE1DDF63BD002EDD00 /* XMGVoicePostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVoicePostRouting.h; sourceTree = "<group>"; };
+		402649AF1DDF63BD002EDD00 /* XMGVoicePostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVoicePostRouting.m; sourceTree = "<group>"; };
+		402649B11DDF63CD002EDD00 /* XMGPictruePostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictruePostRouting.h; sourceTree = "<group>"; };
+		402649B21DDF63CD002EDD00 /* XMGPictruePostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostRouting.m; sourceTree = "<group>"; };
+		402649B41DDF641D002EDD00 /* XMGWordsPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordsPostRouting.h; sourceTree = "<group>"; };
+		402649B51DDF641D002EDD00 /* XMGWordsPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordsPostRouting.m; sourceTree = "<group>"; };
+		402649B71DDF64F3002EDD00 /* XMGAllPostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllPostPresenter.h; sourceTree = "<group>"; };
+		402649B81DDF64F3002EDD00 /* XMGAllPostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAllPostPresenter.m; sourceTree = "<group>"; };
+		402649BA1DDF6502002EDD00 /* XMGVideoPostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVideoPostPresenter.h; sourceTree = "<group>"; };
+		402649BB1DDF6502002EDD00 /* XMGVideoPostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVideoPostPresenter.m; sourceTree = "<group>"; };
+		402649BD1DDF651E002EDD00 /* XMGVoicePostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVoicePostPresenter.h; sourceTree = "<group>"; };
+		402649BE1DDF651E002EDD00 /* XMGVoicePostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVoicePostPresenter.m; sourceTree = "<group>"; };
+		402649C01DDF6536002EDD00 /* XMGPictruePostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictruePostPresenter.h; sourceTree = "<group>"; };
+		402649C11DDF6536002EDD00 /* XMGPictruePostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostPresenter.m; sourceTree = "<group>"; };
+		402649C31DDF6548002EDD00 /* XMGWordsPostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordsPostPresenter.h; sourceTree = "<group>"; };
+		402649C41DDF6548002EDD00 /* XMGWordsPostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordsPostPresenter.m; sourceTree = "<group>"; };
 		404873EC1DD3515E00388087 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -460,6 +525,7 @@
 		402647B51DDEE6FB002EDD00 /* Essence */ = {
 			isa = PBXGroup;
 			children = (
+				402649771DDF5560002EDD00 /* Post */,
 				402647B61DDEE6FB002EDD00 /* Essence */,
 				402647D01DDEE6FB002EDD00 /* RecommendTag */,
 			);
@@ -1603,6 +1669,146 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		402649771DDF5560002EDD00 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				4026497A1DDF5800002EDD00 /* Post */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		4026497A1DDF5800002EDD00 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				4026497B1DDF5800002EDD00 /* Application Logic */,
+				402649831DDF5800002EDD00 /* Module Interface */,
+				402649891DDF5800002EDD00 /* User Interface */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		4026497B1DDF5800002EDD00 /* Application Logic */ = {
+			isa = PBXGroup;
+			children = (
+				4026497C1DDF5800002EDD00 /* DataManager */,
+				4026497F1DDF5800002EDD00 /* Interactor */,
+				402649821DDF5800002EDD00 /* Provider */,
+			);
+			path = "Application Logic";
+			sourceTree = "<group>";
+		};
+		4026497C1DDF5800002EDD00 /* DataManager */ = {
+			isa = PBXGroup;
+			children = (
+				4026497D1DDF5800002EDD00 /* XMGPostDataManager.h */,
+				4026497E1DDF5800002EDD00 /* XMGPostDataManager.m */,
+			);
+			path = DataManager;
+			sourceTree = "<group>";
+		};
+		4026497F1DDF5800002EDD00 /* Interactor */ = {
+			isa = PBXGroup;
+			children = (
+				402649801DDF5800002EDD00 /* XMGPostInteractor.h */,
+				402649811DDF5800002EDD00 /* XMGPostInteractor.m */,
+			);
+			path = Interactor;
+			sourceTree = "<group>";
+		};
+		402649821DDF5800002EDD00 /* Provider */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Provider;
+			sourceTree = "<group>";
+		};
+		402649831DDF5800002EDD00 /* Module Interface */ = {
+			isa = PBXGroup;
+			children = (
+				402649841DDF5800002EDD00 /* XMGPostDataManagerPort.h */,
+				402649851DDF5800002EDD00 /* XMGPostEventHandlerPort.h */,
+				402649861DDF5800002EDD00 /* XMGPostInteractorPort.h */,
+				402649871DDF5800002EDD00 /* XMGPostUserInterfacePort.h */,
+				402649881DDF5800002EDD00 /* XMGPostWireframePort.h */,
+			);
+			path = "Module Interface";
+			sourceTree = "<group>";
+		};
+		402649891DDF5800002EDD00 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4026498A1DDF5800002EDD00 /* Express */,
+				4026498B1DDF5800002EDD00 /* Presenter */,
+				4026498E1DDF5800002EDD00 /* View */,
+				402649911DDF5800002EDD00 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		4026498A1DDF5800002EDD00 /* Express */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		4026498B1DDF5800002EDD00 /* Presenter */ = {
+			isa = PBXGroup;
+			children = (
+				4026498C1DDF5800002EDD00 /* XMGPostPresenter.h */,
+				4026498D1DDF5800002EDD00 /* XMGPostPresenter.m */,
+				402649B71DDF64F3002EDD00 /* XMGAllPostPresenter.h */,
+				402649B81DDF64F3002EDD00 /* XMGAllPostPresenter.m */,
+				402649BA1DDF6502002EDD00 /* XMGVideoPostPresenter.h */,
+				402649BB1DDF6502002EDD00 /* XMGVideoPostPresenter.m */,
+				402649BD1DDF651E002EDD00 /* XMGVoicePostPresenter.h */,
+				402649BE1DDF651E002EDD00 /* XMGVoicePostPresenter.m */,
+				402649C01DDF6536002EDD00 /* XMGPictruePostPresenter.h */,
+				402649C11DDF6536002EDD00 /* XMGPictruePostPresenter.m */,
+				402649C31DDF6548002EDD00 /* XMGWordsPostPresenter.h */,
+				402649C41DDF6548002EDD00 /* XMGWordsPostPresenter.m */,
+			);
+			path = Presenter;
+			sourceTree = "<group>";
+		};
+		4026498E1DDF5800002EDD00 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4026498F1DDF5800002EDD00 /* XMGPostActivity.h */,
+				402649901DDF5800002EDD00 /* XMGPostActivity.m */,
+				402649991DDF6273002EDD00 /* XMGAllPostActivity.h */,
+				4026499A1DDF6273002EDD00 /* XMGAllPostActivity.m */,
+				4026499C1DDF6296002EDD00 /* XMGVideoPostActivity.h */,
+				4026499D1DDF6296002EDD00 /* XMGVideoPostActivity.m */,
+				4026499F1DDF62BE002EDD00 /* XMGPictruePostActivity.h */,
+				402649A01DDF62BE002EDD00 /* XMGPictruePostActivity.m */,
+				402649A21DDF62E1002EDD00 /* XMGVoicePostActivity.h */,
+				402649A31DDF62E1002EDD00 /* XMGVoicePostActivity.m */,
+				402649A51DDF635F002EDD00 /* XMGWordsPostActivity.h */,
+				402649A61DDF635F002EDD00 /* XMGWordsPostActivity.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		402649911DDF5800002EDD00 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				402649921DDF5800002EDD00 /* XMGPostRouting.h */,
+				402649931DDF5800002EDD00 /* XMGPostRouting.m */,
+				402649A81DDF63A0002EDD00 /* XMGAllPostRouting.h */,
+				402649A91DDF63A0002EDD00 /* XMGAllPostRouting.m */,
+				402649AB1DDF63AF002EDD00 /* XMGVideoPostRouting.h */,
+				402649AC1DDF63AF002EDD00 /* XMGVideoPostRouting.m */,
+				402649AE1DDF63BD002EDD00 /* XMGVoicePostRouting.h */,
+				402649AF1DDF63BD002EDD00 /* XMGVoicePostRouting.m */,
+				402649B11DDF63CD002EDD00 /* XMGPictruePostRouting.h */,
+				402649B21DDF63CD002EDD00 /* XMGPictruePostRouting.m */,
+				402649B41DDF641D002EDD00 /* XMGWordsPostRouting.h */,
+				402649B51DDF641D002EDD00 /* XMGWordsPostRouting.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 		404873E31DD3515E00388087 = {
 			isa = PBXGroup;
 			children = (
@@ -1881,23 +2087,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4026499E1DDF6296002EDD00 /* XMGVideoPostActivity.m in Sources */,
 				4026492C1DDEE6FB002EDD00 /* XMGFriendsRecommentRouting.m in Sources */,
+				402649A11DDF62BE002EDD00 /* XMGPictruePostActivity.m in Sources */,
 				4026492A1DDEE6FB002EDD00 /* XMGRecommendUserCell.m in Sources */,
 				4026493C1DDEE6FB002EDD00 /* XMGMeRouting.m in Sources */,
 				4026494F1DDEE6FB002EDD00 /* XFInterfaceFactory.m in Sources */,
 				4026495D1DDEE6FB002EDD00 /* RACSignal+ErrorAlter.m in Sources */,
+				4026499B1DDF6273002EDD00 /* XMGAllPostActivity.m in Sources */,
 				4026494C1DDEE6FB002EDD00 /* XFExpressPiece.m in Sources */,
 				402649521DDEE6FB002EDD00 /* UIViewController+XFLego.m in Sources */,
 				402649461DDEE6FB002EDD00 /* UIBarButtonItem+XMGExtension.m in Sources */,
 				4026490D1DDEE6FB002EDD00 /* XMGEssencePresenter.m in Sources */,
 				402649481DDEE6FB002EDD00 /* XFEventBus.m in Sources */,
 				402649131DDEE6FB002EDD00 /* XMGRecommendTagProvider.m in Sources */,
+				402649B31DDF63CD002EDD00 /* XMGPictruePostRouting.m in Sources */,
+				402649971DDF5800002EDD00 /* XMGPostActivity.m in Sources */,
 				4026492D1DDEE6FB002EDD00 /* XMGFriendTrendsDataManager.m in Sources */,
 				4026495C1DDEE6FB002EDD00 /* XFURLParse.m in Sources */,
 				402649541DDEE6FB002EDD00 /* XFDataManager.m in Sources */,
 				402649391DDEE6FB002EDD00 /* XMGMeInteractor.m in Sources */,
 				402649671DDEE6FB002EDD00 /* XMGRColor.m in Sources */,
 				402649341DDEE6FB002EDD00 /* XMGIndexTabInteractor.m in Sources */,
+				402649B61DDF641D002EDD00 /* XMGWordsPostRouting.m in Sources */,
+				402649A71DDF635F002EDD00 /* XMGWordsPostActivity.m in Sources */,
 				402649401DDEE6FB002EDD00 /* XMGNewActivity.m in Sources */,
 				402649651DDEE6FB002EDD00 /* AppDelegate.m in Sources */,
 				4026494B1DDEE6FB002EDD00 /* XFExpressPack.m in Sources */,
@@ -1906,6 +2119,8 @@
 				402649321DDEE6FB002EDD00 /* XMGFriendTrendsRouting.m in Sources */,
 				4026495A1DDEE6FB002EDD00 /* NSObject+XFLegoCopy.m in Sources */,
 				4026491B1DDEE6FB002EDD00 /* XMGFriendsRecommentInteractor.m in Sources */,
+				402649BF1DDF651E002EDD00 /* XMGVoicePostPresenter.m in Sources */,
+				402649941DDF5800002EDD00 /* XMGPostDataManager.m in Sources */,
 				402649281DDEE6FB002EDD00 /* XMGRecommendCategoryCell.m in Sources */,
 				402649381DDEE6FB002EDD00 /* XMGMeDataManager.m in Sources */,
 				4026492E1DDEE6FB002EDD00 /* XMGFriendTrendsInteractor.m in Sources */,
@@ -1916,24 +2131,31 @@
 				402649241DDEE6FB002EDD00 /* XMGFriendsRecommentActivity.m in Sources */,
 				402649681DDEE6FB002EDD00 /* XMGRImage.m in Sources */,
 				402649411DDEE6FB002EDD00 /* XMGNewRouting.m in Sources */,
+				402649AD1DDF63AF002EDD00 /* XMGVideoPostRouting.m in Sources */,
+				402649AA1DDF63A0002EDD00 /* XMGAllPostRouting.m in Sources */,
 				4026490B1DDEE6FB002EDD00 /* XMGEssenceDataManager.m in Sources */,
 				4026491F1DDEE6FB002EDD00 /* XMGRecommendCategoryModel.m in Sources */,
 				402649631DDEE6FB002EDD00 /* XMGAPPLoader.m in Sources */,
 				4026494D1DDEE6FB002EDD00 /* XFRenderData.m in Sources */,
 				4026491A1DDEE6FB002EDD00 /* XMGFriendsRecommentDataManager.m in Sources */,
+				402649951DDF5800002EDD00 /* XMGPostInteractor.m in Sources */,
 				402649181DDEE6FB002EDD00 /* XMGRecommendTagActivity.m in Sources */,
 				402649441DDEE6FB002EDD00 /* XMGRecommendService.m in Sources */,
+				402649B01DDF63BD002EDD00 /* XMGVoicePostRouting.m in Sources */,
 				4026493A1DDEE6FB002EDD00 /* XMGMePresenter.m in Sources */,
 				402649591DDEE6FB002EDD00 /* XFURLManager.m in Sources */,
 				402649691DDEE6FB002EDD00 /* XMGRMetric.m in Sources */,
 				4026493B1DDEE6FB002EDD00 /* XMGMeActivity.m in Sources */,
+				402649C51DDF6548002EDD00 /* XMGWordsPostPresenter.m in Sources */,
 				402649471DDEE6FB002EDD00 /* UIView+Extention.m in Sources */,
 				402649601DDEE6FB002EDD00 /* XFVerticalButton.m in Sources */,
 				402649611DDEE6FB002EDD00 /* XMGAPI.m in Sources */,
+				402649961DDF5800002EDD00 /* XMGPostPresenter.m in Sources */,
 				402649571DDEE6FB002EDD00 /* XFRouting.m in Sources */,
 				4026493D1DDEE6FB002EDD00 /* XMGNewDataManager.m in Sources */,
 				402649351DDEE6FB002EDD00 /* XMGIndexTabPresenter.m in Sources */,
 				402649121DDEE6FB002EDD00 /* XMGRecommendTagModel.m in Sources */,
+				402649981DDF5800002EDD00 /* XMGPostRouting.m in Sources */,
 				4026493F1DDEE6FB002EDD00 /* XMGNewPresenter.m in Sources */,
 				4026492F1DDEE6FB002EDD00 /* XMGFriendTrendsPresenter.m in Sources */,
 				402649641DDEE6FB002EDD00 /* XMGPushGuideLoader.m in Sources */,
@@ -1945,7 +2167,10 @@
 				402649101DDEE6FB002EDD00 /* XMGRecommendTagDataManager.m in Sources */,
 				4026491D1DDEE6FB002EDD00 /* XMGRecommandUserGroupModel.m in Sources */,
 				402649151DDEE6FB002EDD00 /* XMGRecommendTagPresenter.m in Sources */,
+				402649C21DDF6536002EDD00 /* XMGPictruePostPresenter.m in Sources */,
 				402649331DDEE6FB002EDD00 /* XMGIndexTabDataManager.m in Sources */,
+				402649B91DDF64F3002EDD00 /* XMGAllPostPresenter.m in Sources */,
+				402649A41DDF62E1002EDD00 /* XMGVoicePostActivity.m in Sources */,
 				4026495E1DDEE6FB002EDD00 /* XFPHTextField.m in Sources */,
 				402649491DDEE6FB002EDD00 /* XFModuleAssembly.m in Sources */,
 				402649211DDEE6FB002EDD00 /* XMGRCUserRenderData.m in Sources */,
@@ -1965,6 +2190,7 @@
 				402649231DDEE6FB002EDD00 /* XMGFriendsRecommentPresenter.m in Sources */,
 				402649581DDEE6FB002EDD00 /* XFRoutingLinkManager.m in Sources */,
 				4026493E1DDEE6FB002EDD00 /* XMGNewInteractor.m in Sources */,
+				402649BC1DDF6502002EDD00 /* XMGVideoPostPresenter.m in Sources */,
 				4026494A1DDEE6FB002EDD00 /* XFUIBus.m in Sources */,
 				402649551DDEE6FB002EDD00 /* XFInteractor.m in Sources */,
 				402649751DDEED85002EDD00 /* XFControllerFactory.m in Sources */,

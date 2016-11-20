@@ -39,9 +39,9 @@ static NSString * const Identifier = @"RCUserCell";
     
     XF_Define_Weak
     self.mj_footer = [MJRefreshBackNormalFooter footerWithRefreshingBlock:^{
-        // 加载更多数据
         XF_Define_Strong
-        [[EventHandler actionDidFooterRefresh] subscribeNext:^(NSMutableArray * indexPaths) {
+        // 加载更多数据
+         [[EventHandler actionDidFooterRefresh] subscribeNext:^(NSMutableArray * indexPaths) {
             [self insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
             [self checkFooterRefreshState];
         }];
@@ -121,7 +121,7 @@ static NSString * const Identifier = @"RCUserCell";
     // 开始请求数据
     self.signalDisposable = [[EventHandler actionDidHeaderRefresh] subscribeNext:^(id x) {
         [self reloadData];
-        // 加载数据后再新检测上拉状态
+        // 加载数据后再重新检测上拉状态
         [self checkFooterRefreshState];
         [self.mj_header endRefreshing];
     }];

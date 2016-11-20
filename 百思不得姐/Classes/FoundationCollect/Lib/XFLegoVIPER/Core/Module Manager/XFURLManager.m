@@ -38,12 +38,12 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
 // xf://user/register?usrid=123
 + (void)register:(NSString *)url
 {
-    NSString *lcModuleName = [XFURLParse lastPathComponentForURL:url];
-    if (lcModuleName.length > 2) {
-        NSString *moduleName = [NSString stringWithFormat:@"%@%@",[lcModuleName substringToIndex:XF_Index_Second].uppercaseString,[lcModuleName substringFromIndex:XF_Index_Second]];
-        [self register:url forComponent:moduleName];
+    NSString *lcComponentName = [XFURLParse lastPathComponentForURL:url];
+    if (lcComponentName.length > 2) {
+        NSString *componentName = [NSString stringWithFormat:@"%@%@",[lcComponentName substringToIndex:XF_Index_Second].uppercaseString,[lcComponentName substringFromIndex:XF_Index_Second]];
+        [self register:url forComponent:componentName];
     } else {
-        [self register:url forComponent:lcModuleName.uppercaseString];
+        [self register:url forComponent:lcComponentName.uppercaseString];
     }
 }
 

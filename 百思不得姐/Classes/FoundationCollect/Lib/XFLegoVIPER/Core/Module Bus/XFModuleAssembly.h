@@ -30,11 +30,20 @@
  *
  *  @param navName               导航
  *  @param ibSymbol              ibSymbol
- *  @param dataManagerName       数据管理名
+ *  @param shareDataManagerName  数据管理名
  *
  *  @return Routing
  */
-- (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol dataManagerName:(NSString *)dataManagerName;
+- (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName;
+
+/**
+ *  基于其它模块的视图、事件、数据处理、数据管理层类型创建一个模块
+ *
+ *  @param moduleName 共享的模块名
+ *
+ *  @return Routing
+ */
+- (__kindof XFRouting *)autoAssemblyModuleFromShareModuleName:(NSString *)moduleName;
 
 /**
  *  构建关系层

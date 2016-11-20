@@ -41,22 +41,35 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 
 
 // 自动组装模块成分
-#define XF_AutoAssemblyModule(NavName,IBSymbol,DataManagerName) \
+#define XF_AutoAssemblyModule(NavName,IBSymbol,ShareDataManagerName) \
 + (instancetype)routing \
 { \
-    return [[super routing].assembly autoAssemblyModuleWithNav:NavName ibSymbol:IBSymbol dataManagerName:DataManagerName]; \
+    return [[super routing].assembly autoAssemblyModuleWithNav:NavName ibSymbol:IBSymbol shareDataManagerName:ShareDataManagerName]; \
 }
 // 自动组装一个无Nav的模块成分
-#define XF_AutoAssemblyModule_FastDM(DataManagerName) XF_AutoAssemblyModule(nil,nil,DataManagerName)
-#define XF_AutoAssemblyModule_Fast XF_AutoAssemblyModule_FastDM(nil)
+#define XF_AutoAssemblyModule_ShareDM(ShareDataManagerName) XF_AutoAssemblyModule(nil,nil,ShareDataManagerName)
+#define XF_AutoAssemblyModule_Fast XF_AutoAssemblyModule_ShareDM(nil)
 
 // 自动组装一个有Nav模块成分
-#define XF_AutoAssemblyModule_FastNavDM(NavName,DataManagerName) XF_AutoAssemblyModule(NavName,nil,DataManagerName)
-#define XF_AutoAssemblyModule_FastNav(NavName) XF_AutoAssemblyModule_FastNavDM(NavName,nil)
+#define XF_AutoAssemblyModuleWithNav_ShareDM(NavName,ShareDataManagerName) XF_AutoAssemblyModule(NavName,nil,ShareDataManagerName)
+#define XF_AutoAssemblyModuleWithNav(NavName) XF_AutoAssemblyModuleWithNav_ShareDM(NavName,nil)
 
 // 自动组装一个IBSymbol的模块成分
-#define XF_AutoAssemblyModule_FastIBDM(IBSymbol,DataManagerName) XF_AutoAssemblyModule(nil,IBSymbol,DataManagerName)
-#define XF_AutoAssemblyModule_FastIB(IBSymbol) XF_AutoAssemblyModule_FastIBDM(IBSymbol,nil)
+#define XF_AutoAssemblyModuleFormIB_ShareDM(IBSymbol,ShareDataManagerName) XF_AutoAssemblyModule(nil,IBSymbol,ShareDataManagerName)
+#define XF_AutoAssemblyModuleFormIB(IBSymbol) XF_AutoAssemblyModuleFormIB_ShareDM(IBSymbol,nil)
+
+
+// 自动组装一个基于其它模块成分类型的模块
+#define XF_AutoAssemblyModuleFromShareModuleName(shareModuleName) \
++ (instancetype)routing \
+{ \
+    XFRouting *routing = [[self alloc] init]; \
+    [routing setValue:[[XFModuleAssembly alloc] initWithFromRouting:routing] forKey:@"assembly"]; \
+    [routing setValue:[[XFUIBus alloc] initWithFromRouting:routing] forKey:@"uiBus"]; \
+    [routing setValue:[[XFEventBus alloc] initWithFromRouting:routing] forKey:@"eventBus"]; \
+    return [routing.assembly autoAssemblyModuleFromShareModuleName:shareModuleName]; \
+}
+
 
 
 // Push一个模块宏

@@ -191,7 +191,7 @@ static BOOL _enableLog = NO;
             if (routing.previousRouting) {
                 break;
             }
-            NSString *firstFix = [NSString stringWithFormat:@"\nRoot Routing(%zd): (\n\t%@",routingCount,NSStringFromClass([routing class])];;
+            NSString *firstFix = [NSString stringWithFormat:@"\nRoot Routing(%zd): (\n\t%@",routingCount,NSStringFromClass([routing class])];
             routingCount++;
             if (routing.isSubRoute && routing.parentRouting) {
                 firstFix = [NSString stringWithFormat:@"\nSub Routing from %@(%zd): (\n\t%@",NSStringFromClass([routing.parentRouting class]),subRoutingCount,NSStringFromClass([routing class])];

@@ -12,7 +12,7 @@
 @implementation XMGEssenceRouting
 
 // 组装模块
-XF_AutoAssemblyModule_FastNav(@"XMG")
+XF_AutoAssemblyModuleWithNav(@"XMG")
 
 // 跳转模块
 - (void)transition2RecommendTag

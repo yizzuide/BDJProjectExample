@@ -23,9 +23,19 @@
     return self;
 }
 
-- (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol dataManagerName:(NSString *)dataManagerName
+- (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName
 {
     NSString *moduleName = [XFRoutingLinkManager moduleNameForRouting:self.fromRouting];
+    return [self _autoAssemblyModuleWithModuleName:moduleName navName:navName ibSymbol:ibSymbol shareDataManagerName:shareDataManagerName];
+}
+
+- (__kindof XFRouting *)autoAssemblyModuleFromShareModuleName:(NSString *)moduleName
+{
+    return [self _autoAssemblyModuleWithModuleName:moduleName navName:nil ibSymbol:nil shareDataManagerName:nil];
+}
+
+- (__kindof XFRouting *)_autoAssemblyModuleWithModuleName:(NSString *)moduleName navName:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName
+{
     NSString *modulePrefix = [XFRoutingLinkManager modulePrefix];
     if (modulePrefix == nil || [modulePrefix isEqualToString:@""]) return nil;
     NSString *navClassName = navName ? [NSString stringWithFormat:@"%@%@",navName,@"NavigationController"] : @"";
@@ -33,14 +43,15 @@
     NSString *presenterClassName = [NSString stringWithFormat:@"%@%@%@",modulePrefix,moduleName,@"Presenter"];
     NSString *interactorClassName = [NSString stringWithFormat:@"%@%@%@",modulePrefix,moduleName,@"Interactor"];
     NSString *dataManagerClassName;
-    // 是否不是当前模块名的DataManager
-    if (dataManagerName) {
-        dataManagerClassName = [NSString stringWithFormat:@"%@%@",dataManagerName,@"DataManager"];
-        // 尝试使用同样的前缀
+    // 是使用共享的模块名DataManager
+    if (shareDataManagerName) {
+        // 先采用外部定义的前辍
+        dataManagerClassName = [NSString stringWithFormat:@"%@%@",shareDataManagerName,@"DataManager"];
+        // 尝试使用同样的模块前缀
         if (!NSClassFromString(dataManagerClassName)) {
-            dataManagerClassName = [NSString stringWithFormat:@"%@%@%@",modulePrefix,dataManagerName,@"DataManager"];
+            dataManagerClassName = [NSString stringWithFormat:@"%@%@%@",modulePrefix,shareDataManagerName,@"DataManager"];
         }
-    }else {
+    }else { // 如果当前模块的DataManager
         dataManagerClassName = [NSString stringWithFormat:@"%@%@%@",modulePrefix,moduleName,@"DataManager"];
     }
     // 如果是Nib
@@ -50,7 +61,6 @@
         // 通用组装方式
         return [self buildModulesAssemblyWithActivityClass:NSClassFromString(activityClassName) navigatorClass:NSClassFromString(navClassName) presenterClass:NSClassFromString(presenterClassName) interactorClass:NSClassFromString(interactorClassName) dataManagerClass:NSClassFromString(dataManagerClassName)];
     }
-    
 }
 
 - (__kindof XFRouting *)buildModulesAssemblyWithActivityClass:(Class)activityClass navigatorClass:(Class)navigatorClass presenterClass:(Class)perstentClass interactorClass:(Class)interactorClass dataManagerClass:(Class)dataManagerClass

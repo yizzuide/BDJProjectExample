@@ -17,6 +17,10 @@
 @property (nonatomic, copy) NSString *name;
 // 数量
 @property (nonatomic, assign) NSInteger count;
+
+
+
+
 /**
  *  用户组
  */
@@ -32,4 +36,5 @@
  *  当前加载到的页数
  */
 @property (nonatomic, assign) NSInteger currentPage;
+
 @end
