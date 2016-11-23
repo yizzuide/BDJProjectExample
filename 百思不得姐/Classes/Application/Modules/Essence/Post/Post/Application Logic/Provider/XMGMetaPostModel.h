@@ -13,5 +13,8 @@
 @interface XMGMetaPostModel : NSObject
 
 @property (nonatomic, strong) XMGPostInfo *info;
-@property (nonatomic, strong) NSArray<XMGPostModel *> *list;
+@property (nonatomic, strong) NSMutableArray<XMGPostModel *> *list;
+
+/* ---------------- 记录属性 ---------------- */
+@property (nonatomic, assign) NSInteger currentPage;
 @end

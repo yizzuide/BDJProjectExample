@@ -11,4 +11,6 @@
 
 @protocol XMGPostEventHandlerPort <XFEventHandlerPort>
 
+- (void)didHeaderRefreshAction;
+- (RACSignal *)didFooterRefreshAction;
 @end

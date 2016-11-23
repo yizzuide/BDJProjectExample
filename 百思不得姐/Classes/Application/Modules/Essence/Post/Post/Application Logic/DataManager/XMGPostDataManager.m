@@ -23,6 +23,11 @@
     return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType]];
 }
 
+- (RACSignal *)grabPostsForType:(XMGPostCategoryType)postType maxtime:(NSInteger)maxtime atPage:(NSInteger)page
+{
+    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType] maxtime:maxtime atPage:page];
+}
+
 - (XMGPostDataMediaType)postSeviceMediaTypeForPostType:(XMGPostCategoryType)postType
 {
     XMGPostDataMediaType mediaType;

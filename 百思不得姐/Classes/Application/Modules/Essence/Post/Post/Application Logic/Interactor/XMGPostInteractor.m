@@ -31,6 +31,24 @@
     }];
 }
 
+// 获得下一页
+- (RACSignal *)fetchNextPagePostsForType:(XMGPostCategoryType)postCategoryType
+{
+    // 获得当前类型的预加载数据
+    XMGMetaPostModel *preMetaPostModel = [self.postMap objectForKey:XMG_Post_type2Type(postCategoryType)];
+    return [[DataManager grabPostsForType:postCategoryType maxtime:preMetaPostModel.info.maxtime atPage:preMetaPostModel.currentPage + 1] map:^id(XMGMetaPostModel *postModel) {
+        // 返回成功后，增加页数
+        preMetaPostModel.currentPage++;
+        // 替换新的info
+        preMetaPostModel.info = postModel.info;
+        // 添加新列表数据
+        [preMetaPostModel.list addObjectsFromArray:postModel.list];
+        // 返回新加载的渲染数据
+        return [XMGPostProvider collectPostRenderDataFromArray:postModel.list];
+    }];
+    
+}
+
 
 #pragma mark - BusinessReduce
 

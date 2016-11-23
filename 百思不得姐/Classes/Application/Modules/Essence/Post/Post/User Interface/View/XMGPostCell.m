@@ -9,9 +9,11 @@
 #import "XMGPostCell.h"
 #import <UIImageView+WebCache.h>
 #import "XMGPostRenderItem.h"
+#import "UIView+XFLego.h"
 
 @interface XMGPostCell ()
 
+@property (nonatomic, weak) UIImageView *cardImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *prefileImageView;
 @property (weak, nonatomic) IBOutlet UIImageView *weibo_VImageView;
 @property (weak, nonatomic) IBOutlet UILabel *nikeNameLabel;
@@ -27,7 +29,16 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
-    self.backgroundView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"mainCellBackground"]];
+    
+    // 卡片方式一的样式设置
+//    self.backgroundView =  [[UIImageView alloc] initWithImage:[UIImage imageNamed:R_Image_PostCellBackground]];
+    
+    // 卡片方式二的样式设置
+    self.backgroundColor = [UIColor clearColor];
+    UIImageView *cardImageView = [[UIImageView alloc] init];
+    cardImageView.image = [UIImage imageNamed:R_Image_PostCellBackground];
+    [self.contentView insertSubview:cardImageView atIndex:0];
+    self.cardImageView = cardImageView;
 }
 
 - (void)setSelected:(BOOL)selected animated:(BOOL)animated {
@@ -35,14 +46,30 @@
 
     // Configure the view for the selected state
 }
-- (void)setFrame:(CGRect)frame
+
+// 卡片方式一：重置Cell的Frame，UITableView加载更多使用局部动画加载会有问题
+/*- (void)setFrame:(CGRect)frame
 {
     CGFloat margin = 10;
+    CGSize screenSize = [UIScreen mainScreen].bounds.size;
     frame.origin.x = margin;
     frame.origin.y += margin;
-    frame.size.width -= margin * 2;
+    frame.size.width = screenSize.width - margin * 2;
     frame.size.height -= margin;
     [super setFrame:frame];
+}*/
+
+// 卡片方式二：缩小ContentView的大小
+- (void)layoutSubviews
+{
+    [super layoutSubviews];
+    XF_SetFrame_(self.contentView, {
+        frame.origin.x = R_Size_PostCellMargin;
+        frame.origin.y = R_Height_PostCellClip;
+        frame.size.width -= R_Size_PostCellMargin * 2;
+        frame.size.height -= R_Size_PostCellMargin;
+    })
+    self.cardImageView.frame = self.contentView.bounds;
 }
 
 - (void)setRenderItem:(XMGPostRenderItem *)renderItem

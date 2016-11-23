@@ -35,14 +35,7 @@
 {
     // 填充绑定的ViewData
     //self.viewData = [Interactor fetchData];
-    
-    LogWarning(@"current ModuleName: %@",XF_ModuleName);
-    LogWarning(@"string: ModuleName =? enum: XMGPostCategoryTypeWords, answer is %d",XMG_Post_Str2Type(XF_ModuleName) == XMGPostCategoryTypeWords);
-    // XF_ModuleName为当前模块名，XMG_Post_Str2Type宏可以通过模块名找到对应帖子类型
-    [[Interactor fetchPostsForType:XMG_Post_Str2Type(XF_ModuleName)] subscribeNext:^(XFRenderData *renderData) {
-        // 设置并关联到当前模块的显示数据包
-        XF_SetExpressPack_Fast(renderData);
-    }];
+
 }
 
 // 初始化命令
@@ -73,8 +66,34 @@
 }
 
 #pragma mark - DoAction
+- (void)didHeaderRefreshAction
+{
+    // XF_ModuleName为当前模块名，XMG_Post_Str2Type宏可以通过模块名找到对应帖子分类类型
+    [[Interactor fetchPostsForType:XMG_Post_Str2Type(XF_ModuleName)] subscribeNext:^(XFRenderData *renderData) {
+        // 设置并关联到当前模块的显示数据包
+        XF_SetExpressPack_Fast(renderData);
+    }];
+}
 
-
+- (RACSignal *)didFooterRefreshAction
+{
+    return [[Interactor fetchNextPagePostsForType:XMG_Post_Str2Type(XF_ModuleName)] map:^id(XFRenderData *renderData) {
+        // 记录上一次的数据个数
+        NSUInteger lastPostsCount = self.expressPack.expressPieces.count;
+        
+        // 添加新数据
+        XF_AddExpressPack_Last(renderData)
+        
+        // 创建列表视图布局刷新的IndexPath
+        NSMutableArray *indexPaths = [NSMutableArray array];
+        NSUInteger count = renderData.list.count;
+        for (int i = 0; i < count; i++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastPostsCount + i inSection:0];
+            [indexPaths addObject:indexPath];
+        }
+        return indexPaths;
+    }];
+}
 
 #pragma mark - ValidData
 

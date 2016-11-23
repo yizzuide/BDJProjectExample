@@ -13,4 +13,5 @@
 @protocol XMGPostDataManagerPort <XFDataManagerPort>
 
 - (RACSignal *)grabPostsForType:(XMGPostCategoryType)postType;
+- (RACSignal *)grabPostsForType:(XMGPostCategoryType)postType maxtime:(NSInteger)maxtime atPage:(NSInteger)page;
 @end

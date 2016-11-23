@@ -13,8 +13,18 @@
 /**
  *  远程获取所有帖子
  *
- *  @param postSeviceMediaType 帖子类型枚举
+ *  @param postSeviceMediaType 帖子数据枚举
  *
  */
 - (RACSignal *)pullPostsForType:(XMGPostDataMediaType)postSeviceMediaType;
+
+/**
+ *  加载下一页帖子
+ *
+ *  @param postSeviceMediaType 帖子数据枚举
+ *  @param maxtime             上一次最大时间
+ *  @param page                页数
+ *
+ */
+- (RACSignal *)pullPostsForType:(XMGPostDataMediaType)postSeviceMediaType maxtime:(NSInteger)maxtime atPage:(NSInteger)page;
 @end

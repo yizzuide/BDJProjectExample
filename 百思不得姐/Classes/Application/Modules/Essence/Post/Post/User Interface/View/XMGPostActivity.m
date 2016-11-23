@@ -11,6 +11,7 @@
 #import "XMGPostCategory.h"
 #import "XMGPostCell.h"
 #import "XMGPostRenderItem.h"
+#import <MJRefresh.h>
 
 #define EventHandler  XFConvertPresenterToType(id<XMGPostEventHandlerPort>)
 
@@ -49,7 +50,34 @@ static NSString * const Identifier = @"PostCell";
 }
 
 - (void)setUpViews {
+    XF_Define_Weak
+    self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        if(self.tableView.mj_footer.isRefreshing) {
+            [self.tableView.mj_footer endRefreshing];
+        }
+        XF_Define_Strong
+        [EventHandler didHeaderRefreshAction];
+    }];
+    // 向下自动透明
+    self.tableView.mj_header.automaticallyChangeAlpha = YES;
+    [self.tableView.mj_header beginRefreshing];
     
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        if(self.tableView.mj_header.isRefreshing) {
+            [self.tableView.mj_header endRefreshing];
+        }
+        XF_Define_Strong
+        [[EventHandler didFooterRefreshAction] subscribeNext:^(NSArray<NSIndexPath *> *indexPaths) {
+            [self.tableView.mj_footer endRefreshing];
+            if (!indexPaths) {
+                return;
+            }
+            // 局部插入行
+           [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+//            [self.tableView reloadData];
+        }];
+    }];
+    self.tableView.mj_footer.hidden = YES;
 }
 
 - (void)bindViewData {
@@ -62,6 +90,8 @@ static NSString * const Identifier = @"PostCell";
         // 如果有显示数据加载完成
         if (x) {
             [self.tableView reloadData];
+            [self.tableView.mj_header endRefreshing];
+            self.tableView.mj_footer.hidden = NO;
         }
     }];
 }
@@ -81,6 +111,10 @@ static NSString * const Identifier = @"PostCell";
     return cell;
 }
 
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    [tableView deselectRowAtIndexPath:indexPath animated:YES];
+}
 
 
 #pragma mark - Getter

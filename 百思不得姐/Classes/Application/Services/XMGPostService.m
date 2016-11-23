@@ -25,4 +25,19 @@
                 return [XMGMetaPostModel mj_objectWithKeyValues:tuple.first];
             }];
 }
+
+- (RACSignal *)pullPostsForType:(XMGPostDataMediaType)postSeviceMediaType maxtime:(NSInteger)maxtime atPage:(NSInteger)page
+{
+    return [[XMGHttpRequest getWithURL:API_Main
+                                params:@{
+                                         @"a":@"list",
+                                         @"c":@"data",
+                                         @"type":@(postSeviceMediaType),
+                                         @"maxtime":@(maxtime),
+                                         @"page":@(page)
+                                         }]
+            map:^id(RACTuple *tuple) {
+                return [XMGMetaPostModel mj_objectWithKeyValues:tuple.first];
+            }];
+}
 @end

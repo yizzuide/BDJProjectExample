@@ -12,5 +12,6 @@
 
 @protocol XMGPostInteractorPort <XFInteractorPort>
 
-- (RACSignal *)fetchPostsForType:(XMGPostCategoryType)postType;
+- (RACSignal *)fetchPostsForType:(XMGPostCategoryType)postCategoryType;
+- (RACSignal *)fetchNextPagePostsForType:(XMGPostCategoryType)postCategoryType;
 @end

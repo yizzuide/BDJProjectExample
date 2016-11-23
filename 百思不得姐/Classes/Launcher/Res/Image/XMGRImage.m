@@ -27,6 +27,7 @@ DefConstString R_Image_TabBarMeSel = @"tabBar_me_click_icon";
 DefConstString R_Image_TabBarBkg = @"tabbar-light";
 
 DefConstString R_Image_UserDefault = @"defaultUserIcon";
+DefConstString R_Image_PostCellBackground = @"mainCellBackground";
 
 
 
