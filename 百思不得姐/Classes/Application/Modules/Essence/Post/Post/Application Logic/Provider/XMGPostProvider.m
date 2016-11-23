@@ -29,7 +29,8 @@
         }
         renderItem.userName = postModel.screen_name;
         renderItem.ProfileUrl = [NSURL URLWithString:postModel.profile_image];
-        renderItem.createTime = postModel.create_time;
+        // 这里要使用审核通过时间，不能直接使用用户创建时间，不然会造成时间上的混乱排列
+        renderItem.createTime = postModel.passtime;
         renderItem.love = [NSString stringWithFormat:@"%zd", postModel.love];
         renderItem.hate = [NSString stringWithFormat:@"%zd", postModel.hate];
         renderItem.rePost = [NSString stringWithFormat:@"%zd",postModel.repost];

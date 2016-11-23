@@ -123,6 +123,7 @@
 		403A89081DE43BB60016E080 /* XMGPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 403A89061DE43BB60016E080 /* XMGPostCell.xib */; };
 		403A890B1DE442D00016E080 /* XMGPostRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A890A1DE442D00016E080 /* XMGPostRenderItem.m */; };
 		403A890E1DE53EB40016E080 /* XMGPictruePostRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A890D1DE53EB40016E080 /* XMGPictruePostRenderItem.m */; };
+		403A89141DE58DC10016E080 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A89131DE58DC10016E080 /* NSDate+Extension.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
 		4069EF541DE2DE430037B22C /* XMGPostService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF531DE2DE430037B22C /* XMGPostService.m */; };
@@ -421,6 +422,8 @@
 		403A890A1DE442D00016E080 /* XMGPostRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostRenderItem.m; sourceTree = "<group>"; };
 		403A890C1DE53EB40016E080 /* XMGPictruePostRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictruePostRenderItem.h; sourceTree = "<group>"; };
 		403A890D1DE53EB40016E080 /* XMGPictruePostRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostRenderItem.m; sourceTree = "<group>"; };
+		403A89121DE58DC10016E080 /* NSDate+Extension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDate+Extension.h"; sourceTree = "<group>"; };
+		403A89131DE58DC10016E080 /* NSDate+Extension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDate+Extension.m"; sourceTree = "<group>"; };
 		404873EC1DD3515E00388087 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -1356,6 +1359,8 @@
 		4026489F1DDEE6FB002EDD00 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				403A89121DE58DC10016E080 /* NSDate+Extension.h */,
+				403A89131DE58DC10016E080 /* NSDate+Extension.m */,
 				402648A01DDEE6FB002EDD00 /* UIBarButtonItem+XMGExtension.h */,
 				402648A11DDEE6FB002EDD00 /* UIBarButtonItem+XMGExtension.m */,
 				402648A21DDEE6FB002EDD00 /* UIView+Extention.h */,
@@ -2133,6 +2138,7 @@
 				402649631DDEE6FB002EDD00 /* XMGAPPLoader.m in Sources */,
 				4069EF571DE2E2D80037B22C /* XMGMetaPostModel.m in Sources */,
 				4026494D1DDEE6FB002EDD00 /* XFRenderData.m in Sources */,
+				403A89141DE58DC10016E080 /* NSDate+Extension.m in Sources */,
 				4026491A1DDEE6FB002EDD00 /* XMGFriendsRecommentDataManager.m in Sources */,
 				402649951DDF5800002EDD00 /* XMGPostInteractor.m in Sources */,
 				402649181DDEE6FB002EDD00 /* XMGRecommendTagActivity.m in Sources */,

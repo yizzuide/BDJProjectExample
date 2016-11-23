@@ -43,7 +43,7 @@ static NSString * const Identifier = @"PostCell";
     // 设置滚动条内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 145;
+    self.tableView.rowHeight = 240;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:@"XMGPostCell" bundle:nil] forCellReuseIdentifier:Identifier];
     

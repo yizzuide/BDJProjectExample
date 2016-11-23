@@ -78,6 +78,10 @@
     [self.prefileImageView sd_setImageWithURL:renderItem.ProfileUrl placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
     self.weibo_VImageView.hidden = !renderItem.isSina_v;
     self.createTimeLabel.text = renderItem.createTime;
+    [self.loveButton setTitle:renderItem.love forState:UIControlStateNormal];
+    [self.hateButton setTitle:renderItem.hate forState:UIControlStateNormal];
+    [self.repostButton setTitle:renderItem.rePost forState:UIControlStateNormal];
+    [self.commentButton setTitle:renderItem.comment forState:UIControlStateNormal];
 }
 
 @end
