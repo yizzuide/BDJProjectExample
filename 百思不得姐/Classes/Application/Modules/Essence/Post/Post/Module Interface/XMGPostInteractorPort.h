@@ -8,7 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "XFInteractorPort.h"
+#import "XMGPostCategory.h"
 
 @protocol XMGPostInteractorPort <XFInteractorPort>
 
+- (RACSignal *)fetchPostsForType:(XMGPostCategoryType)postType;
 @end

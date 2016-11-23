@@ -112,23 +112,23 @@
 		402649961DDF5800002EDD00 /* XMGPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026498D1DDF5800002EDD00 /* XMGPostPresenter.m */; };
 		402649971DDF5800002EDD00 /* XMGPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649901DDF5800002EDD00 /* XMGPostActivity.m */; };
 		402649981DDF5800002EDD00 /* XMGPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649931DDF5800002EDD00 /* XMGPostRouting.m */; };
-		4026499B1DDF6273002EDD00 /* XMGAllPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026499A1DDF6273002EDD00 /* XMGAllPostActivity.m */; };
-		4026499E1DDF6296002EDD00 /* XMGVideoPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4026499D1DDF6296002EDD00 /* XMGVideoPostActivity.m */; };
-		402649A11DDF62BE002EDD00 /* XMGPictruePostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A01DDF62BE002EDD00 /* XMGPictruePostActivity.m */; };
-		402649A41DDF62E1002EDD00 /* XMGVoicePostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A31DDF62E1002EDD00 /* XMGVoicePostActivity.m */; };
-		402649A71DDF635F002EDD00 /* XMGWordsPostActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A61DDF635F002EDD00 /* XMGWordsPostActivity.m */; };
 		402649AA1DDF63A0002EDD00 /* XMGAllPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649A91DDF63A0002EDD00 /* XMGAllPostRouting.m */; };
 		402649AD1DDF63AF002EDD00 /* XMGVideoPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649AC1DDF63AF002EDD00 /* XMGVideoPostRouting.m */; };
 		402649B01DDF63BD002EDD00 /* XMGVoicePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649AF1DDF63BD002EDD00 /* XMGVoicePostRouting.m */; };
 		402649B31DDF63CD002EDD00 /* XMGPictruePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B21DDF63CD002EDD00 /* XMGPictruePostRouting.m */; };
 		402649B61DDF641D002EDD00 /* XMGWordsPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B51DDF641D002EDD00 /* XMGWordsPostRouting.m */; };
-		402649B91DDF64F3002EDD00 /* XMGAllPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B81DDF64F3002EDD00 /* XMGAllPostPresenter.m */; };
-		402649BC1DDF6502002EDD00 /* XMGVideoPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649BB1DDF6502002EDD00 /* XMGVideoPostPresenter.m */; };
-		402649BF1DDF651E002EDD00 /* XMGVoicePostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649BE1DDF651E002EDD00 /* XMGVoicePostPresenter.m */; };
-		402649C21DDF6536002EDD00 /* XMGPictruePostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649C11DDF6536002EDD00 /* XMGPictruePostPresenter.m */; };
-		402649C51DDF6548002EDD00 /* XMGWordsPostPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649C41DDF6548002EDD00 /* XMGWordsPostPresenter.m */; };
+		403A88FD1DE41D830016E080 /* XMGPostCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A88FC1DE41D830016E080 /* XMGPostCategory.m */; };
+		403A89001DE422B30016E080 /* XMGPostProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A88FF1DE422B30016E080 /* XMGPostProvider.m */; };
+		403A89071DE43BB60016E080 /* XMGPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A89051DE43BB60016E080 /* XMGPostCell.m */; };
+		403A89081DE43BB60016E080 /* XMGPostCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 403A89061DE43BB60016E080 /* XMGPostCell.xib */; };
+		403A890B1DE442D00016E080 /* XMGPostRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A890A1DE442D00016E080 /* XMGPostRenderItem.m */; };
+		403A890E1DE53EB40016E080 /* XMGPictruePostRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A890D1DE53EB40016E080 /* XMGPictruePostRenderItem.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
+		4069EF541DE2DE430037B22C /* XMGPostService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF531DE2DE430037B22C /* XMGPostService.m */; };
+		4069EF571DE2E2D80037B22C /* XMGMetaPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF561DE2E2D80037B22C /* XMGMetaPostModel.m */; };
+		4069EF5A1DE2E3120037B22C /* XMGPostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF591DE2E3120037B22C /* XMGPostInfo.m */; };
+		4069EF5D1DE2E3E90037B22C /* XMGPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF5C1DE2E3E90037B22C /* XMGPostModel.m */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 		794D92CAE1F05159BC2186FD /* libPods-百思不得姐Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */; };
 /* End PBXBuildFile section */
@@ -400,16 +400,6 @@
 		402649901DDF5800002EDD00 /* XMGPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostActivity.m; sourceTree = "<group>"; };
 		402649921DDF5800002EDD00 /* XMGPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostRouting.h; sourceTree = "<group>"; };
 		402649931DDF5800002EDD00 /* XMGPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostRouting.m; sourceTree = "<group>"; };
-		402649991DDF6273002EDD00 /* XMGAllPostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllPostActivity.h; sourceTree = "<group>"; };
-		4026499A1DDF6273002EDD00 /* XMGAllPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAllPostActivity.m; sourceTree = "<group>"; };
-		4026499C1DDF6296002EDD00 /* XMGVideoPostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVideoPostActivity.h; sourceTree = "<group>"; };
-		4026499D1DDF6296002EDD00 /* XMGVideoPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVideoPostActivity.m; sourceTree = "<group>"; };
-		4026499F1DDF62BE002EDD00 /* XMGPictruePostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictruePostActivity.h; sourceTree = "<group>"; };
-		402649A01DDF62BE002EDD00 /* XMGPictruePostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostActivity.m; sourceTree = "<group>"; };
-		402649A21DDF62E1002EDD00 /* XMGVoicePostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVoicePostActivity.h; sourceTree = "<group>"; };
-		402649A31DDF62E1002EDD00 /* XMGVoicePostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVoicePostActivity.m; sourceTree = "<group>"; };
-		402649A51DDF635F002EDD00 /* XMGWordsPostActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordsPostActivity.h; sourceTree = "<group>"; };
-		402649A61DDF635F002EDD00 /* XMGWordsPostActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordsPostActivity.m; sourceTree = "<group>"; };
 		402649A81DDF63A0002EDD00 /* XMGAllPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllPostRouting.h; sourceTree = "<group>"; };
 		402649A91DDF63A0002EDD00 /* XMGAllPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAllPostRouting.m; sourceTree = "<group>"; };
 		402649AB1DDF63AF002EDD00 /* XMGVideoPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVideoPostRouting.h; sourceTree = "<group>"; };
@@ -420,20 +410,29 @@
 		402649B21DDF63CD002EDD00 /* XMGPictruePostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostRouting.m; sourceTree = "<group>"; };
 		402649B41DDF641D002EDD00 /* XMGWordsPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordsPostRouting.h; sourceTree = "<group>"; };
 		402649B51DDF641D002EDD00 /* XMGWordsPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordsPostRouting.m; sourceTree = "<group>"; };
-		402649B71DDF64F3002EDD00 /* XMGAllPostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGAllPostPresenter.h; sourceTree = "<group>"; };
-		402649B81DDF64F3002EDD00 /* XMGAllPostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGAllPostPresenter.m; sourceTree = "<group>"; };
-		402649BA1DDF6502002EDD00 /* XMGVideoPostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVideoPostPresenter.h; sourceTree = "<group>"; };
-		402649BB1DDF6502002EDD00 /* XMGVideoPostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVideoPostPresenter.m; sourceTree = "<group>"; };
-		402649BD1DDF651E002EDD00 /* XMGVoicePostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGVoicePostPresenter.h; sourceTree = "<group>"; };
-		402649BE1DDF651E002EDD00 /* XMGVoicePostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGVoicePostPresenter.m; sourceTree = "<group>"; };
-		402649C01DDF6536002EDD00 /* XMGPictruePostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictruePostPresenter.h; sourceTree = "<group>"; };
-		402649C11DDF6536002EDD00 /* XMGPictruePostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostPresenter.m; sourceTree = "<group>"; };
-		402649C31DDF6548002EDD00 /* XMGWordsPostPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordsPostPresenter.h; sourceTree = "<group>"; };
-		402649C41DDF6548002EDD00 /* XMGWordsPostPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordsPostPresenter.m; sourceTree = "<group>"; };
+		403A88FB1DE3E05D0016E080 /* XMGPostCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGPostCategory.h; sourceTree = "<group>"; };
+		403A88FC1DE41D830016E080 /* XMGPostCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostCategory.m; sourceTree = "<group>"; };
+		403A88FE1DE422B30016E080 /* XMGPostProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostProvider.h; sourceTree = "<group>"; };
+		403A88FF1DE422B30016E080 /* XMGPostProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostProvider.m; sourceTree = "<group>"; };
+		403A89041DE43BB60016E080 /* XMGPostCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostCell.h; sourceTree = "<group>"; };
+		403A89051DE43BB60016E080 /* XMGPostCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostCell.m; sourceTree = "<group>"; };
+		403A89061DE43BB60016E080 /* XMGPostCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPostCell.xib; sourceTree = "<group>"; };
+		403A89091DE442D00016E080 /* XMGPostRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostRenderItem.h; sourceTree = "<group>"; };
+		403A890A1DE442D00016E080 /* XMGPostRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostRenderItem.m; sourceTree = "<group>"; };
+		403A890C1DE53EB40016E080 /* XMGPictruePostRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPictruePostRenderItem.h; sourceTree = "<group>"; };
+		403A890D1DE53EB40016E080 /* XMGPictruePostRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostRenderItem.m; sourceTree = "<group>"; };
 		404873EC1DD3515E00388087 /* 百思不得姐.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "百思不得姐.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		404874001DD3515E00388087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4069EF521DE2DE430037B22C /* XMGPostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostService.h; sourceTree = "<group>"; };
+		4069EF531DE2DE430037B22C /* XMGPostService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostService.m; sourceTree = "<group>"; };
+		4069EF551DE2E2D80037B22C /* XMGMetaPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMetaPostModel.h; sourceTree = "<group>"; };
+		4069EF561DE2E2D80037B22C /* XMGMetaPostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGMetaPostModel.m; sourceTree = "<group>"; };
+		4069EF581DE2E3120037B22C /* XMGPostInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostInfo.h; sourceTree = "<group>"; };
+		4069EF591DE2E3120037B22C /* XMGPostInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostInfo.m; sourceTree = "<group>"; };
+		4069EF5B1DE2E3E90037B22C /* XMGPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostModel.h; sourceTree = "<group>"; };
+		4069EF5C1DE2E3E90037B22C /* XMGPostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostModel.m; sourceTree = "<group>"; };
 		40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		449496FA4AFF391CA5BE1A63 /* Pods-百思不得姐Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -1319,6 +1318,8 @@
 			children = (
 				402648981DDEE6FB002EDD00 /* XMGRecommendService.h */,
 				402648991DDEE6FB002EDD00 /* XMGRecommendService.m */,
+				4069EF521DE2DE430037B22C /* XMGPostService.h */,
+				4069EF531DE2DE430037B22C /* XMGPostService.m */,
 			);
 			path = Services;
 			sourceTree = "<group>";
@@ -1683,6 +1684,8 @@
 				4026497B1DDF5800002EDD00 /* Application Logic */,
 				402649831DDF5800002EDD00 /* Module Interface */,
 				402649891DDF5800002EDD00 /* User Interface */,
+				403A88FB1DE3E05D0016E080 /* XMGPostCategory.h */,
+				403A88FC1DE41D830016E080 /* XMGPostCategory.m */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -1718,6 +1721,14 @@
 		402649821DDF5800002EDD00 /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				4069EF551DE2E2D80037B22C /* XMGMetaPostModel.h */,
+				4069EF561DE2E2D80037B22C /* XMGMetaPostModel.m */,
+				4069EF581DE2E3120037B22C /* XMGPostInfo.h */,
+				4069EF591DE2E3120037B22C /* XMGPostInfo.m */,
+				4069EF5B1DE2E3E90037B22C /* XMGPostModel.h */,
+				4069EF5C1DE2E3E90037B22C /* XMGPostModel.m */,
+				403A88FE1DE422B30016E080 /* XMGPostProvider.h */,
+				403A88FF1DE422B30016E080 /* XMGPostProvider.m */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -1748,6 +1759,10 @@
 		4026498A1DDF5800002EDD00 /* Express */ = {
 			isa = PBXGroup;
 			children = (
+				403A89091DE442D00016E080 /* XMGPostRenderItem.h */,
+				403A890A1DE442D00016E080 /* XMGPostRenderItem.m */,
+				403A890C1DE53EB40016E080 /* XMGPictruePostRenderItem.h */,
+				403A890D1DE53EB40016E080 /* XMGPictruePostRenderItem.m */,
 			);
 			path = Express;
 			sourceTree = "<group>";
@@ -1757,16 +1772,6 @@
 			children = (
 				4026498C1DDF5800002EDD00 /* XMGPostPresenter.h */,
 				4026498D1DDF5800002EDD00 /* XMGPostPresenter.m */,
-				402649B71DDF64F3002EDD00 /* XMGAllPostPresenter.h */,
-				402649B81DDF64F3002EDD00 /* XMGAllPostPresenter.m */,
-				402649BA1DDF6502002EDD00 /* XMGVideoPostPresenter.h */,
-				402649BB1DDF6502002EDD00 /* XMGVideoPostPresenter.m */,
-				402649BD1DDF651E002EDD00 /* XMGVoicePostPresenter.h */,
-				402649BE1DDF651E002EDD00 /* XMGVoicePostPresenter.m */,
-				402649C01DDF6536002EDD00 /* XMGPictruePostPresenter.h */,
-				402649C11DDF6536002EDD00 /* XMGPictruePostPresenter.m */,
-				402649C31DDF6548002EDD00 /* XMGWordsPostPresenter.h */,
-				402649C41DDF6548002EDD00 /* XMGWordsPostPresenter.m */,
 			);
 			path = Presenter;
 			sourceTree = "<group>";
@@ -1776,16 +1781,9 @@
 			children = (
 				4026498F1DDF5800002EDD00 /* XMGPostActivity.h */,
 				402649901DDF5800002EDD00 /* XMGPostActivity.m */,
-				402649991DDF6273002EDD00 /* XMGAllPostActivity.h */,
-				4026499A1DDF6273002EDD00 /* XMGAllPostActivity.m */,
-				4026499C1DDF6296002EDD00 /* XMGVideoPostActivity.h */,
-				4026499D1DDF6296002EDD00 /* XMGVideoPostActivity.m */,
-				4026499F1DDF62BE002EDD00 /* XMGPictruePostActivity.h */,
-				402649A01DDF62BE002EDD00 /* XMGPictruePostActivity.m */,
-				402649A21DDF62E1002EDD00 /* XMGVoicePostActivity.h */,
-				402649A31DDF62E1002EDD00 /* XMGVoicePostActivity.m */,
-				402649A51DDF635F002EDD00 /* XMGWordsPostActivity.h */,
-				402649A61DDF635F002EDD00 /* XMGWordsPostActivity.m */,
+				403A89041DE43BB60016E080 /* XMGPostCell.h */,
+				403A89051DE43BB60016E080 /* XMGPostCell.m */,
+				403A89061DE43BB60016E080 /* XMGPostCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1973,6 +1971,7 @@
 				4026492B1DDEE6FB002EDD00 /* XMGRecommendUserCell.xib in Resources */,
 				402649291DDEE6FB002EDD00 /* XMGRecommendCategoryCell.xib in Resources */,
 				402649311DDEE6FB002EDD00 /* XMGFriendTrendsActivity.xib in Resources */,
+				403A89081DE43BB60016E080 /* XMGPostCell.xib in Resources */,
 				402649171DDEE6FB002EDD00 /* XMGRCTagCell.xib in Resources */,
 				404873FC1DD3515E00388087 /* Assets.xcassets in Resources */,
 				402649721DDEE7A2002EDD00 /* XMGSignInViewController.xib in Resources */,
@@ -2087,14 +2086,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4026499E1DDF6296002EDD00 /* XMGVideoPostActivity.m in Sources */,
 				4026492C1DDEE6FB002EDD00 /* XMGFriendsRecommentRouting.m in Sources */,
-				402649A11DDF62BE002EDD00 /* XMGPictruePostActivity.m in Sources */,
 				4026492A1DDEE6FB002EDD00 /* XMGRecommendUserCell.m in Sources */,
 				4026493C1DDEE6FB002EDD00 /* XMGMeRouting.m in Sources */,
 				4026494F1DDEE6FB002EDD00 /* XFInterfaceFactory.m in Sources */,
 				4026495D1DDEE6FB002EDD00 /* RACSignal+ErrorAlter.m in Sources */,
-				4026499B1DDF6273002EDD00 /* XMGAllPostActivity.m in Sources */,
 				4026494C1DDEE6FB002EDD00 /* XFExpressPiece.m in Sources */,
 				402649521DDEE6FB002EDD00 /* UIViewController+XFLego.m in Sources */,
 				402649461DDEE6FB002EDD00 /* UIBarButtonItem+XMGExtension.m in Sources */,
@@ -2110,16 +2106,15 @@
 				402649671DDEE6FB002EDD00 /* XMGRColor.m in Sources */,
 				402649341DDEE6FB002EDD00 /* XMGIndexTabInteractor.m in Sources */,
 				402649B61DDF641D002EDD00 /* XMGWordsPostRouting.m in Sources */,
-				402649A71DDF635F002EDD00 /* XMGWordsPostActivity.m in Sources */,
 				402649401DDEE6FB002EDD00 /* XMGNewActivity.m in Sources */,
 				402649651DDEE6FB002EDD00 /* AppDelegate.m in Sources */,
 				4026494B1DDEE6FB002EDD00 /* XFExpressPack.m in Sources */,
+				403A890E1DE53EB40016E080 /* XMGPictruePostRenderItem.m in Sources */,
 				402649161DDEE6FB002EDD00 /* XMGRCTagCell.m in Sources */,
 				402649091DDEE6FB002EDD00 /* XMGPushGuideView.m in Sources */,
 				402649321DDEE6FB002EDD00 /* XMGFriendTrendsRouting.m in Sources */,
 				4026495A1DDEE6FB002EDD00 /* NSObject+XFLegoCopy.m in Sources */,
 				4026491B1DDEE6FB002EDD00 /* XMGFriendsRecommentInteractor.m in Sources */,
-				402649BF1DDF651E002EDD00 /* XMGVoicePostPresenter.m in Sources */,
 				402649941DDF5800002EDD00 /* XMGPostDataManager.m in Sources */,
 				402649281DDEE6FB002EDD00 /* XMGRecommendCategoryCell.m in Sources */,
 				402649381DDEE6FB002EDD00 /* XMGMeDataManager.m in Sources */,
@@ -2136,6 +2131,7 @@
 				4026490B1DDEE6FB002EDD00 /* XMGEssenceDataManager.m in Sources */,
 				4026491F1DDEE6FB002EDD00 /* XMGRecommendCategoryModel.m in Sources */,
 				402649631DDEE6FB002EDD00 /* XMGAPPLoader.m in Sources */,
+				4069EF571DE2E2D80037B22C /* XMGMetaPostModel.m in Sources */,
 				4026494D1DDEE6FB002EDD00 /* XFRenderData.m in Sources */,
 				4026491A1DDEE6FB002EDD00 /* XMGFriendsRecommentDataManager.m in Sources */,
 				402649951DDF5800002EDD00 /* XMGPostInteractor.m in Sources */,
@@ -2145,9 +2141,10 @@
 				4026493A1DDEE6FB002EDD00 /* XMGMePresenter.m in Sources */,
 				402649591DDEE6FB002EDD00 /* XFURLManager.m in Sources */,
 				402649691DDEE6FB002EDD00 /* XMGRMetric.m in Sources */,
+				403A890B1DE442D00016E080 /* XMGPostRenderItem.m in Sources */,
 				4026493B1DDEE6FB002EDD00 /* XMGMeActivity.m in Sources */,
-				402649C51DDF6548002EDD00 /* XMGWordsPostPresenter.m in Sources */,
 				402649471DDEE6FB002EDD00 /* UIView+Extention.m in Sources */,
+				403A89001DE422B30016E080 /* XMGPostProvider.m in Sources */,
 				402649601DDEE6FB002EDD00 /* XFVerticalButton.m in Sources */,
 				402649611DDEE6FB002EDD00 /* XMGAPI.m in Sources */,
 				402649961DDF5800002EDD00 /* XMGPostPresenter.m in Sources */,
@@ -2155,6 +2152,7 @@
 				4026493D1DDEE6FB002EDD00 /* XMGNewDataManager.m in Sources */,
 				402649351DDEE6FB002EDD00 /* XMGIndexTabPresenter.m in Sources */,
 				402649121DDEE6FB002EDD00 /* XMGRecommendTagModel.m in Sources */,
+				403A88FD1DE41D830016E080 /* XMGPostCategory.m in Sources */,
 				402649981DDF5800002EDD00 /* XMGPostRouting.m in Sources */,
 				4026493F1DDEE6FB002EDD00 /* XMGNewPresenter.m in Sources */,
 				4026492F1DDEE6FB002EDD00 /* XMGFriendTrendsPresenter.m in Sources */,
@@ -2164,13 +2162,11 @@
 				402649301DDEE6FB002EDD00 /* XMGFriendTrendsActivity.m in Sources */,
 				4026490E1DDEE6FB002EDD00 /* XMGEssenceActivity.m in Sources */,
 				402649371DDEE6FB002EDD00 /* XMGIndexTabRouting.m in Sources */,
+				4069EF5A1DE2E3120037B22C /* XMGPostInfo.m in Sources */,
 				402649101DDEE6FB002EDD00 /* XMGRecommendTagDataManager.m in Sources */,
 				4026491D1DDEE6FB002EDD00 /* XMGRecommandUserGroupModel.m in Sources */,
 				402649151DDEE6FB002EDD00 /* XMGRecommendTagPresenter.m in Sources */,
-				402649C21DDF6536002EDD00 /* XMGPictruePostPresenter.m in Sources */,
 				402649331DDEE6FB002EDD00 /* XMGIndexTabDataManager.m in Sources */,
-				402649B91DDF64F3002EDD00 /* XMGAllPostPresenter.m in Sources */,
-				402649A41DDF62E1002EDD00 /* XMGVoicePostActivity.m in Sources */,
 				4026495E1DDEE6FB002EDD00 /* XFPHTextField.m in Sources */,
 				402649491DDEE6FB002EDD00 /* XFModuleAssembly.m in Sources */,
 				402649211DDEE6FB002EDD00 /* XMGRCUserRenderData.m in Sources */,
@@ -2178,7 +2174,9 @@
 				402649501DDEE6FB002EDD00 /* XFRoutingFactory.m in Sources */,
 				402649531DDEE6FB002EDD00 /* XFActivity.m in Sources */,
 				402649361DDEE6FB002EDD00 /* XMGIndexTabActivity.m in Sources */,
+				4069EF5D1DE2E3E90037B22C /* XMGPostModel.m in Sources */,
 				402649201DDEE6FB002EDD00 /* XMGCategoryRenderItem.m in Sources */,
+				403A89071DE43BB60016E080 /* XMGPostCell.m in Sources */,
 				4026495F1DDEE6FB002EDD00 /* XFPlusTabBar.m in Sources */,
 				4026494E1DDEE6FB002EDD00 /* XFRenderItem.m in Sources */,
 				402649261DDEE6FB002EDD00 /* XMGRCCategoryTableView.m in Sources */,
@@ -2190,7 +2188,6 @@
 				402649231DDEE6FB002EDD00 /* XMGFriendsRecommentPresenter.m in Sources */,
 				402649581DDEE6FB002EDD00 /* XFRoutingLinkManager.m in Sources */,
 				4026493E1DDEE6FB002EDD00 /* XMGNewInteractor.m in Sources */,
-				402649BC1DDF6502002EDD00 /* XMGVideoPostPresenter.m in Sources */,
 				4026494A1DDEE6FB002EDD00 /* XFUIBus.m in Sources */,
 				402649551DDEE6FB002EDD00 /* XFInteractor.m in Sources */,
 				402649751DDEED85002EDD00 /* XFControllerFactory.m in Sources */,
@@ -2199,6 +2196,7 @@
 				402649661DDEE6FB002EDD00 /* main.m in Sources */,
 				402649711DDEE7A2002EDD00 /* XMGSignInViewController.m in Sources */,
 				4026495B1DDEE6FB002EDD00 /* NSObject+XFLegoInvokeMethod.m in Sources */,
+				4069EF541DE2DE430037B22C /* XMGPostService.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -2350,6 +2348,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = W7Y2AH8S44;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.xmg;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -2364,6 +2363,7 @@
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				DEVELOPMENT_TEAM = W7Y2AH8S44;
 				INFOPLIST_FILE = "百思不得姐/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.yizzuide.xmg;
 				PRODUCT_NAME = "$(TARGET_NAME)";

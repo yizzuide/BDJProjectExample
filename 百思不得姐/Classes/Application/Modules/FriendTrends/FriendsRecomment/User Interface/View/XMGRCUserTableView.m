@@ -72,6 +72,83 @@ static NSString * const Identifier = @"RCUserCell";
     return cell;
 }
 
+#pragma mark - UITableViewDelegate
+- (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 效果来源：http://blog.csdn.net/helloworld_junyang/article/details/51751960
+    /*NSArray *array =  tableView.indexPathsForVisibleRows;
+    NSIndexPath *firstIndexPath = array[0];
+    NSLog(@"fdasf---%ld---%lu",(long)firstIndexPath.row,(unsigned long)array.count);
+    //设置anchorPoint
+    cell.layer.anchorPoint = CGPointMake(0, 0.5);
+    //为了防止cell视图移动，重新把cell放回原来的位置
+    cell.layer.position = CGPointMake(0, cell.layer.position.y);
+    //设置cell 按照z轴旋转90度，注意是弧度
+    if (firstIndexPath.row < indexPath.row) {
+        cell.layer.transform = CATransform3DMakeRotation(M_PI_2, 0, 0, 1.0);
+    }else{
+        cell.layer.transform = CATransform3DMakeRotation(- M_PI_2, 0, 0, 1.0);
+    }
+    cell.alpha = 0.0;
+    [UIView animateWithDuration:1 animations:^{
+        cell.layer.transform = CATransform3DIdentity;
+        cell.alpha = 1.0;
+    }];*/
+    
+    
+    /*cell.alpha = 0.5;
+    CGAffineTransform transformScale = CGAffineTransformMakeScale(0.3,0.8);
+    CGAffineTransform transformTranslate = CGAffineTransformMakeTranslation(0.5, 0.6);
+    cell.transform = CGAffineTransformConcat(transformScale, transformTranslate);
+    [tableView bringSubviewToFront:cell];
+    [UIView animateWithDuration:.4f
+                          delay:0
+                        options:UIViewAnimationOptionAllowUserInteraction
+                     animations:^{
+                         cell.alpha = 1;
+                         //清空 transform
+                         cell.transform = CGAffineTransformIdentity;
+                         
+                     } completion:nil];*/
+    
+    
+    CATransform3D rotation;//3D旋转
+    rotation = CATransform3DMakeRotation( (90.0*M_PI)/180, 0.0, 0.7, 0.4);
+    //逆时针旋转
+    rotation.m34 = 1.0/ -600;
+//    cell.layer.shadowColor = [[UIColor blackColor] CGColor];
+//    cell.layer.shadowOffset = CGSizeMake(10, 10);
+    cell.alpha = 0;
+    cell.layer.transform = rotation;
+    [UIView beginAnimations:@"rotation" context:NULL];
+    // 获得cell显示个数
+    float renderCellCount = ([UIScreen mainScreen].bounds.size.height - R_Height_StautsWithNavBar) / self.rowHeight;
+    // 设置有一个周期内递增显示动画
+    [UIView setAnimationDuration:(indexPath.row % (int)ceilf(renderCellCount)) / renderCellCount];
+    cell.layer.transform = CATransform3DIdentity;
+    cell.alpha = 1;
+//    cell.layer.shadowOffset = CGSizeMake(0, 0);
+    [UIView commitAnimations];
+    
+    
+    /*// 从锚点位置出发，逆时针绕 Y 和 Z 坐标轴旋转90度
+    CATransform3D transform3D = CATransform3DMakeRotation(M_PI, 0.0, 1.0, 1.0);
+    // 定义 cell 的初始状态
+    cell.alpha = 0.0;
+    cell.layer.transform = transform3D;
+    cell.layer.anchorPoint = CGPointMake(0.0, 0.5); // 设置锚点位置；默认为中心点(0.5, 0.5)
+    // 定义 cell 的最终状态，执行动画效果
+    // 方式一：普通操作设置动画
+    [UIView beginAnimations:@"transform" context:NULL];
+    [UIView setAnimationDuration:0.5];
+    cell.alpha = 1.0;
+    cell.layer.transform = CATransform3DIdentity;
+    CGRect rect = cell.frame;
+    rect.origin.x = 0.0;
+    cell.frame = rect;
+    [UIView commitAnimations];*/
+}
+
 // 检测当前刷新状态
 - (void)checkFooterRefreshState
 {

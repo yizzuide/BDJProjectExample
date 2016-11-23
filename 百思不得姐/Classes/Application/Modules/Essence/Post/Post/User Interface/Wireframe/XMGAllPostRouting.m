@@ -10,5 +10,6 @@
 
 @implementation XMGAllPostRouting
 
+// 使用其它模块组件成份，使当前路由只是这个模块的壳
 XF_AutoAssemblyModuleFromShareModuleName(@"Post")
 @end

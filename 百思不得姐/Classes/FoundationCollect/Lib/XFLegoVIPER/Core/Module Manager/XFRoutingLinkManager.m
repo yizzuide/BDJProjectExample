@@ -96,6 +96,20 @@ static NSMutableArray *_keyArr;
     return moduleName;
 }
 
++ (NSString *)moduleNameForComponentObject:(id)componentObject
+{
+    if ([componentObject isKindOfClass:[XFRouting class]]) {
+        return [self moduleNameForRouting:componentObject];
+    }
+    if ([componentObject isKindOfClass:NSClassFromString(@"XFPresenter")]) {
+        return [self moduleNameForRouting:[componentObject valueForKeyPath:@"routing"]];
+    }
+    if ([componentObject isKindOfClass:NSClassFromString(@"UIViewController")]) {
+        return [self moduleNameForRouting:[[componentObject valueForKeyPath:@"eventHandler"] valueForKeyPath:@"routing"]];
+    }
+    return nil;
+}
+
 + (BOOL)verifyModule:(NSString *)moduleName
 {
     NSString *modulePrefix = [self modulePrefix];

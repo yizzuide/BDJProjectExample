@@ -8,6 +8,9 @@
 
 #import "XMGPostActivity.h"
 #import "XMGPostEventHandlerPort.h"
+#import "XMGPostCategory.h"
+#import "XMGPostCell.h"
+#import "XMGPostRenderItem.h"
 
 #define EventHandler  XFConvertPresenterToType(id<XMGPostEventHandlerPort>)
 
@@ -16,6 +19,8 @@
 @end
 
 @implementation XMGPostActivity
+
+static NSString * const Identifier = @"PostCell";
 
 - (void)viewDidLoad
 {
@@ -36,7 +41,13 @@
     self.tableView.contentInset = UIEdgeInsetsMake(R_MaxY_PostHeaderTabs, 0, self.tabBarController.tabBar.height, 0);
     // 设置滚动条内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
+    self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
+    self.tableView.rowHeight = 145;
+    self.tableView.backgroundColor = [UIColor clearColor];
+    [self.tableView registerNib:[UINib nibWithNibName:@"XMGPostCell" bundle:nil] forCellReuseIdentifier:Identifier];
+    
 }
+
 - (void)setUpViews {
     
 }
@@ -46,6 +57,13 @@
     //XF_$_(self.textField, text, EventHandler, text)
     // 绑定事件层按钮命令
     //XF_C_(self.btn, EventHandler, Command)
+    
+    [RACObserve(self.eventHandler, expressPack) subscribeNext:^(id x) {
+        // 如果有显示数据加载完成
+        if (x) {
+            [self.tableView reloadData];
+        }
+    }];
 }
 
 
@@ -53,29 +71,14 @@
 
 #pragma mark - Table view data source
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
-    return 50;
+    return self.eventHandler.expressPack.expressPieces.count;
 }
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    
-    static NSString *ID = @"cell";
-    
-    UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
-    
-    if (cell == nil) {
-        cell = [[UITableViewCell alloc] initWithStyle:UITableViewCellStyleDefault reuseIdentifier:ID];
-        cell.backgroundColor = [UIColor purpleColor];
-    }
-
-    cell.textLabel.text = [NSString stringWithFormat:@"%@----%zd", [[self.eventHandler valueForKey:@"_routing"] class], indexPath.row];
-    
+    XMGPostCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
+    XMGPostRenderItem *item = self.eventHandler.expressPack.expressPieces[indexPath.row].renderItem;
+    cell.renderItem = item;    
     return cell;
-}
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    LogVerbose(@"%@", NSStringFromUIEdgeInsets(tableView.contentInset));
-    LogVerbose(@"%@", NSStringFromCGRect(tableView.frame));
 }
 
 

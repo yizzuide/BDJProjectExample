@@ -9,6 +9,7 @@
 #import "XFDataManager.h"
 #import "XMGPostDataManagerPort.h"
 
+
 @interface XMGPostDataManager : XFDataManager <XMGPostDataManagerPort>
 
 @end

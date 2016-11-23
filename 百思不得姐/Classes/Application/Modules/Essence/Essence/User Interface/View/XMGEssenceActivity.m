@@ -56,7 +56,7 @@
 
 - (void)addChildActivity
 {
-    NSArray *modules = @[@"AllPost",@"VideoPost",@"VoicePost",@"PictruePost",@"WordsPost"];
+    NSArray *modules = @[@"WordsPost",@"AllPost",@"VideoPost",@"VoicePost",@"PictruePost"];
     NSUInteger count = modules.count;
     for (int i = 0; i < count; i++) {
         XFActivity *activity = XF_SubUInterface_(modules[i]);
@@ -66,12 +66,12 @@
 
 - (void)addContentView
 {
-    // 不要自动调整Inset
+    // 不要对当前滚动视图自动调整Inset
     self.automaticallyAdjustsScrollViewInsets = NO;
     UIScrollView *scrollView = [[UIScrollView alloc] init];
     scrollView.backgroundColor = [UIColor clearColor];
     scrollView.frame = self.view.bounds;
-    // 把滚动容器插入在标题栏下方（滚动容器在标题栏之后添加到父视图是因为要通过标题栏视图来计算contentInset）
+    // 把滚动容器插入在标题栏下方
     [self.view insertSubview:scrollView belowSubview:self.headerBar];
     self.contentView = scrollView;
     scrollView.contentSize = CGSizeMake(self.view.width * self.childViewControllers.count, 0);
@@ -92,7 +92,7 @@
     self.headerBar = headerBar;
     
     NSInteger tabCount = 5;
-    NSArray *tabs = @[@"全部All",@"视频",@"声音",@"图片",@"段子"];
+    NSArray *tabs = @[@"段子",@"全部All",@"视频",@"声音",@"图片"];
     for (int i = 0; i < tabCount; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         // 标记索引下标

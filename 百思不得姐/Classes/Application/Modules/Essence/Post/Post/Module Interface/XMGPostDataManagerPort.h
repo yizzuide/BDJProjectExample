@@ -8,8 +8,9 @@
 
 #import <Foundation/Foundation.h>
 #import "XFDataManagerPort.h"
+#import "XMGPostCategory.h"
 
 @protocol XMGPostDataManagerPort <XFDataManagerPort>
 
-
+- (RACSignal *)grabPostsForType:(XMGPostCategoryType)postType;
 @end

@@ -8,21 +8,28 @@
 
 #import "XMGPostInteractor.h"
 #import "XMGPostDataManagerPort.h"
+#import "XMGMetaPostModel.h"
+#import "XMGPostProvider.h"
 
 #define DataManager XFConvertDataManagerToType(id<XMGPostDataManagerPort>)
 
 @interface XMGPostInteractor ()
 
+@property (nonatomic, strong) NSMutableDictionary<NSString *,__kindof XMGMetaPostModel *> *postMap;
 @end
 
 @implementation XMGPostInteractor
 
 #pragma mark - Request
-/*- (RACSignal *)fetchData
+- (RACSignal *)fetchPostsForType:(XMGPostCategoryType)postCategoryType
 {
-    [DataManager setPrefKey:@"PK_User_id" value:@"123"];
-    return [RACSignal return:@""];
-}*/
+    return [[DataManager grabPostsForType:postCategoryType] map:^id(XMGMetaPostModel *postModel) {
+        // 存储对应类型的帖子
+        [self.postMap setObject:postModel forKey:XMG_Post_type2Type(postCategoryType)];
+        // 返回显示数据
+        return [XMGPostProvider collectPostRenderDataFromArray:postModel.list];
+    }];
+}
 
 
 #pragma mark - BusinessReduce
@@ -30,5 +37,14 @@
 
 #pragma mark - ConvertData
 
+
+
+
+- (NSMutableDictionary<NSString *,__kindof XMGMetaPostModel *> *)postMap {
+	if(_postMap == nil) {
+        _postMap = @{}.mutableCopy;
+	}
+	return _postMap;
+}
 
 @end

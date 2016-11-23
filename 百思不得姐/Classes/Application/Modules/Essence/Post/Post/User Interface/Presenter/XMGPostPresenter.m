@@ -11,6 +11,7 @@
 #import "XMGPostUserInterfacePort.h"
 #import "XMGPostInteractorPort.h"
 #import "ReactiveCocoa.h"
+#import "XMGPostCategory.h"
 
 
 #define Interactor XFConvertInteractorToType(id<XMGPostInteractorPort>)
@@ -34,6 +35,14 @@
 {
     // 填充绑定的ViewData
     //self.viewData = [Interactor fetchData];
+    
+    LogWarning(@"current ModuleName: %@",XF_ModuleName);
+    LogWarning(@"string: ModuleName =? enum: XMGPostCategoryTypeWords, answer is %d",XMG_Post_Str2Type(XF_ModuleName) == XMGPostCategoryTypeWords);
+    // XF_ModuleName为当前模块名，XMG_Post_Str2Type宏可以通过模块名找到对应帖子类型
+    [[Interactor fetchPostsForType:XMG_Post_Str2Type(XF_ModuleName)] subscribeNext:^(XFRenderData *renderData) {
+        // 设置并关联到当前模块的显示数据包
+        XF_SetExpressPack_Fast(renderData);
+    }];
 }
 
 // 初始化命令

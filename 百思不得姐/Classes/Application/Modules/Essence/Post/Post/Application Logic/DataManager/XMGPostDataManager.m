@@ -8,11 +8,49 @@
 
 
 #import "XMGPostDataManager.h"
+#import "XMGPostService.h"
+
 
 @interface XMGPostDataManager ()
 
+@property (nonatomic, strong) XMGPostService *postService;
 @end
 
 @implementation XMGPostDataManager
+
+- (RACSignal *)grabPostsForType:(XMGPostCategoryType)postType
+{
+    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType]];
+}
+
+- (XMGPostDataMediaType)postSeviceMediaTypeForPostType:(XMGPostCategoryType)postType
+{
+    XMGPostDataMediaType mediaType;
+    switch (postType) {
+        case XMGPostCategoryTypeAll:
+            mediaType = XMGPostDataMediaTypeAll;
+            break;
+        case XMGPostCategoryTypeVideo:
+            mediaType = XMGPostDataMediaTypeVideo;
+            break;
+        case XMGPostCategoryTypeVoice:
+            mediaType = XMGPostDataMediaTypeVoice;
+            break;
+        case XMGPostCategoryTypePictrue:
+            mediaType = XMGPostDataMediaTypePictrue;
+            break;
+        case XMGPostCategoryTypeWords:
+            mediaType = XMGPostDataMediaTypeWords;
+            break;
+    }
+    return mediaType;
+}
+
+- (XMGPostService *)postService {
+	if(_postService == nil) {
+		_postService = [[XMGPostService alloc] init];
+	}
+	return _postService;
+}
 
 @end

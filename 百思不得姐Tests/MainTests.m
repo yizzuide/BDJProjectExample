@@ -9,6 +9,9 @@
 #import <XCTest/XCTest.h>
 #import "XMGRecommendTagInteractor.h"
 #import "XMGRecommendTagDataManager.h"
+#import "XMGPostService.h"
+#import "XMGPostInteractor.h"
+#import "XMGPostDataManager.h"
 
 @interface MainTests : XCTestCase
 
@@ -46,6 +49,34 @@
     }];
     
     // 等待 3s 期望预期达成
+    [self waitForExpectationsWithTimeout:3 handler:nil];
+}
+
+// 测试帖子数据的获取
+- (void)testPostDict
+{
+    XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch Posts should succeed"];
+    XMGPostService *postService = [[XMGPostService alloc] init];
+    [[postService pullPostsForType:XMGPostDataMediaTypeAll] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        XCTAssertNotNil(x,@"数据返回失败！");
+        [networkSuccessExpectation fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:3 handler:nil];
+}
+
+- (void)testWordsPostRenderData
+{
+    XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch Posts should succeed"];
+    XMGPostInteractor *interactor = [[XMGPostInteractor alloc] init];
+    XMGPostDataManager *dataManager = [[XMGPostDataManager alloc] init];
+    [interactor setValue:dataManager forKeyPath:@"dataManager"];
+    [[interactor fetchPostsForType:XMGPostCategoryTypeWords] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        XCTAssertNotNil(x,@"数据返回失败！");
+        [networkSuccessExpectation fulfill];
+    }];
+
     [self waitForExpectationsWithTimeout:3 handler:nil];
 }
 

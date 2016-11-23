@@ -12,6 +12,9 @@
 #define XF_SendEventFormMVxForVIPERModules_(modulesName,eventName,sendData) \
 [XFRoutingLinkManager sendEventName:eventName intentData:sendData forModulesName:modulesName];
 
+// 在模块组成类中获得模块名（不支持Interactor、DataManager）
+#define XF_ModuleName [XFRoutingLinkManager moduleNameForComponentObject:self]
+
 @protocol XFUserInterfacePort;
 @class XFRouting;
 @interface XFRoutingLinkManager : NSObject
@@ -75,6 +78,14 @@
  *  @return 模块名
  */
 + (NSString *)moduleNameForRouting:(XFRouting *)routing;
+/**
+ *  在模块组成类中获得模块名（不支持Interactor、DataManager）
+ *
+ *  @param componentObject 模块组成对象
+ *
+ *  @return 模块名
+ */
++ (NSString *)moduleNameForComponentObject:(id)componentObject;
 /**
  *  验证一个模块是否存在
  *
