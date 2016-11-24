@@ -36,6 +36,7 @@
         renderItem.rePost = [NSString stringWithFormat:@"%zd",postModel.repost];
         renderItem.comment = [NSString stringWithFormat:@"%zd",postModel.comment];
         renderItem.sina_v = postModel.sina_v;
+        renderItem.text = postModel.text;
         return renderItem;
     }] array].mutableCopy;
     XFRenderData *renderData = [[XFRenderData alloc] init];
@@ -46,7 +47,15 @@
 + (XMGPictruePostRenderItem *)_collectWordsPostRenderItemFrom:(XMGPostModel *)postModel
 {
     XMGPictruePostRenderItem *renderItem = [[XMGPictruePostRenderItem alloc] init];
+    
+    renderItem.width = postModel.width;
+    renderItem.height = postModel.height;
+    renderItem.url = [NSURL URLWithString:postModel.image_large];
     // 是否为长图
+    if (postModel.height > ScreenSize.height * 2) {
+        renderItem.type = XMGPostRenderItemTypePictrueLong;
+        return renderItem;
+    }
     
     // 是否为gif图
     if (postModel.is_gif) {
@@ -54,9 +63,6 @@
         return renderItem;
     }
     renderItem.type = XMGPostRenderItemTypePictrue;
-    renderItem.width = postModel.width;
-    renderItem.height = postModel.height;
-    renderItem.url = [NSURL URLWithString:postModel.image_large];
     return renderItem;
 }
 @end

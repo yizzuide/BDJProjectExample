@@ -42,6 +42,10 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 
 // 自动组装模块成分
 #define XF_AutoAssemblyModule(NavName,IBSymbol,ShareDataManagerName) \
++ (void)load \
+{ \
+    [XFRoutingLinkManager analysisModulePrefixFromClass:self]; \
+} \
 + (instancetype)routing \
 { \
     return [[super routing].assembly autoAssemblyModuleWithNav:NavName ibSymbol:IBSymbol shareDataManagerName:ShareDataManagerName]; \
@@ -78,6 +82,7 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 
 
 
+// 模块名方式（不适用于MVx）
 // Push一个模块宏
 #define XF_PUSH_Routing_(ModuleName,ExecuteCode) \
 XF_Define_Weak \
@@ -94,15 +99,16 @@ XF_PUSH_Routing_(ModuleName,{})
 #define XF_Present_Routing_(ModuleName,ExecuteCode) \
 XF_Define_Weak \
 [self.uiBus presentModule:ModuleName intent:self.uiOperator.intentData customCode:^(__kindof XFRouting *routing) { \
-XF_Define_Strong \
-ExecuteCode \
-[self self]; \
+    XF_Define_Strong \
+    ExecuteCode \
+    [self self]; \
 }];
 // 快速Present一个模块
 #define XF_Present_Routing_Fast(ModuleName) \
 XF_Present_Routing_(ModuleName,{})
 
 
+// URL组件方式（这种方式适用于MVx、VIPER）
 // Push一个URL组件
 #define XF_PUSH_URLComponent_(urlString,ExecuteCode) \
 XF_Define_Weak \

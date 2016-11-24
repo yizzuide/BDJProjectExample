@@ -22,6 +22,11 @@
 @property (weak, nonatomic) IBOutlet UIButton *hateButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
+
+@property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
+@property (weak, nonatomic) IBOutlet UIView *mediaContainerView;
+
+
 @end
 
 @implementation XMGPostCell
@@ -82,6 +87,7 @@
     [self.hateButton setTitle:renderItem.hate forState:UIControlStateNormal];
     [self.repostButton setTitle:renderItem.rePost forState:UIControlStateNormal];
     [self.commentButton setTitle:renderItem.comment forState:UIControlStateNormal];
+    self.bodyLabel.text = renderItem.text;
 }
 
 @end

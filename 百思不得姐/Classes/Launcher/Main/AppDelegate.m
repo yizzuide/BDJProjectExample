@@ -20,9 +20,8 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    
+    // 开启模块追踪log
     [XFRoutingLinkManager enableLog];
-    [XFRoutingLinkManager setModulePrefix:@"XMG"];
     // 注册APP的所有URL
     [XMGAppURLRegister urlRegister];
     // 根据URL显示组件

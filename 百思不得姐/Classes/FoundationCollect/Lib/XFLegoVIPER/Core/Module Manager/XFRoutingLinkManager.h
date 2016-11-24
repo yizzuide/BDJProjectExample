@@ -56,19 +56,6 @@
  */
 + (void)sendEventName:(NSString *)eventName intentData:(id)intentData forModulesName:(NSArray<NSString *> *)modulesName;
 
-/**
- *  设置模块前辍，让模块查找更佳精准，避免模块与子模块有部分位置名相同查找错误问题
- *  注意：
-    1.要设置就在第一个模块加载前设置,不然后面模块搜索会出问题，要么就不要设置
-    2.设置了前辍后，模块路由类必须以"Routing"结尾，否则内部会找不到对应模块
- *
- */
-+ (void)setModulePrefix:(NSString *)prefix;
-/**
- *  返回模块前辍
- *
- */
-+ (NSString *)modulePrefix;
 
 /**
  *  获得一个路由的模块名
@@ -102,6 +89,26 @@
  *  @return 模块关系链是否正确
  */
 + (BOOL)verifyModuleLinkForList:(NSArray<NSString *> *)modules;
+/**
+ *  解析模块前辍
+ *
+ *  @param clazz 类
+ */
++ (void)analysisModulePrefixFromClass:(Class)clazz;
+
+/**
+ *  设置模块前辍
+ *  注意：
+ 1.要设置就在第一个模块加载前设置
+ 2.设置了前辍后，模块路由类必须以"Routing"结尾，否则内部会找不到对应模块
+ *
+ */
++ (void)setModulePrefix:(NSString *)prefix;
+/**
+ *  返回模块前辍
+ *
+ */
++ (NSString *)modulePrefix;
 
 /**
  *  允许打印log

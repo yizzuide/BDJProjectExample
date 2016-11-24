@@ -110,6 +110,8 @@ static NSMutableArray *_keyArr;
     return nil;
 }
 
+
+#pragma mark - 模块自检
 + (BOOL)verifyModule:(NSString *)moduleName
 {
     NSString *modulePrefix = [self modulePrefix];
@@ -150,6 +152,31 @@ static NSMutableArray *_keyArr;
         preRouting = nextRouting;
     }
     return YES;
+}
+
++ (void)analysisModulePrefixFromClass:(Class)clazz
+{
+    if (_prefix) return;
+    // 开始解析模块前辍
+    NSString *clazzName = NSStringFromClass(clazz);
+    NSUInteger count = clazzName.length;
+    NSMutableString *appendString = @"".mutableCopy;
+    for (int i = 0; i < count; i++) {
+        char c = [clazzName characterAtIndex:i];
+        // 如果是小写
+        if (c > 96 && c < 123) {
+            [appendString deleteCharactersInRange:NSMakeRange(appendString.length - 1, 1)];
+            break;
+        }
+        // 添加
+        [appendString appendString:[NSString stringWithFormat:@"%c",c]];
+    }
+#ifdef LogDebug
+    LogDebug(@"analysisModuleName: %@",appendString);
+#elif (defined DEBUG)
+    NSLog(@"analysisModuleName: %@",appendString);
+#endif
+    _prefix = appendString;
 }
 
 #pragma mark - 模块前辍
