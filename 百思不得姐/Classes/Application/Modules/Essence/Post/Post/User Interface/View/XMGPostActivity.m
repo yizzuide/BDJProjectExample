@@ -105,8 +105,7 @@ static NSString * const Identifier = @"PostCell";
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
     XMGPostCell *cell = [tableView dequeueReusableCellWithIdentifier:Identifier];
-    XMGPostRenderItem *item = self.eventHandler.expressPack.expressPieces[indexPath.row].renderItem;
-    cell.renderItem = item;    
+    cell.expressPiece = self.eventHandler.expressPack.expressPieces[indexPath.row];
     return cell;
 }
 

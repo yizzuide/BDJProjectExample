@@ -13,6 +13,7 @@ target '百思不得姐' do
     pod 'SVProgressHUD'
     pod 'Canvas', '~> 0.1.2'
     pod 'MTMigration'
+    pod 'DACircularProgress'
 end
 
 target '百思不得姐Tests' do

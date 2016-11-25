@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		40229D9B1DE898E0005F9C20 /* UIImage+Size.m in Sources */ = {isa = PBXBuildFile; fileRef = 40229D9A1DE898E0005F9C20 /* UIImage+Size.m */; };
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		402649081DDEE6FB002EDD00 /* XMGNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647AF1DDEE6FB002EDD00 /* XMGNavigationController.m */; };
 		402649091DDEE6FB002EDD00 /* XMGPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647B11DDEE6FB002EDD00 /* XMGPushGuideView.m */; };
@@ -131,6 +132,9 @@
 		405890421DE7E06000EF4A4F /* XFURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 405890411DE7E06000EF4A4F /* XFURLRoute.m */; };
 		405890491DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 405890471DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m */; };
 		4058904A1DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 405890481DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib */; };
+		4058904D1DE8238100EF4A4F /* XMGPostPictrueView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4058904C1DE8238100EF4A4F /* XMGPostPictrueView.m */; };
+		4058904F1DE82DF300EF4A4F /* XMGPostPictrueView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4058904E1DE82DF300EF4A4F /* XMGPostPictrueView.xib */; };
+		405890581DE88DEE00EF4A4F /* XMGProgressView.m in Sources */ = {isa = PBXBuildFile; fileRef = 405890571DE88DEE00EF4A4F /* XMGProgressView.m */; };
 		4069EF541DE2DE430037B22C /* XMGPostService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF531DE2DE430037B22C /* XMGPostService.m */; };
 		4069EF571DE2E2D80037B22C /* XMGMetaPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF561DE2E2D80037B22C /* XMGMetaPostModel.m */; };
 		4069EF5A1DE2E3120037B22C /* XMGPostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF591DE2E3120037B22C /* XMGPostInfo.m */; };
@@ -154,6 +158,8 @@
 		1AEB5C01B3BE34921D97F0B2 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		2ED5D2819ABC02509F94272B /* Pods-百思不得姐Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E85152145C7B8009538B59E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		40229D991DE898E0005F9C20 /* UIImage+Size.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+Size.h"; sourceTree = "<group>"; };
+		40229D9A1DE898E0005F9C20 /* UIImage+Size.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+Size.m"; sourceTree = "<group>"; };
 		402647811DDD45B3002EDD00 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402647831DDD45B3002EDD00 /* MainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTests.m; sourceTree = "<group>"; };
 		402647851DDD45B3002EDD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -443,6 +449,11 @@
 		405890461DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostPictrueBrowseViewController.h; sourceTree = "<group>"; };
 		405890471DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostPictrueBrowseViewController.m; sourceTree = "<group>"; };
 		405890481DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPostPictrueBrowseViewController.xib; sourceTree = "<group>"; };
+		4058904B1DE8238100EF4A4F /* XMGPostPictrueView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostPictrueView.h; sourceTree = "<group>"; };
+		4058904C1DE8238100EF4A4F /* XMGPostPictrueView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostPictrueView.m; sourceTree = "<group>"; };
+		4058904E1DE82DF300EF4A4F /* XMGPostPictrueView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPostPictrueView.xib; sourceTree = "<group>"; };
+		405890561DE88DEE00EF4A4F /* XMGProgressView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGProgressView.h; sourceTree = "<group>"; };
+		405890571DE88DEE00EF4A4F /* XMGProgressView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGProgressView.m; sourceTree = "<group>"; };
 		4069EF521DE2DE430037B22C /* XMGPostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostService.h; sourceTree = "<group>"; };
 		4069EF531DE2DE430037B22C /* XMGPostService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostService.m; sourceTree = "<group>"; };
 		4069EF551DE2E2D80037B22C /* XMGMetaPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMetaPostModel.h; sourceTree = "<group>"; };
@@ -1345,6 +1356,7 @@
 		4026489A1DDEE6FB002EDD00 /* FoundationABSLayer */ = {
 			isa = PBXGroup;
 			children = (
+				405890501DE88CF900EF4A4F /* UI */,
 				4026489B1DDEE6FB002EDD00 /* Network */,
 			);
 			path = FoundationABSLayer;
@@ -1380,6 +1392,8 @@
 				402648A11DDEE6FB002EDD00 /* UIBarButtonItem+XMGExtension.m */,
 				402648A21DDEE6FB002EDD00 /* UIView+Extention.h */,
 				402648A31DDEE6FB002EDD00 /* UIView+Extention.m */,
+				40229D991DE898E0005F9C20 /* UIImage+Size.h */,
+				40229D9A1DE898E0005F9C20 /* UIImage+Size.m */,
 			);
 			path = Category;
 			sourceTree = "<group>";
@@ -1810,6 +1824,9 @@
 				403A89041DE43BB60016E080 /* XMGPostCell.h */,
 				403A89051DE43BB60016E080 /* XMGPostCell.m */,
 				403A89061DE43BB60016E080 /* XMGPostCell.xib */,
+				4058904B1DE8238100EF4A4F /* XMGPostPictrueView.h */,
+				4058904C1DE8238100EF4A4F /* XMGPostPictrueView.m */,
+				4058904E1DE82DF300EF4A4F /* XMGPostPictrueView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -1899,6 +1916,23 @@
 				405890481DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		405890501DE88CF900EF4A4F /* UI */ = {
+			isa = PBXGroup;
+			children = (
+				405890551DE88DEE00EF4A4F /* Progress */,
+			);
+			path = UI;
+			sourceTree = "<group>";
+		};
+		405890551DE88DEE00EF4A4F /* Progress */ = {
+			isa = PBXGroup;
+			children = (
+				405890561DE88DEE00EF4A4F /* XMGProgressView.h */,
+				405890571DE88DEE00EF4A4F /* XMGProgressView.m */,
+			);
+			path = Progress;
 			sourceTree = "<group>";
 		};
 		81C032B40B4AB21DB0B68124 /* Frameworks */ = {
@@ -2019,6 +2053,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4058904F1DE82DF300EF4A4F /* XMGPostPictrueView.xib in Resources */,
 				4026490A1DDEE6FB002EDD00 /* XMGPushGuideView.xib in Resources */,
 				404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */,
 				4058904A1DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib in Resources */,
@@ -2159,17 +2194,20 @@
 				402649541DDEE6FB002EDD00 /* XFDataManager.m in Sources */,
 				402649391DDEE6FB002EDD00 /* XMGMeInteractor.m in Sources */,
 				402649671DDEE6FB002EDD00 /* XMGRColor.m in Sources */,
+				40229D9B1DE898E0005F9C20 /* UIImage+Size.m in Sources */,
 				402649341DDEE6FB002EDD00 /* XMGIndexTabInteractor.m in Sources */,
 				402649B61DDF641D002EDD00 /* XMGWordsPostRouting.m in Sources */,
 				402649401DDEE6FB002EDD00 /* XMGNewActivity.m in Sources */,
 				402649651DDEE6FB002EDD00 /* AppDelegate.m in Sources */,
 				4026494B1DDEE6FB002EDD00 /* XFExpressPack.m in Sources */,
 				403A890E1DE53EB40016E080 /* XMGPictruePostRenderItem.m in Sources */,
+				405890581DE88DEE00EF4A4F /* XMGProgressView.m in Sources */,
 				402649161DDEE6FB002EDD00 /* XMGRCTagCell.m in Sources */,
 				402649091DDEE6FB002EDD00 /* XMGPushGuideView.m in Sources */,
 				402649321DDEE6FB002EDD00 /* XMGFriendTrendsRouting.m in Sources */,
 				4026495A1DDEE6FB002EDD00 /* NSObject+XFLegoCopy.m in Sources */,
 				4026491B1DDEE6FB002EDD00 /* XMGFriendsRecommentInteractor.m in Sources */,
+				4058904D1DE8238100EF4A4F /* XMGPostPictrueView.m in Sources */,
 				402649941DDF5800002EDD00 /* XMGPostDataManager.m in Sources */,
 				402649281DDEE6FB002EDD00 /* XMGRecommendCategoryCell.m in Sources */,
 				405890421DE7E06000EF4A4F /* XFURLRoute.m in Sources */,

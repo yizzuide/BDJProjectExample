@@ -13,4 +13,7 @@
 @property (nonatomic, assign) NSInteger width;
 @property (nonatomic, assign) NSInteger height;
 @property (nonatomic, strong) NSURL *url;
+
+// 图下载进度
+@property (nonatomic, assign) CGFloat loadProgress;
 @end

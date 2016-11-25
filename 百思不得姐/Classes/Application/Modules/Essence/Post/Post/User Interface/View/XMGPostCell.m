@@ -10,6 +10,9 @@
 #import <UIImageView+WebCache.h>
 #import "XMGPostRenderItem.h"
 #import "UIView+XFLego.h"
+#import "XFExpressPiece.h"
+#import "XMGPostPictrueView.h"
+#import "XMGPostFrame.h"
 
 @interface XMGPostCell ()
 
@@ -22,8 +25,14 @@
 @property (weak, nonatomic) IBOutlet UIButton *hateButton;
 @property (weak, nonatomic) IBOutlet UIButton *repostButton;
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
-
+/**
+ *  文本
+ */
 @property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
+/**
+ *  图片
+ */
+@property (nonatomic, weak) XMGPostPictrueView *pictrueView;
 
 
 @end
@@ -76,8 +85,11 @@
     self.cardImageView.frame = self.contentView.bounds;
 }
 
-- (void)setRenderItem:(XMGPostRenderItem *)renderItem
+- (void)setExpressPiece:(XFExpressPiece *)expressPiece
 {
+    _expressPiece = expressPiece;
+    
+    XMGPostRenderItem *renderItem = expressPiece.renderItem;
     self.nikeNameLabel.text = renderItem.userName;
     [self.prefileImageView sd_setImageWithURL:renderItem.ProfileUrl placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
     self.weibo_VImageView.hidden = !renderItem.isSina_v;
@@ -87,6 +99,25 @@
     [self.repostButton setTitle:renderItem.rePost forState:UIControlStateNormal];
     [self.commentButton setTitle:renderItem.comment forState:UIControlStateNormal];
     self.bodyLabel.text = renderItem.text;
+    
+    // 如果是有图片的帖子
+    if (renderItem.type == XMGPostRenderItemTypePictrue ||
+        renderItem.type == XMGPostRenderItemTypePictrueLong ||
+        renderItem.type == XMGPostRenderItemTypePictrueGIF) {
+        XMGPostFrame *postFrame = expressPiece.uiFrame;
+        self.pictrueView.frame = postFrame.pictrueF;
+        [self.pictrueView setExpressPiece:expressPiece];
+    }
+}
+
+
+- (XMGPostPictrueView *)pictrueView {
+	if(_pictrueView == nil) {
+		XMGPostPictrueView *pictrueView = [XMGPostPictrueView postPictrueView];
+        [self.contentView addSubview:pictrueView];
+        self.pictrueView = pictrueView;
+	}
+	return _pictrueView;
 }
 
 @end

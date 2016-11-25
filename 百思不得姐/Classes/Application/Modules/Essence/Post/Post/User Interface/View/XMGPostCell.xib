@@ -13,7 +13,7 @@
             <rect key="frame" x="0.0" y="0.0" width="331" height="240"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="331" height="239"/>
+                <frame key="frameInset" width="331" height="239.5"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-nm-YUC" userLabel="头像">
@@ -172,7 +172,7 @@
                 <outlet property="repostButton" destination="1qv-rA-p2D" id="WnJ-2I-qLK"/>
                 <outlet property="weibo_VImageView" destination="fk3-x2-Fsf" id="taY-kt-T9C"/>
             </connections>
-            <point key="canvasLocation" x="-841" y="-493"/>
+            <point key="canvasLocation" x="-842" y="-493"/>
         </tableViewCell>
     </objects>
     <resources>

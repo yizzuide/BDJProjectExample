@@ -11,5 +11,6 @@
 // 测量数据类
 @interface XMGPostFrame : NSObject
 
+@property (nonatomic, assign) CGRect pictrueF;
 @property (nonatomic, assign) CGFloat cellHeight;
 @end
