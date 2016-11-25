@@ -44,7 +44,7 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 #define XF_AutoAssemblyModule(NavName,IBSymbol,ShareDataManagerName) \
 + (void)load \
 { \
-    [XFRoutingLinkManager analysisModulePrefixFromClass:self]; \
+    [XFRoutingReflect inspectModulePrefixFromClass:self]; \
 } \
 + (instancetype)routing \
 { \

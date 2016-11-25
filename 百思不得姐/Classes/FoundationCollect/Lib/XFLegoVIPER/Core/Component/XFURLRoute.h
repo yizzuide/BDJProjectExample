@@ -1,6 +1,6 @@
 //
-//  XFURLManager.h
-//  XFLegoVIPERExample
+//  XFURLRoute.h
+//  XFLegoVIPER
 //
 //  Created by 付星 on 2016/11/7.
 //  Copyright © 2016年 yizzuide. All rights reserved.
@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-@interface XFURLManager : NSObject
+@interface XFURLRoute : NSObject
 /**
  *  一次性初始化多个URL组件
  *

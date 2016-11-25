@@ -10,7 +10,7 @@
 #import "XFUIBus.h"
 #import "XFRouting.h"
 #import "XFRoutingFactory.h"
-#import "XFURLManager.h"
+#import "XFURLRoute.h"
 #import "XFControllerFactory.h"
 
 @interface XFUIBus ()
@@ -35,7 +35,7 @@
 
 - (void)openURL:(NSString *)url onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLManager open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
+    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
         [self showModule:moduleName onWindow:mainWindow customCode:customCodeBlock];
     }];
 }
@@ -43,7 +43,7 @@
 // 以URL组件式PUSH
 - (void)openURLForPush:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLManager open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
+    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
         [self pushModule:moduleName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }
@@ -51,14 +51,14 @@
 // 以URL组件式Present
 - (void)openURLForPresent:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLManager open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
+    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
         [self presentModule:moduleName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }
 // 自定义打开一个URL组件
 - (void)openURL:(NSString *)url withTransitionBlock:(TransitionBlock)trasitionBlock customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLManager open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
+    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
         [self putModule:moduleName withTransitionBlock:trasitionBlock intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }

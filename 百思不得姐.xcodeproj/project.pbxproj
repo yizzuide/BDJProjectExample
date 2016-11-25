@@ -87,7 +87,6 @@
 		402649561DDEE6FB002EDD00 /* XFPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 402648CF1DDEE6FB002EDD00 /* XFPresenter.m */; };
 		402649571DDEE6FB002EDD00 /* XFRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402648D11DDEE6FB002EDD00 /* XFRouting.m */; };
 		402649581DDEE6FB002EDD00 /* XFRoutingLinkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 402648D41DDEE6FB002EDD00 /* XFRoutingLinkManager.m */; };
-		402649591DDEE6FB002EDD00 /* XFURLManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 402648D61DDEE6FB002EDD00 /* XFURLManager.m */; };
 		4026495A1DDEE6FB002EDD00 /* NSObject+XFLegoCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 402648D91DDEE6FB002EDD00 /* NSObject+XFLegoCopy.m */; };
 		4026495B1DDEE6FB002EDD00 /* NSObject+XFLegoInvokeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 402648DB1DDEE6FB002EDD00 /* NSObject+XFLegoInvokeMethod.m */; };
 		4026495C1DDEE6FB002EDD00 /* XFURLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 402648DD1DDEE6FB002EDD00 /* XFURLParse.m */; };
@@ -117,6 +116,8 @@
 		402649B01DDF63BD002EDD00 /* XMGVoicePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649AF1DDF63BD002EDD00 /* XMGVoicePostRouting.m */; };
 		402649B31DDF63CD002EDD00 /* XMGPictruePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B21DDF63CD002EDD00 /* XMGPictruePostRouting.m */; };
 		402649B61DDF641D002EDD00 /* XMGWordsPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 402649B51DDF641D002EDD00 /* XMGWordsPostRouting.m */; };
+		40326DEF1DE6D58800E7F68F /* XMGPostExpressPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 40326DEE1DE6D58800E7F68F /* XMGPostExpressPack.m */; };
+		40326DF21DE6D6D500E7F68F /* XMGPostFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 40326DF11DE6D6D500E7F68F /* XMGPostFrame.m */; };
 		403A88FD1DE41D830016E080 /* XMGPostCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A88FC1DE41D830016E080 /* XMGPostCategory.m */; };
 		403A89001DE422B30016E080 /* XMGPostProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A88FF1DE422B30016E080 /* XMGPostProvider.m */; };
 		403A89071DE43BB60016E080 /* XMGPostCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A89051DE43BB60016E080 /* XMGPostCell.m */; };
@@ -126,6 +127,10 @@
 		403A89141DE58DC10016E080 /* NSDate+Extension.m in Sources */ = {isa = PBXBuildFile; fileRef = 403A89131DE58DC10016E080 /* NSDate+Extension.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
+		4058903E1DE7D41300EF4A4F /* XFRoutingReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 4058903D1DE7D41300EF4A4F /* XFRoutingReflect.m */; };
+		405890421DE7E06000EF4A4F /* XFURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 405890411DE7E06000EF4A4F /* XFURLRoute.m */; };
+		405890491DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 405890471DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m */; };
+		4058904A1DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 405890481DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib */; };
 		4069EF541DE2DE430037B22C /* XMGPostService.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF531DE2DE430037B22C /* XMGPostService.m */; };
 		4069EF571DE2E2D80037B22C /* XMGMetaPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF561DE2E2D80037B22C /* XMGMetaPostModel.m */; };
 		4069EF5A1DE2E3120037B22C /* XMGPostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF591DE2E3120037B22C /* XMGPostInfo.m */; };
@@ -346,8 +351,6 @@
 		402648D11DDEE6FB002EDD00 /* XFRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRouting.m; sourceTree = "<group>"; };
 		402648D31DDEE6FB002EDD00 /* XFRoutingLinkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRoutingLinkManager.h; sourceTree = "<group>"; };
 		402648D41DDEE6FB002EDD00 /* XFRoutingLinkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRoutingLinkManager.m; sourceTree = "<group>"; };
-		402648D51DDEE6FB002EDD00 /* XFURLManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLManager.h; sourceTree = "<group>"; };
-		402648D61DDEE6FB002EDD00 /* XFURLManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLManager.m; sourceTree = "<group>"; };
 		402648D81DDEE6FB002EDD00 /* NSObject+XFLegoCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoCopy.h"; sourceTree = "<group>"; };
 		402648D91DDEE6FB002EDD00 /* NSObject+XFLegoCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoCopy.m"; sourceTree = "<group>"; };
 		402648DA1DDEE6FB002EDD00 /* NSObject+XFLegoInvokeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoInvokeMethod.h"; sourceTree = "<group>"; };
@@ -411,6 +414,10 @@
 		402649B21DDF63CD002EDD00 /* XMGPictruePostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPictruePostRouting.m; sourceTree = "<group>"; };
 		402649B41DDF641D002EDD00 /* XMGWordsPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGWordsPostRouting.h; sourceTree = "<group>"; };
 		402649B51DDF641D002EDD00 /* XMGWordsPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGWordsPostRouting.m; sourceTree = "<group>"; };
+		40326DED1DE6D58800E7F68F /* XMGPostExpressPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostExpressPack.h; sourceTree = "<group>"; };
+		40326DEE1DE6D58800E7F68F /* XMGPostExpressPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostExpressPack.m; sourceTree = "<group>"; };
+		40326DF01DE6D6D500E7F68F /* XMGPostFrame.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostFrame.h; sourceTree = "<group>"; };
+		40326DF11DE6D6D500E7F68F /* XMGPostFrame.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostFrame.m; sourceTree = "<group>"; };
 		403A88FB1DE3E05D0016E080 /* XMGPostCategory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XMGPostCategory.h; sourceTree = "<group>"; };
 		403A88FC1DE41D830016E080 /* XMGPostCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostCategory.m; sourceTree = "<group>"; };
 		403A88FE1DE422B30016E080 /* XMGPostProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostProvider.h; sourceTree = "<group>"; };
@@ -428,6 +435,14 @@
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		404874001DD3515E00388087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4058903C1DE7D41300EF4A4F /* XFRoutingReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRoutingReflect.h; sourceTree = "<group>"; };
+		4058903D1DE7D41300EF4A4F /* XFRoutingReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRoutingReflect.m; sourceTree = "<group>"; };
+		405890401DE7E06000EF4A4F /* XFURLRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLRoute.h; sourceTree = "<group>"; };
+		405890411DE7E06000EF4A4F /* XFURLRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLRoute.m; sourceTree = "<group>"; };
+		405890431DE7E2D000EF4A4F /* XFComponentRoutable.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFComponentRoutable.h; sourceTree = "<group>"; };
+		405890461DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostPictrueBrowseViewController.h; sourceTree = "<group>"; };
+		405890471DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostPictrueBrowseViewController.m; sourceTree = "<group>"; };
+		405890481DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPostPictrueBrowseViewController.xib; sourceTree = "<group>"; };
 		4069EF521DE2DE430037B22C /* XMGPostService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostService.h; sourceTree = "<group>"; };
 		4069EF531DE2DE430037B22C /* XMGPostService.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostService.m; sourceTree = "<group>"; };
 		4069EF551DE2E2D80037B22C /* XMGMetaPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGMetaPostModel.h; sourceTree = "<group>"; };
@@ -1391,6 +1406,7 @@
 		402648A61DDEE6FB002EDD00 /* Core */ = {
 			isa = PBXGroup;
 			children = (
+				4058903F1DE7E06000EF4A4F /* Component */,
 				402648A71DDEE6FB002EDD00 /* Module Bus */,
 				402648AE1DDEE6FB002EDD00 /* Module Express */,
 				402648B71DDEE6FB002EDD00 /* Module Factory */,
@@ -1481,8 +1497,8 @@
 			children = (
 				402648D31DDEE6FB002EDD00 /* XFRoutingLinkManager.h */,
 				402648D41DDEE6FB002EDD00 /* XFRoutingLinkManager.m */,
-				402648D51DDEE6FB002EDD00 /* XFURLManager.h */,
-				402648D61DDEE6FB002EDD00 /* XFURLManager.m */,
+				4058903C1DE7D41300EF4A4F /* XFRoutingReflect.h */,
+				4058903D1DE7D41300EF4A4F /* XFRoutingReflect.m */,
 			);
 			path = "Module Manager";
 			sourceTree = "<group>";
@@ -1679,6 +1695,7 @@
 			isa = PBXGroup;
 			children = (
 				4026497A1DDF5800002EDD00 /* Post */,
+				405890441DE7E42200EF4A4F /* PostPictrueBrowse */,
 			);
 			path = Post;
 			sourceTree = "<group>";
@@ -1764,6 +1781,10 @@
 		4026498A1DDF5800002EDD00 /* Express */ = {
 			isa = PBXGroup;
 			children = (
+				40326DED1DE6D58800E7F68F /* XMGPostExpressPack.h */,
+				40326DEE1DE6D58800E7F68F /* XMGPostExpressPack.m */,
+				40326DF01DE6D6D500E7F68F /* XMGPostFrame.h */,
+				40326DF11DE6D6D500E7F68F /* XMGPostFrame.m */,
 				403A89091DE442D00016E080 /* XMGPostRenderItem.h */,
 				403A890A1DE442D00016E080 /* XMGPostRenderItem.m */,
 				403A890C1DE53EB40016E080 /* XMGPictruePostRenderItem.h */,
@@ -1850,6 +1871,34 @@
 				40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4058903F1DE7E06000EF4A4F /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				405890431DE7E2D000EF4A4F /* XFComponentRoutable.h */,
+				405890401DE7E06000EF4A4F /* XFURLRoute.h */,
+				405890411DE7E06000EF4A4F /* XFURLRoute.m */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		405890441DE7E42200EF4A4F /* PostPictrueBrowse */ = {
+			isa = PBXGroup;
+			children = (
+				405890451DE7E42200EF4A4F /* Controller */,
+			);
+			path = PostPictrueBrowse;
+			sourceTree = "<group>";
+		};
+		405890451DE7E42200EF4A4F /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				405890461DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.h */,
+				405890471DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m */,
+				405890481DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 		81C032B40B4AB21DB0B68124 /* Frameworks */ = {
@@ -1972,6 +2021,7 @@
 			files = (
 				4026490A1DDEE6FB002EDD00 /* XMGPushGuideView.xib in Resources */,
 				404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */,
+				4058904A1DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib in Resources */,
 				402649251DDEE6FB002EDD00 /* XMGFriendsRecommentActivity.xib in Resources */,
 				4026492B1DDEE6FB002EDD00 /* XMGRecommendUserCell.xib in Resources */,
 				402649291DDEE6FB002EDD00 /* XMGRecommendCategoryCell.xib in Resources */,
@@ -2122,6 +2172,7 @@
 				4026491B1DDEE6FB002EDD00 /* XMGFriendsRecommentInteractor.m in Sources */,
 				402649941DDF5800002EDD00 /* XMGPostDataManager.m in Sources */,
 				402649281DDEE6FB002EDD00 /* XMGRecommendCategoryCell.m in Sources */,
+				405890421DE7E06000EF4A4F /* XFURLRoute.m in Sources */,
 				402649381DDEE6FB002EDD00 /* XMGMeDataManager.m in Sources */,
 				4026492E1DDEE6FB002EDD00 /* XMGFriendTrendsInteractor.m in Sources */,
 				402649451DDEE6FB002EDD00 /* XMGHttpRequest.m in Sources */,
@@ -2145,15 +2196,16 @@
 				402649441DDEE6FB002EDD00 /* XMGRecommendService.m in Sources */,
 				402649B01DDF63BD002EDD00 /* XMGVoicePostRouting.m in Sources */,
 				4026493A1DDEE6FB002EDD00 /* XMGMePresenter.m in Sources */,
-				402649591DDEE6FB002EDD00 /* XFURLManager.m in Sources */,
 				402649691DDEE6FB002EDD00 /* XMGRMetric.m in Sources */,
 				403A890B1DE442D00016E080 /* XMGPostRenderItem.m in Sources */,
 				4026493B1DDEE6FB002EDD00 /* XMGMeActivity.m in Sources */,
+				405890491DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.m in Sources */,
 				402649471DDEE6FB002EDD00 /* UIView+Extention.m in Sources */,
 				403A89001DE422B30016E080 /* XMGPostProvider.m in Sources */,
 				402649601DDEE6FB002EDD00 /* XFVerticalButton.m in Sources */,
 				402649611DDEE6FB002EDD00 /* XMGAPI.m in Sources */,
 				402649961DDF5800002EDD00 /* XMGPostPresenter.m in Sources */,
+				40326DEF1DE6D58800E7F68F /* XMGPostExpressPack.m in Sources */,
 				402649571DDEE6FB002EDD00 /* XFRouting.m in Sources */,
 				4026493D1DDEE6FB002EDD00 /* XMGNewDataManager.m in Sources */,
 				402649351DDEE6FB002EDD00 /* XMGIndexTabPresenter.m in Sources */,
@@ -2174,6 +2226,8 @@
 				402649151DDEE6FB002EDD00 /* XMGRecommendTagPresenter.m in Sources */,
 				402649331DDEE6FB002EDD00 /* XMGIndexTabDataManager.m in Sources */,
 				4026495E1DDEE6FB002EDD00 /* XFPHTextField.m in Sources */,
+				4058903E1DE7D41300EF4A4F /* XFRoutingReflect.m in Sources */,
+				40326DF21DE6D6D500E7F68F /* XMGPostFrame.m in Sources */,
 				402649491DDEE6FB002EDD00 /* XFModuleAssembly.m in Sources */,
 				402649211DDEE6FB002EDD00 /* XMGRCUserRenderData.m in Sources */,
 				402649271DDEE6FB002EDD00 /* XMGRCUserTableView.m in Sources */,

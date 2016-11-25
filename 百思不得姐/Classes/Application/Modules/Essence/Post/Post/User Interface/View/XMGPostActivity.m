@@ -12,6 +12,7 @@
 #import "XMGPostCell.h"
 #import "XMGPostRenderItem.h"
 #import <MJRefresh.h>
+#import "XMGPostFrame.h"
 
 #define EventHandler  XFConvertPresenterToType(id<XMGPostEventHandlerPort>)
 
@@ -43,7 +44,6 @@ static NSString * const Identifier = @"PostCell";
     // 设置滚动条内边距
     self.tableView.scrollIndicatorInsets = self.tableView.contentInset;
     self.tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    self.tableView.rowHeight = 240;
     self.tableView.backgroundColor = [UIColor clearColor];
     [self.tableView registerNib:[UINib nibWithNibName:@"XMGPostCell" bundle:nil] forCellReuseIdentifier:Identifier];
     
@@ -74,7 +74,6 @@ static NSString * const Identifier = @"PostCell";
             }
             // 局部插入行
            [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
-//            [self.tableView reloadData];
         }];
     }];
     self.tableView.mj_footer.hidden = YES;
@@ -111,6 +110,13 @@ static NSString * const Identifier = @"PostCell";
     return cell;
 }
 
+
+#pragma mark - UITableViewDelegate
+- (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    XMGPostFrame *postFrame = self.eventHandler.expressPack.expressPieces[indexPath.row].uiFrame;
+    return postFrame.cellHeight;
+}
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];

@@ -24,7 +24,6 @@
 @property (weak, nonatomic) IBOutlet UIButton *commentButton;
 
 @property (weak, nonatomic) IBOutlet UILabel *bodyLabel;
-@property (weak, nonatomic) IBOutlet UIView *mediaContainerView;
 
 
 @end

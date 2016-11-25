@@ -1,6 +1,6 @@
 //
 //  XFRoutingLinkManager.m
-//  XFLegoVIPERExample
+//  XFLegoVIPER
 //
 //  Created by 付星 on 16/9/2.
 //  Copyright © 2016年 yizzuide. All rights reserved.
@@ -10,6 +10,7 @@
 #import "XFLegoMarco.h"
 #import "XFRouting.h"
 #import "XFRoutingLinkManager.h"
+#import "XFRoutingReflect.h"
 
 
 @implementation XFRoutingLinkManager
@@ -33,18 +34,13 @@ static NSMutableArray *_keyArr;
 
 #pragma mark - 模块管理
 + (void)addRouting:(XFRouting *)routing {
-    NSString *key = _prefix ? [self moduleNameForRouting:routing] : NSStringFromClass([routing class]);
+    NSString *key = _prefix ? [XFRoutingReflect moduleNameForRouting:routing] : NSStringFromClass([routing class]);
     [_mapTable setObject:routing forKey:key];
     [_keyArr addObject:key];
 }
 
-+ (void)resetSubRoutings:(NSArray *)subRoutings parentRouting:(XFRouting *)parent
-{
-    
-}
-
 + (void)removeRouting:(XFRouting *)routing {
-    NSString *key = _prefix ? [self moduleNameForRouting:routing] : NSStringFromClass([routing class]);
+    NSString *key = _prefix ? [XFRoutingReflect moduleNameForRouting:routing] : NSStringFromClass([routing class]);
     [_mapTable removeObjectForKey:key];
     [_keyArr removeObject:key];
 }
@@ -77,108 +73,6 @@ static NSMutableArray *_keyArr;
     return nil;
 }
 
-+ (NSString *)moduleNameForRouting:(XFRouting *)routing
-{
-    NSArray *simpleSuffix = @[@"Routing",@"Route",@"Router"];
-    NSString *clazzName = NSStringFromClass([routing class]);
-    
-    NSUInteger index = XF_Index_First;
-    NSRange suffixRange;
-    do {
-        if (index == simpleSuffix.count) {
-            return clazzName;
-        }
-        suffixRange = [clazzName rangeOfString:simpleSuffix[index++]];
-    } while (suffixRange.location <= XF_Index_First);
-    
-    NSRange moduleRange = NSMakeRange(_prefix.length, suffixRange.location - _prefix.length);
-    NSString *moduleName = [clazzName substringWithRange:moduleRange];
-    return moduleName;
-}
-
-+ (NSString *)moduleNameForComponentObject:(id)componentObject
-{
-    if ([componentObject isKindOfClass:[XFRouting class]]) {
-        return [self moduleNameForRouting:componentObject];
-    }
-    if ([componentObject isKindOfClass:NSClassFromString(@"XFPresenter")]) {
-        return [self moduleNameForRouting:[componentObject valueForKeyPath:@"routing"]];
-    }
-    if ([componentObject isKindOfClass:NSClassFromString(@"UIViewController")]) {
-        return [self moduleNameForRouting:[[componentObject valueForKeyPath:@"eventHandler"] valueForKeyPath:@"routing"]];
-    }
-    return nil;
-}
-
-
-#pragma mark - 模块自检
-+ (BOOL)verifyModule:(NSString *)moduleName
-{
-    NSString *modulePrefix = [self modulePrefix];
-    return !!NSClassFromString([NSString stringWithFormat:@"%@%@Routing",modulePrefix,moduleName]);
-}
-
-+ (BOOL)verifyModuleLinkForList:(NSArray<NSString *> *)modules
-{
-    // 只有一个路由，直接返回
-    if (modules.count == 1) {
-        return YES;
-    }
-
-    XFRouting *preRouting = [self findRoutingForModuleName:modules[XF_Index_First]];
-    if (!preRouting) {
-        return NO;
-    }
-    for (int i = XF_Index_Second; i < modules.count; i++) {
-        XFRouting *nextRouting = [self findRoutingForModuleName:modules[i]];
-        // 忽略最后一个可能没有添加上的路由
-        if (i == modules.count - 1 && !nextRouting) {
-            return YES;
-        }
-        // 如果下一个路由找不到
-        if (!nextRouting) {
-            return NO;
-        }
-        // 判断父子关系
-        if (nextRouting.parentRouting == preRouting) {
-            preRouting = nextRouting;
-            continue;
-        }
-        // 判断链路关系
-        if (preRouting.nextRouting != nextRouting) {
-            return  NO;
-        }
-        // 以下一个路由为起点
-        preRouting = nextRouting;
-    }
-    return YES;
-}
-
-+ (void)analysisModulePrefixFromClass:(Class)clazz
-{
-    if (_prefix) return;
-    // 开始解析模块前辍
-    NSString *clazzName = NSStringFromClass(clazz);
-    NSUInteger count = clazzName.length;
-    NSMutableString *appendString = @"".mutableCopy;
-    for (int i = 0; i < count; i++) {
-        char c = [clazzName characterAtIndex:i];
-        // 如果是小写
-        if (c > 96 && c < 123) {
-            [appendString deleteCharactersInRange:NSMakeRange(appendString.length - 1, 1)];
-            break;
-        }
-        // 添加
-        [appendString appendString:[NSString stringWithFormat:@"%c",c]];
-    }
-#ifdef LogDebug
-    LogDebug(@"analysisModuleName: %@",appendString);
-#elif (defined DEBUG)
-    NSLog(@"analysisModuleName: %@",appendString);
-#endif
-    _prefix = appendString;
-}
-
 #pragma mark - 模块前辍
 static NSString *_prefix;
 + (void)setModulePrefix:(NSString *)prefix
@@ -188,20 +82,6 @@ static NSString *_prefix;
 
 + (NSString *)modulePrefix
 {
-    if (_prefix == nil) {
-#ifdef LogError
-        LogError(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
-        LogError(@"!! 模块没有设置过前辍！请在应用初始完成方法里调用：!!!!!!!!");
-        LogError(@"!! [XFRouttingLinkManager setModulePrefix:] !!!!!!");
-        LogError(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-#elif (defined DEBUG)
-        NSLog(@"!!!!!!!!!!!!!!!! XFLegoVIPER !!!!!!!!!!!!!!!!!!!!!");
-        NSLog(@"!! 模块没有设置过前辍！请在应用初始完成方法里调用：!!!!!!!!");
-        NSLog(@"!! [XFRouttingLinkManager setModulePrefix:] !!!!!!");
-        NSLog(@"!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!");
-#endif
-    }
-    NSAssert(_prefix, @"当前使用的功能正在访问前辍，但没有设置过模块前辍！");
     return _prefix;
 }
 

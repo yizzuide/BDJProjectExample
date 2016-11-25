@@ -1,24 +1,25 @@
 //
-//  XFURLManager.m
-//  XFLegoVIPERExample
+//  XFURLRoute.m
+//  XFLegoVIPER
 //
 //  Created by 付星 on 2016/11/7.
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import "XFURLManager.h"
+#import "XFURLRoute.h"
 #import "XFURLParse.h"
 #import "XFLegoMarco.h"
-#import "XFRoutingLinkManager.h"
 #import "XFControllerFactory.h"
+#import "XFRoutingLinkManager.h"
+#import "XFRoutingReflect.h"
 
-@implementation XFURLManager
+@implementation XFURLRoute
 
 static NSMutableDictionary<NSString *,NSString *> *_mapTable;
 
 + (void)initialize
 {
-    if (self == [XFURLManager class]) {
+    if (self == [XFURLRoute class]) {
         _mapTable = @{}.mutableCopy;
     }
 }
@@ -53,7 +54,7 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
     if ([XFControllerFactory isViewControllerComponent:componentName]){
         [_mapTable setObject:componentName forKey:url];
     }else{
-        NSAssert([XFRoutingLinkManager verifyModule:componentName], @"模块验证失败！找不到此模块！");
+        NSAssert([XFRoutingReflect verifyModule:componentName], @"模块验证失败！找不到此模块！");
         [_mapTable setObject:componentName forKey:url];
     }
 }
@@ -86,7 +87,7 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
                 NSString *moduleName = [NSString stringWithFormat:@"%@%@",[comp substringToIndex:XF_Index_Second].uppercaseString,[comp substringFromIndex:XF_Index_Second]];
                 [modules addObject:moduleName];
             }
-            BOOL isURLComponentLinkOk = [XFRoutingLinkManager verifyModuleLinkForList:modules];
+            BOOL isURLComponentLinkOk = [XFRoutingReflect verifyModuleLinkForList:modules];
             NSAssert(isURLComponentLinkOk, @"URL子路径关系链错误！");
         });
     }

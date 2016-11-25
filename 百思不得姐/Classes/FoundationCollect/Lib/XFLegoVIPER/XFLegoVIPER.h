@@ -22,7 +22,7 @@
 #import "XFInterfaceFactory.h"
 #import "XFRoutingFactory.h"
 #import "XFRoutingLinkManager.h"
-#import "XFURLManager.h"
+#import "XFURLRoute.h"
 #import "XFExpressPack.h"
 #import "XFExpressPiece.h"
 #import "XFRenderData.h"

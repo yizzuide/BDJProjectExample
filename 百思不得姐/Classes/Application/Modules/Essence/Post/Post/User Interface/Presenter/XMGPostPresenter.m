@@ -12,6 +12,7 @@
 #import "XMGPostInteractorPort.h"
 #import "ReactiveCocoa.h"
 #import "XMGPostCategory.h"
+#import "XMGPostExpressPack.h"
 
 
 #define Interactor XFConvertInteractorToType(id<XMGPostInteractorPort>)
@@ -71,7 +72,7 @@
     // XF_ModuleName为当前模块名，XMG_Post_Str2Type宏可以通过模块名找到对应帖子分类类型
     [[Interactor fetchPostsForType:XMG_Post_Str2Type(XF_ModuleName)] subscribeNext:^(XFRenderData *renderData) {
         // 设置并关联到当前模块的显示数据包
-        XF_SetExpressPack_Fast(renderData);
+        XF_SetExpressPack_(XMGPostExpressPack, renderData);
     }];
 }
 

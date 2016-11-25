@@ -52,7 +52,7 @@
     renderItem.height = postModel.height;
     renderItem.url = [NSURL URLWithString:postModel.image_large];
     // 是否为长图
-    if (postModel.height > ScreenSize.height * 2) {
+    if (postModel.height > R_Height_PostPictureMax) {
         renderItem.type = XMGPostRenderItemTypePictrueLong;
         return renderItem;
     }
@@ -62,6 +62,8 @@
         renderItem.type = XMGPostRenderItemTypePictrueGIF;
         return renderItem;
     }
+    
+    // 一般图片
     renderItem.type = XMGPostRenderItemTypePictrue;
     return renderItem;
 }

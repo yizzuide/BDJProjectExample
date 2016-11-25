@@ -26,6 +26,8 @@ DefConstInt R_Size_PostCellMargin = 10.f;
 DefConstInt R_Height_PostCellClip = R_Size_PostCellMargin;
 DefConstInt R_Height_PostCellBottomBar = 44.f;
 DefConstInt R_Height_PostCellHeader = 45.f;
+DefConstInt R_Height_PostPictureMax = 1500.f;
+DefConstInt R_Height_PostPictureBreak = 250.f;
 
 
 

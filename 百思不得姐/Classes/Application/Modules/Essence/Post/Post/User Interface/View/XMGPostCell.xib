@@ -141,14 +141,10 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="u8l-kU-rms" userLabel="媒体内容显示容器">
-                        <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
-                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fk3-x2-Fsf" firstAttribute="trailing" secondItem="4xw-nm-YUC" secondAttribute="trailing" constant="5" id="3pC-WB-OEF"/>
                     <constraint firstItem="bgf-Ew-tlp" firstAttribute="top" secondItem="4xw-nm-YUC" secondAttribute="top" id="6co-cs-Cxw"/>
-                    <constraint firstItem="u8l-kU-rms" firstAttribute="top" secondItem="s7W-Ql-vZA" secondAttribute="bottom" constant="10" id="7GF-Rf-Bs0"/>
                     <constraint firstItem="cFU-zX-juI" firstAttribute="top" secondItem="4xw-nm-YUC" secondAttribute="top" id="9bg-KC-mfb"/>
                     <constraint firstAttribute="trailingMargin" secondItem="cFU-zX-juI" secondAttribute="trailing" id="AP1-EW-rVr"/>
                     <constraint firstItem="7yz-7E-0nN" firstAttribute="bottom" secondItem="4xw-nm-YUC" secondAttribute="bottom" id="Fh3-nV-naa"/>
@@ -156,13 +152,10 @@
                     <constraint firstItem="4xw-nm-YUC" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="J5i-YB-C0W"/>
                     <constraint firstItem="s7W-Ql-vZA" firstAttribute="leading" secondItem="4xw-nm-YUC" secondAttribute="leading" id="Mym-mC-GS2"/>
                     <constraint firstItem="fvT-6Z-O5O" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="NHK-44-Yby"/>
-                    <constraint firstItem="fvT-6Z-O5O" firstAttribute="top" secondItem="u8l-kU-rms" secondAttribute="bottom" constant="10" id="Nef-tN-PxV"/>
                     <constraint firstItem="4xw-nm-YUC" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Qf9-9Z-oCT"/>
                     <constraint firstItem="s7W-Ql-vZA" firstAttribute="trailing" secondItem="cFU-zX-juI" secondAttribute="trailing" id="WtE-IY-mBC"/>
                     <constraint firstItem="7yz-7E-0nN" firstAttribute="leading" secondItem="bgf-Ew-tlp" secondAttribute="leading" id="XZQ-9x-ALq"/>
-                    <constraint firstItem="s7W-Ql-vZA" firstAttribute="top" secondItem="4xw-nm-YUC" secondAttribute="bottom" constant="13" id="ds4-uh-OYV"/>
-                    <constraint firstItem="u8l-kU-rms" firstAttribute="trailing" secondItem="s7W-Ql-vZA" secondAttribute="trailing" id="hH2-27-u92"/>
-                    <constraint firstItem="u8l-kU-rms" firstAttribute="leading" secondItem="s7W-Ql-vZA" secondAttribute="leading" id="hdc-C0-ubt"/>
+                    <constraint firstItem="s7W-Ql-vZA" firstAttribute="top" secondItem="4xw-nm-YUC" secondAttribute="bottom" constant="10" id="ds4-uh-OYV"/>
                     <constraint firstItem="fk3-x2-Fsf" firstAttribute="bottom" secondItem="4xw-nm-YUC" secondAttribute="bottom" constant="5" id="psG-gM-QaZ"/>
                     <constraint firstAttribute="bottom" secondItem="fvT-6Z-O5O" secondAttribute="bottom" id="zUF-20-XbH"/>
                     <constraint firstAttribute="trailing" secondItem="fvT-6Z-O5O" secondAttribute="trailing" id="zf5-14-U2R"/>
@@ -174,7 +167,6 @@
                 <outlet property="createTimeLabel" destination="7yz-7E-0nN" id="7EW-pW-pXq"/>
                 <outlet property="hateButton" destination="itc-Y5-ORg" id="X0f-9D-8FH"/>
                 <outlet property="loveButton" destination="coy-La-7nV" id="gYh-lD-D8O"/>
-                <outlet property="mediaContainerView" destination="u8l-kU-rms" id="ZJS-Vw-p2y"/>
                 <outlet property="nikeNameLabel" destination="bgf-Ew-tlp" id="xv6-XU-4K0"/>
                 <outlet property="prefileImageView" destination="4xw-nm-YUC" id="5bA-8u-2DK"/>
                 <outlet property="repostButton" destination="1qv-rA-p2D" id="WnJ-2I-qLK"/>

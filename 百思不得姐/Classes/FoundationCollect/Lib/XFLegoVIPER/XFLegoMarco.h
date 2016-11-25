@@ -34,7 +34,8 @@ __weak __typeof__ (self) self_weak_ = self;
 #define XF_Define_Strong \
 __strong __typeof__(self) self = self_weak_;
 
-#import "XFRoutingLinkManager.h"
+// 模块反射类
+#import "XFRoutingReflect.h"
 
 #define SUPPRESS_UNDECLARED_SELECTOR_LEAK_WARNING(code)                        \
 _Pragma("clang diagnostic push")                                        \

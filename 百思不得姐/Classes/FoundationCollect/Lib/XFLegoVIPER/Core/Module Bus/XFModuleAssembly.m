@@ -11,6 +11,7 @@
 #import "XFRouting.h"
 #import "NSObject+XFLegoInvokeMethod.h"
 #import "XFUserInterfacePort.h"
+#import "XFRoutingReflect.h"
 
 @implementation XFModuleAssembly
 
@@ -35,7 +36,7 @@
 
 - (__kindof XFRouting *)autoAssemblyModuleWithNav:(NSString *)navName ibSymbol:(NSString *)ibSymbol shareDataManagerName:(NSString *)shareDataManagerName
 {
-    NSString *moduleName = [XFRoutingLinkManager moduleNameForRouting:self.fromRouting];
+    NSString *moduleName = [XFRoutingReflect moduleNameForRouting:self.fromRouting];
     return [self _autoAssemblyModuleWithModuleName:moduleName navName:navName ibSymbol:ibSymbol shareDataManagerName:shareDataManagerName];
 }
 

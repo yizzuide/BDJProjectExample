@@ -36,6 +36,12 @@ extern DefConstInt R_Height_PostCellClip;
 extern DefConstInt R_Height_PostCellBottomBar;
 /*帖子标题栏高*/
 extern DefConstInt R_Height_PostCellHeader;
+/**
+ *  帖子长图的最高限度
+ */
+extern DefConstInt R_Height_PostPictureMax;
+/*帖子长图显示高度*/
+extern DefConstInt R_Height_PostPictureBreak;
 
 
 
