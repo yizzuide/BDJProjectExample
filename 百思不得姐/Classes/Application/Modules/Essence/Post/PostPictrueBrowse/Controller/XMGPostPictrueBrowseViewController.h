@@ -11,5 +11,5 @@
 
 @interface XMGPostPictrueBrowseViewController : UIViewController <XFComponentRoutable>
 
-@property (nonatomic, strong) NSDictionary *urlRouteParams;
+@property (nonatomic, copy) id intentData;
 @end

@@ -12,6 +12,7 @@
 #import "XFRoutingFactory.h"
 #import "XFURLRoute.h"
 #import "XFControllerFactory.h"
+#import "XFComponentRoutable.h"
 
 @interface XFUIBus ()
 /**
@@ -109,7 +110,12 @@
 - (void)pushModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
     if ([XFControllerFactory isViewControllerComponent:moduleName]) {
-        UIViewController *viewController = [XFControllerFactory controllerFromComponentName:moduleName];
+        UIViewController<XFComponentRoutable> *viewController = (id)[XFControllerFactory controllerFromComponentName:moduleName];
+        // 如果实现URL组件接口
+        if ([viewController respondsToSelector:@selector(setIntentData:)]) {
+            // 传递组件参数
+            [viewController setIntentData:intentData];
+        }
         if (customCodeBlock) {
             customCodeBlock(nil);
         }
