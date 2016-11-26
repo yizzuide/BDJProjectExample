@@ -33,46 +33,54 @@
 }
 
 #pragma mark - URL组件方式
-
 - (void)openURL:(NSString *)url onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
-        [self showModule:moduleName onWindow:mainWindow customCode:customCodeBlock];
+    [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
+        [self showComponent:componentName onWindow:mainWindow customCode:customCodeBlock];
     }];
 }
 
 // 以URL组件式PUSH
 - (void)openURLForPush:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
-        [self pushModule:moduleName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
+    [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
+        [self pushComponent:componentName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }
 
 // 以URL组件式Present
 - (void)openURLForPresent:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
-        [self presentModule:moduleName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
+    [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
+        [self presentComponent:componentName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }
+
 // 自定义打开一个URL组件
 - (void)openURL:(NSString *)url withTransitionBlock:(TransitionBlock)trasitionBlock customCode:(CustomCodeBlock)customCodeBlock
 {
-    [XFURLRoute open:url transitionBlock:^(NSString *moduleName, NSDictionary *params) {
-        [self putModule:moduleName withTransitionBlock:trasitionBlock intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
+    [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
+        [self putComponent:componentName withTransitionBlock:trasitionBlock intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }
 
 
-#pragma mark - 模块名界面切换方式
-
-- (void)showModule:(NSString *)moduleName onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock
+#pragma mark - 组件名界面切换方式
+- (void)showComponent:(NSString *)componentName onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock
 {
-    self.rootRouting = [XFRoutingFactory createRoutingFastFromModuleName:moduleName];
+    // 是否是控制器组件
+    if ([XFControllerFactory isViewControllerComponent:componentName]) {
+        UIViewController *viewController = (id)[XFControllerFactory controllerFromComponentName:componentName];
+        mainWindow.rootViewController = viewController;
+        [mainWindow makeKeyAndVisible];
+        return;
+    }
+    
+    // 否则是VIPER模块组件
+    self.rootRouting = [XFRoutingFactory createRoutingFastFromModuleName:componentName];
     NSAssert(self.rootRouting, @"模块创建失败！请检测模块名是否正确！(注意：使用帕斯卡命名法<首字母大写>）");
     if (customCodeBlock) {
-        customCodeBlock(self.rootRouting);
+        customCodeBlock(self.rootRouting.realInterface);
     }
     id navigator = self.rootRouting.realNavigator;
     if (navigator) {
@@ -84,53 +92,49 @@
 }
 
 // Modal方式
-- (void)presentModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
+- (void)presentComponent:(NSString *)componentName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
-    if ([XFControllerFactory isViewControllerComponent:moduleName]) {
-        // 如是是控制器组件
-        if ([XFControllerFactory isViewControllerComponent:moduleName]) {
-            [self putViewController:moduleName withTransitionBlock:^(UIViewController *viewController) {
-                [self presentMVxViewController:viewController];
-            } intent:intentData customCode:customCodeBlock];
-            return;
-        }
-        return;
-    }
-    [self putModule:moduleName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
+    [self putComponent:componentName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
         [thisInterface presentViewController:nextInterface animated:YES completion:nil];
     } intent:intentData customCode:customCodeBlock];
 }
 
-- (void)dismissModule
+- (void)dismiss
 {
-    [self removeModuleWithTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
+    [self removeWithTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
         [thisInterface dismissViewControllerAnimated:YES completion:nil];
     }];
 }
 
 // PUSH方式
-- (void)pushModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
+- (void)pushComponent:(NSString *)componentName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
-    // 如是是控制器组件
-    if ([XFControllerFactory isViewControllerComponent:moduleName]) {
-        [self putViewController:moduleName withTransitionBlock:^(UIViewController *viewController) {
-            [self pushMVxViewController:viewController];
-        } intent:intentData customCode:customCodeBlock];
-        return;
-    }
-    [self putModule:moduleName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
+    [self putComponent:componentName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
         [thisInterface.navigationController pushViewController:nextInterface animated:YES];
     } intent:intentData customCode:customCodeBlock];
 }
 
-- (void)popModule
+- (void)pop
 {
-    [self removeModuleWithTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
+    [self removeWithTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
         [thisInterface.navigationController popViewControllerAnimated:YES];
     }];
 }
 
-- (void)putViewController:(NSString *)component withTransitionBlock:(void(^)(UIViewController *viewController))trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
+
+#pragma mark - 自定义切换
+- (void)putComponent:(NSString *)componentName withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock {
+    // 是否是控制器组件
+    if ([XFControllerFactory isViewControllerComponent:componentName]) {
+        [self putViewControllerComponent:componentName withTransitionBlock:trasitionBlock intent:intentData customCode:customCodeBlock];
+        return;
+    }
+    
+    // 否则是VIPER模块组件
+    [self putRoutingComponent:componentName withTransitionBlock:trasitionBlock intent:intentData customCode:customCodeBlock];
+}
+
+- (void)putViewControllerComponent:(NSString *)component withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
     UIViewController<XFComponentRoutable> *viewController = (id)[XFControllerFactory controllerFromComponentName:component];
     // 如果实现URL组件接口
@@ -143,19 +147,19 @@
         }
     }
     if (customCodeBlock) {
-        customCodeBlock(nil);
+        customCodeBlock(viewController);
     }
-    trasitionBlock(viewController);
+    trasitionBlock(self.fromRouting.realInterface,viewController);
 }
 
-// 自定义切换
-- (void)putModule:(NSString *)moduleName withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock {
+- (void)putRoutingComponent:(NSString *)component withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
+{
     // 初始化一个Routing
-    XFRouting *nextRouting = [XFRoutingFactory createRoutingFastFromModuleName:moduleName];
+    XFRouting *nextRouting = [XFRoutingFactory createRoutingFastFromModuleName:component];
     NSAssert(nextRouting, @"模块创建失败！请检测模块名是否正确！(注意：使用帕斯卡命名法<首字母大写>）");
     //  调用自定义代码
     if (customCodeBlock) {
-        customCodeBlock(nextRouting);
+        customCodeBlock(nextRouting.realInterface);
     }
     // 如果有事件处理层
     if (nextRouting.uiOperator) {
@@ -193,7 +197,7 @@
 
 #pragma mark - 关系链管理
 // 移除当前Routing
-- (void)removeModuleWithTransitionBlock:(TransitionBlock)trasitionBlock
+- (void)removeWithTransitionBlock:(TransitionBlock)trasitionBlock
 {
     // 标识为程序移除
     [self.fromRouting.realInterface invokeMethod:@"setPoppingProgrammatically:" param:[NSNumber numberWithBool:YES]];

@@ -82,37 +82,37 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 
 
 
-// 模块名方式（不适用于MVx）
-// Push一个模块宏
-#define XF_PUSH_Routing_(ModuleName,ExecuteCode) \
+// 组件名方式
+// Push一个组件宏
+#define XF_PUSH_Component_(ComponentName,ExecuteCode) \
 XF_Define_Weak \
-[self.uiBus pushModule:ModuleName intent:self.uiOperator.intentData customCode:^(__kindof XFRouting *routing) { \
+[self.uiBus pushComponent:ComponentName intent:self.uiOperator.intentData customCode:^(Activity *nextInterface) { \
     XF_Define_Strong \
     ExecuteCode \
     [self self]; \
 }];
-// 快速Push一个模块
-#define XF_PUSH_Routing_Fast(ModuleName) \
-XF_PUSH_Routing_(ModuleName,{})
+// 快速Push一个组件
+#define XF_PUSH_Component_Fast(ComponentName) \
+XF_PUSH_Component_(ComponentName,{})
 
-// Present一个模块宏
-#define XF_Present_Routing_(ModuleName,ExecuteCode) \
+// Present一个组件宏
+#define XF_Present_Component_(ComponentName,ExecuteCode) \
 XF_Define_Weak \
-[self.uiBus presentModule:ModuleName intent:self.uiOperator.intentData customCode:^(__kindof XFRouting *routing) { \
+[self.uiBus presentComponent:ComponentName intent:self.uiOperator.intentData customCode:^(Activity *nextInterface) { \
     XF_Define_Strong \
     ExecuteCode \
     [self self]; \
 }];
-// 快速Present一个模块
-#define XF_Present_Routing_Fast(ModuleName) \
-XF_Present_Routing_(ModuleName,{})
+// 快速Present一个组件
+#define XF_Present_Component_Fast(ComponentName) \
+XF_Present_Component_(ComponentName,{})
 
 
 // URL组件方式（这种方式适用于MVx、VIPER）
 // Push一个URL组件
 #define XF_PUSH_URLComponent_(urlString,ExecuteCode) \
 XF_Define_Weak \
-[self.uiBus openURLForPush:urlString customCode:^(__kindof XFRouting *routing) { \
+[self.uiBus openURLForPush:urlString customCode:^(Activity *nextInterface) { \
     XF_Define_Strong \
     ExecuteCode \
     [self self]; \
@@ -124,7 +124,7 @@ XF_PUSH_URLComponent_(urlString,{})
 // Present一个URL组件
 #define XF_Present_URLComponent_(urlString,ExecuteCode) \
 XF_Define_Weak \
-[self.uiBus openURLForPresent:urlString customCode:^(__kindof XFRouting *routing) { \
+[self.uiBus openURLForPresent:urlString customCode:^(Activity *nextInterface) { \
     XF_Define_Strong \
     ExecuteCode \
     [self self]; \

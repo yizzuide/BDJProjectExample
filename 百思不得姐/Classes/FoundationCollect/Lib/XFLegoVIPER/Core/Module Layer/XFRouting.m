@@ -89,12 +89,12 @@
 #pragma mark - 快速弹出视图方法
 - (void)pop
 {
-    [self.uiBus popModule];
+    [self.uiBus pop];
 }
 
 - (void)dismiss
 {
-    [self.uiBus dismissModule];
+    [self.uiBus dismiss];
 }
 
 #pragma mark - 获取当前视图

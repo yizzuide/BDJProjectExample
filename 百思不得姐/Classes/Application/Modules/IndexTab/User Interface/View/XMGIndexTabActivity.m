@@ -63,6 +63,7 @@
     [SVProgressHUD setDefaultStyle:SVProgressHUDStyleCustom];
     [SVProgressHUD setForegroundColor:UIColorFromRGB(R_Color_Front)];
     [SVProgressHUD setBackgroundColor:UIColorFromRGB(R_Color_CellBkg)];
+    [SVProgressHUD setMinimumDismissTimeInterval:0.5f];
 }
 
 - (void)setUpChildActivitys {

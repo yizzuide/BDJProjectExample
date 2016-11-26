@@ -10,18 +10,18 @@
 
 #define Activity __kindof UIViewController
 
-// 显示根模块
-#define XF_ShowRootRouting2Window_(ModuleName,ExecuteCode) \
-[[[XFUIBus alloc] init] showModule:ModuleName onWindow:self.window customCode:^(__kindof XFRouting *routing) { \
+// 显示根组件
+#define XF_ShowRootComponent2Window_(ComponentName,ExecuteCode) \
+[[[XFUIBus alloc] init] showComponent:ComponentName onWindow:self.window customCode:^(Activity *nextInterface) { \
     ExecuteCode \
 }];
-// 快速显示一个根模块
-#define XF_ShowRootRouting2Window_Fast(ModuleName) \
-XF_ShowRootRouting2Window_(ModuleName,{})
+// 快速显示一个根组件
+#define XF_ShowRootComponent2Window_Fast(ComponentName) \
+XF_ShowRootComponent2Window_(ComponentName,{})
 
 // 显示根组件
 #define XF_ShowURLComponent2Window_(url,ExecuteCode) \
-[[[XFUIBus alloc] init] openURL:url onWindow:self.window customCode:^(__kindof XFRouting *routing) { \
+[[[XFUIBus alloc] init] openURL:url onWindow:self.window customCode:^(Activity *nextInterface) { \
     ExecuteCode \
 }];
 // 快速显示一个根组件
@@ -30,7 +30,7 @@ XF_ShowURLComponent2Window_(url,{})
 
 @class XFRouting;
 typedef void(^TransitionBlock)(Activity *thisInterface, Activity *nextInterface);
-typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
+typedef void(^CustomCodeBlock) (Activity *nextInterface);
 
 
 @interface XFUIBus : NSObject
@@ -50,15 +50,6 @@ typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
 - (instancetype)initWithFromRouting:(XFRouting *)fromRouting;
 
 /**
- *  显示一个模块在窗口（注意：这个方法会创建一个根路由，不需要路由调用，这是一个鸡蛋相生的问题！）
- *
- *  @param moduleName       模块名
- *  @param mainWindow       窗口
- *  @param customCodeBlock  自定义配制代码Block
- */
-- (void)showModule:(NSString *)moduleName onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock;
-
-/**
  *  显示一个组件在窗口
  *
  *  @param url             URL
@@ -66,34 +57,6 @@ typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
  *  @param customCodeBlock 自定义配制代码Block
  */
 - (void)openURL:(NSString *)url onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock;
-
-/**
- *  推入一个模块
- *
- *  @param moduleName       模块名
- *  @param intentData       意图数据（没有可以传nil）
- *  @param customCodeBlock  自定义配制代码Block
- */
-- (void)pushModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock;
-
-/**
- *  推出当前视图(注意：返回到上一个界面的意图数据在需要当前模块的Presenter里设置intentData属性）
- */
-- (void)popModule;
-
-/**
- *  Modal一个模块
- *
- *  @param moduleName       模块名
- *  @param intentData       意图数据（没有可以传nil）
- *  @param customCodeBlock  自定义配制代码Block
- */
-- (void)presentModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock;
-
-/**
- *  dismiss当前视图(注意：返回到上一个界面的意图数据需要在当前模块的Presenter里设置intentData属性）
- */
-- (void)dismissModule;
 
 /**
  *  以URL组件方式Push
@@ -118,22 +81,60 @@ typedef void(^CustomCodeBlock) (__kindof XFRouting *routing);
  */
 - (void)openURL:(NSString *)url withTransitionBlock:(TransitionBlock)trasitionBlock customCode:(CustomCodeBlock)customCodeBlock;
 
+
+/**
+ *  显示一个组件在窗口
+ *
+ *  @param componentName        组件名
+ *  @param mainWindow           窗口
+ *  @param customCodeBlock      自定义配制代码Block
+ */
+- (void)showComponent:(NSString *)componentName onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock;
+
+/**
+ *  推入一个模块
+ *
+ *  @param componentName        组件名
+ *  @param intentData           意图数据（没有可以传nil）
+ *  @param customCodeBlock      自定义配制代码Block
+ */
+- (void)pushComponent:(NSString *)componentName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock;
+
+/**
+ *  推出当前视图(注意：返回到上一个界面的意图数据在需要当前模块的Presenter里设置intentData属性）
+ */
+- (void)pop;
+
+/**
+ *  Modal一个组件
+ *
+ *  @param componentName        组件名
+ *  @param intentData           意图数据（没有可以传nil）
+ *  @param customCodeBlock      自定义配制代码Block
+ */
+- (void)presentComponent:(NSString *)componentName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock;
+
+/**
+ *  dismiss当前视图(注意：返回到上一个界面的意图数据需要在当前模块的Presenter里设置intentData属性）
+ */
+- (void)dismiss;
+
 /**
  *  自定义展示一个界面
  *
- *  @param moduleName       下一个路由
- *  @param trasitionBlock   视图切换代码
- *  @param intentData       意图数据（没有可以传nil）
- *  @param customCodeBlock  自定义配制代码Block
+ *  @param componentName        下一个路由
+ *  @param trasitionBlock       视图切换代码
+ *  @param intentData           意图数据（没有可以传nil）
+ *  @param customCodeBlock      自定义配制代码Block
  */
-- (void)putModule:(NSString *)moduleName withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock;
+- (void)putComponent:(NSString *)componentName withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock;
 
 /**
  *  自定义移除一个界面
  *
  *  @param trasitionBlock 视图切换代码
  */
-- (void)removeModuleWithTransitionBlock:(TransitionBlock)trasitionBlock;
+- (void)removeWithTransitionBlock:(TransitionBlock)trasitionBlock;
 
 /**
  *  push一个MVx架构里的控制器（注意：它不会被VIPER路由器管理，所以不能对之发VIPER事件通信）
