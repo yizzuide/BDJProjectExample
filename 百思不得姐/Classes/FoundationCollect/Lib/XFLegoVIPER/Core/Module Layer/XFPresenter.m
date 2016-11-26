@@ -23,7 +23,7 @@
 - (void)viewWillBecomeFocusWithIntentData:(id)intentData{}
 - (void)viewWillResignFocus{}
 
-- (void)receiveOtherModuleEventName:(NSString *)eventName intentData:(id)intentData{}
+- (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData{}
 
 - (void)xfLego_onBackItemTouch
 {

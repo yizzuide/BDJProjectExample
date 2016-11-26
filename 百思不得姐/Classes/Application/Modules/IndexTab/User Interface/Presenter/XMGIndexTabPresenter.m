@@ -54,8 +54,8 @@
 }
 
 
-// 接受到MVx构架或XFLegoVIPER模块的通知
-- (void)receiveOtherModuleEventName:(NSString *)eventName intentData:(id)intentData
+// 接受到组件事件
+- (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
 {
     // 匹配对应通知
     /*XF_EventIs_(NF_User_XXX, {

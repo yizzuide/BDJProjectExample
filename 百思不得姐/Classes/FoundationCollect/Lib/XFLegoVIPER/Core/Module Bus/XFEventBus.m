@@ -43,7 +43,7 @@
 // 私有方法：路由管理中心通知当前路由发送事件
 - (void)_sendEventName:(NSString *)eventName intentData:(id)intentData
 {
-    [self.fromRouting.uiOperator receiveOtherModuleEventName:eventName intentData:intentData];
+    [self.fromRouting.uiOperator receiveComponentEventName:eventName intentData:intentData];
 }
 
 // VIPER架构模块对MV*模块发送通知
@@ -65,7 +65,7 @@
                 usingBlock:^(NSNotification * _Nonnull note) {
                     XF_Define_Strong
                     // 通知事件处理层接收事件
-                    [self.fromRouting.uiOperator receiveOtherModuleEventName:note.name intentData:note.userInfo];
+                    [self.fromRouting.uiOperator receiveComponentEventName:note.name intentData:note.userInfo];
                 }];
         // 添加到侦听数组
         [self.observers addObject:observer];
