@@ -12,9 +12,9 @@
 #import "XFPlusTabBar.h"
 #import <SVProgressHUD.h>
 
-#define EventHandler  XFConvertPresenterToType(id<XFIndexTabEventHandlerPort>)
+#define EventHandler  XFConvertPresenterToType(id<XMGIndexTabEventHandlerPort>)
 
-@interface XMGIndexTabActivity ()
+@interface XMGIndexTabActivity () <XFTabBarDelegate>
 
 @end
 
@@ -95,7 +95,10 @@
 
 
 #pragma mark - UIControlDelegate
-
+- (void)tabBarDidPlusBtnClick:(UITabBar *)tabBar
+{
+    [EventHandler didPublishButtonClickAction];
+}
 
 
 

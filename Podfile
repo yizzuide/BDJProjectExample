@@ -14,6 +14,8 @@ target '百思不得姐' do
     pod 'Canvas', '~> 0.1.2'
     pod 'MTMigration'
     pod 'DACircularProgress'
+    pod 'pop'
+    pod 'POP+MCAnimate', '~> 2.0'
 end
 
 target '百思不得姐Tests' do

@@ -14,9 +14,12 @@
 // 组装模块
 XF_AutoAssemblyModule_Fast
 
-// 跳转模块
-/*- (void)transition2XXModule
+// 跳转组件
+- (void)transition2Publish
 {
-    XF_PUSH_Routing_Fast(@"ModuleName")
-}*/
+    // 自定义跳转
+   [self.uiBus openURL:@"xmg://indexTab/publish" withTransitionBlock:^(__kindof UIViewController *thisInterface, __kindof UIViewController *nextInterface) {
+       [thisInterface presentViewController:nextInterface animated:NO completion:nil];
+   } customCode:nil];
+}
 @end

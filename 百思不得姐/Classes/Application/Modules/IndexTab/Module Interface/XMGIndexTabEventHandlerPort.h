@@ -11,4 +11,5 @@
 
 @protocol XMGIndexTabEventHandlerPort <XFEventHandlerPort>
 
+- (void)didPublishButtonClickAction;
 @end

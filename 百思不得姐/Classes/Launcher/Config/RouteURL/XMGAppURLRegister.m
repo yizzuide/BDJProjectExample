@@ -15,6 +15,7 @@
 {
     [XFURLRoute initURLGroup:@[
                                  @"xmg://indexTab", // Tab主UI框架页
+                                 @"xmg://indexTab/publish", // 发布作品
                                  @"xmg://friendTrends/friendsRecomment", // 推荐朋友
                                  @"xmg://userCenter/signIn", // 登录
                                  @"xmg://essence/recommendTag", // 推荐标签

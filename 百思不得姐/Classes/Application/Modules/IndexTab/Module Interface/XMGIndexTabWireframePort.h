@@ -11,4 +11,5 @@
 
 @protocol XMGIndexTabWireframePort <XFWireFramePort>
 
+- (void)transition2Publish;
 @end

@@ -14,7 +14,7 @@
 // 组装模块
 XF_AutoAssemblyModule_Fast
 
-// 跳转模块
+// 跳转组件
 - (void)transition2PostPictrueBrowse
 {
     XF_Present_URLComponent_Fast(@"xmg://essence/postPictrueBrowse");

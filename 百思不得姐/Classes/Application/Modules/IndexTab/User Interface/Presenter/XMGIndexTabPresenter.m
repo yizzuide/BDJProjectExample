@@ -15,7 +15,7 @@
 
 #define Interactor XFConvertInteractorToType(id<XMGIndexTabInteractorPort>)
 #define Interface XFConvertUserInterfaceToType(id<XMGIndexTabUserInterfacePort>)
-#define Routing XFConvertRoutingToType(id<XMGIndexTabWireFramePort>)
+#define Routing XFConvertRoutingToType(id<XMGIndexTabWireframePort>)
 
 @interface XMGIndexTabPresenter ()
 
@@ -65,6 +65,10 @@
 
 #pragma mark - DoAction
 
+- (void)didPublishButtonClickAction
+{
+    [Routing transition2Publish];
+}
 
 
 #pragma mark - ValidData

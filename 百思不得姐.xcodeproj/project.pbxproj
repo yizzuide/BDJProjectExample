@@ -139,6 +139,8 @@
 		4069EF571DE2E2D80037B22C /* XMGMetaPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF561DE2E2D80037B22C /* XMGMetaPostModel.m */; };
 		4069EF5A1DE2E3120037B22C /* XMGPostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF591DE2E3120037B22C /* XMGPostInfo.m */; };
 		4069EF5D1DE2E3E90037B22C /* XMGPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4069EF5C1DE2E3E90037B22C /* XMGPostModel.m */; };
+		4075793D1DE9945500E308A9 /* XMGPublishViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4075793B1DE9945500E308A9 /* XMGPublishViewController.m */; };
+		4075793E1DE9945500E308A9 /* XMGPublishViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4075793C1DE9945500E308A9 /* XMGPublishViewController.xib */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 		794D92CAE1F05159BC2186FD /* libPods-百思不得姐Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */; };
 /* End PBXBuildFile section */
@@ -462,6 +464,9 @@
 		4069EF591DE2E3120037B22C /* XMGPostInfo.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostInfo.m; sourceTree = "<group>"; };
 		4069EF5B1DE2E3E90037B22C /* XMGPostModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPostModel.h; sourceTree = "<group>"; };
 		4069EF5C1DE2E3E90037B22C /* XMGPostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPostModel.m; sourceTree = "<group>"; };
+		4075793A1DE9945500E308A9 /* XMGPublishViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMGPublishViewController.h; sourceTree = "<group>"; };
+		4075793B1DE9945500E308A9 /* XMGPublishViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMGPublishViewController.m; sourceTree = "<group>"; };
+		4075793C1DE9945500E308A9 /* XMGPublishViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = XMGPublishViewController.xib; sourceTree = "<group>"; };
 		40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		449496FA4AFF391CA5BE1A63 /* Pods-百思不得姐Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -546,6 +551,7 @@
 				4026485C1DDEE6FB002EDD00 /* Me */,
 				402648771DDEE6FB002EDD00 /* New */,
 				402648921DDEE6FB002EDD00 /* UserCenter */,
+				407579361DE993A900E308A9 /* Publish */,
 			);
 			path = Modules;
 			sourceTree = "<group>";
@@ -1935,6 +1941,32 @@
 			path = Progress;
 			sourceTree = "<group>";
 		};
+		407579361DE993A900E308A9 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				407579381DE993F300E308A9 /* Publish */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		407579381DE993F300E308A9 /* Publish */ = {
+			isa = PBXGroup;
+			children = (
+				407579391DE993F300E308A9 /* Controller */,
+			);
+			path = Publish;
+			sourceTree = "<group>";
+		};
+		407579391DE993F300E308A9 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4075793A1DE9945500E308A9 /* XMGPublishViewController.h */,
+				4075793B1DE9945500E308A9 /* XMGPublishViewController.m */,
+				4075793C1DE9945500E308A9 /* XMGPublishViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
 		81C032B40B4AB21DB0B68124 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2058,6 +2090,7 @@
 				404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */,
 				4058904A1DE7E46F00EF4A4F /* XMGPostPictrueBrowseViewController.xib in Resources */,
 				402649251DDEE6FB002EDD00 /* XMGFriendsRecommentActivity.xib in Resources */,
+				4075793E1DE9945500E308A9 /* XMGPublishViewController.xib in Resources */,
 				4026492B1DDEE6FB002EDD00 /* XMGRecommendUserCell.xib in Resources */,
 				402649291DDEE6FB002EDD00 /* XMGRecommendCategoryCell.xib in Resources */,
 				402649311DDEE6FB002EDD00 /* XMGFriendTrendsActivity.xib in Resources */,
@@ -2215,6 +2248,7 @@
 				4026492E1DDEE6FB002EDD00 /* XMGFriendTrendsInteractor.m in Sources */,
 				402649451DDEE6FB002EDD00 /* XMGHttpRequest.m in Sources */,
 				4026490F1DDEE6FB002EDD00 /* XMGEssenceRouting.m in Sources */,
+				4075793D1DE9945500E308A9 /* XMGPublishViewController.m in Sources */,
 				4026491E1DDEE6FB002EDD00 /* XMGRecommandUserModel.m in Sources */,
 				4026491C1DDEE6FB002EDD00 /* XMGFriendsRecommendProvider.m in Sources */,
 				402649241DDEE6FB002EDD00 /* XMGFriendsRecommentActivity.m in Sources */,

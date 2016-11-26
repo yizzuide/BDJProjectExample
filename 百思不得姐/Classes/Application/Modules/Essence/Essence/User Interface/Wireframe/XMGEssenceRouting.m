@@ -14,7 +14,7 @@
 // 组装模块
 XF_AutoAssemblyModuleWithNav_Fast
 
-// 跳转模块
+// 跳转组件
 - (void)transition2RecommendTag
 {
     XF_PUSH_URLComponent_Fast(@"xmg://essence/recommendTag")

@@ -28,6 +28,29 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - MTMigration (0.0.5)
+  - pop (1.0.9)
+  - POP+MCAnimate (2.0.1):
+    - pop (~> 1.0)
+    - POP+MCAnimate/Animations (= 2.0.1)
+    - POP+MCAnimate/Group (= 2.0.1)
+    - POP+MCAnimate/Internal (= 2.0.1)
+    - POP+MCAnimate/Shorthand (= 2.0.1)
+    - POP+MCAnimate/Velocity (= 2.0.1)
+  - POP+MCAnimate/Animations (2.0.1):
+    - pop (~> 1.0)
+    - POP+MCAnimate/Group
+    - POP+MCAnimate/Internal
+    - POP+MCAnimate/Shorthand
+    - POP+MCAnimate/Velocity
+  - POP+MCAnimate/Group (2.0.1):
+    - pop (~> 1.0)
+  - POP+MCAnimate/Internal (2.0.1):
+    - pop (~> 1.0)
+  - POP+MCAnimate/Shorthand (2.0.1):
+    - pop (~> 1.0)
+  - POP+MCAnimate/Velocity (2.0.1):
+    - pop (~> 1.0)
+    - POP+MCAnimate/Internal
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -47,6 +70,8 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - MTMigration
+  - pop
+  - POP+MCAnimate (~> 2.0)
   - SDWebImage
   - SVProgressHUD
 
@@ -58,10 +83,12 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MTMigration: 725315e6469c8fd7d13966887f59e65eb8aecb2e
+  pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
+  POP+MCAnimate: a99e209148c602512de487f1160a44bf78572024
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
 
-PODFILE CHECKSUM: a41c8c23c8e873f5ad9ed624216769f1df4080c0
+PODFILE CHECKSUM: 1ab0b0783e5ec11cc646dc4ea7f0364a749912b1
 
 COCOAPODS: 1.1.0.rc.3
