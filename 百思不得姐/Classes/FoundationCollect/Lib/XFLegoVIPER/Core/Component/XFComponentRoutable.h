@@ -10,7 +10,11 @@
 @protocol XFComponentRoutable <NSObject>
 
 /**
- *  url组件传递参数数据
+ *  url组件传递参数
+ */
+@property (nonatomic, copy) NSDictionary *params;
+/**
+ *  url组件传递对象
  */
 @property (nonatomic, copy) id intentData;
 

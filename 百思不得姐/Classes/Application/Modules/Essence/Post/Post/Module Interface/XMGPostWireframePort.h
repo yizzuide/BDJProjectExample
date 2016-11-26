@@ -11,4 +11,5 @@
 
 @protocol XMGPostWireFramePort <XFWireFramePort>
 
+- (void)transition2PostPictrueBrowse;
 @end

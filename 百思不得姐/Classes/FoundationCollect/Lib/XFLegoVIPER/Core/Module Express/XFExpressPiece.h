@@ -16,7 +16,7 @@
 /**
  *  渲染数据
  */
-@property (nonatomic, weak) __kindof XFRenderItem *renderItem;
+@property (nonatomic, strong) __kindof XFRenderItem *renderItem;
 /**
  *  视图Frame
  */

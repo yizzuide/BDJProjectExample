@@ -13,6 +13,7 @@
 #import "ReactiveCocoa.h"
 #import "XMGPostCategory.h"
 #import "XMGPostExpressPack.h"
+#import "XMGPostPictrueView.h"
 
 
 #define Interactor XFConvertInteractorToType(id<XMGPostInteractorPort>)
@@ -94,6 +95,13 @@
         }
         return indexPaths;
     }];
+}
+
+- (void)didPictureViewClickAction:(XMGPostPictrueView *)pictrueView
+{
+    // 预设要传过去的参数对象
+    self.intentData = pictrueView.expressPiece.renderItem;
+    [Routing transition2PostPictrueBrowse];
 }
 
 #pragma mark - ValidData

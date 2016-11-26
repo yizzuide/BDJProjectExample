@@ -24,7 +24,7 @@
                         <constraint firstAttribute="width" constant="80" id="Laa-5C-wCK"/>
                     </constraints>
                 </view>
-                <imageView autoresizesSubviews="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iuU-PP-eB7" userLabel="图片内容"/>
+                <imageView autoresizesSubviews="NO" clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="iuU-PP-eB7" userLabel="图片内容"/>
                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="common-gif" translatesAutoresizingMaskIntoConstraints="NO" id="WXe-8W-igz" userLabel="gif标识">
                     <constraints>
                         <constraint firstAttribute="width" constant="31" id="y9e-HK-Zy9"/>

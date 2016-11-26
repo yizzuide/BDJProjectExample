@@ -17,7 +17,8 @@
                                  @"xmg://indexTab", // Tab主UI框架页
                                  @"xmg://friendTrends/friendsRecomment", // 推荐朋友
                                  @"xmg://userCenter/signIn", // 登录
-                                 @"xmg://essence/recommendTag" // 推荐标签
+                                 @"xmg://essence/recommendTag", // 推荐标签
+                                 @"xmg://essence/postPictrueBrowse" // 浏览大图
                                  ]];
 }
 @end

@@ -87,11 +87,13 @@
 - (void)presentModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
     if ([XFControllerFactory isViewControllerComponent:moduleName]) {
-        UIViewController *viewController = [XFControllerFactory controllerFromComponentName:moduleName];
-        if (customCodeBlock) {
-            customCodeBlock(nil);
+        // 如是是控制器组件
+        if ([XFControllerFactory isViewControllerComponent:moduleName]) {
+            [self putViewController:moduleName withTransitionBlock:^(UIViewController *viewController) {
+                [self presentMVxViewController:viewController];
+            } intent:intentData customCode:customCodeBlock];
+            return;
         }
-        [self presentMVxViewController:viewController];
         return;
     }
     [self putModule:moduleName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
@@ -109,17 +111,11 @@
 // PUSH方式
 - (void)pushModule:(NSString *)moduleName intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
+    // 如是是控制器组件
     if ([XFControllerFactory isViewControllerComponent:moduleName]) {
-        UIViewController<XFComponentRoutable> *viewController = (id)[XFControllerFactory controllerFromComponentName:moduleName];
-        // 如果实现URL组件接口
-        if ([viewController respondsToSelector:@selector(setIntentData:)]) {
-            // 传递组件参数
-            [viewController setIntentData:intentData];
-        }
-        if (customCodeBlock) {
-            customCodeBlock(nil);
-        }
-        [self pushMVxViewController:viewController];
+        [self putViewController:moduleName withTransitionBlock:^(UIViewController *viewController) {
+            [self pushMVxViewController:viewController];
+        } intent:intentData customCode:customCodeBlock];
         return;
     }
     [self putModule:moduleName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
@@ -132,6 +128,24 @@
     [self removeModuleWithTransitionBlock:^(Activity *thisInterface, Activity *nextInterface) {
         [thisInterface.navigationController popViewControllerAnimated:YES];
     }];
+}
+
+- (void)putViewController:(NSString *)component withTransitionBlock:(void(^)(UIViewController *viewController))trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
+{
+    UIViewController<XFComponentRoutable> *viewController = (id)[XFControllerFactory controllerFromComponentName:component];
+    // 如果实现URL组件接口
+    if ([viewController respondsToSelector:@selector(setIntentData:)]) {
+        // 传递组件参数
+        if ([intentData isKindOfClass:[NSDictionary class]]) {
+            [viewController setParams:intentData];
+        } else { // 传递组件对象
+            [viewController setIntentData:intentData];
+        }
+    }
+    if (customCodeBlock) {
+        customCodeBlock(nil);
+    }
+    trasitionBlock(viewController);
 }
 
 // 自定义切换

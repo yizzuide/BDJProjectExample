@@ -9,8 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "XFEventHandlerPort.h"
 
+@class XMGPostPictrueView;
 @protocol XMGPostEventHandlerPort <XFEventHandlerPort>
 
 - (void)didHeaderRefreshAction;
 - (RACSignal *)didFooterRefreshAction;
+
+- (void)didPictureViewClickAction:(XMGPostPictrueView *)pictrueView;
 @end
