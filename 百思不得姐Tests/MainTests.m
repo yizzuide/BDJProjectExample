@@ -7,11 +7,11 @@
 //
 
 #import <XCTest/XCTest.h>
-#import "XMGRecommendTagInteractor.h"
-#import "XMGRecommendTagDataManager.h"
-#import "XMGPostService.h"
-#import "XMGPostInteractor.h"
-#import "XMGPostDataManager.h"
+#import "BDJRecommendTagInteractor.h"
+#import "BDJRecommendTagDataManager.h"
+#import "BDJPostService.h"
+#import "BDJPostInteractor.h"
+#import "BDJPostDataManager.h"
 
 @interface MainTests : XCTestCase
 
@@ -38,8 +38,8 @@
 - (void)testLoadTagAsync
 {
     XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch tags should succeed"];
-    XMGRecommendTagInteractor *tagInteractor = [[XMGRecommendTagInteractor alloc] init];
-    XMGRecommendTagDataManager *dm = [[XMGRecommendTagDataManager alloc] init];
+    BDJRecommendTagInteractor *tagInteractor = [[BDJRecommendTagInteractor alloc] init];
+    BDJRecommendTagDataManager *dm = [[BDJRecommendTagDataManager alloc] init];
     [tagInteractor setValue:dm forKeyPath:@"dataManager"];
     [[tagInteractor fetchRecommendTag] subscribeNext:^(id x) {
         NSLog(@"%@",x);
@@ -56,8 +56,8 @@
 - (void)testPostDict
 {
     XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch Posts should succeed"];
-    XMGPostService *postService = [[XMGPostService alloc] init];
-    [[postService pullPostsForType:XMGPostDataMediaTypeAll] subscribeNext:^(id x) {
+    BDJPostService *postService = [[BDJPostService alloc] init];
+    [[postService pullPostsForType:BDJPostDataMediaTypeAll] subscribeNext:^(id x) {
         NSLog(@"%@",x);
         XCTAssertNotNil(x,@"数据返回失败！");
         [networkSuccessExpectation fulfill];
@@ -68,10 +68,10 @@
 - (void)testWordsPostRenderData
 {
     XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch Posts should succeed"];
-    XMGPostInteractor *interactor = [[XMGPostInteractor alloc] init];
-    XMGPostDataManager *dataManager = [[XMGPostDataManager alloc] init];
+    BDJPostInteractor *interactor = [[BDJPostInteractor alloc] init];
+    BDJPostDataManager *dataManager = [[BDJPostDataManager alloc] init];
     [interactor setValue:dataManager forKeyPath:@"dataManager"];
-    [[interactor fetchPostsForType:XMGPostCategoryTypeWords] subscribeNext:^(id x) {
+    [[interactor fetchPostsForType:BDJPostCategoryTypeWords] subscribeNext:^(id x) {
         NSLog(@"%@",x);
         XCTAssertNotNil(x,@"数据返回失败！");
         [networkSuccessExpectation fulfill];

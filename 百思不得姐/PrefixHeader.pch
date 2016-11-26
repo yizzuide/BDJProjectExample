@@ -14,9 +14,9 @@
 // Fast header
 #import "UIView+Extention.h"
 #import <ReactiveCocoa/ReactiveCocoa.h>
-#import "XMGRImage.h"
-#import "XMGRColor.h"
-#import "XMGRMetric.h"
+#import "BDJRImage.h"
+#import "BDJRColor.h"
+#import "BDJRMetric.h"
 
 
 // UIView

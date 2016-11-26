@@ -8,8 +8,8 @@
 
 #import "AppDelegate.h"
 #import "XFLegoVIPER.h"
-#import "XMGAppURLRegister.h"
-#import "XMGAPPLoader.h"
+#import "BDJAppURLRegister.h"
+#import "BDJAPPLoader.h"
 
 @interface AppDelegate ()
 
@@ -23,12 +23,12 @@
     // 开启模块追踪log
     [XFRoutingLinkManager enableLog];
     // 注册APP的所有URL
-    [XMGAppURLRegister urlRegister];
+    [BDJAppURLRegister urlRegister];
     // 根据URL显示组件
-    XF_ShowURLComponent2Window_Fast(@"xmg://indexTab")
+    XF_ShowURLComponent2Window_Fast(@"BDJ://indexTab")
     
     // 启动加载器
-    [XMGAPPLoader loadForWindow:self.window];
+    [BDJAPPLoader loadForWindow:self.window];
     return YES;
 }
 
