@@ -6,7 +6,7 @@
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BDJPostPictrueBrowseViewController">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BDJPostPictureBrowseViewController">
             <connections>
                 <outlet property="progressView" destination="aMH-ka-bBU" id="YJw-gF-6Gr"/>
                 <outlet property="scrollView" destination="Hsg-tE-VKD" id="3Ng-wj-5jO"/>

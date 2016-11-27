@@ -1,5 +1,5 @@
 //
-//  BDJPostPictrueBrowseViewController.h
+//  BDJPostPictureBrowseViewController.h
 //  百思不得姐
 //
 //  Created by 付星 on 2016/11/25.
@@ -9,7 +9,7 @@
 #import <UIKit/UIKit.h>
 #import "XFComponentRoutable.h"
 
-@interface BDJPostPictrueBrowseViewController : UIViewController <XFComponentRoutable>
+@interface BDJPostPictureBrowseViewController : UIViewController <XFComponentRoutable>
 
 @property (nonatomic, copy) NSDictionary *params;
 @property (nonatomic, copy) id intentData;

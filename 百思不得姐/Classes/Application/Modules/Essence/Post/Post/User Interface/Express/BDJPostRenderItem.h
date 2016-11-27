@@ -12,9 +12,9 @@
 typedef enum : NSInteger {
     BDJPostRenderItemTypeVideo,
     BDJPostRenderItemTypeVoice,
-    BDJPostRenderItemTypePictrue,
-    BDJPostRenderItemTypePictrueLong,
-    BDJPostRenderItemTypePictrueGIF,
+    BDJPostRenderItemTypePicture,
+    BDJPostRenderItemTypePictureLong,
+    BDJPostRenderItemTypePictureGIF,
     BDJPostRenderItemTypeWords,
 } BDJPostRenderItemType;
 

@@ -1,14 +1,14 @@
 //
-//  BDJPostPictrueView.m
+//  BDJPostPictureView.m
 //  百思不得姐
 //
 //  Created by 付星 on 2016/11/25.
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import "BDJPostPictrueView.h"
+#import "BDJPostPictureView.h"
 #import <UIImageView+WebCache.h>
-#import "BDJPictruePostRenderItem.h"
+#import "BDJPicturePostRenderItem.h"
 #import "XFExpressPiece.h"
 #import "BDJProgressView.h"
 #import "UIImage+Size.h"
@@ -18,18 +18,18 @@
 
 #define EventHandler  XFConvertPresenterToType(id<BDJPostEventHandlerPort>)
 
-@interface BDJPostPictrueView ()
+@interface BDJPostPictureView ()
 
-@property (weak, nonatomic) IBOutlet UIImageView *pictrueView;
+@property (weak, nonatomic) IBOutlet UIImageView *pictureView;
 @property (weak, nonatomic) IBOutlet UIImageView *gifFlagView;
 @property (weak, nonatomic) IBOutlet UIButton *longFlagView;
 @property (weak, nonatomic) IBOutlet BDJProgressView *progressView;
 
 @end
 
-@implementation BDJPostPictrueView
+@implementation BDJPostPictureView
 
-+ (instancetype)postPictrueView
++ (instancetype)postPictureView
 {
     return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
 }
@@ -41,20 +41,20 @@
     self.autoresizingMask = UIViewAutoresizingNone;
     
     UITapGestureRecognizer *tapGesture = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(didPictureViewClick)];
-    [self.pictrueView addGestureRecognizer:tapGesture];
+    [self.pictureView addGestureRecognizer:tapGesture];
 }
 
 - (void)setExpressPiece:(XFExpressPiece *)expressPiece
 {
     _expressPiece = expressPiece;
     
-    BDJPictruePostRenderItem *renderItem = expressPiece.renderItem;
-    if (renderItem.type == BDJPostRenderItemTypePictrueGIF) {
+    BDJPicturePostRenderItem *renderItem = expressPiece.renderItem;
+    if (renderItem.type == BDJPostRenderItemTypePictureGIF) {
         self.gifFlagView.hidden = NO;
     }else{
         self.gifFlagView.hidden = YES;
     }
-    if (renderItem.type == BDJPostRenderItemTypePictrueLong) {
+    if (renderItem.type == BDJPostRenderItemTypePictureLong) {
         self.longFlagView.hidden = NO;
     } else {
         self.longFlagView.hidden = YES;
@@ -63,7 +63,7 @@
     // 循环利用时恢复下载进度
     [self.progressView setProgress:renderItem.loadProgress animated:YES];
     // 使用sd_下载
-    [self.pictrueView sd_setImageWithURL:renderItem.url placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
+    [self.pictureView sd_setImageWithURL:renderItem.url placeholderImage:nil options:0 progress:^(NSInteger receivedSize, NSInteger expectedSize) {
         self.progressView.hidden = NO;
         CGFloat progress = 1.0 * receivedSize / expectedSize;
         // 记录当前进度
@@ -72,9 +72,9 @@
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
         // 如果长图，取最上部分
-        if (renderItem.type == BDJPostRenderItemTypePictrueLong) {
+        if (renderItem.type == BDJPostRenderItemTypePictureLong) {
             BDJPostFrame *frame = expressPiece.uiFrame;
-            self.pictrueView.image = [image topPartImageForDestSize:CGSizeMake(frame.pictrueF.size.width, R_Height_PostPictureBreak)];
+            self.pictureView.image = [image topPartImageForDestSize:CGSizeMake(frame.pictureF.size.width, R_Height_PostPictureBreak)];
         }
     }];
 }

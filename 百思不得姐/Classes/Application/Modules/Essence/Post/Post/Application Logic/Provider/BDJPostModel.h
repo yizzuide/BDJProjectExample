@@ -11,7 +11,7 @@
 /** 帖子的类型，1为全部 10为图片 29为段子 31为音频 41为视频 */
 typedef enum : NSUInteger {
     BDJPostDataMediaTypeAll = 1,
-    BDJPostDataMediaTypePictrue = 10,
+    BDJPostDataMediaTypePicture = 10,
     BDJPostDataMediaTypeWords = 29,
     BDJPostDataMediaTypeVoice = 31,
     BDJPostDataMediaTypeVideo = 41

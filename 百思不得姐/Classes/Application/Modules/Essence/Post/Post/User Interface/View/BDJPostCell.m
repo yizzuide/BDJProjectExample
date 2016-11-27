@@ -11,7 +11,7 @@
 #import "BDJPostRenderItem.h"
 #import "UIView+XFLego.h"
 #import "XFExpressPiece.h"
-#import "BDJPostPictrueView.h"
+#import "BDJPostPictureView.h"
 #import "BDJPostFrame.h"
 
 @interface BDJPostCell ()
@@ -32,7 +32,7 @@
 /**
  *  图片
  */
-@property (nonatomic, weak) BDJPostPictrueView *pictrueView;
+@property (nonatomic, weak) BDJPostPictureView *PictureView;
 
 
 @end
@@ -101,23 +101,23 @@
     self.bodyLabel.text = renderItem.text;
     
     // 如果是有图片的帖子
-    if (renderItem.type == BDJPostRenderItemTypePictrue ||
-        renderItem.type == BDJPostRenderItemTypePictrueLong ||
-        renderItem.type == BDJPostRenderItemTypePictrueGIF) {
+    if (renderItem.type == BDJPostRenderItemTypePicture ||
+        renderItem.type == BDJPostRenderItemTypePictureLong ||
+        renderItem.type == BDJPostRenderItemTypePictureGIF) {
         BDJPostFrame *postFrame = expressPiece.uiFrame;
-        self.pictrueView.frame = postFrame.pictrueF;
-        [self.pictrueView setExpressPiece:expressPiece];
+        self.PictureView.frame = postFrame.pictureF;
+        [self.PictureView setExpressPiece:expressPiece];
     }
 }
 
 
-- (BDJPostPictrueView *)pictrueView {
-	if(_pictrueView == nil) {
-		BDJPostPictrueView *pictrueView = [BDJPostPictrueView postPictrueView];
-        [self.contentView addSubview:pictrueView];
-        self.pictrueView = pictrueView;
+- (BDJPostPictureView *)PictureView {
+	if(_PictureView == nil) {
+		BDJPostPictureView *PictureView = [BDJPostPictureView postPictureView];
+        [self.contentView addSubview:PictureView];
+        self.PictureView = PictureView;
 	}
-	return _pictrueView;
+	return _PictureView;
 }
 
 @end

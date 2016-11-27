@@ -13,7 +13,7 @@
 #import "ReactiveCocoa.h"
 #import "BDJPostCategory.h"
 #import "BDJPostExpressPack.h"
-#import "BDJPostPictrueView.h"
+#import "BDJPostPictureView.h"
 
 
 #define Interactor XFConvertInteractorToType(id<BDJPostInteractorPort>)
@@ -97,11 +97,11 @@
     }];
 }
 
-- (void)didPictureViewClickAction:(BDJPostPictrueView *)pictrueView
+- (void)didPictureViewClickAction:(BDJPostPictureView *)PictureView
 {
     // 预设要传过去的参数对象
-    self.intentData = pictrueView.expressPiece.renderItem;
-    [Routing transition2PostPictrueBrowse];
+    self.intentData = PictureView.expressPiece.renderItem;
+    [Routing transition2PostPictureBrowse];
 }
 
 #pragma mark - ValidData

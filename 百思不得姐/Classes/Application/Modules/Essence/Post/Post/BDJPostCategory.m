@@ -13,7 +13,7 @@
 static NSArray *_postTypeArray;
 + (void)load
 {
-    _postTypeArray = @[@"AllPost",@"VideoPost",@"VoicePost",@"PictruePost",@"WordsPost"];
+    _postTypeArray = @[@"AllPost",@"VideoPost",@"VoicePost",@"PicturePost",@"WordsPost"];
 }
 
 + (BDJPostCategoryType)postCategoryTypeFromString:(NSString *)string {

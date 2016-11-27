@@ -13,7 +13,7 @@ typedef enum : NSInteger {
     BDJPostCategoryTypeAll,
     BDJPostCategoryTypeVideo,
     BDJPostCategoryTypeVoice,
-    BDJPostCategoryTypePictrue,
+    BDJPostCategoryTypePicture,
     BDJPostCategoryTypeWords,
 } BDJPostCategoryType;
 

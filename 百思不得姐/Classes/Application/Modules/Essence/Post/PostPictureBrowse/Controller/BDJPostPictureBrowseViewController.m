@@ -1,19 +1,19 @@
 //
-//  BDJPostPictrueBrowseViewController.m
+//  BDJPostPictureBrowseViewController.m
 //  百思不得姐
 //
 //  Created by 付星 on 2016/11/25.
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import "BDJPostPictrueBrowseViewController.h"
+#import "BDJPostPictureBrowseViewController.h"
 #import "BDJProgressView.h"
 #import "SVProgressHUD.h"
-#import "BDJPictruePostRenderItem.h"
+#import "BDJPicturePostRenderItem.h"
 #import <UIImageView+WebCache.h>
 #import "XFExpressPack.h"
 
-@interface BDJPostPictrueBrowseViewController ()
+@interface BDJPostPictureBrowseViewController ()
 
 @property (weak, nonatomic) IBOutlet UIScrollView *scrollView;
 @property (weak, nonatomic) IBOutlet BDJProgressView *progressView;
@@ -21,19 +21,19 @@
 
 @end
 
-@implementation BDJPostPictrueBrowseViewController
+@implementation BDJPostPictureBrowseViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    BDJPictruePostRenderItem *renderItem = self.intentData;
+    BDJPicturePostRenderItem *renderItem = self.intentData;
     if (renderItem.height > 17000) {
         [SVProgressHUD showErrorWithStatus:@"图片太大，移动端无法显示!"];
         return;
     }
     CGFloat h = ScreenSize.width * renderItem.height / renderItem.width;
     // 是否是大图
-    if (renderItem.type == BDJPostRenderItemTypePictrueLong) {
+    if (renderItem.type == BDJPostRenderItemTypePictureLong) {
         self.imageView.frame = CGRectMake(0, 0, ScreenSize.width, h);
         self.scrollView.contentSize = CGSizeMake(0, h);
     } else {

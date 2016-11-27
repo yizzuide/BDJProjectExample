@@ -1,5 +1,5 @@
 //
-//  BDJPictruePostRouting.h
+//  BDJPicturePostRouting.h
 //  百思不得姐
 //
 //  Created by 付星 on 2016/11/19.
@@ -8,6 +8,6 @@
 
 #import "BDJPostRouting.h"
 
-@interface BDJPictruePostRouting : BDJPostRouting
+@interface BDJPicturePostRouting : BDJPostRouting
 
 @end

@@ -10,7 +10,7 @@
 #import "BDJPostModel.h"
 #import "XFRenderData.h"
 #import "BDJPostRenderItem.h"
-#import "BDJPictruePostRenderItem.h"
+#import "BDJPicturePostRenderItem.h"
 
 @implementation BDJPostProvider
 
@@ -18,7 +18,7 @@
 	NSMutableArray *list = [[array.rac_sequence map:^id(BDJPostModel *postModel) {
         BDJPostRenderItem *renderItem;
         switch (postModel.type) {
-            case BDJPostDataMediaTypePictrue:
+            case BDJPostDataMediaTypePicture:
                 renderItem = [self _collectWordsPostRenderItemFrom:postModel];
                 break;
             default:
@@ -44,27 +44,27 @@
     return renderData;
 }
 
-+ (BDJPictruePostRenderItem *)_collectWordsPostRenderItemFrom:(BDJPostModel *)postModel
++ (BDJPicturePostRenderItem *)_collectWordsPostRenderItemFrom:(BDJPostModel *)postModel
 {
-    BDJPictruePostRenderItem *renderItem = [[BDJPictruePostRenderItem alloc] init];
+    BDJPicturePostRenderItem *renderItem = [[BDJPicturePostRenderItem alloc] init];
     
     renderItem.width = postModel.width;
     renderItem.height = postModel.height;
     renderItem.url = [NSURL URLWithString:postModel.image_large];
     // 是否为长图
     if (postModel.height > R_Height_PostPictureMax) {
-        renderItem.type = BDJPostRenderItemTypePictrueLong;
+        renderItem.type = BDJPostRenderItemTypePictureLong;
         return renderItem;
     }
     
     // 是否为gif图
     if (postModel.is_gif) {
-        renderItem.type = BDJPostRenderItemTypePictrueGIF;
+        renderItem.type = BDJPostRenderItemTypePictureGIF;
         return renderItem;
     }
     
     // 一般图片
-    renderItem.type = BDJPostRenderItemTypePictrue;
+    renderItem.type = BDJPostRenderItemTypePicture;
     return renderItem;
 }
 @end

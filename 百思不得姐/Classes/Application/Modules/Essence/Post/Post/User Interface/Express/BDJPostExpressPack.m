@@ -9,7 +9,7 @@
 #import "BDJPostExpressPack.h"
 #import "BDJPostFrame.h"
 #import "BDJPostRenderItem.h"
-#import "BDJPictruePostRenderItem.h"
+#import "BDJPicturePostRenderItem.h"
 
 @implementation BDJPostExpressPack
 
@@ -28,21 +28,21 @@
     cellH += textMaxY + R_Size_PostCellMargin; // 头部+文本内容高度
     
     // 如果为短图
-    if (postRenderItem.type == BDJPostRenderItemTypePictrue ||
-        postRenderItem.type == BDJPostRenderItemTypePictrueGIF) {
+    if (postRenderItem.type == BDJPostRenderItemTypePicture ||
+        postRenderItem.type == BDJPostRenderItemTypePictureGIF) {
         // 缩放它的比例
-        BDJPictruePostRenderItem *item = renderItem;
+        BDJPicturePostRenderItem *item = renderItem;
         // 获得等比例图高
-        CGFloat pictrueH = cellContentWidth * item.height / item.width;
-        cellH += pictrueH + R_Size_PostCellMargin; // 添加图片高度
+        CGFloat PictureH = cellContentWidth * item.height / item.width;
+        cellH += PictureH + R_Size_PostCellMargin; // 添加图片高度
         
         // 计算图片的Frame
-        postFrame.pictrueF = CGRectMake(R_Size_PostCellMargin, textMaxY + R_Size_PostCellMargin, cellContentWidth, pictrueH);
+        postFrame.pictureF = CGRectMake(R_Size_PostCellMargin, textMaxY + R_Size_PostCellMargin, cellContentWidth, PictureH);
         
         // 如果是长图，固定它的高度
-    } else if(postRenderItem.type == BDJPostRenderItemTypePictrueLong) {
+    } else if(postRenderItem.type == BDJPostRenderItemTypePictureLong) {
         cellH += R_Height_PostPictureBreak + R_Size_PostCellMargin;
-        postFrame.pictrueF = CGRectMake(R_Size_PostCellMargin, textMaxY + R_Size_PostCellMargin, cellContentWidth, R_Height_PostPictureBreak);
+        postFrame.pictureF = CGRectMake(R_Size_PostCellMargin, textMaxY + R_Size_PostCellMargin, cellContentWidth, R_Height_PostPictureBreak);
     }
     
     cellH += R_Height_PostCellBottomBar; // 添加帖子工具条高度

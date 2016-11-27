@@ -56,7 +56,7 @@
 
 - (void)addChildActivity
 {
-    NSArray *modules = @[@"WordsPost",@"AllPost",@"VideoPost",@"VoicePost",@"PictruePost"];
+    NSArray *modules = @[@"WordsPost",@"AllPost",@"VideoPost",@"VoicePost",@"PicturePost"];
     NSUInteger count = modules.count;
     for (int i = 0; i < count; i++) {
         XFActivity *activity = XF_SubUInterface_(modules[i]);

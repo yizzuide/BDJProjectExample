@@ -41,8 +41,8 @@
         case BDJPostCategoryTypeVoice:
             mediaType = BDJPostDataMediaTypeVoice;
             break;
-        case BDJPostCategoryTypePictrue:
-            mediaType = BDJPostDataMediaTypePictrue;
+        case BDJPostCategoryTypePicture:
+            mediaType = BDJPostDataMediaTypePicture;
             break;
         case BDJPostCategoryTypeWords:
             mediaType = BDJPostDataMediaTypeWords;

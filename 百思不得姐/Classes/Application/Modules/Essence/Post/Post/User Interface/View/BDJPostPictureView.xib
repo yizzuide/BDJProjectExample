@@ -8,7 +8,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BDJPostPictrueView">
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="BDJPostPictureView">
             <rect key="frame" x="0.0" y="0.0" width="493" height="489"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
@@ -61,7 +61,7 @@
             <connections>
                 <outlet property="gifFlagView" destination="WXe-8W-igz" id="cI7-Ds-v2G"/>
                 <outlet property="longFlagView" destination="Mcj-lz-MOW" id="aqV-N9-6QJ"/>
-                <outlet property="pictrueView" destination="iuU-PP-eB7" id="P1y-gz-GrX"/>
+                <outlet property="pictureView" destination="iuU-PP-eB7" id="gSM-u1-ixf"/>
                 <outlet property="progressView" destination="WC2-Yc-S8G" id="nP2-Vx-03s"/>
             </connections>
             <point key="canvasLocation" x="-130" y="5"/>

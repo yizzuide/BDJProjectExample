@@ -16,7 +16,7 @@ static CGFloat const kSpringFactor = 10;
 
 typedef enum : NSUInteger {
     BDJPublishTypeVideo,
-    BDJPublishTypePictrue,
+    BDJPublishTypePicture,
 } BDJPublishType;
 
 @interface BDJPublishViewController ()

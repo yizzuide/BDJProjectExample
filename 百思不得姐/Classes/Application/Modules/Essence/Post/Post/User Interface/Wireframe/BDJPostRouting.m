@@ -15,8 +15,8 @@
 XF_AutoAssemblyModule_Fast
 
 // 跳转组件
-- (void)transition2PostPictrueBrowse
+- (void)transition2PostPictureBrowse
 {
-    XF_Present_URLComponent_Fast(@"BDJ://essence/postPictrueBrowse");
+    XF_Present_URLComponent_Fast(@"BDJ://essence/postPictureBrowse");
 }
 @end

@@ -9,11 +9,11 @@
 #import <Foundation/Foundation.h>
 #import "XFEventHandlerPort.h"
 
-@class BDJPostPictrueView;
+@class BDJPostPictureView;
 @protocol BDJPostEventHandlerPort <XFEventHandlerPort>
 
 - (void)didHeaderRefreshAction;
 - (RACSignal *)didFooterRefreshAction;
 
-- (void)didPictureViewClickAction:(BDJPostPictrueView *)pictrueView;
+- (void)didPictureViewClickAction:(BDJPostPictureView *)PictureView;
 @end

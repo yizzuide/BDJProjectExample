@@ -19,7 +19,7 @@
                                  @"BDJ://friendTrends/friendsRecomment", // 推荐朋友
                                  @"BDJ://userCenter/signIn", // 登录
                                  @"BDJ://essence/recommendTag", // 推荐标签
-                                 @"BDJ://essence/postPictrueBrowse" // 浏览大图
+                                 @"BDJ://essence/postPictureBrowse" // 浏览大图
                                  ]];
 }
 @end

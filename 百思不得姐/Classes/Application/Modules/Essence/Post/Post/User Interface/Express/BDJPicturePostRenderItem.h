@@ -1,5 +1,5 @@
 //
-//  BDJPictruePostRenderItem.h
+//  BDJPicturePostRenderItem.h
 //  百思不得姐
 //
 //  Created by 付星 on 2016/11/23.
@@ -8,7 +8,7 @@
 
 #import "BDJPostRenderItem.h"
 
-@interface BDJPictruePostRenderItem : BDJPostRenderItem
+@interface BDJPicturePostRenderItem : BDJPostRenderItem
 
 @property (nonatomic, assign) NSInteger width;
 @property (nonatomic, assign) NSInteger height;
