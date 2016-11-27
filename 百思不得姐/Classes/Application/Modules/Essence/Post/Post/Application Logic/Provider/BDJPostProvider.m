@@ -11,6 +11,7 @@
 #import "XFRenderData.h"
 #import "BDJPostRenderItem.h"
 #import "BDJPicturePostRenderItem.h"
+#import "BDJMediaRenderItem.h"
 
 @implementation BDJPostProvider
 
@@ -19,7 +20,10 @@
         BDJPostRenderItem *renderItem;
         switch (postModel.type) {
             case BDJPostDataMediaTypePicture:
-                renderItem = [self _collectWordsPostRenderItemFrom:postModel];
+                renderItem = [self _collectPicturePostRenderItemFrom:postModel];
+                break;
+            case BDJPostDataMediaTypeVoice:
+                renderItem = [self _collectVoicePostRenderItemFrom:postModel];
                 break;
             default:
                 // 其它为纯文本类型
@@ -44,7 +48,7 @@
     return renderData;
 }
 
-+ (BDJPicturePostRenderItem *)_collectWordsPostRenderItemFrom:(BDJPostModel *)postModel
++ (BDJPicturePostRenderItem *)_collectPicturePostRenderItemFrom:(BDJPostModel *)postModel
 {
     BDJPicturePostRenderItem *renderItem = [[BDJPicturePostRenderItem alloc] init];
     
@@ -67,4 +71,16 @@
     renderItem.type = BDJPostRenderItemTypePicture;
     return renderItem;
 }
+
++ (BDJMediaRenderItem *)_collectVoicePostRenderItemFrom:(BDJPostModel *)postModel
+{
+    BDJMediaRenderItem *renderItem = [[BDJMediaRenderItem alloc] init];
+    renderItem.width = postModel.width;
+    renderItem.height = postModel.height;
+    renderItem.playURL = [NSURL URLWithString:postModel.voiceuri];
+    renderItem.playCount = [NSString stringWithFormat:@"%zd",postModel.playcount];
+    renderItem.playTimeLen = [NSString stringWithFormat:@"%zd",postModel.voicetime];
+    return renderItem;
+}
+
 @end

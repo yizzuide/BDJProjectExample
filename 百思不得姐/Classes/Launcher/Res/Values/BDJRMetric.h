@@ -42,7 +42,8 @@ extern DefConstInt R_Height_PostCellHeader;
 extern DefConstInt R_Height_PostPictureMax;
 /*帖子长图显示高度*/
 extern DefConstInt R_Height_PostPictureBreak;
-
+/*浏览长图最高长度*/
+extern DefConstInt R_Height_PostPictureBrowseBreak;
 
 
 

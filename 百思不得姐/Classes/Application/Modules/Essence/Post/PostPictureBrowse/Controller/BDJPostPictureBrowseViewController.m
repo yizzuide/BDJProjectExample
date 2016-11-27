@@ -27,7 +27,7 @@
     [super viewDidLoad];
     
     BDJPicturePostRenderItem *renderItem = self.intentData;
-    if (renderItem.height > 17000) {
+    if (renderItem.height > R_Height_PostPictureBrowseBreak) {
         [SVProgressHUD showErrorWithStatus:@"图片太大，移动端无法显示!"];
         return;
     }

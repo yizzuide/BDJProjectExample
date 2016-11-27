@@ -21,7 +21,6 @@
 		4005108B1DEB141700E402DE /* BDJPostInfo.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050EFA1DEB141600E402DE /* BDJPostInfo.m */; };
 		4005108C1DEB141700E402DE /* BDJPostModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050EFC1DEB141600E402DE /* BDJPostModel.m */; };
 		4005108D1DEB141700E402DE /* BDJPostProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050EFE1DEB141600E402DE /* BDJPostProvider.m */; };
-		4005108E1DEB141700E402DE /* BDJPostCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050F001DEB141600E402DE /* BDJPostCategory.m */; };
 		4005108F1DEB141700E402DE /* BDJPicturePostRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050F0A1DEB141600E402DE /* BDJPicturePostRenderItem.m */; };
 		400510901DEB141700E402DE /* BDJPostExpressPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050F0C1DEB141600E402DE /* BDJPostExpressPack.m */; };
 		400510911DEB141700E402DE /* BDJPostFrame.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050F0E1DEB141600E402DE /* BDJPostFrame.m */; };
@@ -138,6 +137,8 @@
 		400511001DEB141700E402DE /* BDJRColor.m in Sources */ = {isa = PBXBuildFile; fileRef = 400510791DEB141700E402DE /* BDJRColor.m */; };
 		400511011DEB141700E402DE /* BDJRImage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005107C1DEB141700E402DE /* BDJRImage.m */; };
 		400511021DEB141700E402DE /* BDJRMetric.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005107F1DEB141700E402DE /* BDJRMetric.m */; };
+		400511051DEB16DE00E402DE /* BDJPostCategory.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511041DEB16DE00E402DE /* BDJPostCategory.m */; };
+		400511081DEB17C100E402DE /* BDJMediaRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511071DEB17C100E402DE /* BDJMediaRenderItem.m */; };
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
@@ -192,8 +193,6 @@
 		40050EFC1DEB141600E402DE /* BDJPostModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostModel.m; sourceTree = "<group>"; };
 		40050EFD1DEB141600E402DE /* BDJPostProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostProvider.h; sourceTree = "<group>"; };
 		40050EFE1DEB141600E402DE /* BDJPostProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostProvider.m; sourceTree = "<group>"; };
-		40050EFF1DEB141600E402DE /* BDJPostCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCategory.h; sourceTree = "<group>"; };
-		40050F001DEB141600E402DE /* BDJPostCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCategory.m; sourceTree = "<group>"; };
 		40050F021DEB141600E402DE /* BDJPostDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostDataManagerPort.h; sourceTree = "<group>"; };
 		40050F031DEB141600E402DE /* BDJPostEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostEventHandlerPort.h; sourceTree = "<group>"; };
 		40050F041DEB141600E402DE /* BDJPostInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostInteractorPort.h; sourceTree = "<group>"; };
@@ -459,6 +458,10 @@
 		4005107C1DEB141700E402DE /* BDJRImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJRImage.m; sourceTree = "<group>"; };
 		4005107E1DEB141700E402DE /* BDJRMetric.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJRMetric.h; sourceTree = "<group>"; };
 		4005107F1DEB141700E402DE /* BDJRMetric.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJRMetric.m; sourceTree = "<group>"; };
+		400511031DEB16DE00E402DE /* BDJPostCategory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCategory.h; sourceTree = "<group>"; };
+		400511041DEB16DE00E402DE /* BDJPostCategory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCategory.m; sourceTree = "<group>"; };
+		400511061DEB17C100E402DE /* BDJMediaRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJMediaRenderItem.h; sourceTree = "<group>"; };
+		400511071DEB17C100E402DE /* BDJMediaRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJMediaRenderItem.m; sourceTree = "<group>"; };
 		402647811DDD45B3002EDD00 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402647831DDD45B3002EDD00 /* MainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTests.m; sourceTree = "<group>"; };
 		402647851DDD45B3002EDD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -672,8 +675,6 @@
 			isa = PBXGroup;
 			children = (
 				40050EEF1DEB141600E402DE /* Application Logic */,
-				40050EFF1DEB141600E402DE /* BDJPostCategory.h */,
-				40050F001DEB141600E402DE /* BDJPostCategory.m */,
 				40050F011DEB141600E402DE /* Module Interface */,
 				40050F071DEB141600E402DE /* User Interface */,
 			);
@@ -749,14 +750,18 @@
 		40050F081DEB141600E402DE /* Express */ = {
 			isa = PBXGroup;
 			children = (
-				40050F091DEB141600E402DE /* BDJPicturePostRenderItem.h */,
-				40050F0A1DEB141600E402DE /* BDJPicturePostRenderItem.m */,
+				400511031DEB16DE00E402DE /* BDJPostCategory.h */,
+				400511041DEB16DE00E402DE /* BDJPostCategory.m */,
 				40050F0B1DEB141600E402DE /* BDJPostExpressPack.h */,
 				40050F0C1DEB141600E402DE /* BDJPostExpressPack.m */,
 				40050F0D1DEB141600E402DE /* BDJPostFrame.h */,
 				40050F0E1DEB141600E402DE /* BDJPostFrame.m */,
 				40050F0F1DEB141600E402DE /* BDJPostRenderItem.h */,
 				40050F101DEB141600E402DE /* BDJPostRenderItem.m */,
+				40050F091DEB141600E402DE /* BDJPicturePostRenderItem.h */,
+				40050F0A1DEB141600E402DE /* BDJPicturePostRenderItem.m */,
+				400511061DEB17C100E402DE /* BDJMediaRenderItem.h */,
+				400511071DEB17C100E402DE /* BDJMediaRenderItem.m */,
 			);
 			path = Express;
 			sourceTree = "<group>";
@@ -2222,17 +2227,18 @@
 				400510861DEB141700E402DE /* BDJEssenceActivity.m in Sources */,
 				400510CE1DEB141700E402DE /* BDJNewDataManager.m in Sources */,
 				400510C31DEB141700E402DE /* BDJFriendTrendsRouting.m in Sources */,
+				400511081DEB17C100E402DE /* BDJMediaRenderItem.m in Sources */,
 				400510C61DEB141700E402DE /* BDJIndexTabPresenter.m in Sources */,
 				400510B11DEB141700E402DE /* BDJCategoryRenderItem.m in Sources */,
 				400510DF1DEB141700E402DE /* XFURLRoute.m in Sources */,
 				400510B21DEB141700E402DE /* BDJRCUserRenderData.m in Sources */,
 				400510A41DEB141700E402DE /* BDJRecommendTagProvider.m in Sources */,
 				400510D81DEB141700E402DE /* BDJRecommendService.m in Sources */,
-				4005108E1DEB141700E402DE /* BDJPostCategory.m in Sources */,
 				400510DB1DEB141700E402DE /* NSDate+Extension.m in Sources */,
 				400510E71DEB141700E402DE /* XFControllerFactory.m in Sources */,
 				400510A31DEB141700E402DE /* BDJRecommendTagModel.m in Sources */,
 				400510DC1DEB141700E402DE /* UIBarButtonItem+BDJExtension.m in Sources */,
+				400511051DEB16DE00E402DE /* BDJPostCategory.m in Sources */,
 				400510A61DEB141700E402DE /* BDJRecommendTagPresenter.m in Sources */,
 				400510F21DEB141700E402DE /* XFRoutingReflect.m in Sources */,
 				400510CA1DEB141700E402DE /* BDJMeInteractor.m in Sources */,
