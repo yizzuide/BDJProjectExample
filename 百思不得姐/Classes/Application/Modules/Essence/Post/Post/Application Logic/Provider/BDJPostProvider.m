@@ -11,7 +11,7 @@
 #import "XFRenderData.h"
 #import "BDJPostRenderItem.h"
 #import "BDJPicturePostRenderItem.h"
-#import "BDJMediaRenderItem.h"
+#import "BDJAVPostRenderItem.h"
 
 @implementation BDJPostProvider
 
@@ -20,10 +20,16 @@
         BDJPostRenderItem *renderItem;
         switch (postModel.type) {
             case BDJPostDataMediaTypePicture:
-                renderItem = [self _collectPicturePostRenderItemFrom:postModel];
+                renderItem = [[BDJPicturePostRenderItem alloc] init];
+                [self _collectPicturePostRenderItem:(id)renderItem from:postModel];
                 break;
             case BDJPostDataMediaTypeVoice:
-                renderItem = [self _collectVoicePostRenderItemFrom:postModel];
+                renderItem = [[BDJAVPostRenderItem alloc] init];
+                [self _collectVoicePostRenderItem:(id)renderItem from:postModel];
+                break;
+            case BDJPostDataMediaTypeVideo:
+                renderItem = [[BDJAVPostRenderItem alloc] init];
+                [self _collectVideoPostRenderItem:(id)renderItem from:postModel];
                 break;
             default:
                 // 其它为纯文本类型
@@ -48,39 +54,41 @@
     return renderData;
 }
 
-+ (BDJPicturePostRenderItem *)_collectPicturePostRenderItemFrom:(BDJPostModel *)postModel
++ (void)_collectPicturePostRenderItem:(BDJPicturePostRenderItem *)renderItem from:(BDJPostModel *)postModel
 {
-    BDJPicturePostRenderItem *renderItem = [[BDJPicturePostRenderItem alloc] init];
-    
     renderItem.width = postModel.width;
     renderItem.height = postModel.height;
     renderItem.url = [NSURL URLWithString:postModel.image_large];
+    // 一般图片
+    renderItem.type = BDJPostRenderItemTypePicture;
+    
     // 是否为长图
     if (postModel.height > R_Height_PostPictureMax) {
         renderItem.type = BDJPostRenderItemTypePictureLong;
-        return renderItem;
     }
     
     // 是否为gif图
     if (postModel.is_gif) {
         renderItem.type = BDJPostRenderItemTypePictureGIF;
-        return renderItem;
     }
-    
-    // 一般图片
-    renderItem.type = BDJPostRenderItemTypePicture;
-    return renderItem;
 }
 
-+ (BDJMediaRenderItem *)_collectVoicePostRenderItemFrom:(BDJPostModel *)postModel
++ (void)_collectVoicePostRenderItem:(BDJAVPostRenderItem *)renderItem from:(BDJPostModel *)postModel
 {
-    BDJMediaRenderItem *renderItem = [[BDJMediaRenderItem alloc] init];
-    renderItem.width = postModel.width;
-    renderItem.height = postModel.height;
+    [self _collectPicturePostRenderItem:renderItem from:postModel];
     renderItem.playURL = [NSURL URLWithString:postModel.voiceuri];
     renderItem.playCount = [NSString stringWithFormat:@"%zd",postModel.playcount];
     renderItem.playTimeLen = [NSString stringWithFormat:@"%zd",postModel.voicetime];
-    return renderItem;
+    renderItem.type = BDJPostRenderItemTypeVoice;
+}
+
++ (void)_collectVideoPostRenderItem:(BDJAVPostRenderItem *)renderItem from:(BDJPostModel *)postModel
+{
+    [self _collectPicturePostRenderItem:renderItem from:postModel];
+    renderItem.playURL = [NSURL URLWithString:postModel.videouri];
+    renderItem.playCount = [NSString stringWithFormat:@"%zd",postModel.playcount];
+    renderItem.playTimeLen = [NSString stringWithFormat:@"%zd",postModel.videotime];
+    renderItem.type = BDJPostRenderItemTypeVideo;
 }
 
 @end

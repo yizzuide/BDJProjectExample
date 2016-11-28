@@ -7,10 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XFExpressPiecePort.h"
 
-
-@class XFExpressPiece;
-@interface BDJPostPictureView : UIView
+@interface BDJPostPictureView : UIView <XFExpressPiecePort>
 
 @property (nonatomic, weak) XFExpressPiece *expressPiece;
 

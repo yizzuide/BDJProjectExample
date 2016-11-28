@@ -6,13 +6,11 @@
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import "BDJPostRenderItem.h"
+#import "BDJPicturePostRenderItem.h"
 
-@interface BDJMediaRenderItem : BDJPostRenderItem
+@interface BDJAVPostRenderItem : BDJPicturePostRenderItem
 
 @property (nonatomic, copy) NSURL *playURL;
-@property (nonatomic, assign) NSInteger width;
-@property (nonatomic, assign) NSInteger height;
 @property (nonatomic, copy) NSString *playCount;
 @property (nonatomic, copy) NSString *playTimeLen;
 

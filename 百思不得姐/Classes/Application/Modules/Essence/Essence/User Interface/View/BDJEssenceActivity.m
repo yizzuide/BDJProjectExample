@@ -56,7 +56,7 @@
 
 - (void)addChildActivity
 {
-    NSArray *modules = @[@"WordsPost",@"AllPost",@"VideoPost",@"VoicePost",@"PicturePost"];
+    NSArray *modules = @[@"AllPost",@"VideoPost",@"VoicePost",@"PicturePost",@"WordsPost"];
     NSUInteger count = modules.count;
     for (int i = 0; i < count; i++) {
         XFActivity *activity = XF_SubUInterface_(modules[i]);
@@ -92,7 +92,7 @@
     self.headerBar = headerBar;
     
     NSInteger tabCount = 5;
-    NSArray *tabs = @[@"段子",@"全部All",@"视频",@"声音",@"图片"];
+    NSArray *tabs = @[@"全部",@"视频",@"声音",@"图片",@"段子"];
     for (int i = 0; i < tabCount; i++) {
         UIButton *button = [UIButton buttonWithType:UIButtonTypeCustom];
         // 标记索引下标

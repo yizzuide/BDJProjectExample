@@ -33,10 +33,8 @@
     // 添加文本高
     cellH += R_Size_PostCellMargin + textH;
     
-    // 如果为短图
-    if (postRenderItem.type == BDJPostRenderItemTypePicture ||
-        postRenderItem.type == BDJPostRenderItemTypePictureGIF ||
-        postRenderItem.type == BDJPostRenderItemTypePictureLong) {
+    // 如果是图片子类型
+    if ([renderItem isKindOfClass:[BDJPicturePostRenderItem class]]) {
         // 如果是长图，固定它的高度
         if(postRenderItem.type == BDJPostRenderItemTypePictureLong) {
             postFrame.pictureF = CGRectMake(R_Size_PostCellMargin, textMaxY + R_Size_PostCellMargin, cellContentWidth, R_Height_PostPictureBreak);

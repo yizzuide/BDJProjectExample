@@ -6,7 +6,9 @@
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-
+/**
+ *  一个针对MVx的组件可运行接口
+ */
 @protocol XFComponentRoutable <NSObject>
 
 /**

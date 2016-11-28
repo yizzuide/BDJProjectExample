@@ -13,6 +13,9 @@
 #import "XFExpressPiece.h"
 #import "BDJPostPictureView.h"
 #import "BDJPostFrame.h"
+#import "BDJPostVoiceView.h"
+#import "BDJPostVideoView.h"
+#import "XFExpressPiecePort.h"
 
 @interface BDJPostCell ()
 
@@ -32,7 +35,9 @@
 /**
  *  图片
  */
-@property (nonatomic, weak) BDJPostPictureView *PictureView;
+@property (nonatomic, weak) BDJPostPictureView *pictureView;
+@property (nonatomic, weak) BDJPostVoiceView *voiceView;
+@property (nonatomic, weak) BDJPostVideoView *videoView;
 
 
 @end
@@ -88,7 +93,6 @@
 - (void)setExpressPiece:(XFExpressPiece *)expressPiece
 {
     _expressPiece = expressPiece;
-    
     BDJPostRenderItem *renderItem = expressPiece.renderItem;
     self.nikeNameLabel.text = renderItem.userName;
     [self.prefileImageView sd_setImageWithURL:renderItem.ProfileUrl placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
@@ -100,24 +104,66 @@
     [self.commentButton setTitle:renderItem.comment forState:UIControlStateNormal];
     self.bodyLabel.text = renderItem.text;
     
-    // 如果是有图片的帖子
-    if (renderItem.type == BDJPostRenderItemTypePicture ||
-        renderItem.type == BDJPostRenderItemTypePictureLong ||
-        renderItem.type == BDJPostRenderItemTypePictureGIF) {
-        BDJPostFrame *postFrame = expressPiece.uiFrame;
-        self.PictureView.frame = postFrame.pictureF;
-        [self.PictureView setExpressPiece:expressPiece];
+    // 根据帖子类型，填充视图
+    if (renderItem.type == BDJPostRenderItemTypeWords) {
+        [self hideAllMediaPictureExcludeView:nil];
+        return;
+    }
+    
+    if (renderItem.type == BDJPostRenderItemTypeVoice) {
+        [self setupMediaView:self.voiceView];
+    } else if (renderItem.type == BDJPostRenderItemTypeVideo) {
+        [self setupMediaView:self.videoView];
+    } else {
+        [self setupMediaView:self.pictureView];
+    }
+    
+}
+
+- (void)setupMediaView:(UIView<XFExpressPiecePort> *)mediaView
+{
+    BDJPostFrame *postFrame = self.expressPiece.uiFrame;
+    mediaView.frame = postFrame.pictureF;
+    [mediaView setExpressPiece:self.expressPiece];
+    [self hideAllMediaPictureExcludeView:mediaView];
+}
+
+// 隐藏所有类型图片，除了传入的视图
+- (void)hideAllMediaPictureExcludeView:(UIView *)view
+{
+    self.pictureView.hidden = YES;
+    self.voiceView.hidden = YES;
+    self.videoView.hidden = YES;
+    if (view) {
+        view.hidden = NO;
     }
 }
 
-
-- (BDJPostPictureView *)PictureView {
-	if(_PictureView == nil) {
-		BDJPostPictureView *PictureView = [BDJPostPictureView postPictureView];
-        [self.contentView addSubview:PictureView];
-        self.PictureView = PictureView;
+- (BDJPostPictureView *)pictureView {
+	if(_pictureView == nil) {
+		BDJPostPictureView *pictureView = [BDJPostPictureView postPictureView];
+        [self.contentView addSubview:pictureView];
+        self.pictureView = pictureView;
 	}
-	return _PictureView;
+	return _pictureView;
+}
+
+- (BDJPostVoiceView *)voiceView {
+	if(_voiceView == nil) {
+		BDJPostVoiceView *voiceView = [BDJPostVoiceView postVoiceView];
+        [self.contentView addSubview:voiceView];
+        self.voiceView = voiceView;
+	}
+	return _voiceView;
+}
+
+- (BDJPostVideoView *)videoView {
+	if(_videoView == nil) {
+		BDJPostVideoView *videoView = [BDJPostVideoView postVideoView];
+        [self.contentView addSubview:videoView];
+        self.videoView = videoView;
+	}
+	return _videoView;
 }
 
 @end

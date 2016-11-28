@@ -11,6 +11,12 @@
 // 测量数据类
 @interface BDJPostFrame : NSObject
 
+/**
+ *  图片Frame
+ */
 @property (nonatomic, assign) CGRect pictureF;
+/**
+ *  cell高度
+ */
 @property (nonatomic, assign) CGFloat cellHeight;
 @end

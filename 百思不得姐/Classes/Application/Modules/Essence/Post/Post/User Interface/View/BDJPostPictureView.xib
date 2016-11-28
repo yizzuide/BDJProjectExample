@@ -64,7 +64,7 @@
                 <outlet property="pictureView" destination="iuU-PP-eB7" id="gSM-u1-ixf"/>
                 <outlet property="progressView" destination="WC2-Yc-S8G" id="nP2-Vx-03s"/>
             </connections>
-            <point key="canvasLocation" x="-130" y="5"/>
+            <point key="canvasLocation" x="142" y="-1"/>
         </view>
     </objects>
     <resources>
