@@ -60,27 +60,29 @@ commandRef = [[RACCommand alloc] initWithEnabled:enableSignal signalBlock:^RACSi
 
 
 // 通过渲染数据创建表达对象
-#define XF_SetExpressPack_(ExpressPackClass,RenderData) \
-ExpressPackClass *expressPack = [[ExpressPackClass alloc] init]; \
-expressPack.renderData = RenderData; \
-self.expressPack = expressPack;
+#define XF_SetExpressPack_(ExpressPackClass,renderData) \
+[self expressPackCreateFromClass:[ExpressPackClass class] fillRenderData:renderData];
 // 快速创建通过渲染数据表达对象（使用默认类XFExpressPack）
-#define XF_SetExpressPack_Fast(RenderData) \
-XF_SetExpressPack_(XFExpressPack,RenderData)
+#define XF_SetExpressPack_Fast(renderData) \
+XF_SetExpressPack_(XFExpressPack,renderData)
 
 // 添加渲染数据到子列表最后
-#define XF_AddExpressPack_Last(RenderData) \
-[self.expressPack.renderData.list addObjectsFromArray:RenderData.list]; \
-[self.expressPack measureFrameWithList:RenderData.list appendType:XFExpressPieceAppendTypeBottom];
+#define XF_AddExpressPack_Last(renderData) \
+[self expressPackAddLastRenderData:renderData];
 // 添加渲染数据到子列表首
-#define XF_AddExpressPack_first(RenderData) \
-NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, RenderData.list.count)]; \
-[self.expressPack.renderData.list insertObjects:RenderData.list atIndexes:indexSet]; \
-[self.expressPack measureFrameWithList:RenderData.list appendType:XFExpressPieceAppendTypeTop];
+#define XF_AddExpressPack_First(renderData) \
+[self expressPackAddNewRenderData:renderData];
+
+// 从加载最近的数据创建indexPaths
+#define XF_CreateIndexPaths_Last(renderData) \
+[self expressPackTransform2IndexPathsFromLastRenderData:renderData]
+// 从加载最新的数据创建indexPaths
+#define XF_CreateIndexPaths_First(renderData) \
+[self expressPackTransform2IndexPathsFromFirstRenderData:renderData]
+
 // 清空渲染数据
 #define XF_ExpressPack_Clean() \
-[self.expressPack.renderData.list removeAllObjects]; \
-[self.expressPack.expressPieces removeAllObjects];
+[self expressPackClean];
 
 @interface XFPresenter : NSObject <XFEventHandlerPort,XFUIOperatorPort>
 /**
@@ -137,4 +139,45 @@ NSIndexSet *indexSet = [NSIndexSet indexSetWithIndexesInRange:NSMakeRange(0, Ren
 - (void)viewDidAppear;
 - (void)viewWillDisappear;
 - (void)viewDidDisappear;
+
+
+/**
+ *  初始化填充数据包
+ *
+ *  @param expressPackClass 自定义的数据包类
+ *  @param renderData       渲染数据
+ */
+- (void)expressPackCreateFromClass:(Class)expressPackClass fillRenderData:(XFRenderData *)renderData;
+/**
+ *  数据包追加渲染数据
+ *
+ *  @param renderData 渲染数据
+ */
+- (void)expressPackAddLastRenderData:(XFRenderData *)renderData;
+/**
+ *  数据包插入新渲染数据
+ *
+ *  @param renderData 渲染数据
+ */
+- (void)expressPackAddNewRenderData:(XFRenderData *)renderData;
+/**
+ *  清空数据包
+ */
+- (void)expressPackClean;
+/**
+ *  从上拉刷新的新渲染数据，返回相对于列表IndexPaths的路径
+ *
+ *  @param renderData 渲染数据
+ *
+ *  @return NSIndexPath数组
+ */
+- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromLastRenderData:(XFRenderData *)renderData;
+/**
+ *  从下拉刷新的新渲染数据，返回相对于列表IndexPaths的路径
+ *
+ *  @param renderData 渲染数据
+ *
+ *  @return NSIndexPath数组
+ */
+- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromFirstRenderData:(XFRenderData *)renderData;
 @end

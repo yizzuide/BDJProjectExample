@@ -43,6 +43,9 @@
 #pragma mark - DoAction
 - (void)actionDidSelectCategoryAtIndex:(NSInteger)index
 {
+    // 排除重复选择当前分类
+    if (self.selectedCategoryIndex == index && self.expressPack) return;
+    
     // 记录当前选择分类
     self.selectedCategoryIndex = index;
     

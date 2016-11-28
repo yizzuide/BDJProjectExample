@@ -80,7 +80,7 @@
 - (RACSignal *)didFooterRefreshAction
 {
     return [[Interactor fetchNextPagePostsForType:BDJ_Post_Str2Type(XF_ModuleName)] map:^id(XFRenderData *renderData) {
-        // 记录上一次的数据个数
+        /*// 记录上一次的数据个数
         NSUInteger lastPostsCount = self.expressPack.expressPieces.count;
         
         // 添加新数据
@@ -93,7 +93,8 @@
             NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastPostsCount + i inSection:0];
             [indexPaths addObject:indexPath];
         }
-        return indexPaths;
+        return indexPaths;*/
+        return XF_CreateIndexPaths_Last(renderData);
     }];
 }
 

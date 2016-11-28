@@ -19,14 +19,19 @@
     BDJPostRenderItem *postRenderItem = renderItem;
     CGFloat cellContentWidth = ScreenSize.width - R_Size_PostCellMargin * 4;
     
+    CGFloat cellH; // cell累加高度
     // 初始化固定的高度
     CGFloat cellTopH = R_Height_PostCellClip; // cell被裁剪的高度
-    CGFloat cellHeaderH =  R_Size_PostCellMargin + R_Height_PostCellHeader + R_Size_PostCellMargin; // 头部高
+    CGFloat cellHeaderH =  R_Size_PostCellMargin + R_Height_PostCellHeader; // 头部高
     CGFloat cellBottomH = R_Size_PostCellMargin + R_Height_PostCellBottomBar; // 底部高
-    // 开始计算cell高度
-    CGFloat textMaxY = cellHeaderH;
+    
+    // 添加顶部高
+    cellH = cellTopH + cellHeaderH;
+    // 计算文本
     CGFloat textH = [postRenderItem.text boundingRectWithSize:CGSizeMake(cellContentWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:15]} context:nil].size.height;
-    textMaxY += textH;
+    CGFloat textMaxY = cellHeaderH + R_Size_PostCellMargin + textH;
+    // 添加文本高
+    cellH += R_Size_PostCellMargin + textH;
     
     // 如果为短图
     if (postRenderItem.type == BDJPostRenderItemTypePicture ||
@@ -44,11 +49,12 @@
             // 计算图片的Frame
             postFrame.pictureF = CGRectMake(R_Size_PostCellMargin, textMaxY + R_Size_PostCellMargin, cellContentWidth, PictureH);
         }
-        postFrame.cellHeight = cellTopH + CGRectGetMaxY(postFrame.pictureF) + cellBottomH;
-        return postFrame;
+        // 图片高
+        cellH += R_Size_PostCellMargin + postFrame.pictureF.size.height;
     }
     
-    postFrame.cellHeight = cellTopH + textMaxY + cellBottomH;
+    // 添加底部高度
+    postFrame.cellHeight = cellH + cellBottomH;
     return postFrame;
 }
 @end
