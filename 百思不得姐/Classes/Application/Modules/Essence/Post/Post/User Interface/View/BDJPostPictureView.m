@@ -9,7 +9,6 @@
 #import "BDJPostPictureView.h"
 #import <UIImageView+WebCache.h>
 #import "BDJPicturePostRenderItem.h"
-#import "XFExpressPiece.h"
 #import "BDJProgressView.h"
 #import "UIImage+Size.h"
 #import "BDJPostFrame.h"

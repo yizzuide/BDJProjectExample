@@ -6,7 +6,8 @@
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-@class XFExpressPiece;
+#import "XFExpressPiece.h"
+
 @protocol XFExpressPiecePort <NSObject>
 
 @property (nonatomic, weak) XFExpressPiece *expressPiece;

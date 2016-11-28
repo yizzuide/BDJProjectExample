@@ -133,7 +133,6 @@ XF_Define_Weak \
 #define XF_Present_URLComponent_Fast(urlString) \
 XF_Present_URLComponent_(urlString,{})
 
-@class XFUIBus;
 @interface XFRouting : NSObject <XFWireFramePort>
 
 /**

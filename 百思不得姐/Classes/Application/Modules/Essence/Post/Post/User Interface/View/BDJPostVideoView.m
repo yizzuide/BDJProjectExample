@@ -7,7 +7,6 @@
 //
 
 #import "BDJPostVideoView.h"
-#import "XFExpressPiece.h"
 #import <UIImageView+WebCache.h>
 #import "BDJAVPostRenderItem.h"
 

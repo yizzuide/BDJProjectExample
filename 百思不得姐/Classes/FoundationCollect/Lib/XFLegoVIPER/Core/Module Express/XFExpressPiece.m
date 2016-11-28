@@ -10,4 +10,8 @@
 
 @implementation XFExpressPiece
 
+// 重新计算
+- (void)reMeasureFrame {
+    [self.expressPack reMeasureFrameForExpressPiece:self];
+}
 @end
