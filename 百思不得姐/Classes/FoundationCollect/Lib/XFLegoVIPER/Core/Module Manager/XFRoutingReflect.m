@@ -71,6 +71,14 @@
         }
         // 如果下一个路由找不到
         if (!nextRouting) {
+            // 是否是共享的模块壳
+            XFRouting *sharedRouting = [XFRoutingLinkManager currentActionRouting];
+            NSString *componentName = [self moduleNameForComponentObject:sharedRouting];
+            // 模糊匹配模块名
+            if ([componentName containsString:modules[i]]) {
+                preRouting = sharedRouting;
+                continue;
+            }
             return NO;
         }
         // 判断父子关系

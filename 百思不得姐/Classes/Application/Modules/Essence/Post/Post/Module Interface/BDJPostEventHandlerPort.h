@@ -16,4 +16,6 @@
 - (RACSignal *)didFooterRefreshAction;
 
 - (void)didPictureViewClickAction:(BDJPostPictureView *)PictureView;
+
+- (void)didPostCellSelectedAction;
 @end

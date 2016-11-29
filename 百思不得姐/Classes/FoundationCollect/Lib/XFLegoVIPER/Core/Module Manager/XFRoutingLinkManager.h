@@ -29,6 +29,18 @@
 + (void)removeRouting:(XFRouting *)routing;
 
 /**
+ *  跟踪将有跳转动作的路由
+ *
+ *  @param routing 路由
+ */
++ (void)setCurrentActionRounting:(XFRouting *)routing;
+/**
+ *  获得将有跳转动作的路由
+ *
+ */
++ (XFRouting *)currentActionRouting;
+
+/**
  *  总数
  *
  *  @return 路由个数

@@ -105,6 +105,11 @@
     [Routing transition2PostPictureBrowse];
 }
 
+- (void)didPostCellSelectedAction
+{
+    [Routing transition2PostComment];
+}
+
 #pragma mark - ValidData
 
 

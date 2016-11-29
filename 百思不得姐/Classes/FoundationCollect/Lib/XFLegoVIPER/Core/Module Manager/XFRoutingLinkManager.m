@@ -23,12 +23,18 @@ static NSMapTable *_mapTable;
  *  有序键
  */
 static NSMutableArray *_keyArr;
+/**
+ *  跟踪将要发起跳转的路由
+ */
+static NSHashTable *_trackActionRoutingTable;
 
 + (void)initialize
 {
     if (self == [XFRoutingLinkManager class]) {
         _mapTable = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsCopyIn valueOptions:NSPointerFunctionsWeakMemory];
         _keyArr = [NSMutableArray array];
+        
+        _trackActionRoutingTable = [NSHashTable weakObjectsHashTable];
     }
 }
 
@@ -48,6 +54,17 @@ static NSMutableArray *_keyArr;
 + (NSInteger)count
 {
     return _mapTable.count;
+}
+
++ (void)setCurrentActionRounting:(XFRouting *)routing
+{
+    [_trackActionRoutingTable removeAllObjects];
+    [_trackActionRoutingTable addObject:routing];
+}
+
++ (XFRouting *)currentActionRouting
+{
+    return [_trackActionRoutingTable anyObject];
 }
 
 #pragma mark - 模块通信

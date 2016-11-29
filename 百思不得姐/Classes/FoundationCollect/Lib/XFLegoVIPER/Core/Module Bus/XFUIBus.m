@@ -13,6 +13,7 @@
 #import "XFURLRoute.h"
 #import "XFControllerFactory.h"
 #import "XFComponentRoutable.h"
+#import "XFRoutingLinkManager.h"
 
 @interface XFUIBus ()
 /**
@@ -43,6 +44,7 @@
 // 以URL组件式PUSH
 - (void)openURLForPush:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
 {
+    [self _trackRouting];
     [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
         [self pushComponent:componentName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
@@ -51,6 +53,7 @@
 // 以URL组件式Present
 - (void)openURLForPresent:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
 {
+    [self _trackRouting];
     [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
         [self presentComponent:componentName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
@@ -59,9 +62,16 @@
 // 自定义打开一个URL组件
 - (void)openURL:(NSString *)url withTransitionBlock:(TransitionBlock)trasitionBlock customCode:(CustomCodeBlock)customCodeBlock
 {
+    [self _trackRouting];
     [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
         [self putComponent:componentName withTransitionBlock:trasitionBlock intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
+}
+
+// 跟踪当前要跳转的路由
+- (void)_trackRouting
+{
+    [XFRoutingLinkManager setCurrentActionRounting:self.fromRouting];
 }
 
 

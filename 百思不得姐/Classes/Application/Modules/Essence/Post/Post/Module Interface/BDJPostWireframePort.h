@@ -12,4 +12,5 @@
 @protocol BDJPostWireFramePort <XFWireFramePort>
 
 - (void)transition2PostPictureBrowse;
+- (void)transition2PostComment;
 @end
