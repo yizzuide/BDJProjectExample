@@ -8,10 +8,15 @@
 
 #import "BDJPostCommentActivity.h"
 #import "BDJPostCommentEventHandlerPort.h"
+#import "BDJPostCell.h"
+#import "XFExpressPiece.h"
+#import "BDJPostFrame.h"
 
 #define EventHandler  XFConvertPresenterToType(id<BDJPostCommentEventHandlerPort>)
 
 @interface BDJPostCommentActivity ()
+
+@property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @end
 
@@ -34,6 +39,18 @@
     self.view.backgroundColor = UIColorFromRGB(R_Color_GlobalBkg);
 }
 - (void)setUpViews {
+    
+
+}
+
+// 填充帖子表头
+- (void)fillPostExpressPiece:(XFExpressPiece *)expressPiece
+{
+    BDJPostFrame *cellFrame = expressPiece.uiFrame;
+    BDJPostCell *postCell = [BDJPostCell postCell];
+    postCell.height = cellFrame.cellHeight;
+    [postCell setExpressPiece:expressPiece];
+    self.tableView.tableHeaderView = postCell;
     
 }
 

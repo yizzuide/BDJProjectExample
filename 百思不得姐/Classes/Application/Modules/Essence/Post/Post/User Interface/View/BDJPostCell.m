@@ -49,6 +49,11 @@
 
 @implementation BDJPostCell
 
++ (instancetype)postCell
+{
+    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
+}
+
 - (void)awakeFromNib {
     [super awakeFromNib];
     // Initialization code
@@ -109,9 +114,9 @@
     [self.commentButton setTitle:renderItem.commentCount forState:UIControlStateNormal];
     self.bodyLabel.text = renderItem.text;
     // 如果有最热评论
-    if (renderItem.topCmtContent) {
+    if (renderItem.hotCmtContent) {
         self.topCmtView.hidden = NO;
-        self.topCmtLabel.text = renderItem.topCmtContent;
+        self.topCmtLabel.text = renderItem.hotCmtRenderContent;
     }else{
         self.topCmtView.hidden = YES;
     }

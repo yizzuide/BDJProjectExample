@@ -19,4 +19,9 @@ XF_AutoAssemblyModule_Fast
 {
     XF_PUSH_Routing_Fast(@"ModuleName")
 }*/
+
+- (void)dealloc
+{
+    XF_Debug_M();
+}
 @end

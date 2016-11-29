@@ -14,6 +14,7 @@
 #import "BDJPostCategory.h"
 #import "BDJPostExpressPack.h"
 #import "BDJPostPictureView.h"
+#import "BDJPostRenderItem.h"
 
 
 #define Interactor XFConvertInteractorToType(id<BDJPostInteractorPort>)
@@ -105,8 +106,18 @@
     [Routing transition2PostPictureBrowse];
 }
 
-- (void)didPostCellSelectedAction
+- (void)didPostCellSelectedActionAtIndex:(NSInteger)index
 {
+    // 拷贝一份行数据片段作为下一个组件接收的意图数据
+    self.intentData = self.expressPack.expressPieces[index];
+    // 去除最热评论显示
+    BDJPostRenderItem *renderItem = [self.intentData renderItem];
+    if (renderItem.hotCmtContent) {
+        renderItem.hotCmtContent = nil;
+        // 重新计算高度
+        [self.expressPack reMeasureFrameForExpressPiece:self.intentData];
+    }
+    // 切换到评论
     [Routing transition2PostComment];
 }
 

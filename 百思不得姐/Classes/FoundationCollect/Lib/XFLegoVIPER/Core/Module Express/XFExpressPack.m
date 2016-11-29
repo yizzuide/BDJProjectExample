@@ -29,7 +29,6 @@
     NSUInteger insertIdex = 0;
     for (int i = 0; i < count; i++) {
         XFExpressPiece *expressPiece = [[XFExpressPiece alloc] init];
-        expressPiece.expressPack = self;
         expressPiece.renderItem = renderDataList[i];
         // 如果子类有实现计算布局测量方法
         id subUIFrame = [self onMeasureFrameWithItem:renderDataList[i] index:i];
@@ -59,8 +58,7 @@
 // 重新计算单行数据
 - (void)reMeasureFrameForExpressPiece:(__kindof XFExpressPiece *)expressPiece
 {
-    id uiFrame = [self onMeasureFrameWithItem:expressPiece.renderItem index:[self findIndexWithPiece:expressPiece]];
-    expressPiece.uiFrame = uiFrame;
+    expressPiece.uiFrame = [self onMeasureFrameWithItem:expressPiece.renderItem index:[self findIndexWithPiece:expressPiece]];
 }
 
 - (NSInteger)findIndexWithPiece:(__kindof XFExpressPiece *)expressPiece {

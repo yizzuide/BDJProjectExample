@@ -52,9 +52,9 @@
     }
     
     // 最热一条评论
-    if (postRenderItem.topCmtContent) {
+    if (postRenderItem.hotCmtContent) {
         cellH += [@"最热评论" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}].height;
-        CGFloat topCmtH = [postRenderItem.topCmtContent boundingRectWithSize:CGSizeMake(cellContentWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+        CGFloat topCmtH = [postRenderItem.hotCmtRenderContent boundingRectWithSize:CGSizeMake(cellContentWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
         cellH += R_Size_PostCellMargin + topCmtH;
     }
     

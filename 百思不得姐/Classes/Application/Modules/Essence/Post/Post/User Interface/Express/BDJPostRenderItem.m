@@ -72,9 +72,9 @@
     return numberString;
 }
 
-- (NSString *)topCmtContent
+- (NSString *)hotCmtRenderContent
 {
-    if (!_topCmtContent) return nil;
-    return [NSString stringWithFormat:@"%@：%@",_topCmtUserName,_topCmtContent];
+    if (!_hotCmtContent) return nil;
+    return [NSString stringWithFormat:@"%@：%@",_hotCmtUserName,_hotCmtContent];
 }
 @end

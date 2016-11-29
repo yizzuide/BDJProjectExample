@@ -9,6 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "XFUserInterfacePort.h"
 
+@class XFExpressPiece;
 @protocol BDJPostCommentUserInterfacePort <XFUserInterfacePort>
 
+- (void)fillPostExpressPiece:(XFExpressPiece *)expressPiece;
 @end

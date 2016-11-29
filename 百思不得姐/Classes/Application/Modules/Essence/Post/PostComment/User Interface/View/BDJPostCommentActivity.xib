@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="BDJPostCommentActivity">
+            <connections>
+                <outlet property="tableView" destination="Uy4-in-jSw" id="FbH-gw-oVi"/>
+                <outlet property="view" destination="iN0-l3-epB" id="zJx-ij-7Ks"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Uy4-in-jSw">
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2GC-KP-N06" userLabel="输入工具条">
+                    <color key="backgroundColor" red="1" green="0.80000001190000003" blue="0.40000000600000002" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="49" id="vew-9P-YUM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="Uy4-in-jSw" secondAttribute="bottom" id="7SQ-yR-7Hj"/>
+                <constraint firstItem="2GC-KP-N06" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="PZo-pF-TmP"/>
+                <constraint firstAttribute="trailing" secondItem="2GC-KP-N06" secondAttribute="trailing" id="jc9-vC-Mku"/>
+                <constraint firstItem="Uy4-in-jSw" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="r55-W8-CCS"/>
+                <constraint firstItem="Uy4-in-jSw" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="rdL-12-PjR"/>
+                <constraint firstAttribute="bottom" secondItem="2GC-KP-N06" secondAttribute="bottom" id="ter-lI-Z0l"/>
+                <constraint firstAttribute="trailing" secondItem="Uy4-in-jSw" secondAttribute="trailing" id="zNU-zd-LXK"/>
+            </constraints>
+            <point key="canvasLocation" x="-292" y="-4"/>
+        </view>
+    </objects>
+</document>

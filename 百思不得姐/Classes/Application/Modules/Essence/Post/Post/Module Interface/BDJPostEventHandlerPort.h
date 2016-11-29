@@ -17,5 +17,5 @@
 
 - (void)didPictureViewClickAction:(BDJPostPictureView *)PictureView;
 
-- (void)didPostCellSelectedAction;
+- (void)didPostCellSelectedActionAtIndex:(NSInteger)index;
 @end

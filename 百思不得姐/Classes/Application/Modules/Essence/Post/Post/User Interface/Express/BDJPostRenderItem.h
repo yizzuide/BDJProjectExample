@@ -40,7 +40,8 @@ typedef enum : NSInteger {
 @property (nonatomic, copy) NSString *text;
 
 //-- 最热一条评论 --
-@property (nonatomic, copy) NSString *topCmtUserName;
-@property (nonatomic, copy) NSString *topCmtContent;
+@property (nonatomic, copy) NSString *hotCmtUserName;
+@property (nonatomic, copy) NSString *hotCmtContent;
+@property (nonatomic, copy) NSString *hotCmtRenderContent;
 
 @end

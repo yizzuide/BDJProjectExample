@@ -150,6 +150,7 @@
 		400511601DED65EF00E402DE /* BDJPostCommentPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511571DED65EF00E402DE /* BDJPostCommentPresenter.m */; };
 		400511611DED65EF00E402DE /* BDJPostCommentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005115A1DED65EF00E402DE /* BDJPostCommentActivity.m */; };
 		400511621DED65EF00E402DE /* BDJPostCommentRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005115D1DED65EF00E402DE /* BDJPostCommentRouting.m */; };
+		400511641DED7D8A00E402DE /* BDJPostCommentActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400511631DED7D8A00E402DE /* BDJPostCommentActivity.xib */; };
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
@@ -499,6 +500,7 @@
 		4005115A1DED65EF00E402DE /* BDJPostCommentActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCommentActivity.m; sourceTree = "<group>"; };
 		4005115C1DED65EF00E402DE /* BDJPostCommentRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCommentRouting.h; sourceTree = "<group>"; };
 		4005115D1DED65EF00E402DE /* BDJPostCommentRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCommentRouting.m; sourceTree = "<group>"; };
+		400511631DED7D8A00E402DE /* BDJPostCommentActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDJPostCommentActivity.xib; sourceTree = "<group>"; };
 		402647811DDD45B3002EDD00 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402647831DDD45B3002EDD00 /* MainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTests.m; sourceTree = "<group>"; };
 		402647851DDD45B3002EDD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -2061,6 +2063,7 @@
 			children = (
 				400511591DED65EF00E402DE /* BDJPostCommentActivity.h */,
 				4005115A1DED65EF00E402DE /* BDJPostCommentActivity.m */,
+				400511631DED7D8A00E402DE /* BDJPostCommentActivity.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2242,6 +2245,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */,
+				400511641DED7D8A00E402DE /* BDJPostCommentActivity.xib in Resources */,
 				400511111DEC2C2800E402DE /* BDJPostVideoView.xib in Resources */,
 				400510A81DEB141700E402DE /* BDJRCTagCell.xib in Resources */,
 				400510C21DEB141700E402DE /* BDJFriendTrendsActivity.xib in Resources */,

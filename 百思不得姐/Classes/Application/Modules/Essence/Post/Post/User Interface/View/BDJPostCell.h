@@ -12,4 +12,6 @@
 @interface BDJPostCell : UITableViewCell <XFExpressPiecePort>
 
 @property (nonatomic, weak) XFExpressPiece *expressPiece;
+
++ (instancetype)postCell;
 @end

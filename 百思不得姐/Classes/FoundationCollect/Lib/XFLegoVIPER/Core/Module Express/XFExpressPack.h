@@ -27,7 +27,6 @@ typedef NS_ENUM(NSInteger, XFExpressPieceAppendType) {
 /**
  *  视图表达对象，只有要对列表计算Frame时需要继承并实现测量方法
  */
-@class XFExpressPiece;
 @interface XFExpressPack : NSObject
 
 /**

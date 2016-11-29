@@ -119,7 +119,7 @@ static NSString * const Identifier = @"PostCell";
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
-    [EventHandler didPostCellSelectedAction];
+    [EventHandler didPostCellSelectedActionAtIndex:indexPath.row];
 }
 
 

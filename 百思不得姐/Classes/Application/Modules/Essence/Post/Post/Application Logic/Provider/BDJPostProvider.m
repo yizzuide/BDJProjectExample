@@ -51,8 +51,8 @@
         // 最热一条评论
         if(postModel.top_cmt.count){
             BDJPostCommentModel *commentModel = postModel.top_cmt.firstObject;
-            renderItem.topCmtUserName = commentModel.user.username;
-            renderItem.topCmtContent = commentModel.content;
+            renderItem.hotCmtUserName = commentModel.user.username;
+            renderItem.hotCmtContent = commentModel.content;
         }
         return renderItem;
     }] array].mutableCopy;
