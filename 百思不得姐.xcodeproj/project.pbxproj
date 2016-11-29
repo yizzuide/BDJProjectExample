@@ -143,6 +143,8 @@
 		4005110D1DEC26DE00E402DE /* BDJPostVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4005110C1DEC26DE00E402DE /* BDJPostVoiceView.xib */; };
 		400511111DEC2C2800E402DE /* BDJPostVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400511101DEC2C2800E402DE /* BDJPostVideoView.xib */; };
 		400511141DEC2FB900E402DE /* BDJPostVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511131DEC2FB900E402DE /* BDJPostVideoView.m */; };
+		400511181DED25B200E402DE /* BDJPostCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511171DED25B200E402DE /* BDJPostCommentModel.m */; };
+		4005111B1DED25F400E402DE /* BDJUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005111A1DED25F400E402DE /* BDJUserModel.m */; };
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
@@ -473,6 +475,10 @@
 		400511121DEC2FB900E402DE /* BDJPostVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostVideoView.h; sourceTree = "<group>"; };
 		400511131DEC2FB900E402DE /* BDJPostVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostVideoView.m; sourceTree = "<group>"; };
 		400511151DEC447200E402DE /* XFExpressPiecePort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFExpressPiecePort.h; sourceTree = "<group>"; };
+		400511161DED25B200E402DE /* BDJPostCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCommentModel.h; sourceTree = "<group>"; };
+		400511171DED25B200E402DE /* BDJPostCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCommentModel.m; sourceTree = "<group>"; };
+		400511191DED25F400E402DE /* BDJUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJUserModel.h; sourceTree = "<group>"; };
+		4005111A1DED25F400E402DE /* BDJUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJUserModel.m; sourceTree = "<group>"; };
 		402647811DDD45B3002EDD00 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402647831DDD45B3002EDD00 /* MainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTests.m; sourceTree = "<group>"; };
 		402647851DDD45B3002EDD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -731,6 +737,10 @@
 				40050EFC1DEB141600E402DE /* BDJPostModel.m */,
 				40050EFD1DEB141600E402DE /* BDJPostProvider.h */,
 				40050EFE1DEB141600E402DE /* BDJPostProvider.m */,
+				400511161DED25B200E402DE /* BDJPostCommentModel.h */,
+				400511171DED25B200E402DE /* BDJPostCommentModel.m */,
+				400511191DED25F400E402DE /* BDJUserModel.h */,
+				4005111A1DED25F400E402DE /* BDJUserModel.m */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -2276,6 +2286,7 @@
 				400510B51DEB141700E402DE /* BDJFriendsRecommentActivity.m in Sources */,
 				400510AF1DEB141700E402DE /* BDJRecommandUserModel.m in Sources */,
 				400510B71DEB141700E402DE /* BDJRCCategoryTableView.m in Sources */,
+				4005111B1DED25F400E402DE /* BDJUserModel.m in Sources */,
 				400510BB1DEB141700E402DE /* BDJRecommendUserCell.m in Sources */,
 				400510EF1DEB141700E402DE /* XFPresenter.m in Sources */,
 				400510DA1DEB141700E402DE /* BDJProgressView.m in Sources */,
@@ -2336,6 +2347,7 @@
 				400510D91DEB141700E402DE /* BDJHttpRequest.m in Sources */,
 				400510E91DEB141700E402DE /* XFRoutingFactory.m in Sources */,
 				400510C81DEB141700E402DE /* BDJIndexTabRouting.m in Sources */,
+				400511181DED25B200E402DE /* BDJPostCommentModel.m in Sources */,
 				400510F61DEB141700E402DE /* RACSignal+ErrorAlter.m in Sources */,
 				4005109A1DEB141700E402DE /* BDJPicturePostRouting.m in Sources */,
 				4005108F1DEB141700E402DE /* BDJPicturePostRenderItem.m in Sources */,

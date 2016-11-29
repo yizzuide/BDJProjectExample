@@ -23,12 +23,12 @@
 
 - (NSString *)rePost
 {
-    return [self formatNumberString:_rePost placeholder:@"转"];
+    return [self formatNumberString:_rePostCount placeholder:@"转"];
 }
 
 - (NSString *)comment
 {
-    return [self formatNumberString:_comment placeholder:@"评"];
+    return [self formatNumberString:_commentCount placeholder:@"评"];
 }
 
 - (NSString *)createTime
@@ -70,5 +70,11 @@
         return placeholder;
     }
     return numberString;
+}
+
+- (NSString *)topCmtContent
+{
+    if (!_topCmtContent) return nil;
+    return [NSString stringWithFormat:@"%@：%@",_topCmtUserName,_topCmtContent];
 }
 @end

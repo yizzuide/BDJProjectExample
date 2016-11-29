@@ -22,6 +22,10 @@
                                          @"type":@(postSeviceMediaType)
                                          }]
             map:^id(RACTuple *tuple) {
+                /*if (postSeviceMediaType == BDJPostDataMediaTypeWords) {
+                    NSDictionary *dict = tuple.first;
+                    [dict writeToFile:@"/Users/yizzuide/Desktop/comment.plist" atomically:YES];
+                }*/
                 return [BDJMetaPostModel mj_objectWithKeyValues:tuple.first];
             }];
 }

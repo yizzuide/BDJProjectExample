@@ -9,11 +9,11 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="240" id="KGk-i7-Jjw" customClass="BDJPostCell">
-            <rect key="frame" x="0.0" y="0.0" width="331" height="240"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="none" indentationWidth="10" reuseIdentifier="PostCell" rowHeight="334" id="KGk-i7-Jjw" customClass="BDJPostCell">
+            <rect key="frame" x="0.0" y="0.0" width="342" height="334"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
-                <frame key="frameInset" width="331" height="239"/>
+                <frame key="frameInset" width="342" height="333"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="4xw-nm-YUC" userLabel="头像">
@@ -46,6 +46,11 @@
                         <state key="normal" title="Button" backgroundImage="cellFollowIcon"/>
                         <state key="highlighted" backgroundImage="cellFollowClickIcon"/>
                     </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7W-Ql-vZA" userLabel="文本内容">
+                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="fvT-6Z-O5O" userLabel="底部工具条">
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="cell-content-line" translatesAutoresizingMaskIntoConstraints="NO" id="LUj-4D-9Hg" userLabel="工具条顶部分割线">
@@ -136,11 +141,31 @@
                             <constraint firstItem="Ewi-n8-f3j" firstAttribute="leading" secondItem="coy-La-7nV" secondAttribute="trailing" id="yq1-x2-vfl"/>
                         </constraints>
                     </view>
-                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="s7W-Ql-vZA" userLabel="文本内容">
-                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                        <nil key="textColor"/>
-                        <nil key="highlightedColor"/>
-                    </label>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ULD-CF-dQN" userLabel="最热评论视图">
+                        <subviews>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="最热评论" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="lSR-Bt-uXx">
+                                <color key="backgroundColor" red="0.67450980392156867" green="0.67450980392156867" blue="0.67450980392156867" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="风在伤上：这是什么建议~" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXL-N3-bm6" userLabel="评论">
+                                <color key="backgroundColor" red="0.8784313725490196" green="0.8784313725490196" blue="0.8784313725490196" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="qXL-N3-bm6" firstAttribute="leading" secondItem="ULD-CF-dQN" secondAttribute="leading" id="Kfp-rR-0kv"/>
+                            <constraint firstAttribute="trailing" secondItem="qXL-N3-bm6" secondAttribute="trailing" id="Phg-q2-mIP"/>
+                            <constraint firstItem="qXL-N3-bm6" firstAttribute="top" secondItem="lSR-Bt-uXx" secondAttribute="bottom" id="W2t-Os-u2o"/>
+                            <constraint firstItem="lSR-Bt-uXx" firstAttribute="top" secondItem="ULD-CF-dQN" secondAttribute="top" id="bxt-Z7-lfh"/>
+                            <constraint firstItem="lSR-Bt-uXx" firstAttribute="leading" secondItem="ULD-CF-dQN" secondAttribute="leading" id="h26-IC-Qht"/>
+                            <constraint firstAttribute="bottom" secondItem="qXL-N3-bm6" secondAttribute="bottom" id="pOk-cv-Oau"/>
+                        </constraints>
+                    </view>
                 </subviews>
                 <constraints>
                     <constraint firstItem="fk3-x2-Fsf" firstAttribute="trailing" secondItem="4xw-nm-YUC" secondAttribute="trailing" constant="5" id="3pC-WB-OEF"/>
@@ -156,9 +181,12 @@
                     <constraint firstItem="s7W-Ql-vZA" firstAttribute="trailing" secondItem="cFU-zX-juI" secondAttribute="trailing" id="WtE-IY-mBC"/>
                     <constraint firstItem="7yz-7E-0nN" firstAttribute="leading" secondItem="bgf-Ew-tlp" secondAttribute="leading" id="XZQ-9x-ALq"/>
                     <constraint firstItem="s7W-Ql-vZA" firstAttribute="top" secondItem="4xw-nm-YUC" secondAttribute="bottom" constant="10" id="ds4-uh-OYV"/>
+                    <constraint firstAttribute="trailing" secondItem="ULD-CF-dQN" secondAttribute="trailing" constant="10" id="h0k-Vw-5mT"/>
+                    <constraint firstItem="ULD-CF-dQN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="nek-Ja-dG2"/>
                     <constraint firstItem="fk3-x2-Fsf" firstAttribute="bottom" secondItem="4xw-nm-YUC" secondAttribute="bottom" constant="5" id="psG-gM-QaZ"/>
                     <constraint firstAttribute="bottom" secondItem="fvT-6Z-O5O" secondAttribute="bottom" id="zUF-20-XbH"/>
                     <constraint firstAttribute="trailing" secondItem="fvT-6Z-O5O" secondAttribute="trailing" id="zf5-14-U2R"/>
+                    <constraint firstItem="fvT-6Z-O5O" firstAttribute="top" secondItem="ULD-CF-dQN" secondAttribute="bottom" constant="10" id="zj3-B5-syN"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
@@ -170,9 +198,11 @@
                 <outlet property="nikeNameLabel" destination="bgf-Ew-tlp" id="xv6-XU-4K0"/>
                 <outlet property="prefileImageView" destination="4xw-nm-YUC" id="5bA-8u-2DK"/>
                 <outlet property="repostButton" destination="1qv-rA-p2D" id="WnJ-2I-qLK"/>
+                <outlet property="topCmtLabel" destination="qXL-N3-bm6" id="WPW-Dx-GbH"/>
+                <outlet property="topCmtView" destination="ULD-CF-dQN" id="5vY-ds-dWi"/>
                 <outlet property="weibo_VImageView" destination="fk3-x2-Fsf" id="taY-kt-T9C"/>
             </connections>
-            <point key="canvasLocation" x="-842" y="-493"/>
+            <point key="canvasLocation" x="-1502" y="-913"/>
         </tableViewCell>
     </objects>
     <resources>

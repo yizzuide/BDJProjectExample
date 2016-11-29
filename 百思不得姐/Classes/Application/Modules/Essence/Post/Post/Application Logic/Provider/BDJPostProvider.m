@@ -12,6 +12,7 @@
 #import "BDJPostRenderItem.h"
 #import "BDJPicturePostRenderItem.h"
 #import "BDJAVPostRenderItem.h"
+#import "BDJPostCommentModel.h"
 
 @implementation BDJPostProvider
 
@@ -43,10 +44,16 @@
         renderItem.createTime = postModel.passtime;
         renderItem.love = [NSString stringWithFormat:@"%zd", postModel.love];
         renderItem.hate = [NSString stringWithFormat:@"%zd", postModel.hate];
-        renderItem.rePost = [NSString stringWithFormat:@"%zd",postModel.repost];
-        renderItem.comment = [NSString stringWithFormat:@"%zd",postModel.comment];
+        renderItem.rePostCount = [NSString stringWithFormat:@"%zd",postModel.repost];
+        renderItem.commentCount = [NSString stringWithFormat:@"%zd",postModel.comment];
         renderItem.sina_v = postModel.sina_v;
         renderItem.text = postModel.text;
+        // 最热一条评论
+        if(postModel.top_cmt.count){
+            BDJPostCommentModel *commentModel = postModel.top_cmt.firstObject;
+            renderItem.topCmtUserName = commentModel.user.username;
+            renderItem.topCmtContent = commentModel.content;
+        }
         return renderItem;
     }] array].mutableCopy;
     XFRenderData *renderData = [[XFRenderData alloc] init];

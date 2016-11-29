@@ -51,6 +51,13 @@
         cellH += R_Size_PostCellMargin + postFrame.pictureF.size.height;
     }
     
+    // 最热一条评论
+    if (postRenderItem.topCmtContent) {
+        cellH += [@"最热评论" sizeWithAttributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]}].height;
+        CGFloat topCmtH = [postRenderItem.topCmtContent boundingRectWithSize:CGSizeMake(cellContentWidth, MAXFLOAT) options:NSStringDrawingUsesLineFragmentOrigin attributes:@{NSFontAttributeName:[UIFont systemFontOfSize:14]} context:nil].size.height;
+        cellH += R_Size_PostCellMargin + topCmtH;
+    }
+    
     // 添加底部高度
     postFrame.cellHeight = cellH + cellBottomH;
     return postFrame;

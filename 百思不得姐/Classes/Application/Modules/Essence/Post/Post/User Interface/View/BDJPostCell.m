@@ -39,6 +39,11 @@
 @property (nonatomic, weak) BDJPostVoiceView *voiceView;
 @property (nonatomic, weak) BDJPostVideoView *videoView;
 
+/**
+ *  最热一条评论
+ */
+@property (weak, nonatomic) IBOutlet UILabel *topCmtLabel;
+@property (weak, nonatomic) IBOutlet UIView *topCmtView;
 
 @end
 
@@ -100,9 +105,16 @@
     self.createTimeLabel.text = renderItem.createTime;
     [self.loveButton setTitle:renderItem.love forState:UIControlStateNormal];
     [self.hateButton setTitle:renderItem.hate forState:UIControlStateNormal];
-    [self.repostButton setTitle:renderItem.rePost forState:UIControlStateNormal];
-    [self.commentButton setTitle:renderItem.comment forState:UIControlStateNormal];
+    [self.repostButton setTitle:renderItem.rePostCount forState:UIControlStateNormal];
+    [self.commentButton setTitle:renderItem.commentCount forState:UIControlStateNormal];
     self.bodyLabel.text = renderItem.text;
+    // 如果有最热评论
+    if (renderItem.topCmtContent) {
+        self.topCmtView.hidden = NO;
+        self.topCmtLabel.text = renderItem.topCmtContent;
+    }else{
+        self.topCmtView.hidden = YES;
+    }
     
     // 根据帖子类型，填充视图
     if (renderItem.type == BDJPostRenderItemTypeWords) {
@@ -117,7 +129,6 @@
     } else {
         [self setupMediaView:self.pictureView];
     }
-    
 }
 
 - (void)setupMediaView:(UIView<XFExpressPiecePort> *)mediaView

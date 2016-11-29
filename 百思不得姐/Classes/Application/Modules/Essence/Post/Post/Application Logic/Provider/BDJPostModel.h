@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "BDJPostCommentModel.h"
 
 /** 帖子的类型，1为全部 10为图片 29为段子 31为音频 41为视频 */
 typedef enum : NSUInteger {
@@ -58,8 +59,8 @@ typedef enum : NSUInteger {
 @property (nonatomic, assign) BDJPostDataMediaType  type;
 
 
-/** ??? */
-@property (nonatomic, strong) NSArray* top_cmt;
+/** 最热评论 */
+@property (nonatomic, strong) NSArray<BDJPostCommentModel *> *top_cmt;
 
 /** 转发数量 */
 @property (nonatomic, assign) NSInteger  repost;

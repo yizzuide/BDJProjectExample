@@ -25,8 +25,8 @@ typedef enum : NSInteger {
 @property (nonatomic, copy) NSString *createTime;
 @property (nonatomic, copy) NSString *love;
 @property (nonatomic, copy) NSString *hate;
-@property (nonatomic, copy) NSString *rePost;
-@property (nonatomic, copy) NSString *comment;
+@property (nonatomic, copy) NSString *rePostCount;
+@property (nonatomic, copy) NSString *commentCount;
 /* 是否是新浪会员 */
 @property (nonatomic, assign,getter=isSina_v) BOOL sina_v;
 /**
@@ -38,5 +38,9 @@ typedef enum : NSInteger {
  *  每个帖子都有文本
  */
 @property (nonatomic, copy) NSString *text;
+
+//-- 最热一条评论 --
+@property (nonatomic, copy) NSString *topCmtUserName;
+@property (nonatomic, copy) NSString *topCmtContent;
 
 @end
