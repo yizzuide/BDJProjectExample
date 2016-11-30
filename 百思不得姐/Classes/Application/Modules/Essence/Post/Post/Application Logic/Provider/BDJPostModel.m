@@ -17,14 +17,8 @@
              @"ID":@"id",
              @"image_thumb":@"image0",
              @"image_large":@"image1",
-             @"image_middle":@"image2"
-             };
-}
-
-+ (NSDictionary *)mj_objectClassInArray
-{
-    return @{
-             @"top_cmt":[BDJPostCommentModel class]
+             @"image_middle":@"image2",
+             @"top_cmt":@"top_cmt[0]" // 只要数组中[0]的元素，因为最热评论就固定的一条
              };
 }
 

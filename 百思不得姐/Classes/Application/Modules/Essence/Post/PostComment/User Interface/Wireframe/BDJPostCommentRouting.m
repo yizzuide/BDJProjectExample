@@ -14,9 +14,4 @@
 // 组装模块
 XF_AutoAssemblyModule_Fast
 
-// 跳转模块
-/*- (void)transition2XXModule
-{
-    XF_PUSH_Routing_Fast(@"ModuleName")
-}*/
 @end

@@ -24,17 +24,6 @@
 @implementation BDJEssencePresenter
 
 #pragma mark - lifeCycle
-// 绑定视图层后调用
-- (void)viewDidLoad
-{
-}
-
-// 初始化视图数据
-- (void)initRenderView
-{
-    // 填充绑定的ViewData
-    //self.viewData = [Interactor fetchData];
-}
 
 // 初始化命令
 - (void)initCommand
@@ -48,25 +37,15 @@
     })
 }
 
-// 注册MVx通知
-- (void)registerMVxNotifactions
-{
-    // 注册MVx构架通知
-//    XF_RegisterMVxNotis_(@[NF_User_XXX])
-}
-
-
-// 接受到组件事件
-- (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
-{
-    // 匹配对应通知
-    /*XF_EventIs_(NF_User_XXX, {
-        // TODO
-    })*/
-}
 
 #pragma mark - DoAction
 
+- (void)didScrollIndicatorAction
+{
+    // 给帖子发模块事件，即使这些都是共享模块<只有路由的模块壳>，也要分别写明，而不能直接用"Post"
+    NSArray *modules = @[@"AllPost",@"PicturePost",@"VideoPost",@"VoicePost",@"WordsPost"];
+    XF_SendEventForModules_(modules, @"ScrollIndicatorEvent", nil)
+}
 
 
 #pragma mark - ValidData

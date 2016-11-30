@@ -13,4 +13,6 @@
 @protocol BDJEssenceEventHandlerPort <XFEventHandlerPort>
 
 @property (nonatomic, strong) RACCommand *tagCommand;
+
+- (void)didScrollIndicatorAction;
 @end

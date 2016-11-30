@@ -13,6 +13,11 @@
 #import "XFUserInterfacePort.h"
 #import "XFRoutingReflect.h"
 
+@interface XFModuleAssembly ()
+
+@property (nonatomic, copy) NSString *shareModule;
+@end
+
 @implementation XFModuleAssembly
 
 - (instancetype)initWithFromRouting:(XFRouting *)fromRouting
@@ -31,6 +36,7 @@
 
 - (__kindof XFRouting *)autoAssemblyModuleFromShareModuleName:(NSString *)moduleName
 {
+    self.shareModule = moduleName; // 标识为模块共享
     return [self _autoAssemblyModuleWithModuleName:moduleName navName:nil ibSymbol:nil shareDataManagerName:nil];
 }
 
@@ -149,23 +155,38 @@
         [self.fromRouting setValue:navVC forKey:@"currentNavigator"];
     }
     
+//    构建事件层<连接视图层和路由层>
+    id presenter;
     if (perstentClass) {
-        id presenter = [[perstentClass alloc] init];
+        presenter = [[perstentClass alloc] init];
         [activity setValue:presenter forKey:@"eventHandler"];
         [presenter setValue:self.fromRouting forKey:@"routing"];
         [self.fromRouting setValue:presenter forKey:@"uiOperator"];
-        // other...
+    }
+    
+    // 如果是共享模块，则共用业务层
+    XFRouting *sharedRouting = [XFRoutingLinkManager sharedRoutingForShareModule:self.shareModule];
+    if (sharedRouting) {
+        // 设置到当前模块
+        id sharedInteractor = [sharedRouting.uiOperator valueForKey:@"interactor"];
+        [self.fromRouting.uiOperator setValue:sharedInteractor forKey:@"interactor"];
+    }else{
+        // 存储共享模块
+        if (self.shareModule.length) {
+            [XFRoutingLinkManager setSharedRounting:self.fromRouting shareModule:self.shareModule];
+        }
+        // 构建业务层
         if (interactorClass) {
             id interactor = [[interactorClass alloc] init];
             [presenter setValue:interactor forKey:@"interactor"];
-            
+            // 数据层
             if(dataManagerClass){
                 id dataManager = [[dataManagerClass alloc] init];
                 [interactor setValue:dataManager forKey:@"dataManager"];
             }
         }
     }
-
+    
     // 如果有事件处理层
     if (self.fromRouting.uiOperator) {
         // 添加到路由管理中心

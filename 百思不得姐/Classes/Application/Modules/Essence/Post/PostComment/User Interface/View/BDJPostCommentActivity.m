@@ -38,6 +38,7 @@
 {
     self.view.backgroundColor = UIColorFromRGB(R_Color_GlobalBkg);
 }
+
 - (void)setUpViews {
     
 

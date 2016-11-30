@@ -60,7 +60,7 @@ typedef enum : NSUInteger {
 
 
 /** 最热评论 */
-@property (nonatomic, strong) NSArray<BDJPostCommentModel *> *top_cmt;
+@property (nonatomic, strong) BDJPostCommentModel *top_cmt;
 
 /** 转发数量 */
 @property (nonatomic, assign) NSInteger  repost;

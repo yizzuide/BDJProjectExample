@@ -24,9 +24,14 @@ static NSMapTable *_mapTable;
  */
 static NSMutableArray *_keyArr;
 /**
- *  跟踪将要发起跳转的路由
+ *  跟踪一个将要发起跳转动作的路由
  */
 static NSHashTable *_trackActionRoutingTable;
+
+/**
+ * 存储共享路由
+ */
+static NSMapTable *_sharedRoutingTable;
 
 + (void)initialize
 {
@@ -35,6 +40,7 @@ static NSHashTable *_trackActionRoutingTable;
         _keyArr = [NSMutableArray array];
         
         _trackActionRoutingTable = [NSHashTable weakObjectsHashTable];
+        _sharedRoutingTable =[NSMapTable mapTableWithKeyOptions:NSPointerFunctionsCopyIn valueOptions:NSPointerFunctionsWeakMemory];
     }
 }
 
@@ -65,6 +71,17 @@ static NSHashTable *_trackActionRoutingTable;
 + (XFRouting *)currentActionRouting
 {
     return [_trackActionRoutingTable anyObject];
+}
+
++ (void)setSharedRounting:(XFRouting *)routing shareModule:(NSString *)moduleName
+{
+    [_sharedRoutingTable setObject:routing forKey:moduleName];
+}
+
++ (XFRouting *)sharedRoutingForShareModule:(NSString *)moduleName
+{
+    if (!moduleName) return nil;
+    return [_sharedRoutingTable objectForKey:moduleName];
 }
 
 #pragma mark - 模块通信

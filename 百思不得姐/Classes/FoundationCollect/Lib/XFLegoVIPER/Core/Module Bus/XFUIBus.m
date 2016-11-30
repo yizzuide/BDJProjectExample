@@ -68,7 +68,7 @@
     }];
 }
 
-// 跟踪当前要跳转的路由
+// 跟踪当前要跳转的路由,用于对共享的路由URL匹配
 - (void)_trackRouting
 {
     [XFRoutingLinkManager setCurrentActionRounting:self.fromRouting];

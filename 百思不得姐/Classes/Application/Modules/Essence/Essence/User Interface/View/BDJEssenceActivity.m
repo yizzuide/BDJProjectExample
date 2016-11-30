@@ -136,8 +136,17 @@
 #pragma mark - Action
 - (void)scrollIndicatorWithButton:(UIButton *)button
 {
-    self.seletedTabBtn.enabled = YES;
+    // 告诉事件层的当前UI事件
+    [EventHandler didScrollIndicatorAction];
+    // 重置按钮状态
+    NSUInteger count = self.headerBar.subviews.count - 1;
+    for (int i = 0; i < count; i++) {
+        UIButton *btnItem = self.headerBar.subviews[i];
+        btnItem.enabled = YES;
+    }
+    // 设置当前状态
     button.enabled = NO;
+    
     // 第一个不让其有动画
     if (self.seletedTabBtn == button) {
         self.indicator.width = button.titleLabel.width;
@@ -166,7 +175,8 @@
     // 添加对应位置上的视图
     NSInteger index = scrollView.contentOffset.x / scrollView.width;
     XFActivity *activity = self.childViewControllers[index];
-    activity.view.x = scrollView.contentOffset.x;
+    // 注意：这里不能用scrollView.contentOffset.x来赋值，不然在快速切换时会有页面残留问题
+    activity.view.x = index * ScreenSize.width;
     activity.view.y = 0;// 设置控制器view的y值为0(控制器的Y值默认都是20<这是从IOS6这前的定的值，IOS7以后系统添加时会自动重新设置来全屏显示，如果是自己创建出来显示，要手动设置>)
     activity.view.height = scrollView.height; // 设置控制器view的height值为整个屏幕的高度(由于控制器的Y值默认都是20，所以就少了20的高度)
     [scrollView addSubview:activity.view];

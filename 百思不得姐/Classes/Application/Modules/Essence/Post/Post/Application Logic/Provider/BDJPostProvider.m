@@ -49,8 +49,8 @@
         renderItem.sina_v = postModel.sina_v;
         renderItem.text = postModel.text;
         // 最热一条评论
-        if(postModel.top_cmt.count){
-            BDJPostCommentModel *commentModel = postModel.top_cmt.firstObject;
+        if(postModel.top_cmt){
+            BDJPostCommentModel *commentModel = postModel.top_cmt;
             renderItem.hotCmtUserName = commentModel.user.username;
             renderItem.hotCmtContent = commentModel.content;
         }

@@ -11,7 +11,6 @@
 #import "BDJPostCommentUserInterfacePort.h"
 #import "BDJPostCommentInteractorPort.h"
 #import "ReactiveCocoa.h"
-#import "BDJPostRenderItem.h"
 
 
 #define Interactor XFConvertInteractorToType(id<BDJPostCommentInteractorPort>)

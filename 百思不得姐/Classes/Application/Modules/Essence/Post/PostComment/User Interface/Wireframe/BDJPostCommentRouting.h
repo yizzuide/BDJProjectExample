@@ -9,7 +9,8 @@
 #import <Foundation/Foundation.h>
 #import "XFRouting.h"
 #import "BDJPostCommentWireframePort.h"
+#import "BDJPostRouting.h"
 
-@interface BDJPostCommentRouting : XFRouting <BDJPostCommentWireFramePort>
+@interface BDJPostCommentRouting : BDJPostRouting <BDJPostCommentWireFramePort>
 
 @end

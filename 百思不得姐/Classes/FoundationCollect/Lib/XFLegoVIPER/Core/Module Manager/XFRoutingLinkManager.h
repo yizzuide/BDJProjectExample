@@ -41,6 +41,22 @@
 + (XFRouting *)currentActionRouting;
 
 /**
+ *  存储共享路由
+ *
+ *  @param routing    路由
+ *  @param moduleName 共享模块名
+ */
++ (void)setSharedRounting:(XFRouting *)routing shareModule:(NSString *)moduleName;
+
+/**
+ *  返回共享路由
+ *
+ *  @param moduleName 共享模块名
+ *
+ */
++ (XFRouting *)sharedRoutingForShareModule:(NSString *)moduleName;
+
+/**
  *  总数
  *
  *  @return 路由个数

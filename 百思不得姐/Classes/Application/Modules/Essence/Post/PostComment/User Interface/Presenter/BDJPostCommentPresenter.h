@@ -8,9 +8,10 @@
 
 #import "BDJPostCommentEventHandlerPort.h"
 #import "XFPresenter.h"
+#import "BDJPostPresenter.h"
 
 
-@interface BDJPostCommentPresenter : XFPresenter <BDJPostCommentEventHandlerPort>
+@interface BDJPostCommentPresenter : BDJPostPresenter <BDJPostCommentEventHandlerPort>
 
 
 @end
