@@ -80,7 +80,7 @@
 
 - (void)didPictureViewClick
 {
-    [EventHandler didPictureViewClickAction:self];
+    [EventHandler didPictureViewClickActionWithExpressPiece:self.expressPiece];
 }
 
 @end

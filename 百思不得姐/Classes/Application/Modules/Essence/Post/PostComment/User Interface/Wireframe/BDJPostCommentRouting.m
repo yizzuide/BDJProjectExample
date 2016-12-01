@@ -14,4 +14,8 @@
 // 组装模块
 XF_AutoAssemblyModule_Fast
 
+- (void)dealloc
+{
+    XF_Debug_M();
+}
 @end

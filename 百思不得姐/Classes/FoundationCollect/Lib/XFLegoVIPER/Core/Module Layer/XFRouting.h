@@ -21,7 +21,11 @@
 
 // 快速注入模块成分-导航方式
 #define XF_InjectModuleWith_Nav(_NavigatorClass_,_ActivityClass_,_PresenterClass_,_InteractorClass_,_DataManagerClass_) \
-+ (instancetype)routing \
++ (void)load \
+{ \
+    [XFRoutingReflect inspectModulePrefixFromClass:self]; \
+} \
++ (instancetype)assembleRouting \
 { \
     return [[super routing].assembly buildModulesAssemblyWithActivityClass:_ActivityClass_ \
                                                    navigatorClass:_NavigatorClass_ \
@@ -29,37 +33,52 @@
                                                   interactorClass:_InteractorClass_ \
                                                  dataManagerClass:_DataManagerClass_]; \
 }
-// 快速注入模块成分-子界面方式
+
+// 快速注入模块成分-子界面方式（全自定义组装常用方式）
 #define XF_InjectModuleWith_Act(_ActivityClass_,_PresenterClass_,_InteractorClass_,_DataManagerClass_) \
 XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_DataManagerClass_)
+
 // 快速注入模块成分-ib方式
 #define XF_InjectModuleWith_IB(ibSymbol,_PresenterClass_,_InteractorClass_,_DataManagerClass_) \
-+ (instancetype)routing \
++ (void)load \
+{ \
+    [XFRoutingReflect inspectModulePrefixFromClass:self]; \
+} \
++ (instancetype)assembleRouting \
 { \
     return [[super routing].assembly buildModulesAssemblyWithIB:ibSymbol presenterClass:_PresenterClass_ interactorClass:_InteractorClass_ dataManagerClass:_DataManagerClass_]; \
 }
 
 
-// 自动组装模块成分
+// 自动组装模块成分基本方法（不适用直接使用）
 #define XF_AutoAssemblyModule(NavName,IBSymbol,ShareDataManagerName) \
 + (void)load \
 { \
     [XFRoutingReflect inspectModulePrefixFromClass:self]; \
 } \
-+ (instancetype)routing \
++ (instancetype)assembleRouting \
 { \
     return [[super routing].assembly autoAssemblyModuleWithNav:NavName ibSymbol:IBSymbol shareDataManagerName:ShareDataManagerName]; \
 }
 // 自动组装一个无Nav的模块成分
+// 有共享其它模块DataManager的
 #define XF_AutoAssemblyModule_ShareDM(ShareDataManagerName) XF_AutoAssemblyModule(nil,nil,ShareDataManagerName)
+// 无共享其它模块DataManager（全自动组装方式中最常用）
 #define XF_AutoAssemblyModule_Fast XF_AutoAssemblyModule_ShareDM(nil)
 
 // 自动组装一个有Nav模块成分
+// 有自定义导航和共享其它模块DataManager的
 #define XF_AutoAssemblyModuleWithNav_ShareDM(NavName,ShareDataManagerName) XF_AutoAssemblyModule(NavName,nil,ShareDataManagerName)
+// 有自定义导航和无共享其它模块DataManager的
 #define XF_AutoAssemblyModuleWithNav(NavName) XF_AutoAssemblyModuleWithNav_ShareDM(NavName,nil)
-// 根据项目模块前辍自动组装一个有Nav模块成分
+
+// 根据项目模块前辍自动组装一个有Nav模块成分（全自动组装方式中较常用）
 #define XF_AutoAssemblyModuleWithNav_Fast \
-+ (instancetype)routing \
++ (void)load \
+{ \
+    [XFRoutingReflect inspectModulePrefixFromClass:self]; \
+} \
++ (instancetype)assembleRouting \
 { \
     return [[super routing].assembly autoAssemblyModuleWithPrefixNav]; \
 }
@@ -69,15 +88,11 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 #define XF_AutoAssemblyModuleFormIB(IBSymbol) XF_AutoAssemblyModuleFormIB_ShareDM(IBSymbol,nil)
 
 
-// 自动组装一个基于其它模块成分类型的模块
+// 自动组装一个基于其它模块成分类型的模块（全自动组装方式中常用）
 #define XF_AutoAssemblyModuleFromShareModuleName(shareModuleName) \
-+ (instancetype)routing \
++ (instancetype)assembleRouting \
 { \
-    XFRouting *routing = [[self alloc] init]; \
-    [routing setValue:[[XFModuleAssembly alloc] initWithFromRouting:routing] forKey:@"assembly"]; \
-    [routing setValue:[[XFUIBus alloc] initWithFromRouting:routing] forKey:@"uiBus"]; \
-    [routing setValue:[[XFEventBus alloc] initWithFromRouting:routing] forKey:@"eventBus"]; \
-    return [routing.assembly autoAssemblyModuleFromShareModuleName:shareModuleName]; \
+    return [[super routing].assembly autoAssemblyModuleFromShareModuleName:shareModuleName]; \
 }
 
 
@@ -178,11 +193,18 @@ XF_Present_URLComponent_(urlString,{})
 @property (nonatomic, strong, readonly) NSMutableArray<__kindof XFRouting *> *childRoutings;
 
 /**
- *  组装当前路由
+ *  返回初始路由对象（默认包含路由的组装器、UI总线、Event总线）
  *
  *  @return 路由
  */
 + (instancetype)routing;
+
+/**
+ *  从路由组装当前模块各层（这是一个抽象方法，子类必需覆盖实现组装方式）
+ *
+ *  @return 组装完成的路由
+ */
++ (instancetype)assembleRouting;
 
 /**
  *  添加子路由

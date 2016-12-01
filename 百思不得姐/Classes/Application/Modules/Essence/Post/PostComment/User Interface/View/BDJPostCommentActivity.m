@@ -91,7 +91,9 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
 - (void)bindViewData {
     
     // 侦听数据包
+    XF_Define_Weak
     [RACObserve(self.eventHandler, expressPack) subscribeNext:^(id x) {
+        XF_Define_Strong
         if (x) {
             [self.tableView.mj_header endRefreshing];
             [self.tableView reloadData];

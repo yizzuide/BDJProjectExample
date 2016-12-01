@@ -84,8 +84,9 @@ static NSString * const Identifier = @"PostCell";
     //XF_$_(self.textField, text, EventHandler, text)
     // 绑定事件层按钮命令
     //XF_C_(self.btn, EventHandler, Command)
-    
+    XF_Define_Weak
     [RACObserve(self.eventHandler, expressPack) subscribeNext:^(id x) {
+        XF_Define_Strong
         // 如果有显示数据加载完成
         if (x) {
             [self.tableView reloadData];

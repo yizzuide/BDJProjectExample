@@ -65,6 +65,7 @@
 
 @implementation XFRouting
 
+#pragma mark - 初始化
 + (instancetype)routing
 {
     XFRouting *routing = [[self alloc] init];
@@ -72,6 +73,13 @@
     routing.uiBus = [[XFUIBus alloc] initWithFromRouting:routing];
     routing.eventBus = [[XFEventBus alloc] initWithFromRouting:routing];
     return routing;
+}
+
+// **子类要自己实现组装当前模块方式**
++ (instancetype)assembleRouting
+{
+    NSAssert(NO, @"当前子类没有覆盖当前方法以实现组装模块方式");
+    return nil;
 }
 
 #pragma mark - 子路由管理

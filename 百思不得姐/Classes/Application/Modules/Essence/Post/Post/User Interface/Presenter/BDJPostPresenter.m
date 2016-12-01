@@ -68,10 +68,10 @@
     }];
 }
 
-- (void)didPictureViewClickAction:(BDJPostPictureView *)PictureView
+- (void)didPictureViewClickActionWithExpressPiece:(XFExpressPiece *)expressPiece
 {
     // 预设要传过去的参数对象
-    self.intentData = PictureView.expressPiece.renderItem;
+    self.intentData = expressPiece.renderItem;
     [Routing transition2PostPictureBrowse];
 }
 

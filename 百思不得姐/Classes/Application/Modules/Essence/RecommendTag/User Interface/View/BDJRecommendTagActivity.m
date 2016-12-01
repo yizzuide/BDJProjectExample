@@ -54,7 +54,9 @@ static NSString * const Identifier = @"RCTagCell";
     //XF_C_(self.btn, EventHandler, Command)
     
     [SVProgressHUD show];
+    XF_Define_Weak
     [RACObserve(self.eventHandler, expressPack) subscribeNext:^(id x) {
+        XF_Define_Strong
         if (x) {
             [SVProgressHUD dismiss];
             [self.tableView reloadData];
@@ -88,4 +90,8 @@ static NSString * const Identifier = @"RCTagCell";
     [SVProgressHUD popActivity];
 }
 
+- (void)dealloc
+{
+    XF_Debug_M();
+}
 @end

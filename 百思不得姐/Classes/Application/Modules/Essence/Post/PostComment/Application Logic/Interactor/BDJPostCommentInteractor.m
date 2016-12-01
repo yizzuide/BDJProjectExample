@@ -42,5 +42,8 @@
 
 #pragma mark - ConvertData
 
-
+- (void)dealloc
+{
+    XF_Debug_M();
+}
 @end

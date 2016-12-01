@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "XFEventHandlerPort.h"
 
-@class BDJPostPictureView;
+@class XFExpressPiece;
 @protocol BDJPostCommentEventHandlerPort <XFEventHandlerPort>
 
 - (void)didPostCommentHeaderRefresh;

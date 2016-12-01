@@ -13,5 +13,4 @@
 
 @interface BDJPostCommentPresenter : BDJPostPresenter <BDJPostCommentEventHandlerPort>
 
-
 @end

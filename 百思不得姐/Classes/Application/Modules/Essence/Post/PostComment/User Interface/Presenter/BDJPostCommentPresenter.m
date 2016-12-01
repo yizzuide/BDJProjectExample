@@ -46,7 +46,6 @@
     })
     
     XF_EventIs_(ET_PostSelected, {
-        LogWarning(@"%@",intentData);
         // 叫业务层缓存这个帖子ID
         [Interactor cachePostID:intentData];
     })
@@ -63,5 +62,8 @@
 
 #pragma mark - ValidData
 
-
+- (void)dealloc
+{
+    XF_Debug_M();
+}
 @end

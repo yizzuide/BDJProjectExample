@@ -9,13 +9,13 @@
 #import <Foundation/Foundation.h>
 #import "XFEventHandlerPort.h"
 
-@class BDJPostPictureView;
+@class XFExpressPiece;
 @protocol BDJPostEventHandlerPort <XFEventHandlerPort>
 
 - (void)didHeaderRefreshAction;
 - (RACSignal *)didFooterRefreshAction;
 
-- (void)didPictureViewClickAction:(BDJPostPictureView *)PictureView;
+- (void)didPictureViewClickActionWithExpressPiece:(XFExpressPiece *)expressPiece;
 
 - (void)didPostCellSelectedActionAtIndex:(NSInteger)index;
 @end

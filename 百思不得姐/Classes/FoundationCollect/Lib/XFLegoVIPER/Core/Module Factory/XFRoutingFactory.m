@@ -29,7 +29,7 @@
     NSString *routingClassName = [NSString stringWithFormat:@"%@%@%@",prefixName,moduleName,@"Routing"];
     Class routingClass = NSClassFromString(routingClassName);
     if (routingClass) {
-        return [routingClass routing];
+        return [routingClass assembleRouting];
     }
     return nil;
 }
@@ -47,7 +47,7 @@
             NSString *routingClassName = [NSString stringWithFormat:@"%@%@%@",prefixName,moduleName,@"Routing"];
             routingClass = NSClassFromString(routingClassName);
             if (routingClass) {
-                subRouting = [routingClass routing];
+                subRouting = [routingClass assembleRouting];
                 break;
             }
         } while (1);
