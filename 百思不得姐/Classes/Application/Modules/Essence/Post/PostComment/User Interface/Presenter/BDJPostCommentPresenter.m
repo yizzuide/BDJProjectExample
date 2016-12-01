@@ -30,8 +30,35 @@
     [Interface fillPostExpressPiece:intentData];
 }
 
-#pragma mark - DoAction
+- (void)registerMVxNotifactions
+{
+    // 注册键盘通知
+    XF_RegisterMVxNotis_(@[UIKeyboardWillChangeFrameNotification])
+}
 
+// 接收
+- (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
+{
+    XF_EventIs_(UIKeyboardWillChangeFrameNotification, {
+        NSDictionary *dict = intentData;
+        CGFloat y = ScreenSize.height - [dict[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
+        [Interface needUpdateInputBarY:y durationTime:[dict[UIKeyboardAnimationDurationUserInfoKey] floatValue]];
+    })
+    
+    XF_EventIs_(ET_PostSelected, {
+        LogWarning(@"%@",intentData);
+        // 叫业务层缓存这个帖子ID
+        [Interactor cachePostID:intentData];
+    })
+}
+
+#pragma mark - DoAction
+- (void)didPostCommentHeaderRefresh
+{
+    [[Interactor fetchPostComments] subscribeNext:^(XFRenderData *renderData) {
+        XF_SetExpressPack_Fast(renderData)
+    }];
+}
 
 
 #pragma mark - ValidData

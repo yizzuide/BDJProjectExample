@@ -19,6 +19,8 @@ DefConstInt R_Color_CellBkg = R_Color_SectionSeparator;
 DefConstInt R_Color_CellLine = R_Color_Section;
 DefConstInt R_Color_CellDetailText = R_Color_CellLine;
 
+DefConstInt R_Color_PostCmtSectionHeaderTitle = 0x434343;
+
 
 
 

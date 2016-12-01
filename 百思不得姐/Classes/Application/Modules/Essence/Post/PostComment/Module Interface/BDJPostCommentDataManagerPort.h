@@ -11,5 +11,5 @@
 
 @protocol BDJPostCommentDataManagerPort <XFDataManagerPort>
 
-
+- (RACSignal *)grabPostCommentsWithPostID:(NSString *)ID;
 @end

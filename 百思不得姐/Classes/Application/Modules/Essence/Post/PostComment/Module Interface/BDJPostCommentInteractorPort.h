@@ -11,4 +11,6 @@
 
 @protocol BDJPostCommentInteractorPort <XFInteractorPort>
 
+- (void)cachePostID:(NSString *)ID;
+- (RACSignal *)fetchPostComments;
 @end

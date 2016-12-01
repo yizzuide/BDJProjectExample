@@ -80,6 +80,18 @@
     [self waitForExpectationsWithTimeout:3 handler:nil];
 }
 
+- (void)testPostComment
+{
+    XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch PostComments should succeed"];
+    BDJPostService *postService = [[BDJPostService alloc] init];
+    [[postService pullPostCommentsWithPostID:@"22236861"] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        XCTAssertNotNil(x,@"数据返回失败！");
+        [networkSuccessExpectation fulfill];
+    }];
+     [self waitForExpectationsWithTimeout:3 handler:nil];
+}
+
 - (void)testPerformanceExample {
     // This is an example of a performance test case.
     [self measureBlock:^{

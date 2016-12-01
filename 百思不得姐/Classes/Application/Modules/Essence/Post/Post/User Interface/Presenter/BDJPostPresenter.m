@@ -32,9 +32,9 @@
 // 接受到组件事件
 - (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
 {
-    XF_EventIs_(@"ScrollIndicatorEvent", {
-        [Interface needEndRefreshState];
-    })
+    /*XF_EventIs_(ET_PostPostScrollIndicator, {
+        
+    })*/
 }
 
 #pragma mark - DoAction
@@ -87,9 +87,11 @@
         [self.expressPack reMeasureFrameForExpressPiece:self.intentData];
     }
     // 查找帖子ID
-    [Interactor fetchPostIDForIndex:index type:BDJ_Post_Str2Type(XF_ModuleName)];
+    NSString *PostID = [Interactor fetchPostIDForIndex:index type:BDJ_Post_Str2Type(XF_ModuleName)];
     // 切换到评论
     [Routing transition2PostComment];
+    // 发送选择帖子ID事件
+    XF_SendEventForModule_(@"PostComment", ET_PostSelected, PostID)
 }
 
 #pragma mark - ValidData

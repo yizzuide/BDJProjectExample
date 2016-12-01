@@ -124,15 +124,7 @@ static NSString * const Identifier = @"PostCell";
 
 
 #pragma mark - Change UI Action
-- (void)needEndRefreshState
-{
-    if (self.tableView.mj_header.isRefreshing) {
-        [self.tableView.mj_header endRefreshing];
-    }
-    if (self.tableView.mj_footer.isRefreshing) {
-        [self.tableView.mj_footer endRefreshing];
-    }
-}
+
 
 #pragma mark - Getter
 

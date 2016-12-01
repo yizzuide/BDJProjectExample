@@ -10,6 +10,7 @@
 #import "BDJHttpRequest.h"
 #import "BDJAPI.h"
 #import "MJExtension.h"
+#import "BDJMetaPostCmtModel.h"
 
 @implementation BDJPostService
 
@@ -42,6 +43,22 @@
                                          }]
             map:^id(RACTuple *tuple) {
                 return [BDJMetaPostModel mj_objectWithKeyValues:tuple.first];
+            }];
+}
+
+- (RACSignal *)pullPostCommentsWithPostID:(NSString *)ID
+{
+    return [[BDJHttpRequest getWithURL:API_Main
+                                params:@{
+                                         @"a":@"dataList",
+                                         @"c":@"comment",
+                                         @"data_id":ID,
+                                         @"hot":@"1",
+                                         }]
+            map:^id(RACTuple *tuple) {
+                /*NSDictionary *dict = tuple.first;
+                [dict writeToFile:@"/Users/yizzuide/Desktop/PostComment.plist" atomically:YES];*/
+                return [BDJMetaPostCmtModel mj_objectWithKeyValues:tuple.first];
             }];
 }
 @end

@@ -27,4 +27,11 @@
  *
  */
 - (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType maxtime:(NSInteger)maxtime atPage:(NSInteger)page;
+/**
+ *  加载帖子评论
+ *
+ *  @param ID 帖子ID
+ *
+ */
+- (RACSignal *)pullPostCommentsWithPostID:(NSString *)ID;
 @end

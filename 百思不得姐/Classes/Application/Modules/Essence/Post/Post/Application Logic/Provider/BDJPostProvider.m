@@ -12,7 +12,7 @@
 #import "BDJPostRenderItem.h"
 #import "BDJPicturePostRenderItem.h"
 #import "BDJAVPostRenderItem.h"
-#import "BDJPostCommentModel.h"
+#import "BDJPostCmtModel.h"
 
 @implementation BDJPostProvider
 
@@ -50,7 +50,7 @@
         renderItem.text = postModel.text;
         // 最热一条评论
         if(postModel.top_cmt){
-            BDJPostCommentModel *commentModel = postModel.top_cmt;
+            BDJPostCmtModel *commentModel = postModel.top_cmt;
             renderItem.hotCmtUserName = commentModel.user.username;
             renderItem.hotCmtContent = commentModel.content;
         }

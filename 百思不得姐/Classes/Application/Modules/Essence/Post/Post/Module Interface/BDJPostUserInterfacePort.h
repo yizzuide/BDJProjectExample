@@ -11,5 +11,4 @@
 
 @protocol BDJPostUserInterfacePort <XFUserInterfacePort>
 
-- (void)needEndRefreshState;
 @end

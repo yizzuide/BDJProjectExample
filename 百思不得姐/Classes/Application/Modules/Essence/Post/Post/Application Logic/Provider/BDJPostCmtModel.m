@@ -6,9 +6,9 @@
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import "BDJPostCommentModel.h"
+#import "BDJPostCmtModel.h"
 
-@implementation BDJPostCommentModel
+@implementation BDJPostCmtModel
 
 + (NSDictionary *)mj_replacedKeyFromPropertyName
 {

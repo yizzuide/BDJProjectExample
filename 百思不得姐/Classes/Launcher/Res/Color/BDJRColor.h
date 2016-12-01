@@ -49,6 +49,11 @@ extern DefConstInt R_Color_CellLine;
  */
 extern DefConstInt R_Color_CellDetailText;
 
+/**
+ *  帖子评论列表Section标题
+ */
+extern DefConstInt R_Color_PostCmtSectionHeaderTitle;
+
 
 
 

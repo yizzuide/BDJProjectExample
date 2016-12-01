@@ -14,5 +14,5 @@
 
 - (RACSignal *)fetchPostsForType:(BDJPostCategoryType)postCategoryType;
 - (RACSignal *)fetchNextPagePostsForType:(BDJPostCategoryType)postCategoryType;
-- (NSInteger)fetchPostIDForIndex:(NSInteger)index type:(BDJPostCategoryType)postCategoryType;
+- (NSString *)fetchPostIDForIndex:(NSInteger)index type:(BDJPostCategoryType)postCategoryType;
 @end

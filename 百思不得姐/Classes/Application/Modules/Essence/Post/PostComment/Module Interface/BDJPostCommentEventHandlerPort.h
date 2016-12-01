@@ -12,4 +12,5 @@
 @class BDJPostPictureView;
 @protocol BDJPostCommentEventHandlerPort <XFEventHandlerPort>
 
+- (void)didPostCommentHeaderRefresh;
 @end

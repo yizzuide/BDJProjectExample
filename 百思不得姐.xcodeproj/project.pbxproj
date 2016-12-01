@@ -143,7 +143,7 @@
 		4005110D1DEC26DE00E402DE /* BDJPostVoiceView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4005110C1DEC26DE00E402DE /* BDJPostVoiceView.xib */; };
 		400511111DEC2C2800E402DE /* BDJPostVideoView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400511101DEC2C2800E402DE /* BDJPostVideoView.xib */; };
 		400511141DEC2FB900E402DE /* BDJPostVideoView.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511131DEC2FB900E402DE /* BDJPostVideoView.m */; };
-		400511181DED25B200E402DE /* BDJPostCommentModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511171DED25B200E402DE /* BDJPostCommentModel.m */; };
+		400511181DED25B200E402DE /* BDJPostCmtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511171DED25B200E402DE /* BDJPostCmtModel.m */; };
 		4005111B1DED25F400E402DE /* BDJUserModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005111A1DED25F400E402DE /* BDJUserModel.m */; };
 		4005115E1DED65EF00E402DE /* BDJPostCommentDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511481DED65EF00E402DE /* BDJPostCommentDataManager.m */; };
 		4005115F1DED65EF00E402DE /* BDJPostCommentInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005114B1DED65EF00E402DE /* BDJPostCommentInteractor.m */; };
@@ -151,6 +151,14 @@
 		400511611DED65EF00E402DE /* BDJPostCommentActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005115A1DED65EF00E402DE /* BDJPostCommentActivity.m */; };
 		400511621DED65EF00E402DE /* BDJPostCommentRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005115D1DED65EF00E402DE /* BDJPostCommentRouting.m */; };
 		400511641DED7D8A00E402DE /* BDJPostCommentActivity.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400511631DED7D8A00E402DE /* BDJPostCommentActivity.xib */; };
+		400511671DEECD4700E402DE /* BDJEventNotiKey.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511661DEECD4700E402DE /* BDJEventNotiKey.m */; };
+		4005116A1DEEDE5000E402DE /* BDJMetaPostCmtModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511691DEEDE5000E402DE /* BDJMetaPostCmtModel.m */; };
+		4005116D1DEEE5A600E402DE /* BDJPostCmtRenderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005116C1DEEE5A600E402DE /* BDJPostCmtRenderData.m */; };
+		400511701DEEE65500E402DE /* BDJPostCmtProvider.m in Sources */ = {isa = PBXBuildFile; fileRef = 4005116F1DEEE65500E402DE /* BDJPostCmtProvider.m */; };
+		400511731DEEE74500E402DE /* BDJPostCmtRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511721DEEE74500E402DE /* BDJPostCmtRenderItem.m */; };
+		400511761DEFC0EE00E402DE /* BDJPostCmtHeaderView.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511751DEFC0EE00E402DE /* BDJPostCmtHeaderView.m */; };
+		4005117A1DEFCBC800E402DE /* BDJPostCmtCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 400511781DEFCBC800E402DE /* BDJPostCmtCell.m */; };
+		4005117B1DEFCBC800E402DE /* BDJPostCmtCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 400511791DEFCBC800E402DE /* BDJPostCmtCell.xib */; };
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
@@ -481,8 +489,8 @@
 		400511121DEC2FB900E402DE /* BDJPostVideoView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostVideoView.h; sourceTree = "<group>"; };
 		400511131DEC2FB900E402DE /* BDJPostVideoView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostVideoView.m; sourceTree = "<group>"; };
 		400511151DEC447200E402DE /* XFExpressPiecePort.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = XFExpressPiecePort.h; sourceTree = "<group>"; };
-		400511161DED25B200E402DE /* BDJPostCommentModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCommentModel.h; sourceTree = "<group>"; };
-		400511171DED25B200E402DE /* BDJPostCommentModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCommentModel.m; sourceTree = "<group>"; };
+		400511161DED25B200E402DE /* BDJPostCmtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCmtModel.h; sourceTree = "<group>"; };
+		400511171DED25B200E402DE /* BDJPostCmtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCmtModel.m; sourceTree = "<group>"; };
 		400511191DED25F400E402DE /* BDJUserModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJUserModel.h; sourceTree = "<group>"; };
 		4005111A1DED25F400E402DE /* BDJUserModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJUserModel.m; sourceTree = "<group>"; };
 		400511471DED65EF00E402DE /* BDJPostCommentDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCommentDataManager.h; sourceTree = "<group>"; };
@@ -501,6 +509,21 @@
 		4005115C1DED65EF00E402DE /* BDJPostCommentRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCommentRouting.h; sourceTree = "<group>"; };
 		4005115D1DED65EF00E402DE /* BDJPostCommentRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCommentRouting.m; sourceTree = "<group>"; };
 		400511631DED7D8A00E402DE /* BDJPostCommentActivity.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDJPostCommentActivity.xib; sourceTree = "<group>"; };
+		400511651DEECD4700E402DE /* BDJEventNotiKey.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJEventNotiKey.h; sourceTree = "<group>"; };
+		400511661DEECD4700E402DE /* BDJEventNotiKey.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJEventNotiKey.m; sourceTree = "<group>"; };
+		400511681DEEDE5000E402DE /* BDJMetaPostCmtModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJMetaPostCmtModel.h; sourceTree = "<group>"; };
+		400511691DEEDE5000E402DE /* BDJMetaPostCmtModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJMetaPostCmtModel.m; sourceTree = "<group>"; };
+		4005116B1DEEE5A600E402DE /* BDJPostCmtRenderData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCmtRenderData.h; sourceTree = "<group>"; };
+		4005116C1DEEE5A600E402DE /* BDJPostCmtRenderData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCmtRenderData.m; sourceTree = "<group>"; };
+		4005116E1DEEE65500E402DE /* BDJPostCmtProvider.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCmtProvider.h; sourceTree = "<group>"; };
+		4005116F1DEEE65500E402DE /* BDJPostCmtProvider.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCmtProvider.m; sourceTree = "<group>"; };
+		400511711DEEE74500E402DE /* BDJPostCmtRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCmtRenderItem.h; sourceTree = "<group>"; };
+		400511721DEEE74500E402DE /* BDJPostCmtRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCmtRenderItem.m; sourceTree = "<group>"; };
+		400511741DEFC0EE00E402DE /* BDJPostCmtHeaderView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCmtHeaderView.h; sourceTree = "<group>"; };
+		400511751DEFC0EE00E402DE /* BDJPostCmtHeaderView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCmtHeaderView.m; sourceTree = "<group>"; };
+		400511771DEFCBC800E402DE /* BDJPostCmtCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPostCmtCell.h; sourceTree = "<group>"; };
+		400511781DEFCBC800E402DE /* BDJPostCmtCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJPostCmtCell.m; sourceTree = "<group>"; };
+		400511791DEFCBC800E402DE /* BDJPostCmtCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = BDJPostCmtCell.xib; sourceTree = "<group>"; };
 		402647811DDD45B3002EDD00 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402647831DDD45B3002EDD00 /* MainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTests.m; sourceTree = "<group>"; };
 		402647851DDD45B3002EDD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -760,8 +783,8 @@
 				40050EFC1DEB141600E402DE /* BDJPostModel.m */,
 				40050EFD1DEB141600E402DE /* BDJPostProvider.h */,
 				40050EFE1DEB141600E402DE /* BDJPostProvider.m */,
-				400511161DED25B200E402DE /* BDJPostCommentModel.h */,
-				400511171DED25B200E402DE /* BDJPostCommentModel.m */,
+				400511161DED25B200E402DE /* BDJPostCmtModel.h */,
+				400511171DED25B200E402DE /* BDJPostCmtModel.m */,
 				400511191DED25F400E402DE /* BDJUserModel.h */,
 				4005111A1DED25F400E402DE /* BDJUserModel.m */,
 			);
@@ -1894,6 +1917,8 @@
 		400510661DEB141700E402DE /* ConstKey */ = {
 			isa = PBXGroup;
 			children = (
+				400511651DEECD4700E402DE /* BDJEventNotiKey.h */,
+				400511661DEECD4700E402DE /* BDJEventNotiKey.m */,
 			);
 			path = ConstKey;
 			sourceTree = "<group>";
@@ -2015,6 +2040,10 @@
 		4005114C1DED65EF00E402DE /* Provider */ = {
 			isa = PBXGroup;
 			children = (
+				400511681DEEDE5000E402DE /* BDJMetaPostCmtModel.h */,
+				400511691DEEDE5000E402DE /* BDJMetaPostCmtModel.m */,
+				4005116E1DEEE65500E402DE /* BDJPostCmtProvider.h */,
+				4005116F1DEEE65500E402DE /* BDJPostCmtProvider.m */,
 			);
 			path = Provider;
 			sourceTree = "<group>";
@@ -2045,6 +2074,10 @@
 		400511541DED65EF00E402DE /* Express */ = {
 			isa = PBXGroup;
 			children = (
+				4005116B1DEEE5A600E402DE /* BDJPostCmtRenderData.h */,
+				4005116C1DEEE5A600E402DE /* BDJPostCmtRenderData.m */,
+				400511711DEEE74500E402DE /* BDJPostCmtRenderItem.h */,
+				400511721DEEE74500E402DE /* BDJPostCmtRenderItem.m */,
 			);
 			path = Express;
 			sourceTree = "<group>";
@@ -2064,6 +2097,11 @@
 				400511591DED65EF00E402DE /* BDJPostCommentActivity.h */,
 				4005115A1DED65EF00E402DE /* BDJPostCommentActivity.m */,
 				400511631DED7D8A00E402DE /* BDJPostCommentActivity.xib */,
+				400511741DEFC0EE00E402DE /* BDJPostCmtHeaderView.h */,
+				400511751DEFC0EE00E402DE /* BDJPostCmtHeaderView.m */,
+				400511771DEFCBC800E402DE /* BDJPostCmtCell.h */,
+				400511781DEFCBC800E402DE /* BDJPostCmtCell.m */,
+				400511791DEFCBC800E402DE /* BDJPostCmtCell.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -2248,6 +2286,7 @@
 				400511641DED7D8A00E402DE /* BDJPostCommentActivity.xib in Resources */,
 				400511111DEC2C2800E402DE /* BDJPostVideoView.xib in Resources */,
 				400510A81DEB141700E402DE /* BDJRCTagCell.xib in Resources */,
+				4005117B1DEFCBC800E402DE /* BDJPostCmtCell.xib in Resources */,
 				400510C21DEB141700E402DE /* BDJFriendTrendsActivity.xib in Resources */,
 				400510B61DEB141700E402DE /* BDJFriendsRecommentActivity.xib in Resources */,
 				400510821DEB141700E402DE /* BDJPushGuideView.xib in Resources */,
@@ -2402,12 +2441,14 @@
 				400510CA1DEB141700E402DE /* BDJMeInteractor.m in Sources */,
 				400510DD1DEB141700E402DE /* UIImage+Size.m in Sources */,
 				400510FC1DEB141700E402DE /* BDJAPPLoader.m in Sources */,
+				400511761DEFC0EE00E402DE /* BDJPostCmtHeaderView.m in Sources */,
 				400510951DEB141700E402DE /* BDJPostCell.m in Sources */,
 				400510FD1DEB141700E402DE /* BDJPushGuideLoader.m in Sources */,
 				400510E61DEB141700E402DE /* XFRenderItem.m in Sources */,
 				400510881DEB141700E402DE /* BDJPostDataManager.m in Sources */,
 				400510E21DEB141700E402DE /* XFUIBus.m in Sources */,
 				400510AA1DEB141700E402DE /* BDJRecommendTagRouting.m in Sources */,
+				4005117A1DEFCBC800E402DE /* BDJPostCmtCell.m in Sources */,
 				4005108D1DEB141700E402DE /* BDJPostProvider.m in Sources */,
 				4005115E1DED65EF00E402DE /* BDJPostCommentDataManager.m in Sources */,
 				400510F31DEB141700E402DE /* NSObject+XFLegoCopy.m in Sources */,
@@ -2438,9 +2479,11 @@
 				400510971DEB141700E402DE /* BDJPostPictureView.m in Sources */,
 				400510911DEB141700E402DE /* BDJPostFrame.m in Sources */,
 				400510931DEB141700E402DE /* BDJPostPresenter.m in Sources */,
+				400511731DEEE74500E402DE /* BDJPostCmtRenderItem.m in Sources */,
 				400510E01DEB141700E402DE /* XFEventBus.m in Sources */,
 				400510EA1DEB141700E402DE /* UIView+XFLego.m in Sources */,
 				400510EC1DEB141700E402DE /* XFActivity.m in Sources */,
+				400511701DEEE65500E402DE /* BDJPostCmtProvider.m in Sources */,
 				400510CD1DEB141700E402DE /* BDJMeRouting.m in Sources */,
 				400510D01DEB141700E402DE /* BDJNewPresenter.m in Sources */,
 				400510C51DEB141700E402DE /* BDJIndexTabInteractor.m in Sources */,
@@ -2468,17 +2511,20 @@
 				400510C01DEB141700E402DE /* BDJFriendTrendsPresenter.m in Sources */,
 				400510851DEB141700E402DE /* BDJEssencePresenter.m in Sources */,
 				400510A21DEB141700E402DE /* BDJRecommendTagInteractor.m in Sources */,
+				4005116D1DEEE5A600E402DE /* BDJPostCmtRenderData.m in Sources */,
 				400510A91DEB141700E402DE /* BDJRecommendTagActivity.m in Sources */,
 				400510BE1DEB141700E402DE /* BDJFriendTrendsDataManager.m in Sources */,
 				400510B91DEB141700E402DE /* BDJRecommendCategoryCell.m in Sources */,
 				400510AE1DEB141700E402DE /* BDJRecommandUserGroupModel.m in Sources */,
 				400510D21DEB141700E402DE /* BDJNewRouting.m in Sources */,
+				400511671DEECD4700E402DE /* BDJEventNotiKey.m in Sources */,
 				400510D71DEB141700E402DE /* BDJPostService.m in Sources */,
 				400510A71DEB141700E402DE /* BDJRCTagCell.m in Sources */,
 				400510D91DEB141700E402DE /* BDJHttpRequest.m in Sources */,
+				4005116A1DEEDE5000E402DE /* BDJMetaPostCmtModel.m in Sources */,
 				400510E91DEB141700E402DE /* XFRoutingFactory.m in Sources */,
 				400510C81DEB141700E402DE /* BDJIndexTabRouting.m in Sources */,
-				400511181DED25B200E402DE /* BDJPostCommentModel.m in Sources */,
+				400511181DED25B200E402DE /* BDJPostCmtModel.m in Sources */,
 				400510F61DEB141700E402DE /* RACSignal+ErrorAlter.m in Sources */,
 				4005109A1DEB141700E402DE /* BDJPicturePostRouting.m in Sources */,
 				4005108F1DEB141700E402DE /* BDJPicturePostRenderItem.m in Sources */,

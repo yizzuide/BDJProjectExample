@@ -155,6 +155,21 @@
     }
 }
 
+- (IBAction)moreBtnAction {
+   UIAlertController *alertController = [UIAlertController alertControllerWithTitle:nil message:nil preferredStyle:UIAlertControllerStyleActionSheet];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"收藏" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
+        LogWarning(@"%@",action.title);
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"举报" style:UIAlertActionStyleDestructive handler:^(UIAlertAction * _Nonnull action) {
+        LogWarning(@"%@",action.title);
+    }]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+        LogWarning(@"%@",action.title);
+    }]];
+    [self.window.rootViewController presentViewController: alertController animated: YES completion: nil];
+}
+
+
 - (BDJPostPictureView *)pictureView {
 	if(_pictureView == nil) {
 		BDJPostPictureView *pictureView = [BDJPostPictureView postPictureView];

@@ -9,22 +9,25 @@
 #import <Foundation/Foundation.h>
 #import "BDJUserModel.h"
 
-@interface BDJPostCommentModel : NSObject
+@interface BDJPostCmtModel : NSObject
 
-/** 评论id */
+/** 评论ID */
 @property (nonatomic, assign) NSInteger  ID;
 
-/** precid */
+/** 引用评论ID */
 @property (nonatomic, assign) NSInteger  precid;
+
+/** 引用评论 */
+@property (nonatomic, strong) BDJPostCmtModel *precmt;
+
+/** 引用评论的用户ID */
+@property (nonatomic, assign) NSInteger  preuid;
 
 /** 评论用户 */
 @property (nonatomic, strong) BDJUserModel * user;
 
 /** data_id */
 @property (nonatomic, assign) NSInteger  data_id;
-
-/** precmt */
-@property (nonatomic, strong) NSArray* precmt;
 
 /** 评论类型 文本类型：29 */
 @property (nonatomic, assign) NSInteger  cmt_type;
@@ -40,9 +43,6 @@
 
 /** 语音URL */
 @property (nonatomic, copy) NSString* voiceuri;
-
-/** preuid */
-@property (nonatomic, assign) NSInteger  preuid;
 
 /** 状态 */
 @property (nonatomic, assign) NSInteger  status;

@@ -8,11 +8,25 @@
 
 
 #import "BDJPostCommentDataManager.h"
+#import "BDJPostService.h"
+
 
 @interface BDJPostCommentDataManager ()
-
+@property (nonatomic, strong) BDJPostService *postService;
 @end
 
 @implementation BDJPostCommentDataManager
+
+- (RACSignal *)grabPostCommentsWithPostID:(NSString *)ID
+{
+    return [self.postService pullPostCommentsWithPostID:ID];
+}
+
+- (BDJPostService *)postService {
+	if(_postService == nil) {
+		_postService = [[BDJPostService alloc] init];
+	}
+	return _postService;
+}
 
 @end

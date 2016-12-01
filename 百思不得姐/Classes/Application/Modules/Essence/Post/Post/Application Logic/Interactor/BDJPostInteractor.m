@@ -49,7 +49,7 @@
     
 }
 
-- (NSInteger)fetchPostIDForIndex:(NSInteger)index type:(BDJPostCategoryType)postCategoryType
+- (NSString *)fetchPostIDForIndex:(NSInteger)index type:(BDJPostCategoryType)postCategoryType
 {
     BDJMetaPostModel *metaPostModel = [self.postMap objectForKey:BDJ_Post_type2Type(postCategoryType)];
     return metaPostModel.list[index].ID;

@@ -44,6 +44,10 @@ extern DefConstInt R_Height_PostPictureMax;
 extern DefConstInt R_Height_PostPictureBreak;
 /*浏览长图最高长度*/
 extern DefConstInt R_Height_PostPictureBrowseBreak;
+/*帖子评论输入工具条 */
+extern DefConstInt R_Height_PostInputBar;
+/*帖子评论列表Section高*/
+extern DefConstInt R_Height_PostCommentTableViewSectionHeader;
 
 
 

@@ -31,7 +31,6 @@
     XF_CEXE_Begin
     // 当命令触发时执行代码
     XF_CEXE_(self.tagCommand, {
-//        NSLog(@"tagButtonClick!");
         [Routing transition2RecommendTag];
         
     })
@@ -43,8 +42,8 @@
 - (void)didScrollIndicatorAction
 {
     // 给帖子发模块事件，即使这些都是共享模块<只有路由的模块壳>，也要分别写明，而不能直接用"Post"
-    NSArray *modules = @[@"AllPost",@"PicturePost",@"VideoPost",@"VoicePost",@"WordsPost"];
-    XF_SendEventForModules_(modules, @"ScrollIndicatorEvent", nil)
+//    NSArray *modules = @[@"AllPost",@"PicturePost",@"VideoPost",@"VoicePost",@"WordsPost"];
+//    XF_SendEventForModules_(modules, ET_PostPostScrollIndicator, nil)
 }
 
 

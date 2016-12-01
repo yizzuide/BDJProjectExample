@@ -8,21 +8,33 @@
 
 #import "BDJPostCommentInteractor.h"
 #import "BDJPostCommentDataManagerPort.h"
+#import "BDJMetaPostCmtModel.h"
+#import "BDJPostCmtProvider.h"
 
 #define DataManager XFConvertDataManagerToType(id<BDJPostCommentDataManagerPort>)
 
 @interface BDJPostCommentInteractor ()
 
+@property (nonatomic, strong) BDJMetaPostCmtModel *metaPostCmtModel;
+@property (nonatomic, copy) NSString *postID;
 @end
 
 @implementation BDJPostCommentInteractor
 
 #pragma mark - Request
-/*- (RACSignal *)fetchData
+
+- (void)cachePostID:(NSString *)ID
 {
-    [DataManager setPrefKey:@"PK_User_id" value:@"123"];
-    return [RACSignal return:@""];
-}*/
+    self.postID = ID;
+}
+
+- (RACSignal *)fetchPostComments
+{
+    return [[DataManager grabPostCommentsWithPostID:self.postID] map:^id(BDJMetaPostCmtModel *metaPostCmtModel) {
+        self.metaPostCmtModel = metaPostCmtModel;
+        return [BDJPostCmtProvider collectRenderDataFromModel:metaPostCmtModel];
+    }];
+}
 
 
 #pragma mark - BusinessReduce

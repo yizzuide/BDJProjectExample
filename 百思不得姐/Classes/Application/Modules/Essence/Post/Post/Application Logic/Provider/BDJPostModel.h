@@ -7,7 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "BDJPostCommentModel.h"
+#import "BDJPostCmtModel.h"
 
 /** 帖子的类型，1为全部 10为图片 29为段子 31为音频 41为视频 */
 typedef enum : NSUInteger {
@@ -41,7 +41,7 @@ typedef enum : NSUInteger {
 
 
 /** 帖子ID */
-@property (nonatomic, assign) NSInteger  ID;
+@property (nonatomic, copy) NSString *  ID;
 /** 帖子的状态 */
 @property (nonatomic, assign) NSInteger  status;
 /** 缓存版本 */
@@ -60,7 +60,7 @@ typedef enum : NSUInteger {
 
 
 /** 最热评论 */
-@property (nonatomic, strong) BDJPostCommentModel *top_cmt;
+@property (nonatomic, strong) BDJPostCmtModel *top_cmt;
 
 /** 转发数量 */
 @property (nonatomic, assign) NSInteger  repost;
