@@ -9,6 +9,7 @@
 #import "BDJPostCmtCell.h"
 #import "BDJPostCmtRenderItem.h"
 #import <UIImageView+WebCache.h>
+#import "UIImageView+BDJExtension.h"
 
 @interface BDJPostCmtCell ()
 
@@ -42,7 +43,7 @@
     _expressPiece = expressPiece;
     BDJPostCmtRenderItem *renderItem = expressPiece.renderItem;
     self.nikeNameLabel.text = renderItem.userName;
-    [self.profileImageView sd_setImageWithURL:renderItem.profile placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
+    [self.profileImageView setProfileWithURL:renderItem.profile];
     NSString *sexImageName = renderItem.sexType == PostCmtRenderItemSexTypeMan ? @"Profile_manIcon" : @"Profile_womanIcon";
     self.sexImageView.image = [UIImage imageNamed:sexImageName];
     self.likeCountLabel.text = renderItem.likeCount;

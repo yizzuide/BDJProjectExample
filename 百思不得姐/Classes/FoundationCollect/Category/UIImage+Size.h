@@ -16,4 +16,9 @@
  *
  */
 - (UIImage *)topPartImageForDestSize:(CGSize)dest;
+/**
+ *  图形图
+ *
+ */
+- (UIImage *)cricle;
 @end

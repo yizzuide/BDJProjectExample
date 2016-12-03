@@ -9,6 +9,7 @@
 #import "BDJRecommendUserCell.h"
 #import "UIImageView+WebCache.h"
 #import "BDJRCUserRenderItem.h"
+#import "UIImageView+BDJExtension.h"
 
 
 @interface BDJRecommendUserCell ()
@@ -35,7 +36,7 @@
 - (void)setRenderItem:(BDJRCUserRenderItem *)renderItem
 {
     _renderItem = renderItem;
-    [self.headPortraitImage sd_setImageWithURL:renderItem.headPortraitURL placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
+    [self.headPortraitImage setProfileWithURL:renderItem.headPortraitURL];
     self.nikeNameLabel.text = renderItem.nikeName;
     self.fansLabel.text = renderItem.fansCount;
     

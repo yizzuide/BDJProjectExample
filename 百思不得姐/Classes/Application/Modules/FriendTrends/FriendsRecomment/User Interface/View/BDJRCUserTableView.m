@@ -197,10 +197,10 @@ static NSString * const Identifier = @"RCUserCell";
     [self.signalDisposable dispose];
     // 开始请求数据
     self.signalDisposable = [[EventHandler actionDidHeaderRefresh] subscribeNext:^(id x) {
+        [self.mj_header endRefreshing];
         [self reloadData];
         // 加载数据后再重新检测上拉状态
         [self checkFooterRefreshState];
-        [self.mj_header endRefreshing];
     }];
 }
 

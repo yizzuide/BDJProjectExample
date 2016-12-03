@@ -16,6 +16,8 @@
 #import "BDJPostVoiceView.h"
 #import "BDJPostVideoView.h"
 #import "XFExpressPiecePort.h"
+#import "UIImageView+BDJExtension.h"
+
 
 @interface BDJPostCell ()
 
@@ -105,7 +107,7 @@
     _expressPiece = expressPiece;
     BDJPostRenderItem *renderItem = expressPiece.renderItem;
     self.nikeNameLabel.text = renderItem.userName;
-    [self.prefileImageView sd_setImageWithURL:renderItem.ProfileUrl placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
+    [self.prefileImageView setProfileWithURL:renderItem.ProfileUrl];
     self.weibo_VImageView.hidden = !renderItem.isSina_v;
     self.createTimeLabel.text = renderItem.createTime;
     [self.loveButton setTitle:renderItem.love forState:UIControlStateNormal];

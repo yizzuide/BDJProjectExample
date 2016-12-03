@@ -9,6 +9,7 @@
 #import "BDJRCTagCell.h"
 #import <UIImageView+WebCache.h>
 #import "BDJRCTagRenderItem.h"
+#import "UIImageView+BDJExtension.h"
 
 @interface BDJRCTagCell ()
 
@@ -44,7 +45,7 @@
 - (void)setRenderItem:(BDJRCTagRenderItem *)renderItem
 {
     _renderItem = renderItem;
-    [self.tagimageView sd_setImageWithURL:renderItem.imageURL placeholderImage:[UIImage imageNamed:R_Image_UserDefault]];
+    [self.tagimageView setProfileWithURL:renderItem.imageURL];
     self.tagLabel.text = renderItem.tagName;
     self.subscribeLabel.text = renderItem.subscribeAmount;
 }

@@ -163,6 +163,7 @@
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
 		40CC9E761DF170CA00A91EBB /* XFStatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CC9E751DF170CA00A91EBB /* XFStatWindow.m */; };
+		40CC9E7D1DF3290200A91EBB /* UIImageView+BDJExtension.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CC9E7C1DF3290200A91EBB /* UIImageView+BDJExtension.m */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 		794D92CAE1F05159BC2186FD /* libPods-百思不得姐Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */; };
 /* End PBXBuildFile section */
@@ -536,6 +537,8 @@
 		40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		40CC9E741DF170CA00A91EBB /* XFStatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFStatWindow.h; sourceTree = "<group>"; };
 		40CC9E751DF170CA00A91EBB /* XFStatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFStatWindow.m; sourceTree = "<group>"; };
+		40CC9E7B1DF3290200A91EBB /* UIImageView+BDJExtension.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+BDJExtension.h"; sourceTree = "<group>"; };
+		40CC9E7C1DF3290200A91EBB /* UIImageView+BDJExtension.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+BDJExtension.m"; sourceTree = "<group>"; };
 		449496FA4AFF391CA5BE1A63 /* Pods-百思不得姐Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1675,6 +1678,7 @@
 		400510081DEB141700E402DE /* UI */ = {
 			isa = PBXGroup;
 			children = (
+				40CC9E771DF328A300A91EBB /* Image */,
 				400510091DEB141700E402DE /* Progress */,
 			);
 			path = UI;
@@ -2169,6 +2173,15 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
+		40CC9E771DF328A300A91EBB /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				40CC9E7B1DF3290200A91EBB /* UIImageView+BDJExtension.h */,
+				40CC9E7C1DF3290200A91EBB /* UIImageView+BDJExtension.m */,
+			);
+			path = Image;
+			sourceTree = "<group>";
+		};
 		81C032B40B4AB21DB0B68124 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
@@ -2421,6 +2434,7 @@
 				4005109D1DEB141700E402DE /* BDJVoicePostRouting.m in Sources */,
 				400510871DEB141700E402DE /* BDJEssenceRouting.m in Sources */,
 				400510D31DEB141700E402DE /* BDJPublishViewController.m in Sources */,
+				40CC9E7D1DF3290200A91EBB /* UIImageView+BDJExtension.m in Sources */,
 				400510891DEB141700E402DE /* BDJPostInteractor.m in Sources */,
 				400510991DEB141700E402DE /* BDJAllPostRouting.m in Sources */,
 				400510E51DEB141700E402DE /* XFRenderData.m in Sources */,
