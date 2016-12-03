@@ -60,4 +60,15 @@
     })
 }
 
+// 使当前视图能成为第一响应者，可以显示菜单
+- (BOOL)canBecomeFirstResponder
+{
+    return YES;
+}
+// 不要显示默认的菜单
+- (BOOL)canPerformAction:(SEL)action withSender:(id)sender
+{
+    return NO;
+}
+
 @end

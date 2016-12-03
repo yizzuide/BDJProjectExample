@@ -154,6 +154,52 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
 - (void)scrollViewWillBeginDragging:(UIScrollView *)scrollView
 {
     [self.view endEditing:YES];
+    // 滚动里让显示的菜单消失
+    UIMenuController *menuVC = [UIMenuController sharedMenuController];
+    if (menuVC.isMenuVisible) {
+        [menuVC setMenuVisible:NO animated:YES];
+    }
+}
+
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
+{
+    // 使当前选择的cell成为第一响应者
+    UIView *cell = [tableView cellForRowAtIndexPath:indexPath];
+    [cell becomeFirstResponder]; // 注意：在切换第一响应者时，上一个显示响应者的菜单会自动消失（就像键盘成为第一响应者后也会消失一样）
+    // 快捷菜单
+    UIMenuController *menuVC = [UIMenuController sharedMenuController];
+    if (menuVC.isMenuVisible) { // 重复点击当前cell使之隐藏
+        [menuVC setMenuVisible:NO animated:YES];
+    }else{
+        // 创建自定义菜单
+        // 创建的Action内部会找到第一响应者的控制器的方法来执行（所以在Cell类里要注册响应者）
+        UIMenuItem *commentMI = [[UIMenuItem alloc] initWithTitle:@"评论" action:@selector(commentAction:)];
+        UIMenuItem *collectMI = [[UIMenuItem alloc] initWithTitle:@"收藏" action:@selector(collectAction:)];
+        UIMenuItem *reportMI = [[UIMenuItem alloc] initWithTitle:@"举报" action:@selector(reportAction:)];
+        menuVC.menuItems = @[commentMI,collectMI,reportMI]; // 注意：由于这个菜单控制器是共享的，所以其它地方显示不同菜单就会重新设置
+        CGRect rect = CGRectMake(0, cell.height * 0.5, cell.width, cell.height); // 显示在cell中心位置
+        [menuVC setTargetRect:rect inView:cell];  // 设置显示区域
+        [menuVC setMenuVisible:YES animated:YES];
+    }
+}
+
+#pragma mark - Menu Action
+- (void)commentAction:(UIMenuController *)menu
+{
+    XF_Debug_M();
+}
+
+- (void)collectAction:(UIMenuController *)menu
+{
+    XF_Debug_M();
+    // 获得当前选择的IndexPath
+    /*NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
+    UITableViewCell<XFExpressPiecePort> *cell = [self.tableView cellForRowAtIndexPath:indexPath];
+    [EventHandler didCollectActionWithExpressPiece:cell.expressPiece];*/
+}
+- (void)reportAction:(UIMenuController *)menu
+{
+    XF_Debug_M();
 }
 
 #pragma mark - UITableView Source
