@@ -13,4 +13,5 @@
 
 - (void)cachePostID:(NSString *)ID;
 - (RACSignal *)fetchPostComments;
+- (RACSignal *)fetchNextPagePostComments;
 @end

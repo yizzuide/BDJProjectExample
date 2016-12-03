@@ -17,6 +17,7 @@
 
 @property (nonatomic, strong) BDJMetaPostCmtModel *metaPostCmtModel;
 @property (nonatomic, copy) NSString *postID;
+@property (nonatomic, assign) NSInteger currentPage;
 @end
 
 @implementation BDJPostCommentInteractor
@@ -36,6 +37,17 @@
     }];
 }
 
+- (RACSignal *)fetchNextPagePostComments
+{
+    NSString *lastID = [self.metaPostCmtModel.data lastObject].ID;
+    return [[DataManager grabPostCommentsWithWithPostID:self.postID lastCommentID:lastID atPage:self.currentPage + 1] map:^id(BDJMetaPostCmtModel * metaPostCmtModel) {
+        self.currentPage++;
+        // 添加到当前模型的最新评论数组
+        [self.metaPostCmtModel.data addObjectsFromArray:metaPostCmtModel.data];
+        return [BDJPostCmtProvider collectNextPageRenderDataFromModel:metaPostCmtModel hadLoadCount:self.metaPostCmtModel.data.count];
+        
+    }];
+}
 
 #pragma mark - BusinessReduce
 

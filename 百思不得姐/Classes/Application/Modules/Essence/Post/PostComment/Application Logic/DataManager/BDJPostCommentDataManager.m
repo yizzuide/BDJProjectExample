@@ -22,6 +22,11 @@
     return [self.postService pullPostCommentsWithPostID:ID];
 }
 
+- (RACSignal *)grabPostCommentsWithWithPostID:(NSString *)ID lastCommentID:(NSString *)lastCmtID atPage:(NSInteger)page
+{
+    return [self.postService pullPostCommentsWithWithPostID:ID lastCommentID:lastCmtID atPage:page];
+}
+
 - (BDJPostService *)postService {
 	if(_postService == nil) {
 		_postService = [[BDJPostService alloc] init];

@@ -18,4 +18,10 @@
 @property(nonatomic, assign) CGFloat height;
 @property(nonatomic, assign) CGSize size;
 @property(nonatomic, assign) CGPoint origin;
+
+/**
+ *  当前视图是否显示在主窗口上
+ *
+ */
+- (BOOL)isShowOnKeyWindow;
 @end

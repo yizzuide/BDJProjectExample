@@ -23,5 +23,5 @@
 /**
  *  所有最新评论
  */
-@property (nonatomic, strong) NSArray<BDJPostCmtModel *> *data;
+@property (nonatomic, strong) NSMutableArray<BDJPostCmtModel *> *data;
 @end

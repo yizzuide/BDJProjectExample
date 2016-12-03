@@ -10,7 +10,7 @@
 
 #define Activity __kindof UIViewController
 
-// 显示根组件
+// 使用组件名显示根组件
 #define XF_ShowRootComponent2Window_(ComponentName,ExecuteCode) \
 [[[XFUIBus alloc] init] showComponent:ComponentName onWindow:self.window customCode:^(Activity *nextInterface) { \
     ExecuteCode \
@@ -19,7 +19,7 @@
 #define XF_ShowRootComponent2Window_Fast(ComponentName) \
 XF_ShowRootComponent2Window_(ComponentName,{})
 
-// 显示根组件
+// 使用URL方式显示根组件
 #define XF_ShowURLComponent2Window_(url,ExecuteCode) \
 [[[XFUIBus alloc] init] openURL:url onWindow:self.window customCode:^(Activity *nextInterface) { \
     ExecuteCode \

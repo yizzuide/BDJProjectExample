@@ -34,4 +34,13 @@
  *
  */
 - (RACSignal *)pullPostCommentsWithPostID:(NSString *)ID;
+/**
+ *  加载下一页帖子评论
+ *
+ *  @param ID        帖子ID
+ *  @param lastCmtID 最近的评论ID
+ *  @param page      页数
+ *
+ */
+- (RACSignal *)pullPostCommentsWithWithPostID:(NSString *)ID lastCommentID:(NSString *)lastCmtID atPage:(NSInteger)page;
 @end

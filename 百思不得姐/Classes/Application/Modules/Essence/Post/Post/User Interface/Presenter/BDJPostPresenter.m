@@ -64,7 +64,7 @@
             [indexPaths addObject:indexPath];
         }
         return indexPaths;*/
-        return XF_CreateIndexPaths_Last(renderData);
+        return XF_CreateIndexPaths_Last_Fast(renderData);
     }];
 }
 

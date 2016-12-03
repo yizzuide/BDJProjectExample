@@ -162,6 +162,7 @@
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
+		40CC9E761DF170CA00A91EBB /* XFStatWindow.m in Sources */ = {isa = PBXBuildFile; fileRef = 40CC9E751DF170CA00A91EBB /* XFStatWindow.m */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 		794D92CAE1F05159BC2186FD /* libPods-百思不得姐Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */; };
 /* End PBXBuildFile section */
@@ -533,6 +534,8 @@
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		404874001DD3515E00388087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		40C529571DD5B1FE007E76D7 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		40CC9E741DF170CA00A91EBB /* XFStatWindow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFStatWindow.h; sourceTree = "<group>"; };
+		40CC9E751DF170CA00A91EBB /* XFStatWindow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFStatWindow.m; sourceTree = "<group>"; };
 		449496FA4AFF391CA5BE1A63 /* Pods-百思不得姐Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -1761,10 +1764,10 @@
 			children = (
 				4005101E1DEB141700E402DE /* XFEventBus.h */,
 				4005101F1DEB141700E402DE /* XFEventBus.m */,
-				400510201DEB141700E402DE /* XFModuleAssembly.h */,
-				400510211DEB141700E402DE /* XFModuleAssembly.m */,
 				400510221DEB141700E402DE /* XFUIBus.h */,
 				400510231DEB141700E402DE /* XFUIBus.m */,
+				400510201DEB141700E402DE /* XFModuleAssembly.h */,
+				400510211DEB141700E402DE /* XFModuleAssembly.m */,
 			);
 			path = "Module Bus";
 			sourceTree = "<group>";
@@ -1889,6 +1892,8 @@
 				400510611DEB141700E402DE /* XFPlusTabBar.m */,
 				400510621DEB141700E402DE /* XFVerticalButton.h */,
 				400510631DEB141700E402DE /* XFVerticalButton.m */,
+				40CC9E741DF170CA00A91EBB /* XFStatWindow.h */,
+				40CC9E751DF170CA00A91EBB /* XFStatWindow.m */,
 			);
 			path = UIControls;
 			sourceTree = "<group>";
@@ -2503,6 +2508,7 @@
 				400510841DEB141700E402DE /* BDJEssenceInteractor.m in Sources */,
 				400510E81DEB141700E402DE /* XFInterfaceFactory.m in Sources */,
 				400510BD1DEB141700E402DE /* BDJFriendsRecommentRouting.m in Sources */,
+				40CC9E761DF170CA00A91EBB /* XFStatWindow.m in Sources */,
 				400510CF1DEB141700E402DE /* BDJNewInteractor.m in Sources */,
 				4005115F1DED65EF00E402DE /* BDJPostCommentInteractor.m in Sources */,
 				400510EE1DEB141700E402DE /* XFInteractor.m in Sources */,

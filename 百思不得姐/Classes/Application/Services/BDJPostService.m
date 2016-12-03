@@ -61,4 +61,19 @@
                 return [BDJMetaPostCmtModel mj_objectWithKeyValues:tuple.first];
             }];
 }
+
+- (RACSignal *)pullPostCommentsWithWithPostID:(NSString *)ID lastCommentID:(NSString *)lastCmtID atPage:(NSInteger)page
+{
+    return [[BDJHttpRequest getWithURL:API_Main
+                                params:@{
+                                         @"a":@"dataList",
+                                         @"c":@"comment",
+                                         @"data_id":ID,
+                                         @"page": @(page),
+                                         @"lastcid" : lastCmtID,
+                                         }]
+            map:^id(RACTuple *tuple) {
+                return [BDJMetaPostCmtModel mj_objectWithKeyValues:tuple.first];
+            }];
+}
 @end

@@ -19,14 +19,14 @@
 #import "XFExpressPiecePort.h"
 
 #define EventHandler  XFConvertPresenterToType(id<BDJPostCommentEventHandlerPort>)
-#define ExpressPack self.eventHandler.expressPack
 #define HotCount ((BDJPostCmtRenderData *)self.eventHandler.expressPack.renderData).hotCount
 
 @interface BDJPostCommentActivity () <UITableViewDelegate,UITableViewDataSource>
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
-
 @property (weak, nonatomic) IBOutlet NSLayoutConstraint *inputBarBottomConstraint;
+
+@property (nonatomic, strong) RACDisposable *disposable;
 @end
 
 @implementation BDJPostCommentActivity
@@ -59,7 +59,7 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
     [self.tableView registerNib:[UINib nibWithNibName:@"BDJPostCmtCell" bundle:nil] forCellReuseIdentifier:CellIdentifiler];
     
     // IOS8自动计算高度
-    self.tableView.estimatedRowHeight = 44; // 评估初始高度
+    self.tableView.estimatedRowHeight = 56; // 评估初始高度
     self.tableView.rowHeight = UITableViewAutomaticDimension; // 设置高度为自动检测
 }
 
@@ -67,12 +67,65 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
     XF_Define_Weak
     self.tableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
         XF_Define_Strong
-        [EventHandler didPostCommentHeaderRefresh];
+        [self resetSignal];
+        self.disposable = [EventHandler didPostCommentHeaderRefresh];
     }];
     
+    self.tableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        XF_Define_Strong
+        [self resetSignal];
+        self.disposable = [[EventHandler didPostCommentFooterRefresh] subscribeNext:^(NSArray<NSIndexPath *> *indexPaths) {
+            if (indexPaths.count) {
+                // 局部插入行
+                // 多个操作用动画块
+                [self.tableView beginUpdates];
+                [self.tableView insertRowsAtIndexPaths:indexPaths withRowAnimation:UITableViewRowAnimationTop];
+                // 由于使用AutoLayout和自动计算cell高度，在插入行时会有跳动的问题<自动计算高度>，使用手动还原位置，但列表最后一段加载还是会跳动
+                /*
+                 the solution was to do ONE of the following:
+                    * implement  func tableView(tableView: UITableView, estimatedHeightForRowAtIndexPath indexPath: NSIndexPath) -> CGFloat
+                    * disable auto layout
+                    * set a more accurate estimatedRowHeight on my UITableView
+                 */
+                [self.tableView scrollToRowAtIndexPath:[self.tableView.indexPathsForVisibleRows lastObject] atScrollPosition:UITableViewScrollPositionTop animated:NO];
+                [self.tableView endUpdates];
+            }
+            [self updateFooterRefreshState];
+        }];
+    }];
+    self.tableView.mj_footer.hidden = YES;
     [self.tableView.mj_header beginRefreshing];
 }
 
+
+- (void)bindViewData {
+    // 侦听数据包
+    XF_Define_Weak
+    [RACObserve(self.eventHandler, expressPack) subscribeNext:^(id x) {
+        XF_Define_Strong
+        if (x) {
+            [self.tableView.mj_header endRefreshing];
+            [self.tableView reloadData];
+            [self updateFooterRefreshState];
+        }
+    }];
+}
+
+- (void)resetSignal
+{
+    [self.disposable dispose];
+}
+// 更新Footer刷新状态
+- (void)updateFooterRefreshState
+{
+    if (self.tableView.mj_footer.isRefreshing) {
+        [self.tableView.mj_footer endRefreshing];
+    }
+    BDJPostCmtRenderData *renderData = ExpressPack.renderData;
+    self.tableView.mj_footer.hidden = renderData.isLoadFinish;
+}
+
+#pragma mark - Change UI State
 // 填充帖子表头
 - (void)fillPostExpressPiece:(XFExpressPiece *)expressPiece
 {
@@ -88,20 +141,6 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
     
 }
 
-- (void)bindViewData {
-    
-    // 侦听数据包
-    XF_Define_Weak
-    [RACObserve(self.eventHandler, expressPack) subscribeNext:^(id x) {
-        XF_Define_Strong
-        if (x) {
-            [self.tableView.mj_header endRefreshing];
-            [self.tableView reloadData];
-        }
-    }];
-}
-
-#pragma mark - Change UI State
 - (void)needUpdateInputBarY:(CGFloat)y durationTime:(CGFloat)time
 {
     self.inputBarBottomConstraint.constant = y;
@@ -182,6 +221,10 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
 #pragma mark - Getter
 
 
+- (void)xfLego_viewWillPopOrDismiss
+{
+    return [self resetSignal];
+}
 - (void)dealloc
 {
     XF_Debug_M();

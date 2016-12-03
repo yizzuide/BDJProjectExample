@@ -57,15 +57,16 @@
     // 开始计算Frame
     [self.expressPack measureFrameWithList:renderData.list appendType:XFExpressPieceAppendTypeTop];
 }
+// 清空数据
 - (void)expressPackClean
 {
     [self.expressPack.renderData.list removeAllObjects];
     [self.expressPack.expressPieces removeAllObjects];
 }
-- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromLastRenderData:(XFRenderData *)renderData
+- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromLastRenderData:(XFRenderData *)renderData inSection:(NSInteger)section offsetCount:(NSInteger)offset
 {
     // 记录上一次的数据个数
-    NSUInteger lastPostsCount = self.expressPack.expressPieces.count;
+    NSUInteger lastPostsCount = self.expressPack.expressPieces.count - offset;
     
     // 添加新数据
     XF_AddExpressPack_Last(renderData)
@@ -74,19 +75,19 @@
     NSMutableArray *indexPaths = [NSMutableArray array];
     NSUInteger count = renderData.list.count;
     for (int i = 0; i < count; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastPostsCount + i inSection:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastPostsCount + i inSection:section];
         [indexPaths addObject:indexPath];
     }
     return indexPaths;
 }
 
-- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromFirstRenderData:(XFRenderData *)renderData
+- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromFirstRenderData:(XFRenderData *)renderData inSection:(NSInteger)section offsetCount:(NSInteger)offset
 {
     XF_AddExpressPack_First(renderData)
     NSMutableArray *indexPaths = [NSMutableArray array];
     NSUInteger count = renderData.list.count;
     for (int i = 0; i < count; i++) {
-        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i inSection:0];
+        NSIndexPath *indexPath = [NSIndexPath indexPathForRow:i + offset inSection:section];
         [indexPaths addObject:indexPath];
     }
     return indexPaths;

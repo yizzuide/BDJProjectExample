@@ -20,6 +20,9 @@
 // 在VIPER架构中快速获取一个子模块的视图
 #define XF_SubUInterface_(moduleName) [self xfLego_subUInterfaceFromModuleName:moduleName]
 
+// 渲染数据包
+#define ExpressPack self.eventHandler.expressPack
+
 // 基于ReactiveCocoa的双向数据绑定
 #define XF_$_(UIControl, VProp, EventHandler, VDProp) \
 UIControl.VProp = EventHandler.VDProp; \

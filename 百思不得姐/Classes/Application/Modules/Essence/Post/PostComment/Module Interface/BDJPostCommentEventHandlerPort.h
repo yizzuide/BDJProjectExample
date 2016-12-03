@@ -12,5 +12,6 @@
 @class XFExpressPiece;
 @protocol BDJPostCommentEventHandlerPort <XFEventHandlerPort>
 
-- (void)didPostCommentHeaderRefresh;
+- (RACDisposable *)didPostCommentHeaderRefresh;
+- (RACSignal *)didPostCommentFooterRefresh;
 @end

@@ -74,11 +74,14 @@ XF_SetExpressPack_(XFExpressPack,renderData)
 [self expressPackAddNewRenderData:renderData];
 
 // 从加载最近的数据创建indexPaths
-#define XF_CreateIndexPaths_Last(renderData) \
-[self expressPackTransform2IndexPathsFromLastRenderData:renderData]
+#define XF_CreateIndexPaths_Last(renderData,section,offset) \
+[self expressPackTransform2IndexPathsFromLastRenderData:renderData inSection:section offsetCount:offset]
+// 一个快速只适合单组数据的创建indexPaths
+#define XF_CreateIndexPaths_Last_Fast(renderData) XF_CreateIndexPaths_Last(renderData,0,0)
 // 从加载最新的数据创建indexPaths
-#define XF_CreateIndexPaths_First(renderData) \
-[self expressPackTransform2IndexPathsFromFirstRenderData:renderData]
+#define XF_CreateIndexPaths_First(renderData,section,offset) \
+[self expressPackTransform2IndexPathsFromFirstRenderData:renderData inSection:section offsetCount:offset]
+#define XF_CreateIndexPaths_First_Fast(renderData) XF_CreateIndexPaths_First(renderData,0,0)
 
 // 清空渲染数据
 #define XF_ExpressPack_Clean() \
@@ -168,16 +171,20 @@ XF_SetExpressPack_(XFExpressPack,renderData)
  *  从上拉刷新的新渲染数据，返回相对于列表IndexPaths的路径
  *
  *  @param renderData 渲染数据
+ *  @param section    添加组
+ *  @param offset     偏移量
  *
  *  @return NSIndexPath数组
  */
-- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromLastRenderData:(XFRenderData *)renderData;
+- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromLastRenderData:(XFRenderData *)renderData inSection:(NSInteger)section offsetCount:(NSInteger)offset;
 /**
  *  从下拉刷新的新渲染数据，返回相对于列表IndexPaths的路径
  *
  *  @param renderData 渲染数据
+ *  @param section    添加组
+ *  @param offset     偏移量
  *
  *  @return NSIndexPath数组
  */
-- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromFirstRenderData:(XFRenderData *)renderData;
+- (NSArray<NSIndexPath *> *)expressPackTransform2IndexPathsFromFirstRenderData:(XFRenderData *)renderData inSection:(NSInteger)section offsetCount:(NSInteger)offset;
 @end

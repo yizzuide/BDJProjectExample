@@ -14,4 +14,8 @@
  *  热评的总数
  */
 @property (nonatomic, assign) NSInteger hotCount;
+/**
+ *  是否加载完成
+ */
+@property (nonatomic, assign, getter=isLoadFinish) BOOL loadFinish;
 @end

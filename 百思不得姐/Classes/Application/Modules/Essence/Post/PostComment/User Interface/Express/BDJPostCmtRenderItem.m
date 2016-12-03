@@ -26,6 +26,14 @@
     return _likeCount;
 }
 
+- (NSString *)commentContent
+{
+    if ([_commentContent isEqualToString:@""]) {
+        return nil;
+    }
+    return _commentContent;
+}
+
 - (NSAttributedString *)autoDelectAtCmtContent
 {
     if (!_commentContent) {

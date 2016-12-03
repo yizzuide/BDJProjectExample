@@ -21,8 +21,35 @@
     NSArray *hotList = [[metaPostCmtModel.hot.rac_sequence map:^id(BDJPostCmtModel *postCmtModel) {
         return [self _collectRenderItemFromModel:postCmtModel];
     }] array];
-    // 收集最新评论的显示数据
-    NSArray *newList = [[metaPostCmtModel.data.rac_sequence map:^id(BDJPostCmtModel *postCmtModel) {
+
+    BDJPostCmtRenderData *renderData = [[BDJPostCmtRenderData alloc] init];
+    renderData.list = @[].mutableCopy;
+    renderData.hotCount = hotList.count; // 记录最热评论的个数
+    if (hotList.count) {
+        [renderData.list addObjectsFromArray:hotList];
+    }
+    [renderData.list addObjectsFromArray:[self _newListOfCommentFromModel:metaPostCmtModel]];
+    renderData.loadFinish = metaPostCmtModel.data.count >= metaPostCmtModel.total;
+    return renderData;
+}
+
++ (XFRenderData *)collectNextPageRenderDataFromModel:(BDJMetaPostCmtModel *)metaPostCmtModel hadLoadCount:(NSInteger)hadLoadCount
+{
+    BDJPostCmtRenderData *renderData = [[BDJPostCmtRenderData alloc] init];
+    renderData.list = @[].mutableCopy;
+    [renderData.list addObjectsFromArray:[self _newListOfCommentFromModel:metaPostCmtModel]];
+    renderData.loadFinish = hadLoadCount >= metaPostCmtModel.total || renderData.list.count < 10;
+    LogWarning(@"已经加载%zd,总数为%zd",hadLoadCount,metaPostCmtModel.total);
+    if (!renderData.list.count) {
+        renderData.loadFinish = YES;
+    }
+    return renderData;
+}
+
+// 收集最新评论的显示数据
++ (NSArray *)_newListOfCommentFromModel:(BDJMetaPostCmtModel *)metaPostCmtModel
+{
+    return [[metaPostCmtModel.data.rac_sequence map:^id(BDJPostCmtModel *postCmtModel) {
         BDJPostCmtRenderItem *renderItem = [self _collectRenderItemFromModel:postCmtModel];
         // 引用评论
         if (postCmtModel.precmt) {
@@ -30,14 +57,6 @@
         }
         return renderItem;
     }] array];
-    BDJPostCmtRenderData *renderData = [[BDJPostCmtRenderData alloc] init];
-    renderData.list = @[].mutableCopy;
-    renderData.hotCount = hotList.count; // 记录最热评论的个数
-    if (hotList.count) {
-        [renderData.list addObjectsFromArray:hotList];
-    }
-    [renderData.list addObjectsFromArray:newList];
-    return renderData;
 }
 
 + (BDJPostCmtRenderItem *)_collectRenderItemFromModel:(BDJPostCmtModel *)postCmtModel
@@ -48,6 +67,7 @@
     renderItem.sexType = [postCmtModel.user.sex isEqualToString:@"m"] ? PostCmtRenderItemSexTypeMan : PostCmtRenderItemSexTypeFemale;
     renderItem.commentContent = postCmtModel.content;
     renderItem.likeCount = [NSString stringWithFormat:@"%zd", postCmtModel.like_count];
+    renderItem.voiceSecond = postCmtModel.voicetime;
     return renderItem;
 }
 

@@ -7,6 +7,7 @@
 //
 
 #import "BDJSignInViewController.h"
+#import "XFStatWindow.h"
 
 @interface BDJSignInViewController ()
 
@@ -18,6 +19,18 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view from its nib.
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    // 由于这个窗口会使当前控制器设置的状态栏样式失效，所以是显示是隐藏
+    [XFStatWindow hide];
+}
+- (void)viewWillDisappear:(BOOL)animated
+{
+    [super viewWillDisappear:animated];
+    [XFStatWindow show];
 }
 
 - (UIStatusBarStyle)preferredStatusBarStyle

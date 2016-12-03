@@ -19,6 +19,8 @@
 // 获取一个类的类
 #define XF_Class_(Class) [Class class]
 
+/* --------------------------------- *模块组装* --------------------------------- */
+/* ------------------------------ 自定义手动组装方式 ------------------------------ */
 // 快速注入模块成分-导航方式
 #define XF_InjectModuleWith_Nav(_NavigatorClass_,_ActivityClass_,_PresenterClass_,_InteractorClass_,_DataManagerClass_) \
 + (void)load \
@@ -50,7 +52,8 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 }
 
 
-// 自动组装模块成分基本方法（不适用直接使用）
+/* --------------------------------- 全自动组装方式 --------------------------------- */
+// 自动组装模块成分基本方法（不适于直接使用）
 #define XF_AutoAssemblyModule(NavName,IBSymbol,ShareDataManagerName) \
 + (void)load \
 { \
@@ -97,7 +100,8 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 
 
 
-// 组件名方式
+/* --------------------------------- *组件的跳转* --------------------------------- */
+/* --------------------------------- 组件名方式 --------------------------------- */
 // Push一个组件宏
 #define XF_PUSH_Component_(ComponentName,ExecuteCode) \
 XF_Define_Weak \
@@ -122,8 +126,7 @@ XF_Define_Weak \
 #define XF_Present_Component_Fast(ComponentName) \
 XF_Present_Component_(ComponentName,{})
 
-
-// URL组件方式（这种方式适用于MVx、VIPER）
+/* --------------------------------- URL组件方式 --------------------------------- */
 // Push一个URL组件
 #define XF_PUSH_URLComponent_(urlString,ExecuteCode) \
 XF_Define_Weak \

@@ -15,6 +15,8 @@
  *  url组件传递参数
  */
 @property (nonatomic, copy) NSDictionary *params;
+
+@optional
 /**
  *  url组件传递对象
  */

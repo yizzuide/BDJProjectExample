@@ -12,4 +12,5 @@
 @interface BDJPostCmtProvider : NSObject
 
 + (XFRenderData *)collectRenderDataFromModel:(BDJMetaPostCmtModel *)metaPostCmtModel;
++ (XFRenderData *)collectNextPageRenderDataFromModel:(BDJMetaPostCmtModel *)metaPostCmtModel hadLoadCount:(NSInteger)hadLoadCount;
 @end

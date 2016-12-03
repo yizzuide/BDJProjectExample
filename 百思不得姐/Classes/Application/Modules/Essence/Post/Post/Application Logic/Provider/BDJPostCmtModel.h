@@ -12,7 +12,7 @@
 @interface BDJPostCmtModel : NSObject
 
 /** 评论ID */
-@property (nonatomic, assign) NSInteger  ID;
+@property (nonatomic, assign) NSString *ID;
 
 /** 引用评论ID */
 @property (nonatomic, assign) NSInteger  precid;

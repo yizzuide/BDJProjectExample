@@ -11,6 +11,7 @@
 #import "XFActivity.h"
 #import "XFPlusTabBar.h"
 #import <SVProgressHUD.h>
+#import "XFStatWindow.h"
 
 #define EventHandler  XFConvertPresenterToType(id<BDJIndexTabEventHandlerPort>)
 
@@ -37,6 +38,10 @@
     XFPlusTabBar *plusTabBar = [XFPlusTabBar plusTabBarWithBkImage:R_Image_PlusButton selBkImage:R_Image_PlusButtonSel];
     [plusTabBar setBackgroundImage:[UIImage imageNamed:R_Image_TabBarBkg]];
     [self setValue:plusTabBar forKeyPath:@"tabBar"];
+    
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+        [XFStatWindow show];
+    });
 }
 
 #pragma mark - 初始化

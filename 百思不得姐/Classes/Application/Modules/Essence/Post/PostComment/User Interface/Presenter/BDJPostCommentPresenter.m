@@ -11,11 +11,14 @@
 #import "BDJPostCommentUserInterfacePort.h"
 #import "BDJPostCommentInteractorPort.h"
 #import "ReactiveCocoa.h"
+#import "BDJPostCmtRenderData.h"
 
 
 #define Interactor XFConvertInteractorToType(id<BDJPostCommentInteractorPort>)
 #define Interface XFConvertUserInterfaceToType(id<BDJPostCommentUserInterfacePort>)
 #define Routing XFConvertRoutingToType(id<BDJPostCommentWireFramePort>)
+
+#define HotCount ((BDJPostCmtRenderData *)self.expressPack.renderData).hotCount
 
 @interface BDJPostCommentPresenter ()
 
@@ -52,10 +55,39 @@
 }
 
 #pragma mark - DoAction
-- (void)didPostCommentHeaderRefresh
+- (RACDisposable *)didPostCommentHeaderRefresh
 {
-    [[Interactor fetchPostComments] subscribeNext:^(XFRenderData *renderData) {
+    return [[Interactor fetchPostComments] subscribeNext:^(BDJPostCmtRenderData *renderData) {
+        // 手动赋值渲染对象的行为属性
+        BDJPostCmtRenderData *preRenderData = self.expressPack.renderData;
+        preRenderData.loadFinish = renderData.loadFinish;
         XF_SetExpressPack_Fast(renderData)
+    }];
+}
+
+- (RACSignal *)didPostCommentFooterRefresh
+{
+    return [[Interactor fetchNextPagePostComments] map:^id(BDJPostCmtRenderData *renderData) {
+        // 手动赋值渲染对象的行为属性
+        BDJPostCmtRenderData *preRenderData = self.expressPack.renderData;
+        preRenderData.loadFinish = renderData.loadFinish;
+        
+        /*// 记录上一次的数据个数
+        NSUInteger lastPostsCount = self.expressPack.expressPieces.count - HotCount;
+        
+        // 添加新数据
+        XF_AddExpressPack_Last(renderData)
+        
+        // 创建列表视图布局刷新的IndexPath
+        NSMutableArray *indexPaths = [NSMutableArray array];
+        NSUInteger count = renderData.list.count;
+        for (int i = 0; i < count; i++) {
+            NSIndexPath *indexPath = [NSIndexPath indexPathForRow:lastPostsCount + i inSection:HotCount ? 1 : 0];
+            [indexPaths addObject:indexPath];
+        }
+        return indexPaths;*/
+        // 上面注释代码是这一句宏的具体实现（返回UITableView局部刷新的IndexPath数组）
+        return XF_CreateIndexPaths_Last(renderData, HotCount ? 1 : 0, HotCount);
     }];
 }
 
