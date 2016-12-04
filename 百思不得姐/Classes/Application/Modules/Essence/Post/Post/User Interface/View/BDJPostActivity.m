@@ -125,7 +125,10 @@ static NSString * const Identifier = @"PostCell";
 
 
 #pragma mark - Change UI Action
-
+- (void)needChange2ReloadDataState
+{
+    [self.tableView.mj_header beginRefreshing];
+}
 
 #pragma mark - Getter
 

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4000A1521DF441DF00D25237 /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000A1511DF441DF00D25237 /* HJCornerRadius.m */; };
 		400510801DEB141700E402DE /* BDJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050ECC1DEB141600E402DE /* BDJNavigationController.m */; };
 		400510811DEB141700E402DE /* BDJPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050ECE1DEB141600E402DE /* BDJPushGuideView.m */; };
 		400510821DEB141700E402DE /* BDJPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40050ECF1DEB141600E402DE /* BDJPushGuideView.xib */; };
@@ -183,6 +184,8 @@
 		1AEB5C01B3BE34921D97F0B2 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		2ED5D2819ABC02509F94272B /* Pods-百思不得姐Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E85152145C7B8009538B59E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4000A1501DF441DF00D25237 /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
+		4000A1511DF441DF00D25237 /* HJCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCornerRadius.m; sourceTree = "<group>"; };
 		40050ECB1DEB141600E402DE /* BDJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJNavigationController.h; sourceTree = "<group>"; };
 		40050ECC1DEB141600E402DE /* BDJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJNavigationController.m; sourceTree = "<group>"; };
 		40050ECD1DEB141600E402DE /* BDJPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPushGuideView.h; sourceTree = "<group>"; };
@@ -563,6 +566,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		4000A14F1DF441DF00D25237 /* HJCornerRadius */ = {
+			isa = PBXGroup;
+			children = (
+				4000A1501DF441DF00D25237 /* HJCornerRadius.h */,
+				4000A1511DF441DF00D25237 /* HJCornerRadius.m */,
+			);
+			path = HJCornerRadius;
+			sourceTree = "<group>";
+		};
 		40050EC81DEB141600E402DE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -1723,6 +1735,7 @@
 		400510161DEB141700E402DE /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				4000A14F1DF441DF00D25237 /* HJCornerRadius */,
 				400510171DEB141700E402DE /* XFLegoVIPER */,
 			);
 			path = Lib;
@@ -2498,6 +2511,7 @@
 				400510971DEB141700E402DE /* BDJPostPictureView.m in Sources */,
 				400510911DEB141700E402DE /* BDJPostFrame.m in Sources */,
 				400510931DEB141700E402DE /* BDJPostPresenter.m in Sources */,
+				4000A1521DF441DF00D25237 /* HJCornerRadius.m in Sources */,
 				400511731DEEE74500E402DE /* BDJPostCmtRenderItem.m in Sources */,
 				400510E01DEB141700E402DE /* XFEventBus.m in Sources */,
 				400510EA1DEB141700E402DE /* UIView+XFLego.m in Sources */,

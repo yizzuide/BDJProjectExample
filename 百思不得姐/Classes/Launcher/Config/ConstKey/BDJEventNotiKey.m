@@ -8,8 +8,10 @@
 
 #import "BDJEventNotiKey.h"
 
-DefConstString ET_PostSelected = @"PostSelectedEvent";
-DefConstString ET_PostPostScrollIndicator = @"PostScrollIndicatorEvent";
+DefConstString BDJPostSelectedEvent = @"BDJPostSelectedEvent";
+DefConstString BDJPostPageChangeEvent = @"BDJPostPageChangeEvent";
+
+DefConstString BDJTabBarSelectAgainNotification = @"BDJTabBarSelectAgainNotification";
 
 @implementation BDJEventNotiKey
 

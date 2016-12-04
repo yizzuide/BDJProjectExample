@@ -48,7 +48,7 @@
         [Interface needUpdateInputBarY:y durationTime:[dict[UIKeyboardAnimationDurationUserInfoKey] floatValue]];
     })
     
-    XF_EventIs_(ET_PostSelected, {
+    XF_EventIs_(BDJPostSelectedEvent, {
         // 叫业务层缓存这个帖子ID
         [Interactor cachePostID:intentData];
     })

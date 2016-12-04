@@ -39,6 +39,7 @@
     [plusTabBar setBackgroundImage:[UIImage imageNamed:R_Image_TabBarBkg]];
     [self setValue:plusTabBar forKeyPath:@"tabBar"];
     
+    // 添加可点击返回顶部的窗口
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [XFStatWindow show];
     });
@@ -86,9 +87,13 @@
     [self addChildViewController:activity.navigationController];
 }
 
+// TabBar模块加载完成会调用这个方法
 - (void)xfLego_viewDidLoadForTabBarViewController
 {
     [self bindViewData];
+    
+    // 设置TabBar视图的代理对象
+    self.delegate = self.eventHandler;
 }
 
 - (void)bindViewData {

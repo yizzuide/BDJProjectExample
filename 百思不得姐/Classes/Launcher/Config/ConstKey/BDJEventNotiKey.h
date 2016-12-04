@@ -11,11 +11,16 @@
 /**
  *  帖子选择事件
  */
-extern DefConstString ET_PostSelected;
+extern DefConstString BDJPostSelectedEvent;
 /**
  *  帖子列表切换
  */
-extern DefConstString ET_PostPostScrollIndicator;
+extern DefConstString BDJPostPageChangeEvent;
+
+/**
+ *  TabBar重复选择通知
+ */
+extern DefConstString BDJTabBarSelectAgainNotification;
 
 @interface BDJEventNotiKey : NSObject
 

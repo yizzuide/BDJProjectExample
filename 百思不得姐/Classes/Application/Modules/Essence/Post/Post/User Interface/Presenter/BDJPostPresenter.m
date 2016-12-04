@@ -15,6 +15,7 @@
 #import "BDJPostExpressPack.h"
 #import "BDJPostPictureView.h"
 #import "BDJPostRenderItem.h"
+#import "UIView+Extention.h"
 
 
 #define Interactor XFConvertInteractorToType(id<BDJPostInteractorPort>)
@@ -29,12 +30,25 @@
 
 #pragma mark - lifeCycle
 
+- (void)registerMVxNotifactions
+{
+    XF_RegisterMVxNotis_(@[BDJTabBarSelectAgainNotification])
+}
+
 // 接受到组件事件
 - (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
 {
-    /*XF_EventIs_(ET_PostPostScrollIndicator, {
+    /*XF_EventIs_(BDJPostPageChangeEvent, {
         
     })*/
+    XF_EventIs_(BDJTabBarSelectAgainNotification, {
+        UIViewController *activity = self.userInterface;
+        // 如果当前视图正在窗口显示，则刷新该视图
+        if (activity.view.isShowOnKeyWindow) {
+            LogWarning(@"模块：%@ 重新刷新数据",XF_ModuleName);
+            [Interface needChange2ReloadDataState];
+        }
+    })
 }
 
 #pragma mark - DoAction
@@ -91,7 +105,7 @@
     // 切换到评论
     [Routing transition2PostComment];
     // 发送选择帖子ID事件
-    XF_SendEventForModule_(@"PostComment", ET_PostSelected, PostID)
+    XF_SendEventForModule_(@"PostComment", BDJPostSelectedEvent, PostID)
 }
 
 #pragma mark - ValidData

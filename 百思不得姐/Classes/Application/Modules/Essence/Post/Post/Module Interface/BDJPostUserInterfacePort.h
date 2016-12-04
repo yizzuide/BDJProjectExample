@@ -11,4 +11,5 @@
 
 @protocol BDJPostUserInterfacePort <XFUserInterfacePort>
 
+- (void)needChange2ReloadDataState;
 @end
