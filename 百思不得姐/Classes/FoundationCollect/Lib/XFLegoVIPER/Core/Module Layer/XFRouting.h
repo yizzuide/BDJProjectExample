@@ -87,8 +87,8 @@ XF_InjectModuleWith_Nav(nil,_ActivityClass_,_PresenterClass_,_InteractorClass_,_
 }
 
 // 自动组装一个IBSymbol的模块成分
-#define XF_AutoAssemblyModuleFormIB_ShareDM(IBSymbol,ShareDataManagerName) XF_AutoAssemblyModule(nil,IBSymbol,ShareDataManagerName)
-#define XF_AutoAssemblyModuleFormIB(IBSymbol) XF_AutoAssemblyModuleFormIB_ShareDM(IBSymbol,nil)
+#define XF_AutoAssemblyModuleFromIB_ShareDM(IBSymbol,ShareDataManagerName) XF_AutoAssemblyModule(nil,IBSymbol,ShareDataManagerName)
+#define XF_AutoAssemblyModuleFromIB(IBSymbol) XF_AutoAssemblyModuleFromIB_ShareDM(IBSymbol,nil)
 
 
 // 自动组装一个基于其它模块成分类型的模块（全自动组装方式中常用）

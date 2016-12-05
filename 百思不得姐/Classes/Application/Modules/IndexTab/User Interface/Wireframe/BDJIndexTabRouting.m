@@ -19,6 +19,7 @@ XF_AutoAssemblyModule_Fast
 {
     // 自定义跳转
    [self.uiBus openURL:@"BDJ://indexTab/publish" withTransitionBlock:^(__kindof UIViewController *thisInterface, __kindof UIViewController *nextInterface) {
+       // 使用不带动画的方式
        [thisInterface presentViewController:nextInterface animated:NO completion:nil];
    } customCode:nil];
 }

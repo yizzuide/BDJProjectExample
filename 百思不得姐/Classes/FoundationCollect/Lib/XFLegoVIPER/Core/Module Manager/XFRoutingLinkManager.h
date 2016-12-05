@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 
 // 从MVx架构向VIPER模块发事件
-#define XF_SendEventFormMVxForVIPERModules_(modulesName,eventName,sendData) \
+#define XF_SendEventFromMVxForVIPERModules_(modulesName,eventName,sendData) \
 [XFRoutingLinkManager sendEventName:eventName intentData:sendData forModulesName:modulesName];
 
 @protocol XFUserInterfacePort;

@@ -20,7 +20,7 @@
                                  @"BDJ://userCenter/signIn", // 登录
                                  @"BDJ://essence/recommendTag", // 推荐标签
                                  @"BDJ://essence/post/postPictureBrowse", // 浏览大图
-                                 @"BDJ://essence/post/postComment"
+                                 @"BDJ://essence/post/postComment" // 帖子评论
                                  ]];
 }
 @end
