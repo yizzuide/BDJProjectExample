@@ -94,8 +94,6 @@
 }
 
 
-
-
 #pragma mark - 私有方法
 // 绑定一个视图
 - (void)xfLego_bindView:(id)view

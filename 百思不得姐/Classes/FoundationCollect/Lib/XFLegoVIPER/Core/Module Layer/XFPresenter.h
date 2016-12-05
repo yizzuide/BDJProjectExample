@@ -105,7 +105,13 @@ XF_SetExpressPack_(XFExpressPack,renderData)
 /**
  *  url组件传递参数
  */
-@property (nonatomic, copy) NSDictionary *params;
+@property (nonatomic, copy) NSDictionary *URLParams;
+
+/**
+ *  url组件传递对象
+ */
+@property (nonatomic, copy) id componentData;
+
 /**
  *  模块之间传递的意图数据
  */

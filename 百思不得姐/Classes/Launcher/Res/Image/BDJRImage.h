@@ -31,6 +31,11 @@ extern DefConstString R_Image_TabBarBkg;
 extern DefConstString R_Image_UserDefault;
 extern DefConstString R_Image_PostCellBackground;
 
+extern DefConstString R_Image_MineSetting;
+extern DefConstString R_Image_MineSettingSel;
+extern DefConstString R_Image_MineMoon;
+extern DefConstString R_Image_MineMoonSel;
+
 
 
 

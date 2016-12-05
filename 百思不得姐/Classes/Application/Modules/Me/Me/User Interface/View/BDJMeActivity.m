@@ -35,13 +35,14 @@
 - (void)configNav
 {
     self.navigationItem.title = @"我的";
-    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:@"mine-setting-icon" imageSel:@"mine-setting-icon-click"];
-    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:@"mine-moon-icon" imageSel:@"mine-moon-icon-click"];
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:R_Image_MineSetting imageSel:R_Image_MineSettingSel];
+    UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:R_Image_MineMoon imageSel:R_Image_MineMoonSel];
     self.navigationItem.rightBarButtonItems = @[
                                               settingItem,
                                               moonItem
                                                ];
 }
+
 - (void)setUpViews {
     
 }

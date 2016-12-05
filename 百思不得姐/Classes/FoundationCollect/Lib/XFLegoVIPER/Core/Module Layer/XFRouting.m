@@ -162,6 +162,7 @@
         // 打印路由关系链
         [XFRoutingLinkManager log];
     }
+    
     // 标识释放成功
     self.releaseSuff = YES;
 }

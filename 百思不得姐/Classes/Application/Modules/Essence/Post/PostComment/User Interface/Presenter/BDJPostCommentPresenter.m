@@ -28,9 +28,10 @@
 
 #pragma mark - lifeCycle
 
-- (void)viewWillBecomeFocusWithIntentData:(id)intentData
+- (void)initRenderView
 {
-    [Interface fillPostExpressPiece:intentData];
+    // 填充传递过来的组件对象
+    [Interface fillPostExpressPiece:self.componentData];
 }
 
 - (void)registerMVxNotifactions

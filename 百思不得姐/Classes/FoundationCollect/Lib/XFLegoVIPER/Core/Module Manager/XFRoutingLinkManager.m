@@ -65,7 +65,9 @@ static NSMapTable *_sharedRoutingTable;
 + (void)setCurrentActionRounting:(XFRouting *)routing
 {
     [_trackActionRoutingTable removeAllObjects];
-    [_trackActionRoutingTable addObject:routing];
+    if (routing) {
+        [_trackActionRoutingTable addObject:routing];
+    }
 }
 
 + (XFRouting *)currentActionRouting

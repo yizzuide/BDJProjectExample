@@ -14,12 +14,11 @@
 /**
  *  url组件传递参数
  */
-@property (nonatomic, copy) NSDictionary *params;
+@property (nonatomic, copy) NSDictionary *URLParams;
 
-@optional
 /**
  *  url组件传递对象
  */
-@property (nonatomic, copy) id intentData;
+@property (nonatomic, copy) id componentData;
 
 @end

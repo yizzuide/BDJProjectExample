@@ -11,6 +11,6 @@
 
 @interface BDJPostPictureBrowseViewController : UIViewController <XFComponentRoutable>
 
-@property (nonatomic, copy) NSDictionary *params;
-@property (nonatomic, copy) id intentData;
+@property (nonatomic, copy) NSDictionary *URLParams;
+@property (nonatomic, copy) id componentData;
 @end

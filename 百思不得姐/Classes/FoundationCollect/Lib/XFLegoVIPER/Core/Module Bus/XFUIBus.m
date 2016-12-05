@@ -147,15 +147,15 @@
 - (void)putViewControllerComponent:(NSString *)component withTransitionBlock:(TransitionBlock)trasitionBlock intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
 {
     UIViewController<XFComponentRoutable> *viewController = (id)[XFControllerFactory controllerFromComponentName:component];
-    // 如果实现URL组件接口
-    if ([viewController respondsToSelector:@selector(setIntentData:)]) {
-        // 传递组件参数
-        if ([intentData isKindOfClass:[NSDictionary class]]) {
-            [viewController setParams:intentData];
-        } else { // 传递组件对象
-            [viewController setIntentData:intentData];
-        }
+    // 传递组件参数
+    if ([intentData isKindOfClass:[NSDictionary class]] &&
+        [viewController respondsToSelector:@selector(setURLParams:)]) {
+        [viewController setURLParams:intentData];
+    } else if ([viewController respondsToSelector:@selector(setComponentData:)]) {
+        // 传递组件对象
+        [viewController setComponentData:intentData];
     }
+    
     if (customCodeBlock) {
         customCodeBlock(viewController);
     }
@@ -171,7 +171,9 @@
     // 传递组件参数
     id<XFComponentRoutable> componentRoutable = nextRouting.uiOperator;
     if ([intentData isKindOfClass:[NSDictionary class]]) {
-        [componentRoutable setParams:intentData];
+        [componentRoutable setURLParams:intentData];
+    } else {
+        [componentRoutable setComponentData:intentData];
     }
     
     //  调用自定义代码
