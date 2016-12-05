@@ -15,6 +15,7 @@
 #import "XFLegoMarco.h"
 #import "XFExpressPack.h"
 #import "XFRenderData.h"
+#import "XFComponentRoutable.h"
 
 #define XFConvertInteractorToType(type) LEGORealPort(type, self.interactor)
 #define XFConvertRoutingToType(type) LEGORealPort(type, self.routing)
@@ -87,7 +88,7 @@ XF_SetExpressPack_(XFExpressPack,renderData)
 #define XF_ExpressPack_Clean() \
 [self expressPackClean];
 
-@interface XFPresenter : NSObject <XFEventHandlerPort,XFUIOperatorPort>
+@interface XFPresenter : NSObject <XFEventHandlerPort,XFUIOperatorPort,XFComponentRoutable>
 /**
  *  显示界面
  */
@@ -101,6 +102,10 @@ XF_SetExpressPack_(XFExpressPack,renderData)
  */
 @property (nonatomic, strong, readonly) __kindof id<XFInteractorPort> interactor;
 
+/**
+ *  url组件传递参数
+ */
+@property (nonatomic, copy) NSDictionary *params;
 /**
  *  模块之间传递的意图数据
  */

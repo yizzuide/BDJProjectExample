@@ -46,7 +46,7 @@
 {
     [self _trackRouting];
     [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
-        [self pushComponent:componentName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
+        [self pushComponent:componentName intent: params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }
 
@@ -55,7 +55,7 @@
 {
     [self _trackRouting];
     [XFURLRoute open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
-        [self presentComponent:componentName intent:params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
+        [self presentComponent:componentName intent: params.count ? params : self.fromRouting.uiOperator.intentData customCode:customCodeBlock];
     }];
 }
 
@@ -167,6 +167,13 @@
     // 初始化一个Routing
     XFRouting *nextRouting = [XFRoutingFactory createRoutingFastFromModuleName:component];
     NSAssert(nextRouting, @"模块创建失败！请检测模块名是否正确！(注意：使用帕斯卡命名法<首字母大写>）");
+    
+    // 传递组件参数
+    id<XFComponentRoutable> componentRoutable = nextRouting.uiOperator;
+    if ([intentData isKindOfClass:[NSDictionary class]]) {
+        [componentRoutable setParams:intentData];
+    }
+    
     //  调用自定义代码
     if (customCodeBlock) {
         customCodeBlock(nextRouting.realInterface);
