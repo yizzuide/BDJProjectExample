@@ -15,18 +15,18 @@
 
 @implementation XFURLRoute
 
-static NSMutableDictionary<NSString *,NSString *> *_mapTable;
+static NSMutableDictionary<NSString *,NSString *> *URLRouteTable_;
 
 + (void)initialize
 {
     if (self == [XFURLRoute class]) {
-        _mapTable = @{}.mutableCopy;
+        URLRouteTable_ = @{}.mutableCopy;
     }
 }
 
 + (void)initURLGroup:(id)urlGroup {
     if ([urlGroup isKindOfClass:[NSDictionary class]]) {
-        [_mapTable setDictionary:urlGroup];
+        [URLRouteTable_ setDictionary:urlGroup];
     } else if([urlGroup isKindOfClass:[NSArray class]]) {
         for (NSString *url in urlGroup) {
             [self register:url];
@@ -52,22 +52,22 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
 {
     // 验证是否是控制器组件
     if ([XFControllerFactory isViewControllerComponent:componentName]){
-        [_mapTable setObject:componentName forKey:url];
+        [URLRouteTable_ setObject:componentName forKey:url];
     }else{
         NSAssert([XFRoutingReflect verifyModule:componentName], @"模块验证失败！找不到此模块！");
-        [_mapTable setObject:componentName forKey:url];
+        [URLRouteTable_ setObject:componentName forKey:url];
     }
 }
 
 + (void)remove:(NSString *)url
 {
-    [_mapTable removeObjectForKey:url];
+    [URLRouteTable_ removeObjectForKey:url];
 }
 
 + (BOOL)open:(NSString *)url transitionBlock:(void(^)(NSString *componentName,NSDictionary *params))transitionBlock
 {
     NSString *path = [XFURLParse pathForURL:url];
-    NSString *componentName = [_mapTable objectForKey:path];
+    NSString *componentName = [URLRouteTable_ objectForKey:path];
     NSAssert(componentName || ![componentName isEqualToString:@""], @"当前URL组件未注册！");
     NSDictionary *params;
     if ([url hasPrefix:@"http"])
