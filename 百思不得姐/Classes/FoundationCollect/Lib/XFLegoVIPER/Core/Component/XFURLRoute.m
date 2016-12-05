@@ -70,14 +70,20 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
     NSString *componentName = [_mapTable objectForKey:path];
     NSAssert(componentName || ![componentName isEqualToString:@""], @"当前URL组件未注册！");
     NSDictionary *params;
-    if([url hasPrefix:@"http"])
+    if ([url hasPrefix:@"http"])
         params = @{@"url":url};
     else
         params = [XFURLParse paramsForURL:url];
-    if(transitionBlock)
+    if (transitionBlock)
         transitionBlock(componentName,params);
     
+    // 检测组件是否存在
     if ([XFControllerFactory isViewControllerComponent:componentName]) return YES;
+    if (![XFRoutingReflect verifyModule:componentName]) {
+        NSAssert(NO, @"当前URL组件名加载错误，请检查组件名是否正确！");
+        return NO;
+    }
+    
     // 异步检测URL路径的正确性
     if ([XFRoutingLinkManager count]) {
         dispatch_async(dispatch_get_global_queue(DISPATCH_QUEUE_PRIORITY_DEFAULT, 0), ^{
@@ -91,6 +97,6 @@ static NSMutableDictionary<NSString *,NSString *> *_mapTable;
             NSAssert(isURLComponentLinkOk, @"URL子路径关系链错误！");
         });
     }
-    return !!componentName;
+    return YES;
 }
 @end

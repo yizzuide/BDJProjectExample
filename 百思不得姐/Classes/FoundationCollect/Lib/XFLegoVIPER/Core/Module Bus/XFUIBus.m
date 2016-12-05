@@ -184,12 +184,12 @@
             trasitionBlock(self.fromRouting.realInterface,LEGORealInterface(nextRouting.realInterface));
         });
     }
-    // 下一个视图获得焦点，并传送意图数据
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    LEGORunAfter0_015({
+        // 下一个视图获得焦点，并传送意图数据
         if (self.fromRouting.nextRouting) {
             [self.fromRouting.nextRouting.uiOperator viewWillBecomeFocusWithIntentData:intentData];
         }
-    });
+    })
 }
 
 #pragma mark - MVx界面切换

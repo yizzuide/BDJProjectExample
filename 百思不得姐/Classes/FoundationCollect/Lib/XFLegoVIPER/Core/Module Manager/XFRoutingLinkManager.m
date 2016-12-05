@@ -159,14 +159,14 @@ static BOOL _enableLog = NO;
             NSUInteger subRoutingDepthCount = 1;
             do {
                 // 打印子路由
-                NSArray<XFRouting *> *childRoutings = [nextRouting valueForKey:@"_childRoutings"];
-                if (childRoutings) {
+                NSArray<XFRouting *> *subRoutings = [nextRouting valueForKey:@"_subRoutings"];
+                if (subRoutings) {
                     [logStrM appendString:@"\n"];
                     for (NSUInteger t = 0; t < subRoutingDepthCount; t++) {
                         [logStrM appendString:@"\t"];
                     }
                     [logStrM appendString:@"Sub Routing: ("];
-                    for (XFRouting *subRouting in childRoutings) {
+                    for (XFRouting *subRouting in subRoutings) {
                         [logStrM appendString:@"\n"];
                         for (NSUInteger t = 0; t < subRoutingDepthCount * 2; t++) {
                             [logStrM appendString:@"\t"];

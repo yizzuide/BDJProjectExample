@@ -191,9 +191,9 @@ XF_Present_URLComponent_(urlString,{})
 @property (nonatomic, assign, getter=isSubRoute) BOOL subRoute;
 
 /**
- *  子路由
+ *  所有子路由
  */
-@property (nonatomic, strong, readonly) NSMutableArray<__kindof XFRouting *> *childRoutings;
+@property (nonatomic, strong, readonly) NSMutableArray<__kindof XFRouting *> *subRoutings;
 
 /**
  *  返回初始路由对象（默认包含路由的组装器、UI总线、Event总线）

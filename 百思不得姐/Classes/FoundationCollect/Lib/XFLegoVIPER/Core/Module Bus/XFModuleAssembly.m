@@ -90,6 +90,7 @@
 
 - (__kindof XFRouting *)_bulildModulesAssemblyWithInterface:(NSString *)interface navigatorClass:(Class)navigatorClass  presenterClass:(Class)perstentClass interactorClass:(Class)interactorClass dataManagerClass:(Class)dataManagerClass
 {
+    // 构建视图层
     id activity;
     Class clazz = NSClassFromString(interface);
     // 如果是Class
@@ -149,7 +150,6 @@
     }
     
     [self.fromRouting setValue:activity forKey:@"currentUserInterface"];
-    
     if (navigatorClass) {
         UINavigationController *navVC = [[navigatorClass alloc] initWithRootViewController:activity];
         [self.fromRouting setValue:navVC forKey:@"currentNavigator"];
@@ -164,7 +164,8 @@
         }
     }
     
-//    构建事件层<连接视图层和路由层>
+    
+    // 构建事件层<连接视图层和路由层>
     id presenter;
     if (perstentClass) {
         presenter = [[perstentClass alloc] init];
@@ -172,6 +173,7 @@
         [presenter setValue:self.fromRouting forKey:@"routing"];
         [self.fromRouting setValue:presenter forKey:@"uiOperator"];
     }
+    
     
     // 如果是共享模块，则共用业务层
     XFRouting *sharedRouting = [XFRoutingLinkManager sharedRoutingForShareModule:self.shareModule];
@@ -188,7 +190,7 @@
         if (interactorClass) {
             id interactor = [[interactorClass alloc] init];
             [presenter setValue:interactor forKey:@"interactor"];
-            // 数据层
+            // 构建数据层
             if(dataManagerClass){
                 id dataManager = [[dataManagerClass alloc] init];
                 [interactor setValue:dataManager forKey:@"dataManager"];
@@ -196,18 +198,18 @@
         }
     }
     
-    // 如果有事件处理层
+    
+    // 如果当前模块有事件处理层，则可以加载模块管理，使之可以处理事件
     if (self.fromRouting.uiOperator) {
         // 添加到路由管理中心
         [XFRoutingLinkManager addRouting:self.fromRouting];
-         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
-             // 打印当前路由
-             if (!(self.fromRouting.isSubRoute || self.fromRouting.parentRouting)) {
-                 // 打印路由关系链
-                 [XFRoutingLinkManager log];
-             }
-         });
-        
+        LEGORunAfter0_015({
+            // 如果当前路由不是子路由或没有父路由
+            if (!(self.fromRouting.isSubRoute || self.fromRouting.parentRouting)) {
+                // 打印路由关系链
+                [XFRoutingLinkManager log];
+            }
+        })
     }
     return self.fromRouting;
 }

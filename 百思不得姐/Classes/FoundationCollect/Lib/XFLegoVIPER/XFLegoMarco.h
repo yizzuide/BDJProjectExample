@@ -17,6 +17,12 @@
 // 即时运行等待时间
 #define LEGONextStep 0.0151
 
+// 等待0.015s再运行代码
+#define LEGORunAfter0_015(ExecuteCode) \
+dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)),dispatch_get_main_queue(), ^{ \
+    ExecuteCode \
+});
+
 // 索引
 #define XF_Index_First  0
 #define XF_Index_Second 1

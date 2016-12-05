@@ -41,7 +41,7 @@
 /**
  *  子路由
  */
-@property (nonatomic, strong, readwrite) NSMutableArray<XFRouting *> *childRoutings;
+@property (nonatomic, strong, readwrite) NSMutableArray<XFRouting *> *subRoutings;
 
 /**
  *  事件层
@@ -90,7 +90,7 @@
     if (asChild) {
         [MainActivity addChildViewController:LEGORealInterface(subRouting.realInterface)];
     }
-    [self.childRoutings addObject:subRouting];
+    [self.subRoutings addObject:subRouting];
     subRouting.parentRouting = self;
 }
 
@@ -147,13 +147,13 @@
     [routing.eventBus removeObservers];
     
     // 释放子路由
-    if (routing->_childRoutings) {
-        for (XFRouting *subRouting in routing->_childRoutings) {
+    if (routing->_subRoutings) {
+        for (XFRouting *subRouting in routing->_subRoutings) {
             [self xfLego_releaseRouting:subRouting];
         }
         // 删除所有子路由
-        [routing->_childRoutings removeAllObjects];
-        routing->_childRoutings = nil;
+        [routing->_subRoutings removeAllObjects];
+        routing->_subRoutings = nil;
     }
     
     // 从路由管理中心移除
@@ -175,11 +175,11 @@
 }
 
 #pragma mark - 懒加载
-- (NSMutableArray<XFRouting *> *)childRoutings
+- (NSMutableArray<XFRouting *> *)subRoutings
 {
-    if (_childRoutings == nil) {
-        _childRoutings = [NSMutableArray array];
+    if (_subRoutings == nil) {
+        _subRoutings = [NSMutableArray array];
     }
-    return _childRoutings;
+    return _subRoutings;
 }
 @end

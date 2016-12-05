@@ -21,13 +21,18 @@
 
 - (RACSignal *)grabPostsForType:(BDJPostCategoryType)postType
 {
-    // 如果新帖
-    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType] isNew:[BDJ_Post_type2Type(postType) containsString:@"New"]];
+    BDJPostDataMediaType mediaType = [self postSeviceMediaTypeForPostType:postType];
+    // 是否是新帖
+    BOOL isNew = [BDJ_Post_type2Type(postType) containsString:@"New"];
+    return [self.postService pullPostsForType:mediaType isNew:isNew];
 }
 
 - (RACSignal *)grabPostsForType:(BDJPostCategoryType)postType maxtime:(NSInteger)maxtime atPage:(NSInteger)page
 {
-    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType] maxtime:maxtime atPage:page isNew:[BDJ_Post_type2Type(postType) containsString:@"New"]];
+    BDJPostDataMediaType mediaType = [self postSeviceMediaTypeForPostType:postType];
+    // 是否是新帖
+    BOOL isNew = [BDJ_Post_type2Type(postType) containsString:@"New"];
+    return [self.postService pullPostsForType:mediaType maxtime:maxtime atPage:page isNew:isNew];
 }
 
 - (BDJPostDataMediaType)postSeviceMediaTypeForPostType:(BDJPostCategoryType)postType
