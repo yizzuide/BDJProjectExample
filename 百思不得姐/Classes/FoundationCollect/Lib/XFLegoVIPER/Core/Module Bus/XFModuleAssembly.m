@@ -153,6 +153,15 @@
     if (navigatorClass) {
         UINavigationController *navVC = [[navigatorClass alloc] initWithRootViewController:activity];
         [self.fromRouting setValue:navVC forKey:@"currentNavigator"];
+    }else if(self.shareModule.length) { // 如果是共享模块
+        // 搜索到共享模块
+        XFRouting *sharedRouting = [XFRoutingLinkManager findRoutingForModuleName:self.shareModule];
+        // 共享模块视图层是否有导航控制器,把它复制过来
+        if (sharedRouting.realNavigator) {
+            Class navigatorClass = [sharedRouting.realNavigator class];
+            UINavigationController *navVC = [[navigatorClass alloc] initWithRootViewController:activity];
+            [self.fromRouting setValue:navVC forKey:@"currentNavigator"];
+        }
     }
     
 //    构建事件层<连接视图层和路由层>
@@ -171,7 +180,7 @@
         id sharedInteractor = [sharedRouting.uiOperator valueForKey:@"interactor"];
         [self.fromRouting.uiOperator setValue:sharedInteractor forKey:@"interactor"];
     }else{
-        // 存储共享模块
+        // 存储当前共享模块，以供再使用同样的共享模块可以复用业务层对象
         if (self.shareModule.length) {
             [XFRoutingLinkManager setSharedRounting:self.fromRouting shareModule:self.shareModule];
         }

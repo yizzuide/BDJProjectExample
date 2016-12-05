@@ -56,12 +56,17 @@
 
 - (void)addChildActivity
 {
-    NSArray *modules = @[@"AllPost",@"VideoPost",@"VoicePost",@"PicturePost",@"WordsPost"];
+    NSArray *modules = [self moduleNames];
     NSUInteger count = modules.count;
     for (int i = 0; i < count; i++) {
         XFActivity *activity = XF_SubUInterface_(modules[i]);
         [self addChildViewController:activity];
     }
+}
+
+- (NSArray *)moduleNames
+{
+    return @[@"AllPost",@"VideoPost",@"VoicePost",@"PicturePost",@"WordsPost"];
 }
 
 - (void)addContentView

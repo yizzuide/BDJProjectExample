@@ -7,10 +7,9 @@
 //
 
 #import "BDJNewEventHandlerPort.h"
-#import "XFPresenter.h"
+#import "BDJEssencePresenter.h"
 
 
-@interface BDJNewPresenter : XFPresenter <BDJNewEventHandlerPort>
-
+@interface BDJNewPresenter : BDJEssencePresenter <BDJNewEventHandlerPort>
 
 @end

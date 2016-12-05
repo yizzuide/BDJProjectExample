@@ -14,9 +14,9 @@
  *  远程获取所有帖子
  *
  *  @param postSeviceMediaType 帖子数据枚举
- *
+ *  @param isNew               是否为新帖
  */
-- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType;
+- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType isNew:(BOOL)isNew;
 
 /**
  *  加载下一页帖子
@@ -24,9 +24,10 @@
  *  @param postSeviceMediaType 帖子数据枚举
  *  @param maxtime             上一次最大时间
  *  @param page                页数
+ *  @param isNew               是否为新帖
  *
  */
-- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType maxtime:(NSInteger)maxtime atPage:(NSInteger)page;
+- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType maxtime:(NSInteger)maxtime atPage:(NSInteger)page  isNew:(BOOL)isNew;
 /**
  *  加载帖子评论
  *

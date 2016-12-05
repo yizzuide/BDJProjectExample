@@ -9,6 +9,7 @@
 
 #import "BDJPostDataManager.h"
 #import "BDJPostService.h"
+#import "BDJPostCategory.h"
 
 
 @interface BDJPostDataManager ()
@@ -20,12 +21,13 @@
 
 - (RACSignal *)grabPostsForType:(BDJPostCategoryType)postType
 {
-    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType]];
+    // 如果新帖
+    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType] isNew:[BDJ_Post_type2Type(postType) containsString:@"New"]];
 }
 
 - (RACSignal *)grabPostsForType:(BDJPostCategoryType)postType maxtime:(NSInteger)maxtime atPage:(NSInteger)page
 {
-    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType] maxtime:maxtime atPage:page];
+    return [self.postService pullPostsForType:[self postSeviceMediaTypeForPostType:postType] maxtime:maxtime atPage:page isNew:[BDJ_Post_type2Type(postType) containsString:@"New"]];
 }
 
 - (BDJPostDataMediaType)postSeviceMediaTypeForPostType:(BDJPostCategoryType)postType
@@ -33,18 +35,23 @@
     BDJPostDataMediaType mediaType;
     switch (postType) {
         case BDJPostCategoryTypeAll:
+        case BDJPostCategoryTypeNewAll:
             mediaType = BDJPostDataMediaTypeAll;
             break;
         case BDJPostCategoryTypeVideo:
+        case BDJPostCategoryTypeNewVideo:
             mediaType = BDJPostDataMediaTypeVideo;
             break;
         case BDJPostCategoryTypeVoice:
+        case BDJPostCategoryTypeNewVoice:
             mediaType = BDJPostDataMediaTypeVoice;
             break;
         case BDJPostCategoryTypePicture:
+        case BDJPostCategoryTypeNewPicture:
             mediaType = BDJPostDataMediaTypePicture;
             break;
         case BDJPostCategoryTypeWords:
+        case BDJPostCategoryTypeNewWords:
             mediaType = BDJPostDataMediaTypeWords;
             break;
     }

@@ -14,4 +14,5 @@
 
 @interface BDJEssenceActivity : XFActivity <BDJEssenceUserInterfacePort>
 
+- (NSArray *)moduleNames;
 @end

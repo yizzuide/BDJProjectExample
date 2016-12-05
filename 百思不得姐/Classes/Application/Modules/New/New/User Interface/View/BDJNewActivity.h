@@ -7,11 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
-
-#import "XFActivity.h"
 #import "BDJNewUserInterfacePort.h"
+#import "BDJEssenceActivity.h"
 
-
-@interface BDJNewActivity : XFActivity <BDJNewUserInterfacePort>
+@interface BDJNewActivity : BDJEssenceActivity <BDJNewUserInterfacePort>
 
 @end

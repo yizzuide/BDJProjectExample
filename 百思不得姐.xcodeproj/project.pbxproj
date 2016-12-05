@@ -8,6 +8,11 @@
 
 /* Begin PBXBuildFile section */
 		4000A1521DF441DF00D25237 /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000A1511DF441DF00D25237 /* HJCornerRadius.m */; };
+		4000A1581DF47A9500D25237 /* BDJNewAllPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000A1571DF47A9500D25237 /* BDJNewAllPostRouting.m */; };
+		4000A1641DF47B2D00D25237 /* BDJNewWordsPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000A1631DF47B2D00D25237 /* BDJNewWordsPostRouting.m */; };
+		4000A1671DF47B6F00D25237 /* BDJNewVideoPostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000A1661DF47B6F00D25237 /* BDJNewVideoPostRouting.m */; };
+		4000A16A1DF47B8700D25237 /* BDJNewVoicePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000A1691DF47B8700D25237 /* BDJNewVoicePostRouting.m */; };
+		4000A16D1DF47B9A00D25237 /* BDJNewPicturePostRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 4000A16C1DF47B9A00D25237 /* BDJNewPicturePostRouting.m */; };
 		400510801DEB141700E402DE /* BDJNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050ECC1DEB141600E402DE /* BDJNavigationController.m */; };
 		400510811DEB141700E402DE /* BDJPushGuideView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40050ECE1DEB141600E402DE /* BDJPushGuideView.m */; };
 		400510821DEB141700E402DE /* BDJPushGuideView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 40050ECF1DEB141600E402DE /* BDJPushGuideView.xib */; };
@@ -186,6 +191,16 @@
 		3E85152145C7B8009538B59E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4000A1501DF441DF00D25237 /* HJCornerRadius.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HJCornerRadius.h; sourceTree = "<group>"; };
 		4000A1511DF441DF00D25237 /* HJCornerRadius.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HJCornerRadius.m; sourceTree = "<group>"; };
+		4000A1561DF47A9500D25237 /* BDJNewAllPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJNewAllPostRouting.h; sourceTree = "<group>"; };
+		4000A1571DF47A9500D25237 /* BDJNewAllPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJNewAllPostRouting.m; sourceTree = "<group>"; };
+		4000A1621DF47B2D00D25237 /* BDJNewWordsPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJNewWordsPostRouting.h; sourceTree = "<group>"; };
+		4000A1631DF47B2D00D25237 /* BDJNewWordsPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJNewWordsPostRouting.m; sourceTree = "<group>"; };
+		4000A1651DF47B6F00D25237 /* BDJNewVideoPostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJNewVideoPostRouting.h; sourceTree = "<group>"; };
+		4000A1661DF47B6F00D25237 /* BDJNewVideoPostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJNewVideoPostRouting.m; sourceTree = "<group>"; };
+		4000A1681DF47B8700D25237 /* BDJNewVoicePostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJNewVoicePostRouting.h; sourceTree = "<group>"; };
+		4000A1691DF47B8700D25237 /* BDJNewVoicePostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJNewVoicePostRouting.m; sourceTree = "<group>"; };
+		4000A16B1DF47B9A00D25237 /* BDJNewPicturePostRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJNewPicturePostRouting.h; sourceTree = "<group>"; };
+		4000A16C1DF47B9A00D25237 /* BDJNewPicturePostRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJNewPicturePostRouting.m; sourceTree = "<group>"; };
 		40050ECB1DEB141600E402DE /* BDJNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJNavigationController.h; sourceTree = "<group>"; };
 		40050ECC1DEB141600E402DE /* BDJNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJNavigationController.m; sourceTree = "<group>"; };
 		40050ECD1DEB141600E402DE /* BDJPushGuideView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJPushGuideView.h; sourceTree = "<group>"; };
@@ -575,6 +590,39 @@
 			path = HJCornerRadius;
 			sourceTree = "<group>";
 		};
+		4000A1531DF47A7400D25237 /* Post */ = {
+			isa = PBXGroup;
+			children = (
+				4000A1541DF47A7400D25237 /* User Interface */,
+			);
+			path = Post;
+			sourceTree = "<group>";
+		};
+		4000A1541DF47A7400D25237 /* User Interface */ = {
+			isa = PBXGroup;
+			children = (
+				4000A1551DF47A7400D25237 /* Wireframe */,
+			);
+			path = "User Interface";
+			sourceTree = "<group>";
+		};
+		4000A1551DF47A7400D25237 /* Wireframe */ = {
+			isa = PBXGroup;
+			children = (
+				4000A1561DF47A9500D25237 /* BDJNewAllPostRouting.h */,
+				4000A1571DF47A9500D25237 /* BDJNewAllPostRouting.m */,
+				4000A1621DF47B2D00D25237 /* BDJNewWordsPostRouting.h */,
+				4000A1631DF47B2D00D25237 /* BDJNewWordsPostRouting.m */,
+				4000A1651DF47B6F00D25237 /* BDJNewVideoPostRouting.h */,
+				4000A1661DF47B6F00D25237 /* BDJNewVideoPostRouting.m */,
+				4000A1681DF47B8700D25237 /* BDJNewVoicePostRouting.h */,
+				4000A1691DF47B8700D25237 /* BDJNewVoicePostRouting.m */,
+				4000A16B1DF47B9A00D25237 /* BDJNewPicturePostRouting.h */,
+				4000A16C1DF47B9A00D25237 /* BDJNewPicturePostRouting.m */,
+			);
+			path = Wireframe;
+			sourceTree = "<group>";
+		};
 		40050EC81DEB141600E402DE /* Classes */ = {
 			isa = PBXGroup;
 			children = (
@@ -619,11 +667,11 @@
 		40050ED11DEB141600E402DE /* Modules */ = {
 			isa = PBXGroup;
 			children = (
-				40050ED21DEB141600E402DE /* Essence */,
-				40050F521DEB141600E402DE /* FriendTrends */,
 				40050FA11DEB141600E402DE /* IndexTab */,
-				40050FBB1DEB141700E402DE /* Me */,
+				40050ED21DEB141600E402DE /* Essence */,
 				40050FD61DEB141700E402DE /* New */,
+				40050F521DEB141600E402DE /* FriendTrends */,
+				40050FBB1DEB141700E402DE /* Me */,
 				40050FF11DEB141700E402DE /* Publish */,
 				40050FF71DEB141700E402DE /* UserCenter */,
 			);
@@ -1484,6 +1532,7 @@
 			isa = PBXGroup;
 			children = (
 				40050FD71DEB141700E402DE /* New */,
+				4000A1531DF47A7400D25237 /* Post */,
 			);
 			path = New;
 			sourceTree = "<group>";
@@ -2474,6 +2523,7 @@
 				400510DD1DEB141700E402DE /* UIImage+Size.m in Sources */,
 				400510FC1DEB141700E402DE /* BDJAPPLoader.m in Sources */,
 				400511761DEFC0EE00E402DE /* BDJPostCmtHeaderView.m in Sources */,
+				4000A16A1DF47B8700D25237 /* BDJNewVoicePostRouting.m in Sources */,
 				400510951DEB141700E402DE /* BDJPostCell.m in Sources */,
 				400510FD1DEB141700E402DE /* BDJPushGuideLoader.m in Sources */,
 				400510E61DEB141700E402DE /* XFRenderItem.m in Sources */,
@@ -2487,6 +2537,8 @@
 				400510B51DEB141700E402DE /* BDJFriendsRecommentActivity.m in Sources */,
 				400510AF1DEB141700E402DE /* BDJRecommandUserModel.m in Sources */,
 				400510B71DEB141700E402DE /* BDJRCCategoryTableView.m in Sources */,
+				4000A1581DF47A9500D25237 /* BDJNewAllPostRouting.m in Sources */,
+				4000A1671DF47B6F00D25237 /* BDJNewVideoPostRouting.m in Sources */,
 				4005111B1DED25F400E402DE /* BDJUserModel.m in Sources */,
 				400510BB1DEB141700E402DE /* BDJRecommendUserCell.m in Sources */,
 				400511611DED65EF00E402DE /* BDJPostCommentActivity.m in Sources */,
@@ -2542,6 +2594,7 @@
 				400510EE1DEB141700E402DE /* XFInteractor.m in Sources */,
 				400510801DEB141700E402DE /* BDJNavigationController.m in Sources */,
 				400511021DEB141700E402DE /* BDJRMetric.m in Sources */,
+				4000A1641DF47B2D00D25237 /* BDJNewWordsPostRouting.m in Sources */,
 				400510C01DEB141700E402DE /* BDJFriendTrendsPresenter.m in Sources */,
 				400510851DEB141700E402DE /* BDJEssencePresenter.m in Sources */,
 				400510A21DEB141700E402DE /* BDJRecommendTagInteractor.m in Sources */,
@@ -2557,6 +2610,7 @@
 				400510D91DEB141700E402DE /* BDJHttpRequest.m in Sources */,
 				4005116A1DEEDE5000E402DE /* BDJMetaPostCmtModel.m in Sources */,
 				400510E91DEB141700E402DE /* XFRoutingFactory.m in Sources */,
+				4000A16D1DF47B9A00D25237 /* BDJNewPicturePostRouting.m in Sources */,
 				400510C81DEB141700E402DE /* BDJIndexTabRouting.m in Sources */,
 				400511181DED25B200E402DE /* BDJPostCmtModel.m in Sources */,
 				400510F61DEB141700E402DE /* RACSignal+ErrorAlter.m in Sources */,

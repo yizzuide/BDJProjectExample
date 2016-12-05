@@ -14,11 +14,11 @@
 
 @implementation BDJPostService
 
-- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType
+- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType isNew:(BOOL)isNew
 {
     return [[BDJHttpRequest getWithURL:API_Main
                                 params:@{
-                                         @"a":@"list",
+                                         @"a": isNew ? @"newlist" : @"list",
                                          @"c":@"data",
                                          @"type":@(postSeviceMediaType)
                                          }]
@@ -31,11 +31,11 @@
             }];
 }
 
-- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType maxtime:(NSInteger)maxtime atPage:(NSInteger)page
+- (RACSignal *)pullPostsForType:(BDJPostDataMediaType)postSeviceMediaType maxtime:(NSInteger)maxtime atPage:(NSInteger)page  isNew:(BOOL)isNew
 {
     return [[BDJHttpRequest getWithURL:API_Main
                                 params:@{
-                                         @"a":@"list",
+                                         @"a": isNew ? @"newlist" : @"list",
                                          @"c":@"data",
                                          @"type":@(postSeviceMediaType),
                                          @"maxtime":@(maxtime),

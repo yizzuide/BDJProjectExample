@@ -7,9 +7,9 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "XFRouting.h"
 #import "BDJNewWireframePort.h"
+#import "BDJEssenceRouting.h"
 
-@interface BDJNewRouting : XFRouting <BDJNewWireFramePort>
+@interface BDJNewRouting : BDJEssenceRouting <BDJNewWireFramePort>
 
 @end

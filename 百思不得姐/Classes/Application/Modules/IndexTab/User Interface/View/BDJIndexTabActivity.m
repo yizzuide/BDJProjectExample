@@ -92,7 +92,7 @@
 {
     [self bindViewData];
     
-    // 设置TabBar视图的代理对象
+    // 设置TabBar视图的代理对象，用于侦听重复项点击，还可通过TabBar的子视图UITabBarButton的addTarget方式实现
     self.delegate = self.eventHandler;
 }
 
