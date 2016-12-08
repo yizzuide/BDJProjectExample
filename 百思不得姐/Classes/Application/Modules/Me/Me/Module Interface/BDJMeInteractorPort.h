@@ -11,4 +11,5 @@
 
 @protocol BDJMeInteractorPort <XFInteractorPort>
 
+- (RACSignal *)fetchTopics;
 @end

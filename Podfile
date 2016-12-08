@@ -16,6 +16,8 @@ target '百思不得姐' do
     pod 'DACircularProgress'
     pod 'pop'
     pod 'POP+MCAnimate', '~> 2.0'
+    pod 'XFSettings'
+    pod 'NJKWebViewProgress'
 end
 
 target '百思不得姐Tests' do

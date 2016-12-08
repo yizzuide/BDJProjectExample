@@ -11,4 +11,5 @@
 
 @protocol BDJMeWireFramePort <XFWireFramePort>
 
+- (void)transition2Browser;
 @end

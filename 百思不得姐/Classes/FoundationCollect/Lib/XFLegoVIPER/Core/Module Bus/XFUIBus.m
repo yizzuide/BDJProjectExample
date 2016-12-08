@@ -196,7 +196,7 @@
     LEGORunAfter0_015({
         // 下一个视图获得焦点，并传送意图数据
         if (self.fromRouting.nextRouting) {
-            [self.fromRouting.nextRouting.uiOperator viewWillBecomeFocusWithIntentData:intentData];
+            [self.fromRouting.nextRouting.uiOperator viewWillBecomeFocusWithIntentData:nil];
         }
     })
 }

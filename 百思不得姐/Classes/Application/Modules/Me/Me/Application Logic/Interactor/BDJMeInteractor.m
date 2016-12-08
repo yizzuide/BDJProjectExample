@@ -8,21 +8,26 @@
 
 #import "BDJMeInteractor.h"
 #import "BDJMeDataManagerPort.h"
+#import "BDJTopicModel.h"
+#import "BDJTopicProvider.h"
 
 #define DataManager XFConvertDataManagerToType(id<BDJMeDataManagerPort>)
 
 @interface BDJMeInteractor ()
 
+@property (nonatomic, strong) NSArray<BDJTopicModel *> *topics;
 @end
 
 @implementation BDJMeInteractor
 
 #pragma mark - Request
-/*- (RACSignal *)fetchData
+- (RACSignal *)fetchTopics
 {
-    [DataManager setPrefKey:@"PK_User_id" value:@"123"];
-    return [RACSignal return:@""];
-}*/
+    return [[DataManager grabTopics] map:^id(NSArray<BDJTopicModel *> *topics) {
+        self.topics = topics;
+        return [BDJTopicProvider collectRenderDataFromArray:topics];
+    }];
+}
 
 
 #pragma mark - BusinessReduce

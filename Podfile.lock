@@ -28,6 +28,11 @@ PODS:
   - MJExtension (3.0.13)
   - MJRefresh (3.1.12)
   - MTMigration (0.0.5)
+  - NJKWebViewProgress (0.2.3):
+    - NJKWebViewProgress/Core (= 0.2.3)
+    - NJKWebViewProgress/ProgressView (= 0.2.3)
+  - NJKWebViewProgress/Core (0.2.3)
+  - NJKWebViewProgress/ProgressView (0.2.3)
   - pop (1.0.9)
   - POP+MCAnimate (2.0.1):
     - pop (~> 1.0)
@@ -62,6 +67,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.0.3)
+  - XFSettings (2.3.1)
 
 DEPENDENCIES:
   - AFNetworking-RACExtensions
@@ -70,10 +76,12 @@ DEPENDENCIES:
   - MJExtension
   - MJRefresh
   - MTMigration
+  - NJKWebViewProgress
   - pop
   - POP+MCAnimate (~> 2.0)
   - SDWebImage
   - SVProgressHUD
+  - XFSettings
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
@@ -83,12 +91,14 @@ SPEC CHECKSUMS:
   MJExtension: 5932755f451458eefa24239358817f8d291240c7
   MJRefresh: b96cdb21c4aa75a7b07654311ab2f315c497e806
   MTMigration: 725315e6469c8fd7d13966887f59e65eb8aecb2e
+  NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
   POP+MCAnimate: a99e209148c602512de487f1160a44bf78572024
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
+  XFSettings: 8012ed56d3f0c97402797a672d0a371852eb2e28
 
-PODFILE CHECKSUM: 1ab0b0783e5ec11cc646dc4ea7f0364a749912b1
+PODFILE CHECKSUM: 15f5c143d1af23dd58278e188061bc68dc5a50e8
 
 COCOAPODS: 1.1.0.rc.3

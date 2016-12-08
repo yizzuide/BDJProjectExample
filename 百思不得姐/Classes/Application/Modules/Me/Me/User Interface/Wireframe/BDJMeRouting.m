@@ -15,8 +15,8 @@
 XF_AutoAssemblyModuleWithNav_Fast
 
 // 跳转组件
-/*- (void)transition2XXModule
+- (void)transition2Browser
 {
-    XF_PUSH_Routing_Fast(@"ModuleName")
-}*/
+    XF_PUSH_URLComponent_Fast(@"BDJ://me/web")
+}
 @end

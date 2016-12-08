@@ -11,5 +11,5 @@
 
 @protocol BDJMeDataManagerPort <XFDataManagerPort>
 
-
+- (RACSignal *)grabTopics;
 @end

@@ -8,7 +8,7 @@
 
 #import "BDJNavigationController.h"
 
-@interface BDJNavigationController ()
+@interface BDJNavigationController () <UIGestureRecognizerDelegate>
 
 @end
 
@@ -28,6 +28,8 @@
     // 方式一：直接设置当前导航的背景图，但每一个实例都要设置一次
 //    [self.navigationBar setBackgroundImage:[UIImage imageNamed:R_Image_NavBkg] forBarMetrics:UIBarMetricsDefault];
     
+    // 修复左滑失效问题
+    self.interactivePopGestureRecognizer.delegate = self;
 }
 
 // 统一设置导航子界面的返回按钮

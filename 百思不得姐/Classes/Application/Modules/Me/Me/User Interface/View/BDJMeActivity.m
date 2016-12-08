@@ -9,10 +9,15 @@
 #import "BDJMeActivity.h"
 #import "BDJMeEventHandlerPort.h"
 #import "UIBarButtonItem+BDJExtension.h"
+#import "XFSettings.h"
+#import <UIViewController+XFSettings.h>
+#import "BDJCircleImageCell.h"
+#import "BDJMeFooterView.h"
+#import "BDJTopicFrame.h"
 
 #define EventHandler  XFConvertPresenterToType(id<BDJMeEventHandlerPort>)
 
-@interface BDJMeActivity ()
+@interface BDJMeActivity () <XFSettingTableViewDataSource>
 
 @end
 
@@ -44,19 +49,69 @@
 }
 
 - (void)setUpViews {
+    // set cell attrs
+    XFCellAttrsData *cellAttrsData = [[XFCellAttrsData alloc] init];
+    // 设置图标大小
+    cellAttrsData.contentIconSize = 35;
+    // 设置内容间距
+    cellAttrsData.contentEachOtherPadding = 15;
+    // 标题文字大小（其它文字会按个大小自动调整）
+    cellAttrsData.contentTextMaxSize = 15;
+    // 表格风格
+    cellAttrsData.tableViewStyle = UITableViewStyleGrouped;
+    
+    self.xf_cellAttrsData = cellAttrsData;
+    // 设置数据源
+    self.xf_dataSource = self;
+    // 调用配置设置
+    [self xf_setup];
+    
+    // 使用分组样式的cell会整体向下移动35高度，为了只有10间距，可设置10-35的顶部内边距
+    self.xf_tableView.contentInset = UIEdgeInsetsMake(R_Size_PostCellMargin - 35, 0, 0, 0);
+    // 使用分组间距保持10的高度
+    self.xf_tableView.sectionHeaderHeight = 0;
+    self.xf_tableView.sectionFooterHeight = R_Size_PostCellMargin;
     
 }
 
 - (void)bindViewData {
-    // 双向数据绑定
-    //XF_$_(self.textField, text, EventHandler, text)
-    // 绑定事件层按钮命令
-    //XF_C_(self.btn, EventHandler, Command)
+    
+    [[EventHandler DidFooterViewInitAction] subscribeNext:^(NSArray<XFExpressPiece *> *expressPieces) {
+        BDJMeFooterView *footerView = [[BDJMeFooterView alloc] init];
+        footerView.height = ((BDJTopicFrame *)expressPieces.lastObject.uiFrame).maxH;
+        [footerView setExpressPeices:expressPieces];
+        self.xf_tableView.tableFooterView = footerView;
+    }];
+
 }
 
 
 #pragma mark - UIControlDelegate
-
+- (NSArray *)settingItems
+{
+    return @[ // 对应UITableView的Section数组
+             @{ // 每一个Section
+                 XFSettingGroupItems : @[ // 对应UITableView的cell数组
+                         @{
+                             XFSettingItemTitle: @"登录/注册",
+                             XFSettingItemIcon : R_Image_UserDefault,
+                             XFSettingItemClass: [XFSettingArrowItem class],
+                             XFSettingItemRelatedCellClass: [BDJCircleImageCell class],
+                             XFSettingItemDestViewControllerClass:[NSObject class],
+                             },
+                         ],
+                 },
+             @{
+                 XFSettingGroupItems:@[
+                         @{
+                             XFSettingItemTitle: @"下载",
+                             XFSettingItemClass: [XFSettingArrowItem class],
+                             XFSettingItemDestViewControllerClass:[NSObject class],
+                             }
+                         ]
+                 }
+             ];
+}
 
 
 

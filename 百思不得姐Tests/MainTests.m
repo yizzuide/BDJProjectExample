@@ -12,6 +12,7 @@
 #import "BDJPostService.h"
 #import "BDJPostInteractor.h"
 #import "BDJPostDataManager.h"
+#import "BDJTopicService.h"
 
 @interface MainTests : XCTestCase
 
@@ -57,7 +58,7 @@
 {
     XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch Posts should succeed"];
     BDJPostService *postService = [[BDJPostService alloc] init];
-    [[postService pullPostsForType:BDJPostDataMediaTypeAll] subscribeNext:^(id x) {
+    [[postService pullPostsForType:BDJPostDataMediaTypeAll isNew:NO] subscribeNext:^(id x) {
         NSLog(@"%@",x);
         XCTAssertNotNil(x,@"数据返回失败！");
         [networkSuccessExpectation fulfill];
@@ -90,6 +91,18 @@
         [networkSuccessExpectation fulfill];
     }];
      [self waitForExpectationsWithTimeout:3 handler:nil];
+}
+
+- (void)testTopics
+{
+    XCTestExpectation *networkSuccessExpectation = [self expectationWithDescription:@"fetch topics should succeed"];
+    BDJTopicService *postService = [[BDJTopicService alloc] init];
+    [[postService pullTopics] subscribeNext:^(id x) {
+        NSLog(@"%@",x);
+        XCTAssertNotNil(x,@"数据返回失败！");
+        [networkSuccessExpectation fulfill];
+    }];
+    [self waitForExpectationsWithTimeout:3 handler:nil];
 }
 
 - (void)testPerformanceExample {

@@ -9,6 +9,9 @@
 #import <Foundation/Foundation.h>
 #import "XFEventHandlerPort.h"
 
+@class XFExpressPiece;
 @protocol BDJMeEventHandlerPort <XFEventHandlerPort>
 
+- (RACSignal *)DidFooterViewInitAction;
+- (void)didTopicSelectAction:(XFExpressPiece *)expressPiece;
 @end
