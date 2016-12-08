@@ -61,7 +61,7 @@
     [self.webView reload];
 }
 
-- (void)webViewDidStartLoad:(UIWebView *)webView
+- (void)webViewDidFinishLoad:(UIWebView *)webView
 {
     self.backBarButtonItem.enabled = [self.webView canGoBack];
     self.forwardBarButtonItem.enabled = [self.webView canGoForward];
