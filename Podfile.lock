@@ -67,7 +67,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.0.3)
-  - XFSettings (2.3.1)
+  - XFSettings (2.3.2)
 
 DEPENDENCIES:
   - AFNetworking-RACExtensions
@@ -81,7 +81,7 @@ DEPENDENCIES:
   - POP+MCAnimate (~> 2.0)
   - SDWebImage
   - SVProgressHUD
-  - XFSettings
+  - XFSettings (= 2.3.2)
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
@@ -97,8 +97,8 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
-  XFSettings: 8012ed56d3f0c97402797a672d0a371852eb2e28
+  XFSettings: 06cdf84fc6c90154ecf7684d331ff79bdff56561
 
-PODFILE CHECKSUM: 15f5c143d1af23dd58278e188061bc68dc5a50e8
+PODFILE CHECKSUM: 546dfbd9e292faaee56a9417abc62371d497d7f4
 
 COCOAPODS: 1.1.0.rc.3
