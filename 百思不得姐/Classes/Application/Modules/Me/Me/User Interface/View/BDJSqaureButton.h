@@ -9,8 +9,10 @@
 #import <UIKit/UIKit.h>
 #import "BDJTopicRenderItem.h"
 #import "XFExpressPiecePort.h"
+#import "XFReusedCellDelegate.h"
 
-@interface BDJSqaureButton : UIButton <XFExpressPiecePort>
+@interface BDJSqaureButton : UIButton <XFExpressPiecePort,XFReusedCellDelegate>
 
 @property (nonatomic, weak) XFExpressPiece *expressPiece;
+@property (nonatomic, copy) NSString *identifier;
 @end

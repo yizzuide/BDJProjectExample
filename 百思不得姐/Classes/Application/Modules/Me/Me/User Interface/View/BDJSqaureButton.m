@@ -43,9 +43,11 @@
 - (void)setExpressPiece:(XFExpressPiece *)expressPiece
 {
     _expressPiece = expressPiece;
-    BDJTopicFrame *frame = expressPiece.uiFrame;
+/* ---------------- 使用手动计算Frame ---------------- */
+//    BDJTopicFrame *frame = expressPiece.uiFrame;
+    //    self.frame = frame.topicF;
+/* --------------------------------------------- */
     BDJTopicRenderItem *renderItem = expressPiece.renderItem;
-    self.frame = frame.topicF;
     [self setTitle:renderItem.topicName forState:UIControlStateNormal];
     [self sd_setImageWithURL:renderItem.topicIconURL forState:UIControlStateNormal];
 }

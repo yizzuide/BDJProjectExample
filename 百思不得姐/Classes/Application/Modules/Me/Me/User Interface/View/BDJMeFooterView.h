@@ -8,7 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
+#define SqaureMaxCols 4
+
+@class XFExpressPiece;
 @interface BDJMeFooterView : UIView
 
-- (void)setExpressPeices:(NSArray *)expressPeices;
+@property (nonatomic, strong) NSArray<XFExpressPiece *> *expressPeices;
+
 @end

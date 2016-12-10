@@ -32,7 +32,10 @@
 - (RACSignal *)DidFooterViewInitAction
 {
     return [[Interactor fetchTopics] map:^id(XFRenderData  *renderData) {
-        XF_SetExpressPack_(BDJTopicExpressPack, renderData)
+        /* ---------------- 使用手动计算Frame ---------------- */
+//        XF_SetExpressPack_(BDJTopicExpressPack, renderData)
+        /* --------------------------------------------- */
+        XF_SetExpressPack_Fast(renderData)
         return self.expressPack.expressPieces;
     }];
 }

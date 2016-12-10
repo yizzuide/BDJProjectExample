@@ -18,6 +18,7 @@ target '百思不得姐' do
     pod 'POP+MCAnimate', '~> 2.0'
     pod 'XFSettings', '2.3.2'
     pod 'NJKWebViewProgress'
+    pod 'XFReusedScrollView', '1.0.1'
 end
 
 target '百思不得姐Tests' do

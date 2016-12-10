@@ -17,8 +17,9 @@
 
 #define EventHandler  XFConvertPresenterToType(id<BDJMeEventHandlerPort>)
 
-@interface BDJMeActivity () <XFSettingTableViewDataSource>
+@interface BDJMeActivity () <XFSettingTableViewDataSource,UITableViewDelegate>
 
+@property (nonatomic, weak) BDJMeFooterView *footerView;
 @end
 
 @implementation BDJMeActivity
@@ -78,15 +79,15 @@
     
     [[EventHandler DidFooterViewInitAction] subscribeNext:^(NSArray<XFExpressPiece *> *expressPieces) {
         BDJMeFooterView *footerView = [[BDJMeFooterView alloc] init];
-        footerView.height = ((BDJTopicFrame *)expressPieces.lastObject.uiFrame).maxH;
+        footerView.height = ((expressPieces.count + SqaureMaxCols - 1)  / SqaureMaxCols) * ScreenSize.width / SqaureMaxCols;
         [footerView setExpressPeices:expressPieces];
         self.xf_tableView.tableFooterView = footerView;
+        self.footerView = footerView;
     }];
-
 }
 
 
-#pragma mark - UIControlDelegate
+#pragma mark - Data Source
 - (NSArray *)settingItems
 {
     return @[ // 对应UITableView的Section数组
@@ -112,6 +113,8 @@
                  }
              ];
 }
+
+#pragma mark - UIControlDelegate
 
 
 
