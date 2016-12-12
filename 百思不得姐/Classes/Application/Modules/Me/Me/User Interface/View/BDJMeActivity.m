@@ -105,7 +105,7 @@
              @{
                  XFSettingGroupItems:@[
                          @{
-                             XFSettingItemTitle: @"下载",
+                             XFSettingItemTitle: @"离线下载",
                              XFSettingItemClass: [XFSettingArrowItem class],
                              XFSettingItemDestViewControllerClass:[NSObject class],
                              }

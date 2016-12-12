@@ -19,14 +19,7 @@
 
 @implementation BDJMeFooterView
 
-- (instancetype)initWithFrame:(CGRect)frame
-{
-    self = [super initWithFrame:frame];
-    if (self) {
-        LogWarning(@"%@",NSStringFromCGRect(frame));
-    }
-    return self;
-}
+static NSString *ID = @"sqaureCell";
 
 - (void)setExpressPeices:(NSArray<XFExpressPiece *> *)expressPeices
 {
@@ -50,17 +43,6 @@
     self.waterFlowView.frame = self.bounds;
 }
 
-- (XFWaterflowView *)waterFlowView {
-	if(_waterFlowView == nil) {
-		XFWaterflowView *flowView = [[XFWaterflowView alloc] init];
-        flowView.dataSource = self;
-        flowView.delegate = self;
-        flowView.frame = self.bounds;
-        [self addSubview:flowView];
-	}
-	return _waterFlowView;
-}
-
 
 #pragma mark - DataSource
 - (NSInteger)numberOfColumnsInWaterflowView:(XFWaterflowView *)waterflowView
@@ -74,15 +56,8 @@
 }
 
 - (id<XFReusedCellDelegate>)simpleFlowView:(XFSimpleFlowView *)simpleFlowView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
-    static NSString *ID = @"sqaureCell";
-    
     BDJSqaureButton *cell = [simpleFlowView dequeueReusableCellWithIdentifier:ID];
-    if (cell == nil) {
-        cell = [[BDJSqaureButton alloc] init];
-        cell.identifier = ID;
-    }
     cell.expressPiece = self.expressPeices[indexPath.row];
-    
     return cell;
 }
 
@@ -95,6 +70,20 @@
 - (CGFloat)simpleFlowView:(XFSimpleFlowView *)simpleFlowView heightForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     return ScreenSize.width / SqaureMaxCols;
+}
+
+- (XFWaterflowView *)waterFlowView {
+	if(_waterFlowView == nil) {
+        XFWaterflowView *flowView = [[XFWaterflowView alloc] init];
+        flowView.dataSource = self;
+        flowView.delegate = self;
+        flowView.frame = CGRectMake(0, 0, ScreenBounds.size.width, 0);
+        [self addSubview:flowView];
+        _waterFlowView = flowView;
+        // 注册Cell
+        [self.waterFlowView registerClass:[BDJSqaureButton class] forCellReuseIdentifier:ID];
+	}
+	return _waterFlowView;
 }
 
 @end

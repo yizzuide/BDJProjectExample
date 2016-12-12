@@ -11,10 +11,15 @@
 
 @implementation BDJCircleImageCell
 
+
 - (void)setItem:(XFSettingItem *)item
 {
     self.imageView.aliCornerRadius = self.cellAttrsData.contentIconSize * 0.5;
     [super setItem:item];
 }
 
++ (NSString *)settingCellReuseIdentifierString
+{
+    return @"setting-circleImageCell";
+}
 @end

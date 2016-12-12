@@ -67,7 +67,7 @@ PODS:
     - SDWebImage/Core (= 3.8.2)
   - SDWebImage/Core (3.8.2)
   - SVProgressHUD (2.0.3)
-  - XFReusedScrollView (1.0.1)
+  - XFReusedScrollView (1.0.2)
   - XFSettings (2.3.2)
 
 DEPENDENCIES:
@@ -82,7 +82,7 @@ DEPENDENCIES:
   - POP+MCAnimate (~> 2.0)
   - SDWebImage
   - SVProgressHUD
-  - XFReusedScrollView (= 1.0.1)
+  - XFReusedScrollView
   - XFSettings (= 2.3.2)
 
 SPEC CHECKSUMS:
@@ -99,9 +99,9 @@ SPEC CHECKSUMS:
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
-  XFReusedScrollView: 417e58258cd1cdb9b84e5acfb25ecbe32a8ca2e2
+  XFReusedScrollView: e0406e0c171261da67462130187d240a1321c507
   XFSettings: 06cdf84fc6c90154ecf7684d331ff79bdff56561
 
-PODFILE CHECKSUM: a9903e114edb971de2c9992c4d2d8dcc1fa283bc
+PODFILE CHECKSUM: f0f7c9c703c2f4fa612f236ae739bd694a08f09f
 
 COCOAPODS: 1.1.0.rc.3
