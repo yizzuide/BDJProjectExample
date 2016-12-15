@@ -5,7 +5,7 @@
 
 ![](./ScreenShot/usage.gif)
 
-##Demo运行注意
+##项目运行注意
 安装好CocoaPods,执行命令:
 
 1.`cd ...BDJProjectExample`("..."要根据自己的路径来)
