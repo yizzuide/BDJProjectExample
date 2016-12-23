@@ -32,10 +32,25 @@
     self.selectedIndex = tabBar.selectedIndex;
 }
 
-#pragma mark - DoAction
+- (void)onNewComponentData:(id)componentData
+{
+    LogWarning(@"%@",componentData);
+}
 
+- (void)componentWillBecomeFocus
+{
+    XF_Debug_M();
+}
+
+- (void)componentWillResignFocus
+{
+    XF_Debug_M();
+}
+
+#pragma mark - DoAction
 - (void)didPublishButtonClickAction
 {
+    self.intentData = @"模块到控制器数据";
     [Routing transition2Publish];
 }
 

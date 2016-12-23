@@ -11,5 +11,5 @@
 
 @protocol BDJMeWireFramePort <XFWireFramePort>
 
-- (void)transition2Browser;
+- (void)transition2BrowserWithURL:(NSString *)url;
 @end

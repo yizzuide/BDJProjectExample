@@ -7,7 +7,8 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XFComponentViewController.h"
 
-@interface BDJSignInViewController : UIViewController
+@interface BDJSignInViewController : XFComponentViewController
 
 @end

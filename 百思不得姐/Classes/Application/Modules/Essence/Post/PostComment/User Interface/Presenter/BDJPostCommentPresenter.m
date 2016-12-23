@@ -40,6 +40,18 @@
     XF_RegisterMVxNotis_(@[UIKeyboardWillChangeFrameNotification])
 }
 
+- (void)componentWillBecomeFocus
+{
+    XF_Debug_M();
+}
+
+- (void)componentWillResignFocus
+{
+    XF_Debug_M();
+    // 设置意图回传数据
+    self.intentData = @"返回数据";
+}
+
 // 接收
 - (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
 {

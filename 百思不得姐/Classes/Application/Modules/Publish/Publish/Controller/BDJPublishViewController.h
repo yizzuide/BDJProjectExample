@@ -7,7 +7,9 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "XFComponentViewController.h"
 
-@interface BDJPublishViewController : UIViewController
+// 继承可运行组件控制器XFComponentViewController
+@interface BDJPublishViewController : XFComponentViewController
 
 @end

@@ -20,8 +20,10 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // 开启模块追踪log
-    [XFRoutingLinkManager enableLog];
+    // 开启组件追踪log（可选）
+    [XFComponentManager enableLog];
+    // 开启URL路径验证（可选）
+//    [XFURLRoute enableVerifyURLRoute];
     // 注册APP的所有URL
     [BDJAppURLRegister urlRegister];
     // 根据URL显示组件

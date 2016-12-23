@@ -10,6 +10,7 @@
 #import "XFVerticalButton.h"
 #import "POP.h"
 #import "POP+MCAnimate.h"
+#import "XFLegoMarco.h"
 
 static CGFloat const kAnimDuration = 0.1;
 static CGFloat const kSpringFactor = 10;
@@ -17,6 +18,7 @@ static CGFloat const kSpringFactor = 10;
 typedef enum : NSUInteger {
     BDJPublishTypeVideo,
     BDJPublishTypePicture,
+    BDJPublishTypeWords,
 } BDJPublishType;
 
 @interface BDJPublishViewController ()
@@ -27,6 +29,9 @@ typedef enum : NSUInteger {
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
+    LogWarning(@"%@",self.componentData);
+    LogWarning(@"上一个组件：%@",self.fromComponentRoutable);
     
     // 动画期间不可交互
     self.view.userInteractionEnabled = NO;
@@ -117,6 +122,8 @@ typedef enum : NSUInteger {
 
 - (IBAction)cancel {
     [self cancelWithCompletionBlock:^{
+        // 回传组件意图数据
+        self.intentData = @"控制器的返回数据";
         [self dismissViewControllerAnimated:NO completion:nil];
     }];
 }
@@ -132,15 +139,29 @@ typedef enum : NSUInteger {
     // 先显示退出动画
     [self cancelWithCompletionBlock:^{
         switch (target.tag) {
-            case BDJPublishTypeVideo:
-                LogWarning(@"发布视频");
+            case BDJPublishTypeWords:
+                self.intentData = @"控制器到模块的数据";
+                XF_Present_URLComponent_Fast(@"BDJ://indexTab/publish/publishContent")
                 break;
-                
             default:
                 break;
         }
         [self dismissViewControllerAnimated:NO completion:nil];
     }];
-    
+}
+
+- (void)onNewComponentData:(id)componentData
+{
+    LogWarning(@"%@",componentData);
+}
+
+- (void)componentWillBecomeFocus
+{
+    XF_Debug_M();
+}
+
+- (void)componentWillResignFocus
+{
+    XF_Debug_M();
 }
 @end

@@ -23,6 +23,9 @@
 
 @implementation BDJPostPictureBrowseViewController
 
+// 把控制器导出为组件
+XF_EXPORT_COMPONENT
+
 - (void)viewDidLoad {
     [super viewDidLoad];
     
@@ -38,7 +41,12 @@
         self.scrollView.contentSize = CGSizeMake(0, h);
     } else {
         self.imageView.size = CGSizeMake(ScreenSize.width, h);
-        self.imageView.centerY = ScreenSize.height * 0.5;
+        // 如果图片高度超过屏高
+        if (h > ScreenSize.height) {
+            self.scrollView.contentSize = CGSizeMake(0, h);
+        } else {
+            self.imageView.centerY = ScreenSize.height * 0.5;
+        }
     }
     
     // 使用cell中下载的进度

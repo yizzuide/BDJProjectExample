@@ -44,8 +44,7 @@
 {
     BDJTopicRenderItem *renderItem = expressPiece.renderItem;
     if ([renderItem.openURL hasPrefix:@"http:"]) {
-        self.intentData = renderItem.openURL;
-        [Routing transition2Browser];
+        [Routing transition2BrowserWithURL:renderItem.openURL];
         return;
     }
     

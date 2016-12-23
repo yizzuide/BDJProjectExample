@@ -17,11 +17,11 @@ XF_AutoAssemblyModule_Fast
 // 跳转组件
 - (void)transition2PostPictureBrowse
 {
-    XF_Present_URLComponent_Fast(@"BDJ://essence/post/postPictureBrowse");
+    XF_Present_URLComponent_Fast(@"BDJ://essence/post/postPictureBrowse")
 }
 
 - (void)transition2PostComment
 {
-    XF_PUSH_URLComponent_Fast(@"BDJ://essence/post/postComment");
+    XF_PUSH_URLComponent_Fast(@"BDJ://essence/post/postComment")
 }
 @end

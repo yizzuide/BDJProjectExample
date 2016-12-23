@@ -95,7 +95,7 @@
 
 #pragma mark - ValidData
 
-- (void)viewWillResignFocus
+- (void)componentWillResignFocus
 {
     // 当前视图移除时取消请求的信号
     [self.signalDisposable dispose];

@@ -51,6 +51,21 @@
     })
 }
 
+// 组件回传数据
+- (void)onNewComponentData:(id)componentData
+{
+    LogWarning(@"%@",componentData);
+}
+
+- (void)componentWillBecomeFocus
+{
+    XF_Debug_M();
+}
+- (void)componentWillResignFocus
+{
+    XF_Debug_M();
+}
+
 #pragma mark - DoAction
 - (void)didHeaderRefreshAction
 {
@@ -105,7 +120,8 @@
     // 切换到评论
     [Routing transition2PostComment];
     // 发送选择帖子ID事件
-    XF_SendEventForModule_(@"PostComment", BDJPostSelectedEvent, PostID)
+//    XF_SendEventForModule_(@"PostComment", BDJPostSelectedEvent, PostID)
+    XF_SendEventForComponent_(@"PostComment", BDJPostSelectedEvent, PostID)
 }
 
 #pragma mark - ValidData
