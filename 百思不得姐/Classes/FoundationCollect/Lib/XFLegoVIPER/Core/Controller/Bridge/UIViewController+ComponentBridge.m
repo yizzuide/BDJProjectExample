@@ -9,6 +9,7 @@
 #import "UIViewController+ComponentBridge.h"
 #import <objc/runtime.h>
 #import "NSObject+XFLegoInvokeMethod.h"
+#import "NSObject+XFLegoSwizzle.h"
 
 @implementation UIViewController (ComponentBridge)
 
@@ -60,13 +61,7 @@ static void * xfLego_nextComponentRoutable_porpertyKey = (void *)@"xfLego_nextCo
 + (void)load {
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
-        Class class = [self class];
-        SEL originalSelector = @selector(viewWillDisappear:);
-        SEL swizzledSelector = @selector(componentBridge_viewWillDisappear:);
-        
-        Method originalMethod = class_getInstanceMethod(class, originalSelector);
-        Method swizzledMethod = class_getInstanceMethod(class, swizzledSelector);
-        method_exchangeImplementations(originalMethod, swizzledMethod);
+        [self xfLego_swizzleMethod:@selector(viewWillDisappear:) withMethod:@selector(componentBridge_viewWillDisappear:)];
     });
 }
 

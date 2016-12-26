@@ -11,6 +11,7 @@
 #import "NSObject+XFLegoInvokeMethod.h"
 #import "XFInterfaceFactory.h"
 #import "UIView+XFLego.h"
+#import "NSObject+XFLegoSwizzle.h"
 
 @implementation UIViewController (XFLego)
 
@@ -37,10 +38,22 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
     return [popingNumber boolValue];
 }
 
-#pragma clang diagnostic push
-#pragma clang diagnostic ignored "-Wobjc-protocol-method-implementation"
-- (void)viewDidLoad
+#pragma mark - 生命周期
++ (void)load
 {
+    static dispatch_once_t onceToken;
+    dispatch_once(&onceToken, ^{
+        [self xfLego_swizzleMethod:@selector(viewDidLoad) withMethod:@selector(xfLego_viewDidLoad)];
+        [self xfLego_swizzleMethod:@selector(viewWillAppear:) withMethod:@selector(xfLego_viewWillAppear:)];
+        [self xfLego_swizzleMethod:@selector(viewDidAppear:) withMethod:@selector(xfLego_viewDidAppear:)];
+        [self xfLego_swizzleMethod:@selector(viewWillDisappear:) withMethod:@selector(xfLego_viewWillDisappear:)];
+        [self xfLego_swizzleMethod:@selector(viewDidDisappear:) withMethod:@selector(xfLego_viewDidDisappear:)];
+    });
+}
+
+- (void)xfLego_viewDidLoad
+{
+    [self xfLego_viewDidLoad];
     // 初始化事件处理
     [self _xfLego_initEventHandlerWithAdditionWorkBlock:nil];
     // 由于[[UITabBarController alloc] init]执行会立即调用当前viewDidLoad方法，所以这里要单独处理
@@ -59,22 +72,25 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
     }
 }
 
-- (void)viewWillAppear:(BOOL)animated
+- (void)xfLego_viewWillAppear:(BOOL)animated
 {
+    [self xfLego_viewWillAppear:animated];
     if (self.eventHandler) {
         [self.eventHandler invokeMethod:@"viewWillAppear"];
     }
 }
 
-- (void)viewDidAppear:(BOOL)animated
+- (void)xfLego_viewDidAppear:(BOOL)animated
 {
+    [self xfLego_viewDidAppear:animated];
     if (self.eventHandler) {
         [self.eventHandler invokeMethod:@"viewDidAppear"];
     }
 }
 
-- (void)viewWillDisappear:(BOOL)animated
+- (void)xfLego_viewWillDisappear:(BOOL)animated
 {
+    [self xfLego_viewWillDisappear:animated];
     if (self.eventHandler) {
         [self.eventHandler invokeMethod:@"viewWillDisappear"];
         // 如果当前视图被pop或dismiss
@@ -91,13 +107,33 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
     }
 }
 
-- (void)viewDidDisappear:(BOOL)animated
+- (void)xfLego_viewDidDisappear:(BOOL)animated
 {
+    [self xfLego_viewDidDisappear:animated];
     if (self.eventHandler) {
         [self.eventHandler invokeMethod:@"viewDidDisappear"];
     }
 }
-#pragma clang diagnostic pop
+
+#pragma mark - 子类可覆盖方法
+- (void)xfLego_viewDidLoadForTabBarViewController {}
+- (void)xfLego_viewWillPopOrDismiss {}
+
+#pragma mark - 子类可调用方法
+- (__kindof id<XFUserInterfacePort>)xfLego_subUInterfaceFromModuleName:(NSString *)moduleName
+{
+    return [XFInterfaceFactory createSubUInterfaceFromModuleName:moduleName parentUInterface:self];
+}
+
+#pragma mark - 私有方法
+// 通知所有子视图当前Activity将被移除
+- (void)_xfLego_viewWillPopOrDismiss
+{
+    for (UIView *view in self.view.subviews) {
+        [view xfLego_viewWillPopOrDismiss];
+    }
+    [self xfLego_viewWillPopOrDismiss];
+}
 
 - (void)_xfLego_initEventHandlerWithAdditionWorkBlock:(void(^)())additionWorkBlock
 {
@@ -110,27 +146,5 @@ static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActiv
             additionWorkBlock();
         }
     }
-}
-
-- (void)xfLego_viewDidLoadForTabBarViewController
-{
-}
-
-// 通知所有子视图当前Activity将被移除
-- (void)_xfLego_viewWillPopOrDismiss
-{
-    for (UIView *view in self.view.subviews) {
-        [view xfLego_viewWillPopOrDismiss];
-    }
-    [self xfLego_viewWillPopOrDismiss];
-}
-
-- (void)xfLego_viewWillPopOrDismiss
-{
-}
-
-- (__kindof id<XFUserInterfacePort>)xfLego_subUInterfaceFromModuleName:(NSString *)moduleName
-{
-    return [XFInterfaceFactory createSubUInterfaceFromModuleName:moduleName parentUInterface:self];
 }
 @end

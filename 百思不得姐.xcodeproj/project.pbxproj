@@ -156,6 +156,7 @@
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
+		4054DF0E1E10B3B000323FE1 /* NSObject+XFLegoSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 4054DF0D1E10B3B000323FE1 /* NSObject+XFLegoSwizzle.m */; };
 		405A84F21E07E4ED00D80A87 /* XFControllerReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 405A84F11E07E4ED00D80A87 /* XFControllerReflect.m */; };
 		405A84F61E0801BC00D80A87 /* UIViewController+ComponentBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 405A84F51E0801BC00D80A87 /* UIViewController+ComponentBridge.m */; };
 		40A34B071E028E4F0062B2EA /* BDJPublishContentDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40A34AF11E028E4F0062B2EA /* BDJPublishContentDataManager.m */; };
@@ -538,6 +539,8 @@
 		404873FB1DD3515E00388087 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		404873FE1DD3515E00388087 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		404874001DD3515E00388087 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4054DF0C1E10B3B000323FE1 /* NSObject+XFLegoSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoSwizzle.h"; sourceTree = "<group>"; };
+		4054DF0D1E10B3B000323FE1 /* NSObject+XFLegoSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoSwizzle.m"; sourceTree = "<group>"; };
 		405A84F01E07E4ED00D80A87 /* XFControllerReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerReflect.h; sourceTree = "<group>"; };
 		405A84F11E07E4ED00D80A87 /* XFControllerReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerReflect.m; sourceTree = "<group>"; };
 		405A84F41E0801BC00D80A87 /* UIViewController+ComponentBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ComponentBridge.h"; sourceTree = "<group>"; };
@@ -2506,6 +2509,8 @@
 				40A34B6F1E06AD480062B2EA /* NSObject+XFLegoCopy.m */,
 				40A34B701E06AD480062B2EA /* NSObject+XFLegoInvokeMethod.h */,
 				40A34B711E06AD480062B2EA /* NSObject+XFLegoInvokeMethod.m */,
+				4054DF0C1E10B3B000323FE1 /* NSObject+XFLegoSwizzle.h */,
+				4054DF0D1E10B3B000323FE1 /* NSObject+XFLegoSwizzle.m */,
 			);
 			path = Util;
 			sourceTree = "<group>";
@@ -2897,6 +2902,7 @@
 				4005109F1DEB141700E402DE /* BDJPostPictureBrowseViewController.m in Sources */,
 				400510AD1DEB141700E402DE /* BDJFriendsRecommendProvider.m in Sources */,
 				4005110B1DEC26B300E402DE /* BDJPostVoiceView.m in Sources */,
+				4054DF0E1E10B3B000323FE1 /* NSObject+XFLegoSwizzle.m in Sources */,
 				400510841DEB141700E402DE /* BDJEssenceInteractor.m in Sources */,
 				400510BD1DEB141700E402DE /* BDJFriendsRecommentRouting.m in Sources */,
 				40A34B891E06AD480062B2EA /* NSObject+XFLegoCopy.m in Sources */,
