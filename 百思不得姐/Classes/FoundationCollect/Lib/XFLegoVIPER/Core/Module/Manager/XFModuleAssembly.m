@@ -14,11 +14,22 @@
 #import "XFRoutingReflect.h"
 
 @interface XFModuleAssembly ()
-
+/**
+ *  路由
+ */
+@property (nonatomic, weak) XFRouting *fromRouting;
+/**
+ *  分享模块名
+ */
 @property (nonatomic, copy) NSString *shareModule;
 @end
 
 @implementation XFModuleAssembly
+
+- (instancetype)init
+{
+    return [self initWithFromRouting:nil];
+}
 
 - (instancetype)initWithFromRouting:(XFRouting *)fromRouting
 {

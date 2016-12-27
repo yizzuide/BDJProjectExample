@@ -39,18 +39,13 @@ if ([eventName isEqualToString:EventName]) { \
 @interface XFEventBus : NSObject
 
 /**
- *  可运行组件
- */
-@property (nonatomic, weak, readonly) __kindof id<XFComponentRoutable> componentRoutable;
-
-/**
  *  初始化方法
  *
  *  @param componentRoutable 可运行组件
  *
  *  @return XFEventBus
  */
-- (instancetype)initWithComponentRoutable:(__kindof id<XFComponentRoutable>)componentRoutable;
+- (instancetype)initWithComponentRoutable:(__kindof id<XFComponentRoutable>)componentRoutable NS_DESIGNATED_INITIALIZER;
 
 /**
  *  对单个组件发送事件消息

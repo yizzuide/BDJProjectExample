@@ -73,18 +73,13 @@ typedef void(^CustomCodeBlock) (Activity *nextInterface);
 @interface XFUIBus : NSObject
 
 /**
- *  可运行组件
- */
-@property (nonatomic, weak, readonly) __kindof id<XFComponentRoutable> componentRoutable;
-
-/**
  *  初始化方法
  *
  *  @param componentRoutable 可运行组件
  *
  *  @return XFUIBus
  */
-- (instancetype)initWithComponentRoutable:(__kindof id<XFComponentRoutable>)componentRoutable;
+- (instancetype)initWithComponentRoutable:(__kindof id<XFComponentRoutable>)componentRoutable NS_DESIGNATED_INITIALIZER;
 
 /**
  *  显示一个组件在窗口

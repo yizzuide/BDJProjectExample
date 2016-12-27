@@ -12,18 +12,13 @@
 @interface XFModuleAssembly : NSObject
 
 /**
- *  路由
- */
-@property (nonatomic, weak) XFRouting *fromRouting;
-
-/**
  *  初始化方法
  *
  *  @param fromRouting 路由
  *
- *  @return XFEventBus
+ *  @return XFModuleAssembly
  */
-- (instancetype)initWithFromRouting:(XFRouting *)fromRouting;
+- (instancetype)initWithFromRouting:(XFRouting *)fromRouting NS_DESIGNATED_INITIALIZER;
 
 /**
  *  通过Nav或Nib快速组建一个模块

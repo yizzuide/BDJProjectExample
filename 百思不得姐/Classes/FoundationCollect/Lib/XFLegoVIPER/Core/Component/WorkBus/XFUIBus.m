@@ -23,7 +23,21 @@
 // 当前组件界面
 #define ThisInterface (Activity *)(IS_Module(self.componentRoutable) ? Routing.realInterface: self.componentRoutable)
 
+@interface XFUIBus ()
+
+/**
+ *  可运行组件
+ */
+@property (nonatomic, weak) __kindof id<XFComponentRoutable> componentRoutable;
+
+@end
+
 @implementation XFUIBus
+
+- (instancetype)init
+{
+    return [self initWithComponentRoutable:nil];
+}
 
 - (instancetype)initWithComponentRoutable:(__kindof id<XFComponentRoutable>)componentRoutable
 {
@@ -90,7 +104,7 @@
     mainWindow.rootViewController = interface.navigationController ?: interface;
     [mainWindow makeKeyAndVisible];
     
-    // 添加组件
+    // 添加组件到容器
     [XFComponentManager addComponent:component];
 }
 

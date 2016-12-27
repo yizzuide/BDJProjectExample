@@ -14,14 +14,14 @@
 + (void)urlRegister
 {
     [XFURLRoute initURLGroup:@[
-                                 @"BDJ://indexTab", // Tab主UI框架页
-                                 @"BDJ://indexTab/publish", // 发布作品
-                                 @"BDJ://indexTab/publish/publishContent",
-                                 @"BDJ://friendTrends/friendsRecomment", // 推荐朋友
-                                 @"BDJ://userCenter/signIn", // 登录
-                                 @"BDJ://essence/recommendTag", // 推荐标签
-                                 @"BDJ://essence/post/postPictureBrowse", // 浏览大图
-                                 @"BDJ://essence/post/postComment", // 帖子评论
+                                 @"bdj://indexTab", // Tab主UI框架页
+                                 @"bdj://indexTab/publish", // 发布作品
+                                 @"bdj://indexTab/publish/publishContent",
+                                 @"bdj://friendTrends/friendsRecomment", // 推荐朋友
+                                 @"bdj://userCenter/signIn", // 登录
+                                 @"bdj://essence/recommendTag", // 推荐标签
+                                 @"bdj://essence/post/postPictureBrowse", // 浏览大图
+                                 @"bdj://essence/post/postComment", // 帖子评论
                                  ]];
     // 注册http的处理组件
     [XFURLRoute setHTTPHandlerComponent:@"WebBrowser"];

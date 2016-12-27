@@ -27,7 +27,7 @@
     // 注册APP的所有URL
     [BDJAppURLRegister urlRegister];
     // 根据URL显示组件
-    XF_ShowURLComponent2Window_Fast(@"BDJ://indexTab")
+    XF_ShowURLComponent2Window_Fast(@"bdj://indexTab")
     
     // 启动加载器
     [BDJAPPLoader loadForWindow:self.window];

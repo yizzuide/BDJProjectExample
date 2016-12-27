@@ -141,7 +141,7 @@ typedef enum : NSUInteger {
         switch (target.tag) {
             case BDJPublishTypeWords:
                 self.intentData = @"控制器到模块的数据";
-                XF_Present_URLComponent_Fast(@"BDJ://indexTab/publish/publishContent")
+                XF_Present_URLComponent_Fast(@"bdj://indexTab/publish/publishContent")
                 break;
             default:
                 break;

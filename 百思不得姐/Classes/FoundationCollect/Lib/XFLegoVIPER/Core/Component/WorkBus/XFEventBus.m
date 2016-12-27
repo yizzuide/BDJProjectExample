@@ -13,6 +13,12 @@
 
 
 @interface XFEventBus ()
+
+/**
+ *  可运行组件
+ */
+@property (nonatomic, weak) __kindof id<XFComponentRoutable> componentRoutable;
+
 /**
  *  所有用侦听通知的对象
  */
@@ -20,6 +26,11 @@
 @end
 
 @implementation XFEventBus
+
+- (instancetype)init
+{
+    return [self initWithComponentRoutable:nil];
+}
 
 - (instancetype)initWithComponentRoutable:(__kindof id<XFComponentRoutable>)componentRoutable
 {

@@ -17,6 +17,6 @@ XF_AutoAssemblyModuleWithNav_Fast
 // 跳转组件
 - (void)transition2RecommendTag
 {
-    XF_PUSH_URLComponent_Fast(@"BDJ://essence/recommendTag")
+    XF_PUSH_URLComponent_Fast(@"bdj://essence/recommendTag")
 }
 @end

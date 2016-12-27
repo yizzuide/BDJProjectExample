@@ -19,7 +19,7 @@ XF_AutoAssemblyModule_Fast
 - (void)transition2Publish
 {
     // 自定义跳转
-   [self.uiBus openURL:@"BDJ://indexTab/publish" withTransitionBlock:^(__kindof UIViewController *thisInterface, __kindof UIViewController *nextInterface, TransitionCompletionBlock completionBlock) {
+   [self.uiBus openURL:@"bdj://indexTab/publish" withTransitionBlock:^(__kindof UIViewController *thisInterface, __kindof UIViewController *nextInterface, TransitionCompletionBlock completionBlock) {
        // 装配上导航控制器
 //       UINavigationController *nav = [[BDJNavigationController alloc] initWithRootViewController:nextInterface];
        // 使用不带动画的方式

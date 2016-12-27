@@ -13,49 +13,44 @@
 
 @implementation UIViewController (ComponentBridge)
 
-static void * xfLego_uiBus_porpertyKey = (void *)@"xfLego_uiBus_porpertyKey";
-static void * xfLego_eventBus_porpertyKey = (void *)@"xfLego_eventBus_porpertyKey";
-static void * xfLego_fromComponentRoutable_porpertyKey = (void *)@"xfLego_fromComponentRoutable_porpertyKey";
-static void * xfLego_nextComponentRoutable_porpertyKey = (void *)@"xfLego_nextComponentRoutable_porpertyKey";
-
 - (void)setUiBus:(__kindof XFUIBus *)uiBus
 {
-    objc_setAssociatedObject(self, &xfLego_uiBus_porpertyKey, uiBus, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(uiBus), uiBus, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (XFUIBus *)uiBus
 {
-    return objc_getAssociatedObject(self, &xfLego_uiBus_porpertyKey);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setEventBus:(__kindof XFEventBus *)eventBus
 {
-    objc_setAssociatedObject(self, &xfLego_eventBus_porpertyKey, eventBus, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(eventBus), eventBus, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 
 - (XFEventBus *)eventBus
 {
-    return objc_getAssociatedObject(self, &xfLego_eventBus_porpertyKey);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setFromComponentRoutable:(id<XFComponentRoutable>)fromComponentRoutable
 {
-    objc_setAssociatedObject(self, &xfLego_fromComponentRoutable_porpertyKey, fromComponentRoutable, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(fromComponentRoutable), fromComponentRoutable, OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (id<XFComponentRoutable>)fromComponentRoutable
 {
-    return objc_getAssociatedObject(self, &xfLego_fromComponentRoutable_porpertyKey);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setNextComponentRoutable:(id<XFComponentRoutable>)nextComponentRoutable
 {
-    objc_setAssociatedObject(self, &xfLego_nextComponentRoutable_porpertyKey, nextComponentRoutable, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(nextComponentRoutable), nextComponentRoutable, OBJC_ASSOCIATION_ASSIGN);
 }
 
 - (id<XFComponentRoutable>)nextComponentRoutable
 {
-    return objc_getAssociatedObject(self, &xfLego_nextComponentRoutable_porpertyKey);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 + (void)load {

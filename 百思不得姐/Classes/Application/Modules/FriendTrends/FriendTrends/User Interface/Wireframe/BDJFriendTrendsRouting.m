@@ -17,11 +17,11 @@ XF_AutoAssemblyModuleWithNav_Fast
 // 跳转组件
 - (void)transition2FriendsRecomment
 {
-    XF_PUSH_URLComponent_Fast(@"BDJ://friendTrends/friendsRecomment")
+    XF_PUSH_URLComponent_Fast(@"bdj://friendTrends/friendsRecomment")
 }
 
 - (void)transition2SignIn
 {
-    XF_Present_URLComponent_Fast(@"BDJ://userCenter/signIn")
+    XF_Present_URLComponent_Fast(@"bdj://userCenter/signIn")
 }
 @end

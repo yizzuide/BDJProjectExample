@@ -11,21 +11,19 @@
 
 @implementation UIView (XFLego)
 
-static void * xfViewRender_eventHandler_porpertyKey = (void *)@"xfViewRender_eventHandler_porpertyKey";
-
 - (void)setEventHandler:(id<XFEventHandlerPort>)eventHandler
 {
-    objc_setAssociatedObject(self, &xfViewRender_eventHandler_porpertyKey, eventHandler, OBJC_ASSOCIATION_ASSIGN);
+    objc_setAssociatedObject(self, @selector(eventHandler), eventHandler, OBJC_ASSOCIATION_ASSIGN);
 }
 - (id<XFEventHandlerPort>)eventHandler
 {
     // 绑定事件层
     [self xfLogo_bindEventHandler];
-    return objc_getAssociatedObject(self, &xfViewRender_eventHandler_porpertyKey);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)xfLogo_bindEventHandler {
-    if (objc_getAssociatedObject(self, &xfViewRender_eventHandler_porpertyKey)) return;
+    if (objc_getAssociatedObject(self, @selector(eventHandler))) return;
     UIViewController *activity = [self xfLogo_getCurrentViewController];
     self.eventHandler = [activity performSelector:@selector(eventHandler)];
 }

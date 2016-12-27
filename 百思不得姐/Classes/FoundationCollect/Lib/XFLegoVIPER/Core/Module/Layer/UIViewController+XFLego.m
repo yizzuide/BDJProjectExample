@@ -15,26 +15,23 @@
 
 @implementation UIViewController (XFLego)
 
-static void * xfActivity_eventHandler_porpertyKey = (void *)@"xfActivity_eventHandler_porpertyKey";
-static void * xfActivity_poppingProgrammatically_porpertyKey = (void *)@"xfActivity_poppingProgrammatically_porpertyKey";
-
 - (void)setEventHandler:(id<XFEventHandlerPort>)eventHandler
 {
-    objc_setAssociatedObject(self, &xfActivity_eventHandler_porpertyKey, eventHandler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+    objc_setAssociatedObject(self, @selector(eventHandler), eventHandler, OBJC_ASSOCIATION_RETAIN_NONATOMIC);
 }
 - (id<XFEventHandlerPort>)eventHandler
 {
-    return objc_getAssociatedObject(self, &xfActivity_eventHandler_porpertyKey);
+    return objc_getAssociatedObject(self, _cmd);
 }
 
 - (void)setPoppingProgrammatically:(NSNumber *)popingBool
 {
-     objc_setAssociatedObject(self, &xfActivity_poppingProgrammatically_porpertyKey, popingBool, OBJC_ASSOCIATION_RETAIN);
+     objc_setAssociatedObject(self, @selector(poppingProgrammatically), popingBool, OBJC_ASSOCIATION_RETAIN);
 }
 
 - (BOOL)poppingProgrammatically
 {
-    NSNumber *popingNumber = objc_getAssociatedObject(self, &xfActivity_poppingProgrammatically_porpertyKey);
+    NSNumber *popingNumber = objc_getAssociatedObject(self, _cmd);
     return [popingNumber boolValue];
 }
 
