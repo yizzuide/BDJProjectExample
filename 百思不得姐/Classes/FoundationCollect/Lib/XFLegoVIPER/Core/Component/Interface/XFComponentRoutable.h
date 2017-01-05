@@ -25,12 +25,12 @@
 /* ------------------------------------------------------------------------ */
 
 /**
- *  通过其它URL组件传递过来的参数
+ *  上一个URL组件传递过来的URL参数
  */
 @property (nonatomic, copy) NSDictionary *URLParams;
 
 /**
- *  通过其它URL组件传递过来的数据对象
+ *  上一个URL组件传递过来的自定义数据对象
  */
 @property (nonatomic, copy) id componentData;
 
@@ -40,11 +40,11 @@
 @property (nonatomic, copy) id intentData;
 
 /**
- *  接收到上一个组件的回传数据
+ *  接收到上一个组件的回传意图数据
  *
- *  @param componentData 组件数据
+ *  @param intentData 消息数据
  */
-- (void)onNewComponentData:(id)componentData;
+- (void)onNewIntent:(id)intentData;
 
 /**
  *  组件将获得焦点

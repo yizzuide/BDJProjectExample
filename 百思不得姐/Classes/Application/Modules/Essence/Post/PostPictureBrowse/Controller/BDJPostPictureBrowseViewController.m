@@ -58,7 +58,6 @@ XF_EXPORT_COMPONENT
     } completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
         self.progressView.hidden = YES;
     }];
-    
 }
 
 - (IBAction)saveAction:(id)sender {

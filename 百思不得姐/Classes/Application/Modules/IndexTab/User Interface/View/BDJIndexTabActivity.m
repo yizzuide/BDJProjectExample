@@ -43,6 +43,9 @@
     dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(LEGONextStep * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [XFStatWindow show];
     });
+    
+    // TODO: 无网络下的测试
+//    [self setSelectedIndex:3];
 }
 
 #pragma mark - 初始化

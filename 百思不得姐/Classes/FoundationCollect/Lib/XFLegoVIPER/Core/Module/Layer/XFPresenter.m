@@ -26,7 +26,7 @@ XF_EXPORT_COMPONENT
 - (void)componentWillBecomeFocus{}
 - (void)componentWillResignFocus{}
 
-- (void)onNewComponentData:(id)componentData{}
+- (void)onNewIntent:(id)intentData{}
 
 #pragma mark - 组件通信
 - (void)registerMVxNotifactions{}

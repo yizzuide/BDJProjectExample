@@ -19,6 +19,13 @@
     // 方式二：当导航控制包含当前类时才需要设置,只会设置一次，因为是通过appearance皮肤全局配置
     UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedInInstancesOfClasses:@[[self class]]];
     [navBar setBackgroundImage:[UIImage imageNamed:R_Image_NavBkg] forBarMetrics:UIBarMetricsDefault];
+    // 设置导航标题字体
+    [navBar setTitleTextAttributes:@{NSFontAttributeName:[UIFont boldSystemFontOfSize:20]}];
+    
+    // 设置导航菜单项
+    UIBarButtonItem *barItem = [UIBarButtonItem appearance];
+    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor blackColor]} forState:UIControlStateNormal];
+    [barItem setTitleTextAttributes:@{NSForegroundColorAttributeName:[UIColor lightGrayColor]} forState:UIControlStateDisabled];
 }
 
 - (void)viewDidLoad {

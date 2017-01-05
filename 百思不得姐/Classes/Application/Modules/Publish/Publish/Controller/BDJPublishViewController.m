@@ -150,9 +150,9 @@ typedef enum : NSUInteger {
     }];
 }
 
-- (void)onNewComponentData:(id)componentData
+- (void)onNewIntent:(id)intentData
 {
-    LogWarning(@"%@",componentData);
+    LogWarning(@"%@",intentData);
 }
 
 - (void)componentWillBecomeFocus

@@ -253,7 +253,7 @@
         }
         // 如果组件符合回传数据的条件
         if ([self _canBackDataWithComponent:self.componentRoutable]) {
-            [self.componentRoutable.fromComponentRoutable onNewComponentData:self.componentRoutable.intentData];
+            [self.componentRoutable.fromComponentRoutable onNewIntent:self.componentRoutable.intentData];
         }
         // 如果模块组件
         if ([XFComponentReflect isModuleComponent:self.componentRoutable]) {
@@ -275,7 +275,7 @@
     return [componentRoutable respondsToSelector:@selector(intentData)] &&
     componentRoutable.intentData &&
     componentRoutable.fromComponentRoutable &&
-    [componentRoutable.fromComponentRoutable respondsToSelector:@selector(onNewComponentData:)];
+    [componentRoutable.fromComponentRoutable respondsToSelector:@selector(onNewIntent:)];
 }
 // 获取组件意图数据
 - (id)_intentData
