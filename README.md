@@ -15,3 +15,13 @@
 1.`cd ...BDJProjectExample`("..."要根据自己的路径来)
 
 2.`pod install`
+
+**如果有安装找不到`XFReusedScrollView`，请尝试使用下面的解决方案**：
+
+* 第一步，搜索库信息：
+
+`pod search XFReusedScrollView`
+
+* 如果第一步还是出现安装失败，更新本地资源库：
+
+`pod repo update`
