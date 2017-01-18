@@ -6,7 +6,7 @@
 //  Copyright © 2016年 yizzuide. All rights reserved.
 //
 
-#import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 #define IS_Module(component) [component respondsToSelector:@selector(routing)]
 

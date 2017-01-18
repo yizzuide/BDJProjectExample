@@ -10,6 +10,7 @@
 #import <objc/runtime.h>
 #import "NSObject+XFLegoInvokeMethod.h"
 #import "NSObject+XFLegoSwizzle.h"
+#import "XFEventBus.h"
 
 @implementation UIViewController (ComponentBridge)
 
@@ -57,6 +58,7 @@
     static dispatch_once_t onceToken;
     dispatch_once(&onceToken, ^{
         [self xfLego_swizzleMethod:@selector(viewWillDisappear:) withMethod:@selector(componentBridge_viewWillDisappear:)];
+        [self xfLego_swizzleMethod:@selector(viewDidLoad) withMethod:@selector(componentBridge_viewDidLoad)];
     });
 }
 
@@ -65,7 +67,10 @@
     [self componentBridge_viewWillDisappear:animated];
     if (self.uiBus) {
         // 如果当前视图被pop或dismiss
-        if (self.isMovingFromParentViewController || self.isBeingDismissed) {
+        if (self.isMovingFromParentViewController ||
+            self.isBeingDismissed ||
+            self.navigationController.isMovingToParentViewController ||
+            self.navigationController.isBeingDismissed) {
             // 如果不是通过框架方法
             if (![[self valueForKeyPath:@"poppingProgrammatically"] boolValue]) {
                 // 将组件移除
@@ -74,6 +79,16 @@
                 }];
             }
         }
+    }
+}
+
+
+- (void)componentBridge_viewDidLoad
+{
+    [self componentBridge_viewDidLoad];
+    if (self.uiBus) {
+        // 销毁当前组件界面导航对象强引用
+        [self.uiBus invokeMethod:@"xfLego_destoryNavigatorRef"];
     }
 }
 
