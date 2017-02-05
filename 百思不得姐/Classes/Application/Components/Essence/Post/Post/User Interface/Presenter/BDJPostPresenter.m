@@ -32,15 +32,16 @@
 
 - (void)registerMVxNotifactions
 {
-    XF_RegisterMVxNotis_(@[BDJTabBarSelectAgainNotification])
+    XF_RegisterMVxNotis_(BDJTabBarSelectAgainNotification)
 }
 
 // 接受到组件事件
 - (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
 {
-    /*XF_EventIs_(BDJPostPageChangeEvent, {
-        
-    })*/
+    // 当页面发生变化的事件
+    XF_EventIs_(BDJPostPageChangeEvent, {
+    })
+    // 当前页重复选择事件
     XF_EventIs_(BDJTabBarSelectAgainNotification, {
         UIViewController *activity = self.userInterface;
         // 如果当前视图正在窗口显示，则刷新该视图
@@ -120,8 +121,7 @@
     // 切换到评论
     [Routing transition2PostComment];
     // 发送选择帖子ID事件
-//    XF_SendEventForModule_(@"PostComment", BDJPostSelectedEvent, PostID)
-    XF_SendEventForComponent_(@"PostComment", BDJPostSelectedEvent, PostID)
+    XF_SendEventForComponents_(BDJPostSelectedEvent, PostID, @"PostComment")
 }
 
 #pragma mark - ValidData

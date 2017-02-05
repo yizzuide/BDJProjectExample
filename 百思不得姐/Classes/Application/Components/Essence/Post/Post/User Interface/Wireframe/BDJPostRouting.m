@@ -11,17 +11,17 @@
 
 @implementation BDJPostRouting
 
-// 组装模块
-XF_AutoAssemblyModule_Fast
+// 组装一个共享的模块，使当前模块成为被共享状态，配合在视图层使用宏`XF_SubUInterface_`来动态添加子模块，不用再手动创建新的子路由类
+XF_AutoAssemblyModuleForShareShell_Fast
 
 // 跳转组件
 - (void)transition2PostPictureBrowse
 {
-    XF_Present_URLComponent_Fast(@"bdj://essence/post/postPictureBrowse")
+    XF_Present_URLComponent_Fast(@"bdj://indexTab/essence/post/postPictureBrowse")
 }
 
 - (void)transition2PostComment
 {
-    XF_PUSH_URLComponent_Fast(@"bdj://essence/post/postComment")
+    XF_PUSH_URLComponent_Fast(@"bdj://indexTab/essence/post/postComment")
 }
 @end

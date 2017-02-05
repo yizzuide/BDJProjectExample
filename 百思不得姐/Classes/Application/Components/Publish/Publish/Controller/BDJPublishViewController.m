@@ -144,6 +144,9 @@ typedef enum : NSUInteger {
                 // 使用nav行为参数标识装配自定义导航
                 XF_Present_URLComponent_Fast(@"bdj://indexTab/publish/publishContent?nav=BDJ")
                 break;
+            case BDJPublishTypePicture:
+                XF_Present_URLComponent_Fast(@"bdj://indexTab/publish/publishImg?nav=BDJ")
+                break;
             default:
                 break;
         }

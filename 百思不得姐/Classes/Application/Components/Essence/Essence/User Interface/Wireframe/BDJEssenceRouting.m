@@ -12,11 +12,11 @@
 @implementation BDJEssenceRouting
 
 // 组装模块
-XF_AutoAssemblyModuleWithNav_Fast
+XF_AutoAssemblyModule_Fast
 
 // 跳转组件
 - (void)transition2RecommendTag
 {
-    XF_PUSH_URLComponent_Fast(@"bdj://essence/recommendTag")
+    XF_PUSH_URLComponent_Fast(@"bdj://indexTab/essence/recommendTag")
 }
 @end

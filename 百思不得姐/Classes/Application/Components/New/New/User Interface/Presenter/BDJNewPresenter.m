@@ -50,7 +50,7 @@
 - (void)registerMVxNotifactions
 {
     // 注册MVx构架通知
-//    XF_RegisterMVxNotis_(@[NF_User_XXX])
+//    XF_RegisterMVxNotis_(NF_User_XXX)
 }
 
 

@@ -18,6 +18,7 @@
 @implementation BDJNewActivity
 
 #pragma mark - 初始化
+// 覆盖精华里的子模块类型
 - (NSArray *)moduleNames
 {
     return @[@"NewAllPost",@"NewVideoPost",@"NewVoicePost",@"NewPicturePost",@"NewWordsPost"];

@@ -10,6 +10,7 @@
 #import "XFLegoVIPER.h"
 #import "BDJAppURLRegister.h"
 #import "BDJAPPLoader.h"
+#import "LEMVVMModuleHandler.h"
 
 @interface AppDelegate ()
 
@@ -20,17 +21,21 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window = [[UIWindow alloc] initWithFrame:[[UIScreen mainScreen] bounds]];
-    // 开启组件追踪log（可选）
-    [XFComponentManager enableLog];
-    // 开启URL路径验证（可选）
-//    [XFURLRoute enableVerifyURLRoute];
+    
+    // 配置乐高框架
+    [[[XFLegoConfig defaultConfig] // 使有默认配置
+                    enableLog] // 允许打印log
+                    addComponentHanderPlug:[LEMVVMModuleHandler class]]; // 添加扩展MVVM模块组件处理器（用来处理MVVM模块组件）
+    
     // 注册APP的所有URL
     [BDJAppURLRegister urlRegister];
+    
     // 根据URL显示组件
     XF_ShowURLComponent2Window_Fast(@"bdj://indexTab")
     
     // 启动加载器
     [BDJAPPLoader loadForWindow:self.window];
+    
     return YES;
 }
 

@@ -42,8 +42,7 @@
 - (void)didScrollIndicatorAction
 {
     // 给帖子发模块事件，即使这些都是共享模块<只有路由的模块壳>，也要分别写明，而不能直接用"Post"
-//    NSArray *modules = @[@"AllPost",@"PicturePost",@"VideoPost",@"VoicePost",@"WordsPost"];
-//    XF_SendEventForModules_(modules, BDJPostPageChangeEvent, nil)
+    XF_SendEventForComponents_(BDJPostPageChangeEvent, nil, @"AllPost",@"PicturePost",@"VideoPost",@"VoicePost",@"WordsPost")
 }
 
 

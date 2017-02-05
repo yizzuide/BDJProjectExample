@@ -37,7 +37,7 @@
 - (void)registerMVxNotifactions
 {
     // 注册键盘通知
-    XF_RegisterMVxNotis_(@[UIKeyboardWillChangeFrameNotification])
+    XF_RegisterMVxNotis_(UIKeyboardWillChangeFrameNotification)
 }
 
 - (void)componentWillBecomeFocus

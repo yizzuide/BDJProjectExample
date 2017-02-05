@@ -52,9 +52,9 @@
 + (void)configTabBar
 {
     NSDictionary *textAttr = @{
-                                          NSForegroundColorAttributeName:UIColorFromRGB(R_Color_SectionText),
-                                          NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
-                                          };
+                                  NSForegroundColorAttributeName:UIColorFromRGB(R_Color_SectionText),
+                                  NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
+                                  };
     NSDictionary *textHeightLightAttr = @{
                                           NSForegroundColorAttributeName:UIColorFromRGB(R_Color_SectionTextSel),
                                           NSFontAttributeName:[UIFont systemFontOfSize:R_Size_Font_TabBarTitle]
@@ -76,13 +76,13 @@
 }
 
 - (void)setUpChildActivitys {
-    [self addChildActivity:XF_SubUInterface_(@"Essence") title:@"精华" image:R_Image_TabBarEssence selImage:R_Image_TabBarEssenceSel];
-    [self addChildActivity:XF_SubUInterface_(@"New") title:@"新帖" image:R_Image_TabBarNew selImage:R_Image_TabBarNewSel];
-    [self addChildActivity:XF_SubUInterface_(@"FriendTrends") title:@"关注" image:R_Image_TabBarFriendTrend selImage:R_Image_TabBarFriendTrendSel];
-    [self addChildActivity:XF_SubUInterface_(@"Me") title:@"我" image:R_Image_TabBarMe selImage:R_Image_TabBarMeSel];
+    [self addChildActivity:XF_SubUInterface_URL(@"bdj://indexTab/essence?nav=BDJ") title:@"精华" image:R_Image_TabBarEssence selImage:R_Image_TabBarEssenceSel];
+    [self addChildActivity:XF_SubUInterface_URL(@"bdj://indexTab/new?nav=BDJ") title:@"新帖" image:R_Image_TabBarNew selImage:R_Image_TabBarNewSel];
+    [self addChildActivity:XF_SubUInterface_URL(@"bdj://indexTab/friendTrends?nav=BDJ") title:@"关注" image:R_Image_TabBarFriendTrend selImage:R_Image_TabBarFriendTrendSel];
+    [self addChildActivity:XF_SubUInterface_URL(@"bdj://indexTab/me?nav=BDJ") title:@"我" image:R_Image_TabBarMe selImage:R_Image_TabBarMeSel];
 }
 
-- (void)addChildActivity:(XFActivity *)activity title:(NSString *)title image:(NSString *)image selImage:(NSString *)selImage
+- (void)addChildActivity:(UIViewController *)activity title:(NSString *)title image:(NSString *)image selImage:(NSString *)selImage
 {
     activity.tabBarItem.title = title;
     activity.tabBarItem.image = [UIImage imageNamed:image];

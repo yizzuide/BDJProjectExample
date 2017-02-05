@@ -39,8 +39,11 @@
 - (void)layoutSubviews
 {
     [super layoutSubviews];
-    self.textLabel.y = 2;
-    self.textLabel.height = self.textLabel.height - self.textLabel.y * 2;
+    
+    [self.textLabel sizeToFit];
+    CGFloat textW = self.textLabel.width;
+    self.textLabel.x = (self.contentView.width - textW) * 0.5;
+    self.textLabel.y = (self.contentView.height - self.textLabel.height) * 0.5;
 }
 
 @end

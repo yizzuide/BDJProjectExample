@@ -7,10 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
-#import "XFControllerComponentRunnable.h"
+#import "XFControllerRunnable.h"
 
-// 如要当前控制器不是继承的UIViewController类，可实现XFControllerComponentRunnable接口使控制器成为可运行组件
-@interface BDJPostPictureBrowseViewController : UIViewController <XFControllerComponentRunnable>
+// 如要当前控制器不是继承的UIViewController类，可实现XFControllerRunnable接口使控制器成为可运行组件
+@interface BDJPostPictureBrowseViewController : UIViewController <XFControllerRunnable>
 
 /* ---------------- 可选实现 ---------------- */
 /**
