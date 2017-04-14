@@ -11,4 +11,5 @@
 
 @protocol BDJPublishContentWireFramePort <XFWireFramePort>
 
+- (void)transition2TopicTag;
 @end

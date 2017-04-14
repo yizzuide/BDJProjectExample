@@ -20,11 +20,6 @@
 
 @implementation BDJPostVoiceView
 
-+ (instancetype)postVoiceView
-{
-    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
-}
-
 - (void)awakeFromNib
 {
     [super awakeFromNib];

@@ -20,13 +20,11 @@ XF_AutoAssemblyModule_Fast
 {
     // 自定义跳转
    [self.uiBus openURL:@"bdj://indexTab/publish" withTransitionBlock:^(__kindof UIViewController *thisInterface, __kindof UIViewController *nextInterface, TransitionCompletionBlock completionBlock) {
-//        装配上导航控制器
-//       UINavigationController *nav = [[BDJNavigationController alloc] initWithRootViewController:nextInterface];
 //        使用不带动画的方式
        [thisInterface presentViewController:nextInterface animated:NO completion:completionBlock];
    } customCode:nil];
     
     // TODO: 用于快速测试
-//    XF_Present_URLComponent_Fast(@"bdj://indexTab/publish/publishContent")
+//    XF_Present_URLComponent_Fast(@"bdj://indexTab/publish/publishContent?nav=BDJ")
 }
 @end

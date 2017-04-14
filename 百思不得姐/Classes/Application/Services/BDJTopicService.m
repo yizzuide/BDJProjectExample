@@ -22,8 +22,8 @@
                                          @"c":@"topic",
                                          }]
             map:^id(RACTuple *tuple) {
-                NSDictionary *dict = tuple.first;
-                [dict writeToFile:@"/Users/yizzuide/Desktop/topics.plist" atomically:YES];
+//                NSDictionary *dict = tuple.first;
+//                [dict writeToFile:@"/Users/yizzuide/Desktop/topics.plist" atomically:YES];
                 return [BDJTopicModel mj_objectArrayWithKeyValuesArray:tuple.first[@"square_list"]];
             }];
 }

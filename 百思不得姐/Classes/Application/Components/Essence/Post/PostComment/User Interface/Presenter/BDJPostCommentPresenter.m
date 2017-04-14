@@ -37,7 +37,7 @@
 - (void)registerMVxNotifactions
 {
     // 注册键盘通知
-    XF_RegisterMVxNotis_(UIKeyboardWillChangeFrameNotification)
+    XF_RegisterKeyboardNotifaction
 }
 
 - (void)componentWillBecomeFocus
@@ -55,12 +55,9 @@
 // 接收
 - (void)receiveComponentEventName:(NSString *)eventName intentData:(id)intentData
 {
-    XF_EventIs_(UIKeyboardWillChangeFrameNotification, {
-        NSDictionary *dict = intentData;
-        CGFloat y = ScreenSize.height - [dict[UIKeyboardFrameEndUserInfoKey] CGRectValue].origin.y;
-        [Interface needUpdateInputBarY:y durationTime:[dict[UIKeyboardAnimationDurationUserInfoKey] floatValue]];
-    })
-    
+    // 处理键盘通知
+    XF_HandleKeyboardNotifaction
+    // 帖子选择事件
     XF_EventIs_(BDJPostSelectedEvent, {
         // 叫业务层缓存这个帖子ID
         [Interactor cachePostID:intentData];

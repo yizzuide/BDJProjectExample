@@ -9,7 +9,6 @@
 #import "BDJPostCell.h"
 #import <UIImageView+WebCache.h>
 #import "BDJPostRenderItem.h"
-#import "UIView+XFLego.h"
 #import "XFExpressPiece.h"
 #import "BDJPostPictureView.h"
 #import "BDJPostFrame.h"
@@ -50,11 +49,6 @@
 @end
 
 @implementation BDJPostCell
-
-+ (instancetype)postCell
-{
-    return [[NSBundle mainBundle] loadNibNamed:NSStringFromClass([self class]) owner:nil options:nil].firstObject;
-}
 
 - (void)awakeFromNib {
     [super awakeFromNib];
@@ -174,7 +168,7 @@
 
 - (BDJPostPictureView *)pictureView {
 	if(_pictureView == nil) {
-		BDJPostPictureView *pictureView = [BDJPostPictureView postPictureView];
+		BDJPostPictureView *pictureView = [BDJPostPictureView viewFromXIB];
         [self.contentView addSubview:pictureView];
         self.pictureView = pictureView;
 	}
@@ -183,7 +177,7 @@
 
 - (BDJPostVoiceView *)voiceView {
 	if(_voiceView == nil) {
-		BDJPostVoiceView *voiceView = [BDJPostVoiceView postVoiceView];
+		BDJPostVoiceView *voiceView = [BDJPostVoiceView viewFromXIB];
         [self.contentView addSubview:voiceView];
         self.voiceView = voiceView;
 	}
@@ -192,7 +186,7 @@
 
 - (BDJPostVideoView *)videoView {
 	if(_videoView == nil) {
-		BDJPostVideoView *videoView = [BDJPostVideoView postVideoView];
+		BDJPostVideoView *videoView = [BDJPostVideoView viewFromXIB];
         [self.contentView addSubview:videoView];
         self.videoView = videoView;
 	}

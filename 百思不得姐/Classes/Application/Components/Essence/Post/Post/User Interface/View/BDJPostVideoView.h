@@ -13,5 +13,4 @@
 
 @property (nonatomic, weak) XFExpressPiece *expressPiece;
 
-+ (instancetype)postVideoView;
 @end

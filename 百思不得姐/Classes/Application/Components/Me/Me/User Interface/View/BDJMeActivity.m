@@ -20,6 +20,7 @@
 @interface BDJMeActivity () <XFSettingTableViewDataSource,UITableViewDelegate>
 
 @property (nonatomic, weak) BDJMeFooterView *footerView;
+@property (nonatomic, strong) UIBarButtonItem *settingItem;
 @end
 
 @implementation BDJMeActivity
@@ -41,7 +42,11 @@
 - (void)configNav
 {
     self.navigationItem.title = @"我的";
-    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:R_Image_MineSetting imageSel:R_Image_MineSettingSel];
+    UIBarButtonItem *settingItem = [UIBarButtonItem itemWithImage:R_Image_MineSetting imageSel:R_Image_MineSettingSel target:self action:@selector(settingItemClick)];
+    
+    // UIBarButtonItem的这种方式在新系统不好使，RAC V2.5有bug
+//    XF_C_(settingItem, EventHandler, settingCommand)
+    
     UIBarButtonItem *moonItem = [UIBarButtonItem itemWithImage:R_Image_MineMoon imageSel:R_Image_MineMoonSel];
     self.navigationItem.rightBarButtonItems = @[
                                               settingItem,
@@ -112,6 +117,11 @@
                          ]
                  }
              ];
+}
+
+- (void)settingItemClick
+{
+    [EventHandler.settingCommand execute:nil];
 }
 
 #pragma mark - UIControlDelegate

@@ -9,8 +9,10 @@
 #import <Foundation/Foundation.h>
 #import "XFEventHandlerPort.h"
 
-@class XFExpressPiece;
+@class XFExpressPiece,RACCommand;
 @protocol BDJMeEventHandlerPort <XFEventHandlerPort>
+
+@property (nonatomic, strong) RACCommand *settingCommand;
 
 - (RACSignal *)DidFooterViewInitAction;
 - (void)didTopicSelectAction:(XFExpressPiece *)expressPiece;

@@ -15,8 +15,8 @@
 XF_AutoAssemblyModule_Fast
 
 // 跳转组件
-/*- (void)transition2XXX
+- (void)transition2TopicTag
 {
-    XF_PUSH_URLComponent_Fast(@"xxx://index/user?id=151&name=yizzuide")
-}*/
+    XF_PUSH_URLComponent_Fast(@"bdj://indexTab/publish/publishContent/topicTag")
+}
 @end

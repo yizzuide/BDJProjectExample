@@ -131,7 +131,7 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
 {
     UIView *headerView = [[UIView alloc] init];
     BDJPostFrame *cellFrame = expressPiece.uiFrame;
-    BDJPostCell *postCell = [BDJPostCell postCell];
+    BDJPostCell *postCell = [BDJPostCell viewFromXIB];
     postCell.height = cellFrame.cellHeight;
     [postCell setExpressPiece:expressPiece];
     [headerView addSubview:postCell];
@@ -141,10 +141,10 @@ static NSString *CellIdentifiler = @"PostCmtCellIdentifiler";
     
 }
 
-- (void)needUpdateInputBarY:(CGFloat)y durationTime:(CGFloat)time
+- (void)needUpdateInputUInterfaceY:(CGFloat)y durationTime:(CGFloat)durationTime
 {
-    self.inputBarBottomConstraint.constant = y;
-    [UIView animateWithDuration:time animations:^{
+    self.inputBarBottomConstraint.constant = ScreenSize.height - y;
+    [UIView animateWithDuration:durationTime animations:^{
         [self.view layoutIfNeeded];
     }];
 }

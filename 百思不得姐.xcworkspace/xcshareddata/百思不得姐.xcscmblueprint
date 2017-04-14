@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "DD2FC21FB2D8C39EF6D40753D4F637DF13AF788E",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "5BFAD5D4F0BEEC7B67E7278B26C86DF6F6D09EA2" : 9223372036854775807,
+    "DD2FC21FB2D8C39EF6D40753D4F637DF13AF788E" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "6E4B69DB-CE69-4550-AA73-5D74252BFE10",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "5BFAD5D4F0BEEC7B67E7278B26C86DF6F6D09EA2" : "..\/..\/GitHub\/XFLegoVIPER",
+    "DD2FC21FB2D8C39EF6D40753D4F637DF13AF788E" : "%E7%99%BE%E6%80%9D%E4%B8%8D%E5%BE%97%E5%A7%90\/"
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "百思不得姐",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "百思不得姐.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:yizzuide\/XFLegoVIPER.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "5BFAD5D4F0BEEC7B67E7278B26C86DF6F6D09EA2"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "https:\/\/github.com\/yizzuide\/BDJProjectExample.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "DD2FC21FB2D8C39EF6D40753D4F637DF13AF788E"
+    }
+  ]
+}

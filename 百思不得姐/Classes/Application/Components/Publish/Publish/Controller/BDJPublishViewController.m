@@ -30,6 +30,7 @@ typedef enum : NSUInteger {
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
     LogWarning(@"%@",self.componentData);
     LogWarning(@"上一个组件：%@",self.fromComponentRoutable);
     
@@ -143,9 +144,6 @@ typedef enum : NSUInteger {
                 self.intentData = @"控制器到模块的数据";
                 // 使用nav行为参数标识装配自定义导航
                 XF_Present_URLComponent_Fast(@"bdj://indexTab/publish/publishContent?nav=BDJ")
-                break;
-            case BDJPublishTypePicture:
-                XF_Present_URLComponent_Fast(@"bdj://indexTab/publish/publishImg?nav=BDJ")
                 break;
             default:
                 break;

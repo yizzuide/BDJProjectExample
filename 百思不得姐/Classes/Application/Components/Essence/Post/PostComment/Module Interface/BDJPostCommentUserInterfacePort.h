@@ -13,5 +13,4 @@
 @protocol BDJPostCommentUserInterfacePort <XFUserInterfacePort>
 
 - (void)fillPostExpressPiece:(XFExpressPiece *)expressPiece;
-- (void)needUpdateInputBarY:(CGFloat)y durationTime:(CGFloat)time;
 @end

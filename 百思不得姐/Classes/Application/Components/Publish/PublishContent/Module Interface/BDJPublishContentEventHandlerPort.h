@@ -11,4 +11,5 @@
 
 @protocol BDJPublishContentEventHandlerPort <XFEventHandlerPort>
 
+- (void)actionDidAddTag;
 @end

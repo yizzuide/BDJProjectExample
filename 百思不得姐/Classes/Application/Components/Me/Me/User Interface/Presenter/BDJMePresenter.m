@@ -27,6 +27,15 @@
 
 #pragma mark - lifeCycle
 
+- (void)initCommand
+{
+    XF_Debug_M()
+    XF_CEXE_Begin
+    XF_CEXE_(self.settingCommand, {
+        LogWarning(@"!!!%@",input);
+        [Routing transition2Setting];
+    })
+}
 
 #pragma mark - DoAction
 - (RACSignal *)DidFooterViewInitAction

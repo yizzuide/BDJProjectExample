@@ -19,4 +19,9 @@ XF_AutoAssemblyModule_Fast
 {
     XF_PUSH_URLComponent_Fast(url)
 }
+
+- (void)transition2Setting
+{
+    XF_PUSH_URLComponent_Fast(@"bdj://indexTab/me/setting")
+}
 @end

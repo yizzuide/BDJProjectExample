@@ -12,5 +12,5 @@
 
 @interface BDJMePresenter : XFPresenter <BDJMeEventHandlerPort>
 
-
+@property (nonatomic, strong) RACCommand *settingCommand;
 @end

@@ -12,6 +12,4 @@
 @interface BDJPostPictureView : UIView <XFExpressPiecePort>
 
 @property (nonatomic, weak) XFExpressPiece *expressPiece;
-
-+ (instancetype)postPictureView;
 @end
