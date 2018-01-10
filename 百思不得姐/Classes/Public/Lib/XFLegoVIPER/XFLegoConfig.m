@@ -11,6 +11,7 @@
 #import "XFURLRoute.h"
 #import "XFControllerHandler.h"
 #import "XFVIPERModuleHandler.h"
+#import "XFComponentManager.h"
 
 @implementation XFLegoConfig
 {
@@ -18,6 +19,8 @@
     BOOL _allowDebug;
     // 类前辍
     NSString *_classPrefix;
+    
+    NSArray *_classPrefixList;
     // URL路由插件
     Class<XFURLRoutePlug> _routePlug;
     // 组件处理器插件集合
@@ -65,6 +68,10 @@ static XFLegoConfig *instance_;
     // 添加组件处理器
     [legoConfig->_componentHanderPlugs addObject:[XFVIPERModuleHandler class]]; // VIPER模块组件处理器
     [legoConfig->_componentHanderPlugs addObject:[XFControllerHandler class]]; // 控制器组件处理器
+    
+    // 注册应用级通知，并转为框架能识别的组件事件
+    [XFComponentManager addApplicationNotification];
+    
     return legoConfig;
 }
 
@@ -86,7 +93,33 @@ static XFLegoConfig *instance_;
 
 - (NSString *)classPrefix
 {
-    return self->_classPrefix;
+    // OC模块组件请设置前辍
+    if (self->_classPrefix) {
+        return self->_classPrefix;
+    }
+    return nil;
+}
+
+- (instancetype)setClassPrefixList:(NSArray *)prefixList
+{
+    self->_classPrefixList = prefixList;
+    // 如果统一的类前辍变量没有设置，并且前辍列表里只有一个前辍，对旧变量进行填充
+    if (!self->_classPrefix && prefixList && prefixList.count == 1) {
+        self->_classPrefix = prefixList.firstObject;
+    }
+    return self;
+}
+
+- (NSArray *)classPrefixList
+{
+    return self->_classPrefixList;
+}
+
+- (NSString *)swiftNamespace
+{
+    NSString *appName = [NSBundle mainBundle].infoDictionary[@"CFBundleName"];
+    NSString *namespace = [NSString stringWithFormat:@"%@.",appName];
+    return namespace;
 }
 
 #pragma mark - 插件

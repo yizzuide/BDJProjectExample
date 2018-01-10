@@ -25,11 +25,51 @@ static NSMapTable *componentTable_;
  */
 static NSMutableArray *componentKeyArr_;
 
+/**
+ * 事件接收对象
+ */
+static NSMapTable *eventReceiverTable_;
+
 + (void)initialize
 {
     if (self == [XFComponentManager class]) {
         componentTable_ = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsCopyIn valueOptions:NSPointerFunctionsWeakMemory];
         componentKeyArr_ = [NSMutableArray array];
+        
+        eventReceiverTable_ = [NSMapTable mapTableWithKeyOptions:NSPointerFunctionsCopyIn valueOptions:NSPointerFunctionsWeakMemory];
+    }
+}
+
++ (void)addApplicationNotification
+{
+    NSArray *names = @[
+                       UIApplicationDidEnterBackgroundNotification,
+                       UIApplicationWillEnterForegroundNotification,
+                       UIApplicationDidFinishLaunchingNotification,
+                       UIApplicationDidBecomeActiveNotification,
+                       UIApplicationWillResignActiveNotification,
+                       UIApplicationDidReceiveMemoryWarningNotification,
+                       UIApplicationWillTerminateNotification,
+                       UIApplicationSignificantTimeChangeNotification,
+                       UIApplicationWillChangeStatusBarOrientationNotification,
+                       UIApplicationDidChangeStatusBarOrientationNotification,
+                       UIApplicationWillChangeStatusBarFrameNotification,
+                       UIApplicationDidChangeStatusBarFrameNotification,
+                       UIApplicationBackgroundRefreshStatusDidChangeNotification,
+                       UIApplicationProtectedDataWillBecomeUnavailable,
+                       UIApplicationProtectedDataDidBecomeAvailable,
+                       ];
+    for (NSNotificationName name in names) {
+        [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(sendApplicationEventForAllComponents:) name:name object:nil];
+    }
+}
+
++ (void)sendApplicationEventForAllComponents:(NSNotification *)noti
+{
+    for(id<XFComponentRoutable> component in componentTable_.objectEnumerator) {
+        if ([component respondsToSelector:@selector(receiveComponentEventName:intentData:)]) {
+            [component receiveComponentEventName:noti.name intentData:noti.userInfo];
+        }
     }
 }
 
@@ -41,6 +81,12 @@ static NSMutableArray *componentKeyArr_;
     if (enableLog) [self _log];
 }
 
++ (void)addComponent:(id<XFComponentRoutable>)component forName:(NSString *)componentName
+{
+    [componentTable_ setObject:component forKey:componentName];
+    [componentKeyArr_ addObject:componentName];
+}
+
 + (void)removeComponent:(id<XFComponentRoutable>)component
 {
     if (!component) return;
@@ -49,6 +95,34 @@ static NSMutableArray *componentKeyArr_;
     [componentKeyArr_ removeObject:componentName];
     [self _clearZombieComponent];
     [self _log];
+}
+
++ (void)removeComponentForName:(NSString *)componentName
+{
+    [componentTable_ removeObjectForKey:componentName];
+    [componentKeyArr_ removeObject:componentName];
+    [self _clearZombieComponent];
+}
+
++ (void)addIncompatibleComponent:(UIViewController *)viewController componentName:(NSString *)componentName
+{
+    [componentTable_ setObject:viewController forKey:componentName];
+    [componentKeyArr_ addObject:componentName];
+}
+
++ (void)removeIncompatibleComponentWithName:(NSString *)componentName
+{
+    [self removeComponentForName:componentName];
+}
+
++ (void)addEventReceiver:(id)receiver componentName:(NSString *)componentName
+{
+    [eventReceiverTable_ setObject:receiver forKey:componentName];
+}
+
++ (void)removeEventReceiverComponentWithName:(NSString *)componentName
+{
+    [eventReceiverTable_ removeObjectForKey:componentName];
 }
 
 + (void)_clearZombieComponent
@@ -77,12 +151,34 @@ static NSMutableArray *componentKeyArr_;
     return nil;
 }
 
-+ (void)sendEventName:(NSString *)eventName intentData:(id)intentData forComponent:(NSString *)componentName
++ (void)sendEventName:(NSString *)eventName intentData:(nullable id)intentData forComponent:(nonnull NSString *)componentName
 {
+    // 先检测有没有事件接收者
+    if (eventReceiverTable_.count) {
+        id<XFEventDispatchPort> dispatchPort = [eventReceiverTable_ objectForKey:componentName];
+        if (dispatchPort &&
+            [dispatchPort respondsToSelector:@selector(receiveComponentEventName:intentData:)]) {
+            [dispatchPort receiveComponentEventName:eventName intentData:intentData];
+            return;
+        }
+    }
+    
     id<XFComponentRoutable> component = [self findComponentForName:componentName];
     if ([component respondsToSelector:@selector(receiveComponentEventName:intentData:)]) {
         [component receiveComponentEventName:eventName intentData:intentData];
     }
+}
+
++ (void)sendEventName:(NSString *)eventName intentData:(nullable id)intentData forComponents:(nonnull NSArray<NSString *> *)componentNames
+{
+    for (NSString *compName in componentNames) {
+        [self sendEventName:eventName intentData:intentData forComponent:compName];
+    }
+}
+
+- (void)dealloc
+{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 #pragma mark - log

@@ -45,7 +45,10 @@
 
 - (instancetype)init
 {
+#pragma clang diagnostic push
+#pragma clang diagnostic ignored "-Wnonnull"
     return [self initWithComponentRoutable:nil];
+#pragma clang diagnostic pop
 }
 
 - (instancetype)initWithComponentRoutable:(__kindof id<XFComponentRoutable>)componentRoutable
@@ -66,7 +69,7 @@
 }
 
 #pragma mark - URL组件方式
-- (void)openURL:(NSString *)url onWindow:(UIWindow *)mainWindow customCode:(CustomCodeBlock)customCodeBlock
+- (void)openURL:(NSString *)url onWindow:(UIWindow *)mainWindow customCode:(nullable CustomCodeBlock)customCodeBlock
 {
     [[LEGOConfig routePlug] open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
         [self showComponent:componentName onWindow:mainWindow params:params customCode:customCodeBlock];
@@ -74,7 +77,7 @@
 }
 
 // 以URL组件式PUSH
-- (void)openURLForPush:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
+- (void)openURLForPush:(NSString *)url customCode:(nullable CustomCodeBlock)customCodeBlock
 {
     [[LEGOConfig routePlug] open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
         [self pushComponent:componentName params:params intent:[self _intentData] customCode:customCodeBlock];
@@ -82,7 +85,7 @@
 }
 
 // 以URL组件式Present
-- (void)openURLForPresent:(NSString *)url customCode:(CustomCodeBlock)customCodeBlock
+- (void)openURLForPresent:(NSString *)url customCode:(nullable CustomCodeBlock)customCodeBlock
 {
     [[LEGOConfig routePlug] open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
         [self presentComponent:componentName params:params intent:[self _intentData] customCode:customCodeBlock];
@@ -90,7 +93,7 @@
 }
 
 // 自定义打开一个URL组件
-- (void)openURL:(NSString *)url withTransitionBlock:(TransitionBlock)transitionBlock customCode:(CustomCodeBlock)customCodeBlock
+- (void)openURL:(NSString *)url withTransitionBlock:(TransitionBlock)transitionBlock customCode:(nullable CustomCodeBlock)customCodeBlock
 {
     [[LEGOConfig routePlug] open:url transitionBlock:^(NSString *componentName, NSDictionary *params) {
         [self putComponent:componentName withTransitionBlock:transitionBlock params:params intent:[self _intentData] customCode:customCodeBlock];
@@ -123,7 +126,7 @@
 }
 
 #pragma mark - 组件名切换方式
-- (void)showComponent:(NSString *)componentName onWindow:(UIWindow *)mainWindow params:params customCode:(CustomCodeBlock)customCodeBlock
+- (void)showComponent:(NSString *)componentName onWindow:(UIWindow *)mainWindow params:(nullable  NSDictionary *)params customCode:(nullable CustomCodeBlock)customCodeBlock
 {
     MatchedComponentHandler(componentName)
     // 下一组件
@@ -141,12 +144,16 @@
     mainWindow.rootViewController = nextUInterface.navigationController ?: nextUInterface;
     [mainWindow makeKeyAndVisible];
     
+    if ([nextComponent respondsToSelector:@selector(componentWillBecomeFocus)]) {
+        [nextComponent componentWillBecomeFocus];
+    }
+    
     // 添加组件到容器
     [XFComponentManager addComponent:nextComponent enableLog:YES];
 }
 
 // Modal方式
-- (void)presentComponent:(NSString *)componentName params:(NSDictionary *)params intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
+- (void)presentComponent:(NSString *)componentName params:(nullable NSDictionary *)params intent:(nullable id)intentData customCode:(nullable CustomCodeBlock)customCodeBlock
 {
     [self putComponent:componentName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface, TransitionCompletionBlock completionBlock) {
         // 是否有导航控制器
@@ -177,7 +184,7 @@
 }
 
 // PUSH方式
-- (void)pushComponent:(NSString *)componentName params:(NSDictionary *)params intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock
+- (void)pushComponent:(NSString *)componentName params:(nullable NSDictionary *)params intent:(nullable id)intentData customCode:(nullable CustomCodeBlock)customCodeBlock
 {
     [self putComponent:componentName withTransitionBlock:^(Activity *thisInterface, Activity *nextInterface, TransitionCompletionBlock completionBlock) {
         [thisInterface.navigationController pushViewController:nextInterface animated:YES];
@@ -196,7 +203,7 @@
 }
 
 #pragma mark - 自定义组件切换
-- (void)putComponent:(NSString *)componentName withTransitionBlock:(TransitionBlock)transitionBlock params:(NSDictionary *)params intent:(id)intentData customCode:(CustomCodeBlock)customCodeBlock {
+- (void)putComponent:(NSString *)componentName withTransitionBlock:(TransitionBlock)transitionBlock params:(nullable NSDictionary *)params intent:(nullable id)intentData customCode:(nullable CustomCodeBlock)customCodeBlock {
     MatchedComponentHandler(componentName)
     // 下一组件
     id<XFComponentRoutable> nextComponent = [matchedComponentHandler component:self.componentRoutable createNextComponentFromName:componentName];
@@ -212,7 +219,7 @@
     
     // 传递组件意图对象
     if (intentData && [nextComponent respondsToSelector:@selector(setComponentData:)]) {
-        [nextComponent setComponentData:intentData];
+        nextComponent.componentData = intentData;
     }
     
     // 移除当前组件焦点
@@ -232,7 +239,7 @@
     Activity *thisInterface = [self.matchedComponentHandler uInterfaceForComponent:self.componentRoutable];
     dispatch_async(dispatch_get_main_queue(), ^{
         // 执行切换组件
-        transitionBlock(thisInterface, nextUInterface, ^{
+        transitionBlock(thisInterface, nextUInterface.navigationController?:nextUInterface, ^{
             // 下一个组件获得焦点
             if ([nextComponent respondsToSelector:@selector(componentWillBecomeFocus)]) {
                 [nextComponent componentWillBecomeFocus];
@@ -248,7 +255,7 @@
 {
     // 设置为手动代码移除方式
     UIViewController *uInterface = [self.matchedComponentHandler uInterfaceForComponent:self.componentRoutable];
-    [uInterface invokeMethod:@"setPoppingProgrammatically:" param:[NSNumber numberWithBool:YES]];
+    [uInterface invokeMethod:@"setPoppingProgrammatically:" param:@YES];
     // 开始移除当前路由并切换
     [self xfLego_implicitRemoveComponentWithTransitionBlock:transitionBlock];
 }
@@ -325,7 +332,7 @@
         // 移除行为参数
         NSMutableDictionary *mParams = [params mutableCopy];
         for (NSString *behaviorParam in behaviorParams) {
-            if ([mParams objectForKey:behaviorParam]) {
+            if (mParams[behaviorParam]) {
                 [mParams removeObjectForKey:behaviorParam];
             }
         }
@@ -334,7 +341,7 @@
     
     // 判断是否要传递URL参数
     if (params.count && [nextComponent respondsToSelector:@selector(setURLParams:)]) {
-        [nextComponent setURLParams:params];
+        nextComponent.URLParams = params;
     }
 }
 

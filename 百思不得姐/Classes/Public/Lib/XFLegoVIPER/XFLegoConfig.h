@@ -38,7 +38,7 @@
  *  是否能打印log
  *
  */
-- (BOOL)canDebugLog;
+@property (NS_NONATOMIC_IOSONLY, readonly) BOOL canDebugLog;
 
 /**
  *  设置类前缀（注意：如果没有一个使用VIPER的模块，必须手动设置）
@@ -50,6 +50,19 @@
  *
  */
 - (NSString *)classPrefix;
+/**
+ * 设置类前缀列表
+ */
+- (instancetype)setClassPrefixList:(NSArray *)prefixList;
+/**
+ *  返回类前缀列表
+ */
+- (NSArray *)classPrefixList;
+
+/**
+ *  返回swift命名空间
+ */
+- (NSString *)swiftNamespace;
 
 /**
  *  设置URL路由插件
@@ -76,5 +89,5 @@
  *  所有组件处理器插件
  *
  */
-- (NSArray<Class<XFComponentHandlerPlug>> *)allComponentHanderPlugs;
+@property (NS_NONATOMIC_IOSONLY, readonly, copy) NSArray<Class<XFComponentHandlerPlug>> *allComponentHanderPlugs;
 @end

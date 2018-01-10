@@ -45,7 +45,7 @@
     self.view.backgroundColor = UIColorFromRGB(R_Color_GlobalBkg);
     
     self.navigationItem.title = @"发表文字";
-    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self.eventHandler action:@selector(xfLego_onDismissItemTouch)];
+    self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self.eventHandler action:@selector(dismissViewAction)];
     self.navigationItem.rightBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"完成" style:UIBarButtonItemStylePlain target:self action:@selector(publishAciton)];
     // 开始使用禁用状态
     self.navigationItem.rightBarButtonItem.enabled = NO;

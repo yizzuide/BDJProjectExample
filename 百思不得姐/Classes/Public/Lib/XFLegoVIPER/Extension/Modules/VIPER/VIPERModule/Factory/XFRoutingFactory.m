@@ -10,23 +10,33 @@
 #import "XFRoutingLinkManager.h"
 #import "XFRouting.h"
 #import "XFModuleReflect.h"
+#import "XFComponentManager.h"
+#import "XFPresenter.h"
+#import "NSObject+XFLegoInvokeMethod.h"
 
 @implementation XFRoutingFactory
 
 + (XFRouting *)createRouingFromModuleName:(NSString *)moduleName {
-    // 返回已经创建的模块视图
+    __kindof id<XFComponentRoutable> component = [XFComponentManager findComponentForName:moduleName];
+    // 清除残留的组件
+    if (component) {
+        XFPresenter *preseter = component;
+        [preseter setValue:nil forKey:@"userInterface"];
+        [XFComponentManager removeComponent:component];
+        component = nil;
+    }
     XFRouting *routing = [XFRoutingLinkManager findRoutingForModuleName:moduleName];
     if (routing) {
-        return routing;
+        [XFRoutingLinkManager removeRouting:routing];
+        routing = nil;
     }
+    
     // 从新创建
     return [self createRoutingFastFromModuleName:moduleName];
 }
 
 + (XFRouting *)createRoutingFastFromModuleName:(NSString *)moduleName {
     // 查找并实例化
-    NSString *prefixName = XF_Class_Prefix;
-    if (prefixName == nil) return nil;
     Class routingClass = [XFModuleReflect createDynamicSubModuleClassFromName:moduleName stuffixName:@"Routing" superModule:nil];
     if (routingClass) {
         return [routingClass assembleRouting];

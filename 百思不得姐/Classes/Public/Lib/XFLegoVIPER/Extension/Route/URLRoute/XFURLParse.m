@@ -80,6 +80,10 @@
     return result;
 }
 
++ (NSString *)urlFromPath:(NSString *)urlPath params:(NSDictionary *)params {
+    return ([NSString stringWithFormat:@"%@?%@",urlPath,[XFURLParse stringFromDictionary:params]]);
+}
+
 + (NSString *)encodeToPercentEscapeString:(NSString *)input
 {
     NSString *outputStr =
@@ -99,7 +103,7 @@
     [outputStr replaceOccurrencesOfString:@"+"
                                withString:@""
                                   options:NSLiteralSearch
-                                    range:NSMakeRange(0,[outputStr length])];
+                                    range:NSMakeRange(0,outputStr.length)];
     return [outputStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 @end
