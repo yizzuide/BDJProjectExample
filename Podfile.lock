@@ -34,28 +34,28 @@ PODS:
   - NJKWebViewProgress/Core (0.2.3)
   - NJKWebViewProgress/ProgressView (0.2.3)
   - pop (1.0.9)
-  - POP+MCAnimate (2.0.1):
+  - "POP+MCAnimate (2.0.1)":
     - pop (~> 1.0)
-    - POP+MCAnimate/Animations (= 2.0.1)
-    - POP+MCAnimate/Group (= 2.0.1)
-    - POP+MCAnimate/Internal (= 2.0.1)
-    - POP+MCAnimate/Shorthand (= 2.0.1)
-    - POP+MCAnimate/Velocity (= 2.0.1)
-  - POP+MCAnimate/Animations (2.0.1):
+    - "POP+MCAnimate/Animations (= 2.0.1)"
+    - "POP+MCAnimate/Group (= 2.0.1)"
+    - "POP+MCAnimate/Internal (= 2.0.1)"
+    - "POP+MCAnimate/Shorthand (= 2.0.1)"
+    - "POP+MCAnimate/Velocity (= 2.0.1)"
+  - "POP+MCAnimate/Animations (2.0.1)":
     - pop (~> 1.0)
-    - POP+MCAnimate/Group
-    - POP+MCAnimate/Internal
-    - POP+MCAnimate/Shorthand
-    - POP+MCAnimate/Velocity
-  - POP+MCAnimate/Group (2.0.1):
+    - "POP+MCAnimate/Group"
+    - "POP+MCAnimate/Internal"
+    - "POP+MCAnimate/Shorthand"
+    - "POP+MCAnimate/Velocity"
+  - "POP+MCAnimate/Group (2.0.1)":
     - pop (~> 1.0)
-  - POP+MCAnimate/Internal (2.0.1):
+  - "POP+MCAnimate/Internal (2.0.1)":
     - pop (~> 1.0)
-  - POP+MCAnimate/Shorthand (2.0.1):
+  - "POP+MCAnimate/Shorthand (2.0.1)":
     - pop (~> 1.0)
-  - POP+MCAnimate/Velocity (2.0.1):
+  - "POP+MCAnimate/Velocity (2.0.1)":
     - pop (~> 1.0)
-    - POP+MCAnimate/Internal
+    - "POP+MCAnimate/Internal"
   - ReactiveCocoa (2.5):
     - ReactiveCocoa/UI (= 2.5)
   - ReactiveCocoa/Core (2.5):
@@ -79,11 +79,29 @@ DEPENDENCIES:
   - MTMigration
   - NJKWebViewProgress
   - pop
-  - POP+MCAnimate (~> 2.0)
+  - "POP+MCAnimate (~> 2.0)"
   - SDWebImage
   - SVProgressHUD
-  - XFReusedScrollView
+  - XFReusedScrollView (~> 1.0)
   - XFSettings (= 2.3.2)
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - AFNetworking
+    - AFNetworking-RACExtensions
+    - Canvas
+    - DACircularProgress
+    - MJExtension
+    - MJRefresh
+    - MTMigration
+    - NJKWebViewProgress
+    - pop
+    - "POP+MCAnimate"
+    - ReactiveCocoa
+    - SDWebImage
+    - SVProgressHUD
+    - XFReusedScrollView
+    - XFSettings
 
 SPEC CHECKSUMS:
   AFNetworking: 05edc0ac4c4c8cf57bcf4b84be5b0744b6d8e71e
@@ -95,13 +113,13 @@ SPEC CHECKSUMS:
   MTMigration: 725315e6469c8fd7d13966887f59e65eb8aecb2e
   NJKWebViewProgress: f481fd424cb5ecc27eacae11b5397db92fba9a4d
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
-  POP+MCAnimate: a99e209148c602512de487f1160a44bf78572024
+  "POP+MCAnimate": a99e209148c602512de487f1160a44bf78572024
   ReactiveCocoa: e2db045570aa97c695e7aa97c2bcab222ae51f4a
   SDWebImage: 098e97e6176540799c27e804c96653ee0833d13c
   SVProgressHUD: b0830714205bea1317ea1a2ebc71e5633af334d4
   XFReusedScrollView: e0406e0c171261da67462130187d240a1321c507
   XFSettings: 06cdf84fc6c90154ecf7684d331ff79bdff56561
 
-PODFILE CHECKSUM: f0f7c9c703c2f4fa612f236ae739bd694a08f09f
+PODFILE CHECKSUM: 73ed9bcac3f5192429bcfb817ceebb1994d83d7d
 
-COCOAPODS: 1.1.0.rc.3
+COCOAPODS: 1.5.3

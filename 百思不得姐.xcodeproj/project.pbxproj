@@ -7,51 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		40260F57200612140095E925 /* UIViewController+ComponentUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EC6200612130095E925 /* UIViewController+ComponentUI.m */; };
-		40260F58200612140095E925 /* UIView+ComponentSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EC9200612130095E925 /* UIView+ComponentSubView.m */; };
-		40260F59200612140095E925 /* XFModuleReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260ECC200612130095E925 /* XFModuleReflect.m */; };
-		40260F5A200612140095E925 /* XFRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260ECF200612130095E925 /* XFRenderItem.m */; };
-		40260F5B200612140095E925 /* XFRenderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260ED0200612130095E925 /* XFRenderData.m */; };
-		40260F5C200612140095E925 /* XFExpressPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260ED1200612130095E925 /* XFExpressPiece.m */; };
-		40260F5D200612140095E925 /* XFExpressPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260ED2200612130095E925 /* XFExpressPack.m */; };
-		40260F5E200612140095E925 /* XFExpressDirver.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260ED3200612130095E925 /* XFExpressDirver.m */; };
-		40260F5F200612140095E925 /* XFComponentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EDB200612140095E925 /* XFComponentManager.m */; };
-		40260F60200612140095E925 /* XFEventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EE0200612140095E925 /* XFEventBus.m */; };
-		40260F61200612140095E925 /* XFUIBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EE1200612140095E925 /* XFUIBus.m */; };
-		40260F62200612140095E925 /* XFComponentHandlerMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EE5200612140095E925 /* XFComponentHandlerMatcher.m */; };
-		40260F63200612140095E925 /* XFComponentReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EE6200612140095E925 /* XFComponentReflect.m */; };
-		40260F64200612140095E925 /* XFUInterfaceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EE9200612140095E925 /* XFUInterfaceFactory.m */; };
-		40260F65200612140095E925 /* XFURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EF4200612140095E925 /* XFURLRoute.m */; };
-		40260F66200612140095E925 /* XFURLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EF5200612140095E925 /* XFURLParse.m */; };
-		40260F67200612140095E925 /* XFControllerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260EF9200612140095E925 /* XFControllerHandler.m */; };
-		40260F68200612140095E925 /* XFComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F01200612140095E925 /* XFComponentViewController.m */; };
-		40260F69200612140095E925 /* UIViewController+ComponentBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F02200612140095E925 /* UIViewController+ComponentBridge.m */; };
-		40260F6A200612140095E925 /* XFControllerReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F04200612140095E925 /* XFControllerReflect.m */; };
-		40260F6B200612140095E925 /* XFControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F07200612140095E925 /* XFControllerFactory.m */; };
-		40260F6C200612140095E925 /* XFVIPERModuleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F0C200612140095E925 /* XFVIPERModuleHandler.m */; };
-		40260F6D200612140095E925 /* XFVIPERModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F19200612140095E925 /* XFVIPERModuleAssembly.m */; };
-		40260F6E200612140095E925 /* XFRoutingLinkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F1B200612140095E925 /* XFRoutingLinkManager.m */; };
-		40260F6F200612140095E925 /* XFRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F1E200612140095E925 /* XFRouting.m */; };
-		40260F70200612140095E925 /* XFPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F22200612140095E925 /* XFPresenter.m */; };
-		40260F71200612140095E925 /* XFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F25200612140095E925 /* XFDataManager.m */; };
-		40260F72200612140095E925 /* XFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F26200612140095E925 /* XFInteractor.m */; };
-		40260F73200612140095E925 /* UIView+XFLego.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F27200612140095E925 /* UIView+XFLego.m */; };
-		40260F74200612140095E925 /* UIViewController+XFLego.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F28200612140095E925 /* UIViewController+XFLego.m */; };
-		40260F75200612140095E925 /* XFActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F2A200612140095E925 /* XFActivity.m */; };
-		40260F76200612140095E925 /* XFVIPERModuleReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F2D200612140095E925 /* XFVIPERModuleReflect.m */; };
-		40260F77200612140095E925 /* XFRoutingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F30200612140095E925 /* XFRoutingFactory.m */; };
-		40260F78200612140095E925 /* UIViewController+LEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F38200612140095E925 /* UIViewController+LEView.m */; };
-		40260F79200612140095E925 /* LEViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F3A200612140095E925 /* LEViewModel.m */; };
-		40260F7A200612140095E925 /* LEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F3C200612140095E925 /* LEViewController.m */; };
-		40260F7B200612140095E925 /* LEMVVMModuleReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F3F200612140095E925 /* LEMVVMModuleReflect.m */; };
-		40260F7C200612140095E925 /* LEMVVMModuleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F42200612140095E925 /* LEMVVMModuleFactory.m */; };
-		40260F7D200612140095E925 /* LEMVVMModuleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F45200612140095E925 /* LEMVVMModuleHandler.m */; };
-		40260F7E200612140095E925 /* LEMVVMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F47200612140095E925 /* LEMVVMNavigationController.m */; };
-		40260F7F200612140095E925 /* LEMVVMConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F49200612140095E925 /* LEMVVMConnector.m */; };
-		40260F80200612140095E925 /* NSObject+XFLegoCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F4E200612140095E925 /* NSObject+XFLegoCopy.m */; };
-		40260F81200612140095E925 /* NSObject+XFLegoSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F50200612140095E925 /* NSObject+XFLegoSwizzle.m */; };
-		40260F82200612140095E925 /* NSObject+XFLegoInvokeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F52200612140095E925 /* NSObject+XFLegoInvokeMethod.m */; };
-		40260F83200612140095E925 /* XFLegoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40260F54200612140095E925 /* XFLegoConfig.m */; };
 		402647841DDD45B3002EDD00 /* MainTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 402647831DDD45B3002EDD00 /* MainTests.m */; };
 		404873FC1DD3515E00388087 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 404873FB1DD3515E00388087 /* Assets.xcassets */; };
 		404873FF1DD3515E00388087 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 404873FD1DD3515E00388087 /* LaunchScreen.storyboard */; };
@@ -206,6 +161,54 @@
 		40C677991EA09D9900AF6E0C /* HJCornerRadius.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C6766F1EA09D9800AF6E0C /* HJCornerRadius.m */; };
 		40C677C41EA09D9900AF6E0C /* RACSignal+ErrorAlter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C677001EA09D9800AF6E0C /* RACSignal+ErrorAlter.m */; };
 		40C677C51EA09D9900AF6E0C /* BDJCircleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 40C677031EA09D9800AF6E0C /* BDJCircleImageCell.m */; };
+		40F95CCD2237680C00192F50 /* UIViewController+ComponentUI.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C332237680C00192F50 /* UIViewController+ComponentUI.m */; };
+		40F95CCE2237680C00192F50 /* UIView+ComponentSubView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C362237680C00192F50 /* UIView+ComponentSubView.m */; };
+		40F95CCF2237680C00192F50 /* XFModuleReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C392237680C00192F50 /* XFModuleReflect.m */; };
+		40F95CD02237680C00192F50 /* XFRenderItem.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C3C2237680C00192F50 /* XFRenderItem.m */; };
+		40F95CD12237680C00192F50 /* XFRenderData.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C3D2237680C00192F50 /* XFRenderData.m */; };
+		40F95CD22237680C00192F50 /* XFExpressPiece.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C3E2237680C00192F50 /* XFExpressPiece.m */; };
+		40F95CD32237680C00192F50 /* XFExpressPack.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C3F2237680C00192F50 /* XFExpressPack.m */; };
+		40F95CD42237680C00192F50 /* XFExpressDirver.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C402237680C00192F50 /* XFExpressDirver.m */; };
+		40F95CD52237680C00192F50 /* XFComponentManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C4A2237680C00192F50 /* XFComponentManager.m */; };
+		40F95CD62237680C00192F50 /* XFPipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C4C2237680C00192F50 /* XFPipe.m */; };
+		40F95CD72237680C00192F50 /* NSObject+XFPipe.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C4E2237680C00192F50 /* NSObject+XFPipe.m */; };
+		40F95CD82237680C00192F50 /* XFEventBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C522237680C00192F50 /* XFEventBus.m */; };
+		40F95CD92237680C00192F50 /* XFUIBus.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C532237680C00192F50 /* XFUIBus.m */; };
+		40F95CDA2237680C00192F50 /* XFComponentHandlerMatcher.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C572237680C00192F50 /* XFComponentHandlerMatcher.m */; };
+		40F95CDB2237680C00192F50 /* XFComponentReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C582237680C00192F50 /* XFComponentReflect.m */; };
+		40F95CDC2237680C00192F50 /* XFUInterfaceFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C5B2237680C00192F50 /* XFUInterfaceFactory.m */; };
+		40F95CDD2237680C00192F50 /* XFApplicationEmitter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C652237680C00192F50 /* XFApplicationEmitter.m */; };
+		40F95CDE2237680C00192F50 /* XFURLRoute.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C6A2237680C00192F50 /* XFURLRoute.m */; };
+		40F95CDF2237680C00192F50 /* XFURLParse.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C6B2237680C00192F50 /* XFURLParse.m */; };
+		40F95CE02237680C00192F50 /* XFControllerHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C6F2237680C00192F50 /* XFControllerHandler.m */; };
+		40F95CE12237680C00192F50 /* XFComponentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C772237680C00192F50 /* XFComponentViewController.m */; };
+		40F95CE22237680C00192F50 /* UIViewController+ComponentBridge.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C782237680C00192F50 /* UIViewController+ComponentBridge.m */; };
+		40F95CE32237680C00192F50 /* XFControllerReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C7A2237680C00192F50 /* XFControllerReflect.m */; };
+		40F95CE42237680C00192F50 /* XFControllerFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C7D2237680C00192F50 /* XFControllerFactory.m */; };
+		40F95CE52237680C00192F50 /* XFVIPERModuleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C822237680C00192F50 /* XFVIPERModuleHandler.m */; };
+		40F95CE62237680C00192F50 /* XFVIPERModuleAssembly.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C8F2237680C00192F50 /* XFVIPERModuleAssembly.m */; };
+		40F95CE72237680C00192F50 /* XFRoutingLinkManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C912237680C00192F50 /* XFRoutingLinkManager.m */; };
+		40F95CE82237680C00192F50 /* XFRouting.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C942237680C00192F50 /* XFRouting.m */; };
+		40F95CE92237680C00192F50 /* XFPresenter.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C982237680C00192F50 /* XFPresenter.m */; };
+		40F95CEA2237680C00192F50 /* XFDataManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C9B2237680C00192F50 /* XFDataManager.m */; };
+		40F95CEB2237680C00192F50 /* XFInteractor.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C9C2237680C00192F50 /* XFInteractor.m */; };
+		40F95CEC2237680C00192F50 /* UIView+XFLego.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C9D2237680C00192F50 /* UIView+XFLego.m */; };
+		40F95CED2237680C00192F50 /* UIViewController+XFLego.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95C9E2237680C00192F50 /* UIViewController+XFLego.m */; };
+		40F95CEE2237680C00192F50 /* XFActivity.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CA02237680C00192F50 /* XFActivity.m */; };
+		40F95CEF2237680C00192F50 /* XFVIPERModuleReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CA32237680C00192F50 /* XFVIPERModuleReflect.m */; };
+		40F95CF02237680C00192F50 /* XFRoutingFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CA62237680C00192F50 /* XFRoutingFactory.m */; };
+		40F95CF12237680C00192F50 /* UIViewController+LEView.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CAE2237680C00192F50 /* UIViewController+LEView.m */; };
+		40F95CF22237680C00192F50 /* LEViewModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CB02237680C00192F50 /* LEViewModel.m */; };
+		40F95CF32237680C00192F50 /* LEViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CB22237680C00192F50 /* LEViewController.m */; };
+		40F95CF42237680C00192F50 /* LEMVVMModuleReflect.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CB52237680C00192F50 /* LEMVVMModuleReflect.m */; };
+		40F95CF52237680C00192F50 /* LEMVVMModuleFactory.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CB82237680C00192F50 /* LEMVVMModuleFactory.m */; };
+		40F95CF62237680C00192F50 /* LEMVVMModuleHandler.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CBB2237680C00192F50 /* LEMVVMModuleHandler.m */; };
+		40F95CF72237680C00192F50 /* LEMVVMNavigationController.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CBD2237680C00192F50 /* LEMVVMNavigationController.m */; };
+		40F95CF82237680C00192F50 /* LEMVVMConnector.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CBF2237680C00192F50 /* LEMVVMConnector.m */; };
+		40F95CF92237680C00192F50 /* NSObject+XFLegoCopy.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CC42237680C00192F50 /* NSObject+XFLegoCopy.m */; };
+		40F95CFA2237680C00192F50 /* NSObject+XFLegoSwizzle.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CC62237680C00192F50 /* NSObject+XFLegoSwizzle.m */; };
+		40F95CFB2237680C00192F50 /* NSObject+XFLegoInvokeMethod.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CC82237680C00192F50 /* NSObject+XFLegoInvokeMethod.m */; };
+		40F95CFC2237680C00192F50 /* XFLegoConfig.m in Sources */ = {isa = PBXBuildFile; fileRef = 40F95CCA2237680C00192F50 /* XFLegoConfig.m */; };
 		512E97FCCFD5CD2470D052F9 /* libPods-百思不得姐.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E85152145C7B8009538B59E /* libPods-百思不得姐.a */; };
 		794D92CAE1F05159BC2186FD /* libPods-百思不得姐Tests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */; };
 /* End PBXBuildFile section */
@@ -225,117 +228,6 @@
 		1AEB5C01B3BE34921D97F0B2 /* Pods-百思不得姐.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐.release.xcconfig"; sourceTree = "<group>"; };
 		2ED5D2819ABC02509F94272B /* Pods-百思不得姐Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.debug.xcconfig"; sourceTree = "<group>"; };
 		3E85152145C7B8009538B59E /* libPods-百思不得姐.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		40260EC2200612130095E925 /* XFComponentBindEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentBindEvent.h; sourceTree = "<group>"; };
-		40260EC3200612130095E925 /* XFComponentEventResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentEventResponder.h; sourceTree = "<group>"; };
-		40260EC4200612130095E925 /* XFComponentUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentUI.h; sourceTree = "<group>"; };
-		40260EC6200612130095E925 /* UIViewController+ComponentUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ComponentUI.m"; sourceTree = "<group>"; };
-		40260EC7200612130095E925 /* UIView+ComponentSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ComponentSubView.h"; sourceTree = "<group>"; };
-		40260EC8200612130095E925 /* UIViewController+ComponentUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ComponentUI.h"; sourceTree = "<group>"; };
-		40260EC9200612130095E925 /* UIView+ComponentSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ComponentSubView.m"; sourceTree = "<group>"; };
-		40260ECB200612130095E925 /* XFModuleReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFModuleReflect.h; sourceTree = "<group>"; };
-		40260ECC200612130095E925 /* XFModuleReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFModuleReflect.m; sourceTree = "<group>"; };
-		40260ECF200612130095E925 /* XFRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRenderItem.m; sourceTree = "<group>"; };
-		40260ED0200612130095E925 /* XFRenderData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRenderData.m; sourceTree = "<group>"; };
-		40260ED1200612130095E925 /* XFExpressPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFExpressPiece.m; sourceTree = "<group>"; };
-		40260ED2200612130095E925 /* XFExpressPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFExpressPack.m; sourceTree = "<group>"; };
-		40260ED3200612130095E925 /* XFExpressDirver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFExpressDirver.m; sourceTree = "<group>"; };
-		40260ED4200612130095E925 /* XFExpressPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressPiece.h; sourceTree = "<group>"; };
-		40260ED5200612130095E925 /* XFRenderData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRenderData.h; sourceTree = "<group>"; };
-		40260ED6200612130095E925 /* XFRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRenderItem.h; sourceTree = "<group>"; };
-		40260ED7200612130095E925 /* XFExpressPiecePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressPiecePort.h; sourceTree = "<group>"; };
-		40260ED8200612130095E925 /* XFExpressDirver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressDirver.h; sourceTree = "<group>"; };
-		40260ED9200612130095E925 /* XFExpressPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressPack.h; sourceTree = "<group>"; };
-		40260EDB200612140095E925 /* XFComponentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentManager.m; sourceTree = "<group>"; };
-		40260EDC200612140095E925 /* XFComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentManager.h; sourceTree = "<group>"; };
-		40260EDE200612140095E925 /* XFEventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEventBus.h; sourceTree = "<group>"; };
-		40260EDF200612140095E925 /* XFUIBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUIBus.h; sourceTree = "<group>"; };
-		40260EE0200612140095E925 /* XFEventBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEventBus.m; sourceTree = "<group>"; };
-		40260EE1200612140095E925 /* XFUIBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUIBus.m; sourceTree = "<group>"; };
-		40260EE3200612140095E925 /* XFComponentHandlerMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentHandlerMatcher.h; sourceTree = "<group>"; };
-		40260EE4200612140095E925 /* XFComponentReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentReflect.h; sourceTree = "<group>"; };
-		40260EE5200612140095E925 /* XFComponentHandlerMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentHandlerMatcher.m; sourceTree = "<group>"; };
-		40260EE6200612140095E925 /* XFComponentReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentReflect.m; sourceTree = "<group>"; };
-		40260EE8200612140095E925 /* XFUInterfaceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUInterfaceFactory.h; sourceTree = "<group>"; };
-		40260EE9200612140095E925 /* XFUInterfaceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUInterfaceFactory.m; sourceTree = "<group>"; };
-		40260EEB200612140095E925 /* XFEventDispatchPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEventDispatchPort.h; sourceTree = "<group>"; };
-		40260EEC200612140095E925 /* XFURLRoutePlug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLRoutePlug.h; sourceTree = "<group>"; };
-		40260EED200612140095E925 /* XFComponentHandlerPlug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentHandlerPlug.h; sourceTree = "<group>"; };
-		40260EEE200612140095E925 /* XFComponentRoutable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentRoutable.h; sourceTree = "<group>"; };
-		40260EF2200612140095E925 /* XFURLParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLParse.h; sourceTree = "<group>"; };
-		40260EF3200612140095E925 /* XFURLRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLRoute.h; sourceTree = "<group>"; };
-		40260EF4200612140095E925 /* XFURLRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLRoute.m; sourceTree = "<group>"; };
-		40260EF5200612140095E925 /* XFURLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLParse.m; sourceTree = "<group>"; };
-		40260EF9200612140095E925 /* XFControllerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerHandler.m; sourceTree = "<group>"; };
-		40260EFA200612140095E925 /* XFControllerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerHandler.h; sourceTree = "<group>"; };
-		40260EFC200612140095E925 /* XFControllerRunnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerRunnable.h; sourceTree = "<group>"; };
-		40260EFF200612140095E925 /* UIViewController+ComponentBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ComponentBridge.h"; sourceTree = "<group>"; };
-		40260F00200612140095E925 /* XFComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentViewController.h; sourceTree = "<group>"; };
-		40260F01200612140095E925 /* XFComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentViewController.m; sourceTree = "<group>"; };
-		40260F02200612140095E925 /* UIViewController+ComponentBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ComponentBridge.m"; sourceTree = "<group>"; };
-		40260F04200612140095E925 /* XFControllerReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerReflect.m; sourceTree = "<group>"; };
-		40260F05200612140095E925 /* XFControllerReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerReflect.h; sourceTree = "<group>"; };
-		40260F07200612140095E925 /* XFControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerFactory.m; sourceTree = "<group>"; };
-		40260F08200612140095E925 /* XFControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerFactory.h; sourceTree = "<group>"; };
-		40260F0B200612140095E925 /* XFVIPERModuleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleHandler.h; sourceTree = "<group>"; };
-		40260F0C200612140095E925 /* XFVIPERModuleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVIPERModuleHandler.m; sourceTree = "<group>"; };
-		40260F0E200612140095E925 /* XFVIPERModuleRunnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleRunnable.h; sourceTree = "<group>"; };
-		40260F11200612140095E925 /* XFInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFInteractorPort.h; sourceTree = "<group>"; };
-		40260F12200612140095E925 /* XFEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEventHandlerPort.h; sourceTree = "<group>"; };
-		40260F13200612140095E925 /* XFUIOperatorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUIOperatorPort.h; sourceTree = "<group>"; };
-		40260F14200612140095E925 /* XFWireFramePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWireFramePort.h; sourceTree = "<group>"; };
-		40260F15200612140095E925 /* XFDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDataManagerPort.h; sourceTree = "<group>"; };
-		40260F16200612140095E925 /* XFUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUserInterfacePort.h; sourceTree = "<group>"; };
-		40260F18200612140095E925 /* XFRoutingLinkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRoutingLinkManager.h; sourceTree = "<group>"; };
-		40260F19200612140095E925 /* XFVIPERModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVIPERModuleAssembly.m; sourceTree = "<group>"; };
-		40260F1A200612140095E925 /* XFVIPERModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleAssembly.h; sourceTree = "<group>"; };
-		40260F1B200612140095E925 /* XFRoutingLinkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRoutingLinkManager.m; sourceTree = "<group>"; };
-		40260F1D200612140095E925 /* XFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDataManager.h; sourceTree = "<group>"; };
-		40260F1E200612140095E925 /* XFRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRouting.m; sourceTree = "<group>"; };
-		40260F1F200612140095E925 /* UIView+XFLego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XFLego.h"; sourceTree = "<group>"; };
-		40260F20200612140095E925 /* XFInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFInteractor.h; sourceTree = "<group>"; };
-		40260F21200612140095E925 /* XFActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFActivity.h; sourceTree = "<group>"; };
-		40260F22200612140095E925 /* XFPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPresenter.m; sourceTree = "<group>"; };
-		40260F23200612140095E925 /* UIViewController+XFLego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XFLego.h"; sourceTree = "<group>"; };
-		40260F24200612140095E925 /* XFRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRouting.h; sourceTree = "<group>"; };
-		40260F25200612140095E925 /* XFDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDataManager.m; sourceTree = "<group>"; };
-		40260F26200612140095E925 /* XFInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFInteractor.m; sourceTree = "<group>"; };
-		40260F27200612140095E925 /* UIView+XFLego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XFLego.m"; sourceTree = "<group>"; };
-		40260F28200612140095E925 /* UIViewController+XFLego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XFLego.m"; sourceTree = "<group>"; };
-		40260F29200612140095E925 /* XFPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPresenter.h; sourceTree = "<group>"; };
-		40260F2A200612140095E925 /* XFActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFActivity.m; sourceTree = "<group>"; };
-		40260F2C200612140095E925 /* XFVIPERModuleReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleReflect.h; sourceTree = "<group>"; };
-		40260F2D200612140095E925 /* XFVIPERModuleReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVIPERModuleReflect.m; sourceTree = "<group>"; };
-		40260F2F200612140095E925 /* XFRoutingFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRoutingFactory.h; sourceTree = "<group>"; };
-		40260F30200612140095E925 /* XFRoutingFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRoutingFactory.m; sourceTree = "<group>"; };
-		40260F34200612140095E925 /* LEViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEViewProtocol.h; sourceTree = "<group>"; };
-		40260F35200612140095E925 /* LEDataDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDataDriverProtocol.h; sourceTree = "<group>"; };
-		40260F37200612140095E925 /* LEViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEViewModel.h; sourceTree = "<group>"; };
-		40260F38200612140095E925 /* UIViewController+LEView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LEView.m"; sourceTree = "<group>"; };
-		40260F39200612140095E925 /* LEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEViewController.h; sourceTree = "<group>"; };
-		40260F3A200612140095E925 /* LEViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEViewModel.m; sourceTree = "<group>"; };
-		40260F3B200612140095E925 /* UIViewController+LEView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LEView.h"; sourceTree = "<group>"; };
-		40260F3C200612140095E925 /* LEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEViewController.m; sourceTree = "<group>"; };
-		40260F3E200612140095E925 /* LEMVVMModuleReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMModuleReflect.h; sourceTree = "<group>"; };
-		40260F3F200612140095E925 /* LEMVVMModuleReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMModuleReflect.m; sourceTree = "<group>"; };
-		40260F41200612140095E925 /* LEMVVMModuleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMModuleFactory.h; sourceTree = "<group>"; };
-		40260F42200612140095E925 /* LEMVVMModuleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMModuleFactory.m; sourceTree = "<group>"; };
-		40260F44200612140095E925 /* LEMVVMModuleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMModuleHandler.h; sourceTree = "<group>"; };
-		40260F45200612140095E925 /* LEMVVMModuleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMModuleHandler.m; sourceTree = "<group>"; };
-		40260F47200612140095E925 /* LEMVVMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMNavigationController.m; sourceTree = "<group>"; };
-		40260F48200612140095E925 /* LEMVVMIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMIntent.h; sourceTree = "<group>"; };
-		40260F49200612140095E925 /* LEMVVMConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMConnector.m; sourceTree = "<group>"; };
-		40260F4A200612140095E925 /* LEMVVMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMNavigationController.h; sourceTree = "<group>"; };
-		40260F4B200612140095E925 /* LEMVVMConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMConnector.h; sourceTree = "<group>"; };
-		40260F4D200612140095E925 /* NSObject+XFLegoSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoSwizzle.h"; sourceTree = "<group>"; };
-		40260F4E200612140095E925 /* NSObject+XFLegoCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoCopy.m"; sourceTree = "<group>"; };
-		40260F4F200612140095E925 /* NSObject+XFLegoInvokeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoInvokeMethod.h"; sourceTree = "<group>"; };
-		40260F50200612140095E925 /* NSObject+XFLegoSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoSwizzle.m"; sourceTree = "<group>"; };
-		40260F51200612140095E925 /* NSObject+XFLegoCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoCopy.h"; sourceTree = "<group>"; };
-		40260F52200612140095E925 /* NSObject+XFLegoInvokeMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoInvokeMethod.m"; sourceTree = "<group>"; };
-		40260F53200612140095E925 /* XFLegoVIPER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoVIPER.h; sourceTree = "<group>"; };
-		40260F54200612140095E925 /* XFLegoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLegoConfig.m; sourceTree = "<group>"; };
-		40260F55200612140095E925 /* XFLegoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoConfig.h; sourceTree = "<group>"; };
-		40260F56200612140095E925 /* XFLegoMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoMarco.h; sourceTree = "<group>"; };
 		402647811DDD45B3002EDD00 /* 百思不得姐Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "百思不得姐Tests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		402647831DDD45B3002EDD00 /* MainTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MainTests.m; sourceTree = "<group>"; };
 		402647851DDD45B3002EDD00 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -681,6 +573,125 @@
 		40C677001EA09D9800AF6E0C /* RACSignal+ErrorAlter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "RACSignal+ErrorAlter.m"; sourceTree = "<group>"; };
 		40C677021EA09D9800AF6E0C /* BDJCircleImageCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = BDJCircleImageCell.h; sourceTree = "<group>"; };
 		40C677031EA09D9800AF6E0C /* BDJCircleImageCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = BDJCircleImageCell.m; sourceTree = "<group>"; };
+		40F95C2F2237680C00192F50 /* XFComponentBindEvent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentBindEvent.h; sourceTree = "<group>"; };
+		40F95C302237680C00192F50 /* XFComponentEventResponder.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentEventResponder.h; sourceTree = "<group>"; };
+		40F95C312237680C00192F50 /* XFComponentUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentUI.h; sourceTree = "<group>"; };
+		40F95C332237680C00192F50 /* UIViewController+ComponentUI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ComponentUI.m"; sourceTree = "<group>"; };
+		40F95C342237680C00192F50 /* UIView+ComponentSubView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+ComponentSubView.h"; sourceTree = "<group>"; };
+		40F95C352237680C00192F50 /* UIViewController+ComponentUI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ComponentUI.h"; sourceTree = "<group>"; };
+		40F95C362237680C00192F50 /* UIView+ComponentSubView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+ComponentSubView.m"; sourceTree = "<group>"; };
+		40F95C382237680C00192F50 /* XFModuleReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFModuleReflect.h; sourceTree = "<group>"; };
+		40F95C392237680C00192F50 /* XFModuleReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFModuleReflect.m; sourceTree = "<group>"; };
+		40F95C3C2237680C00192F50 /* XFRenderItem.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRenderItem.m; sourceTree = "<group>"; };
+		40F95C3D2237680C00192F50 /* XFRenderData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRenderData.m; sourceTree = "<group>"; };
+		40F95C3E2237680C00192F50 /* XFExpressPiece.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFExpressPiece.m; sourceTree = "<group>"; };
+		40F95C3F2237680C00192F50 /* XFExpressPack.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFExpressPack.m; sourceTree = "<group>"; };
+		40F95C402237680C00192F50 /* XFExpressDirver.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFExpressDirver.m; sourceTree = "<group>"; };
+		40F95C412237680C00192F50 /* XFExpressPiece.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressPiece.h; sourceTree = "<group>"; };
+		40F95C422237680C00192F50 /* XFRenderData.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRenderData.h; sourceTree = "<group>"; };
+		40F95C432237680C00192F50 /* XFRenderItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRenderItem.h; sourceTree = "<group>"; };
+		40F95C442237680C00192F50 /* XFExpressPiecePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressPiecePort.h; sourceTree = "<group>"; };
+		40F95C452237680C00192F50 /* XFExpressDirver.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressDirver.h; sourceTree = "<group>"; };
+		40F95C462237680C00192F50 /* XFExpressPack.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFExpressPack.h; sourceTree = "<group>"; };
+		40F95C482237680C00192F50 /* XFPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPipe.h; sourceTree = "<group>"; };
+		40F95C492237680C00192F50 /* NSObject+XFPipe.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFPipe.h"; sourceTree = "<group>"; };
+		40F95C4A2237680C00192F50 /* XFComponentManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentManager.m; sourceTree = "<group>"; };
+		40F95C4B2237680C00192F50 /* XFPipePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPipePort.h; sourceTree = "<group>"; };
+		40F95C4C2237680C00192F50 /* XFPipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPipe.m; sourceTree = "<group>"; };
+		40F95C4D2237680C00192F50 /* XFComponentManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentManager.h; sourceTree = "<group>"; };
+		40F95C4E2237680C00192F50 /* NSObject+XFPipe.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFPipe.m"; sourceTree = "<group>"; };
+		40F95C502237680C00192F50 /* XFEventBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEventBus.h; sourceTree = "<group>"; };
+		40F95C512237680C00192F50 /* XFUIBus.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUIBus.h; sourceTree = "<group>"; };
+		40F95C522237680C00192F50 /* XFEventBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFEventBus.m; sourceTree = "<group>"; };
+		40F95C532237680C00192F50 /* XFUIBus.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUIBus.m; sourceTree = "<group>"; };
+		40F95C552237680C00192F50 /* XFComponentHandlerMatcher.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentHandlerMatcher.h; sourceTree = "<group>"; };
+		40F95C562237680C00192F50 /* XFComponentReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentReflect.h; sourceTree = "<group>"; };
+		40F95C572237680C00192F50 /* XFComponentHandlerMatcher.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentHandlerMatcher.m; sourceTree = "<group>"; };
+		40F95C582237680C00192F50 /* XFComponentReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentReflect.m; sourceTree = "<group>"; };
+		40F95C5A2237680C00192F50 /* XFUInterfaceFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUInterfaceFactory.h; sourceTree = "<group>"; };
+		40F95C5B2237680C00192F50 /* XFUInterfaceFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFUInterfaceFactory.m; sourceTree = "<group>"; };
+		40F95C5D2237680C00192F50 /* XFEmitterPlug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEmitterPlug.h; sourceTree = "<group>"; };
+		40F95C5E2237680C00192F50 /* XFEventReceivable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEventReceivable.h; sourceTree = "<group>"; };
+		40F95C5F2237680C00192F50 /* XFURLRoutePlug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLRoutePlug.h; sourceTree = "<group>"; };
+		40F95C602237680C00192F50 /* XFComponentHandlerPlug.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentHandlerPlug.h; sourceTree = "<group>"; };
+		40F95C612237680C00192F50 /* XFComponentRoutable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentRoutable.h; sourceTree = "<group>"; };
+		40F95C642237680C00192F50 /* XFApplicationEmitter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFApplicationEmitter.h; sourceTree = "<group>"; };
+		40F95C652237680C00192F50 /* XFApplicationEmitter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFApplicationEmitter.m; sourceTree = "<group>"; };
+		40F95C682237680C00192F50 /* XFURLParse.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLParse.h; sourceTree = "<group>"; };
+		40F95C692237680C00192F50 /* XFURLRoute.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFURLRoute.h; sourceTree = "<group>"; };
+		40F95C6A2237680C00192F50 /* XFURLRoute.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLRoute.m; sourceTree = "<group>"; };
+		40F95C6B2237680C00192F50 /* XFURLParse.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFURLParse.m; sourceTree = "<group>"; };
+		40F95C6F2237680C00192F50 /* XFControllerHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerHandler.m; sourceTree = "<group>"; };
+		40F95C702237680C00192F50 /* XFControllerHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerHandler.h; sourceTree = "<group>"; };
+		40F95C722237680C00192F50 /* XFControllerRunnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerRunnable.h; sourceTree = "<group>"; };
+		40F95C752237680C00192F50 /* UIViewController+ComponentBridge.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+ComponentBridge.h"; sourceTree = "<group>"; };
+		40F95C762237680C00192F50 /* XFComponentViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFComponentViewController.h; sourceTree = "<group>"; };
+		40F95C772237680C00192F50 /* XFComponentViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFComponentViewController.m; sourceTree = "<group>"; };
+		40F95C782237680C00192F50 /* UIViewController+ComponentBridge.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+ComponentBridge.m"; sourceTree = "<group>"; };
+		40F95C7A2237680C00192F50 /* XFControllerReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerReflect.m; sourceTree = "<group>"; };
+		40F95C7B2237680C00192F50 /* XFControllerReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerReflect.h; sourceTree = "<group>"; };
+		40F95C7D2237680C00192F50 /* XFControllerFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFControllerFactory.m; sourceTree = "<group>"; };
+		40F95C7E2237680C00192F50 /* XFControllerFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFControllerFactory.h; sourceTree = "<group>"; };
+		40F95C812237680C00192F50 /* XFVIPERModuleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleHandler.h; sourceTree = "<group>"; };
+		40F95C822237680C00192F50 /* XFVIPERModuleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVIPERModuleHandler.m; sourceTree = "<group>"; };
+		40F95C842237680C00192F50 /* XFVIPERModuleRunnable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleRunnable.h; sourceTree = "<group>"; };
+		40F95C872237680C00192F50 /* XFInteractorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFInteractorPort.h; sourceTree = "<group>"; };
+		40F95C882237680C00192F50 /* XFEventHandlerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFEventHandlerPort.h; sourceTree = "<group>"; };
+		40F95C892237680C00192F50 /* XFUIOperatorPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUIOperatorPort.h; sourceTree = "<group>"; };
+		40F95C8A2237680C00192F50 /* XFWireFramePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFWireFramePort.h; sourceTree = "<group>"; };
+		40F95C8B2237680C00192F50 /* XFDataManagerPort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDataManagerPort.h; sourceTree = "<group>"; };
+		40F95C8C2237680C00192F50 /* XFUserInterfacePort.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFUserInterfacePort.h; sourceTree = "<group>"; };
+		40F95C8E2237680C00192F50 /* XFRoutingLinkManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRoutingLinkManager.h; sourceTree = "<group>"; };
+		40F95C8F2237680C00192F50 /* XFVIPERModuleAssembly.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVIPERModuleAssembly.m; sourceTree = "<group>"; };
+		40F95C902237680C00192F50 /* XFVIPERModuleAssembly.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleAssembly.h; sourceTree = "<group>"; };
+		40F95C912237680C00192F50 /* XFRoutingLinkManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRoutingLinkManager.m; sourceTree = "<group>"; };
+		40F95C932237680C00192F50 /* XFDataManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFDataManager.h; sourceTree = "<group>"; };
+		40F95C942237680C00192F50 /* XFRouting.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRouting.m; sourceTree = "<group>"; };
+		40F95C952237680C00192F50 /* UIView+XFLego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+XFLego.h"; sourceTree = "<group>"; };
+		40F95C962237680C00192F50 /* XFInteractor.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFInteractor.h; sourceTree = "<group>"; };
+		40F95C972237680C00192F50 /* XFActivity.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFActivity.h; sourceTree = "<group>"; };
+		40F95C982237680C00192F50 /* XFPresenter.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFPresenter.m; sourceTree = "<group>"; };
+		40F95C992237680C00192F50 /* UIViewController+XFLego.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+XFLego.h"; sourceTree = "<group>"; };
+		40F95C9A2237680C00192F50 /* XFRouting.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRouting.h; sourceTree = "<group>"; };
+		40F95C9B2237680C00192F50 /* XFDataManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFDataManager.m; sourceTree = "<group>"; };
+		40F95C9C2237680C00192F50 /* XFInteractor.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFInteractor.m; sourceTree = "<group>"; };
+		40F95C9D2237680C00192F50 /* UIView+XFLego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+XFLego.m"; sourceTree = "<group>"; };
+		40F95C9E2237680C00192F50 /* UIViewController+XFLego.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+XFLego.m"; sourceTree = "<group>"; };
+		40F95C9F2237680C00192F50 /* XFPresenter.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFPresenter.h; sourceTree = "<group>"; };
+		40F95CA02237680C00192F50 /* XFActivity.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFActivity.m; sourceTree = "<group>"; };
+		40F95CA22237680C00192F50 /* XFVIPERModuleReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFVIPERModuleReflect.h; sourceTree = "<group>"; };
+		40F95CA32237680C00192F50 /* XFVIPERModuleReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFVIPERModuleReflect.m; sourceTree = "<group>"; };
+		40F95CA52237680C00192F50 /* XFRoutingFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFRoutingFactory.h; sourceTree = "<group>"; };
+		40F95CA62237680C00192F50 /* XFRoutingFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFRoutingFactory.m; sourceTree = "<group>"; };
+		40F95CAA2237680C00192F50 /* LEViewProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEViewProtocol.h; sourceTree = "<group>"; };
+		40F95CAB2237680C00192F50 /* LEDataDriverProtocol.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEDataDriverProtocol.h; sourceTree = "<group>"; };
+		40F95CAD2237680C00192F50 /* LEViewModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEViewModel.h; sourceTree = "<group>"; };
+		40F95CAE2237680C00192F50 /* UIViewController+LEView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+LEView.m"; sourceTree = "<group>"; };
+		40F95CAF2237680C00192F50 /* LEViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEViewController.h; sourceTree = "<group>"; };
+		40F95CB02237680C00192F50 /* LEViewModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEViewModel.m; sourceTree = "<group>"; };
+		40F95CB12237680C00192F50 /* UIViewController+LEView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+LEView.h"; sourceTree = "<group>"; };
+		40F95CB22237680C00192F50 /* LEViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEViewController.m; sourceTree = "<group>"; };
+		40F95CB42237680C00192F50 /* LEMVVMModuleReflect.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMModuleReflect.h; sourceTree = "<group>"; };
+		40F95CB52237680C00192F50 /* LEMVVMModuleReflect.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMModuleReflect.m; sourceTree = "<group>"; };
+		40F95CB72237680C00192F50 /* LEMVVMModuleFactory.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMModuleFactory.h; sourceTree = "<group>"; };
+		40F95CB82237680C00192F50 /* LEMVVMModuleFactory.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMModuleFactory.m; sourceTree = "<group>"; };
+		40F95CBA2237680C00192F50 /* LEMVVMModuleHandler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMModuleHandler.h; sourceTree = "<group>"; };
+		40F95CBB2237680C00192F50 /* LEMVVMModuleHandler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMModuleHandler.m; sourceTree = "<group>"; };
+		40F95CBD2237680C00192F50 /* LEMVVMNavigationController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMNavigationController.m; sourceTree = "<group>"; };
+		40F95CBE2237680C00192F50 /* LEMVVMIntent.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMIntent.h; sourceTree = "<group>"; };
+		40F95CBF2237680C00192F50 /* LEMVVMConnector.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LEMVVMConnector.m; sourceTree = "<group>"; };
+		40F95CC02237680C00192F50 /* LEMVVMNavigationController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMNavigationController.h; sourceTree = "<group>"; };
+		40F95CC12237680C00192F50 /* LEMVVMConnector.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LEMVVMConnector.h; sourceTree = "<group>"; };
+		40F95CC32237680C00192F50 /* NSObject+XFLegoSwizzle.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoSwizzle.h"; sourceTree = "<group>"; };
+		40F95CC42237680C00192F50 /* NSObject+XFLegoCopy.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoCopy.m"; sourceTree = "<group>"; };
+		40F95CC52237680C00192F50 /* NSObject+XFLegoInvokeMethod.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoInvokeMethod.h"; sourceTree = "<group>"; };
+		40F95CC62237680C00192F50 /* NSObject+XFLegoSwizzle.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoSwizzle.m"; sourceTree = "<group>"; };
+		40F95CC72237680C00192F50 /* NSObject+XFLegoCopy.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+XFLegoCopy.h"; sourceTree = "<group>"; };
+		40F95CC82237680C00192F50 /* NSObject+XFLegoInvokeMethod.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+XFLegoInvokeMethod.m"; sourceTree = "<group>"; };
+		40F95CC92237680C00192F50 /* XFLegoVIPER.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoVIPER.h; sourceTree = "<group>"; };
+		40F95CCA2237680C00192F50 /* XFLegoConfig.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XFLegoConfig.m; sourceTree = "<group>"; };
+		40F95CCB2237680C00192F50 /* XFLegoConfig.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoConfig.h; sourceTree = "<group>"; };
+		40F95CCC2237680C00192F50 /* XFLegoMarco.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XFLegoMarco.h; sourceTree = "<group>"; };
 		449496FA4AFF391CA5BE1A63 /* Pods-百思不得姐Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-百思不得姐Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests.release.xcconfig"; sourceTree = "<group>"; };
 		EF1882B994B7BBB02741CBBD /* libPods-百思不得姐Tests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-百思不得姐Tests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -705,452 +716,6 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		40260EBE200612130095E925 /* XFLegoVIPER */ = {
-			isa = PBXGroup;
-			children = (
-				40260EBF200612130095E925 /* Core */,
-				40260EEF200612140095E925 /* Extension */,
-				40260F4C200612140095E925 /* Util */,
-				40260F53200612140095E925 /* XFLegoVIPER.h */,
-				40260F54200612140095E925 /* XFLegoConfig.m */,
-				40260F55200612140095E925 /* XFLegoConfig.h */,
-				40260F56200612140095E925 /* XFLegoMarco.h */,
-			);
-			path = XFLegoVIPER;
-			sourceTree = "<group>";
-		};
-		40260EBF200612130095E925 /* Core */ = {
-			isa = PBXGroup;
-			children = (
-				40260EC0200612130095E925 /* LEGOAbsModule */,
-				40260ECD200612130095E925 /* Component */,
-				40260EEA200612140095E925 /* PlugInterface */,
-			);
-			path = Core;
-			sourceTree = "<group>";
-		};
-		40260EC0200612130095E925 /* LEGOAbsModule */ = {
-			isa = PBXGroup;
-			children = (
-				40260EC1200612130095E925 /* Interface */,
-				40260EC5200612130095E925 /* Layer */,
-				40260ECA200612130095E925 /* Recognizer */,
-			);
-			path = LEGOAbsModule;
-			sourceTree = "<group>";
-		};
-		40260EC1200612130095E925 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				40260EC2200612130095E925 /* XFComponentBindEvent.h */,
-				40260EC3200612130095E925 /* XFComponentEventResponder.h */,
-				40260EC4200612130095E925 /* XFComponentUI.h */,
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
-		40260EC5200612130095E925 /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-				40260EC6200612130095E925 /* UIViewController+ComponentUI.m */,
-				40260EC7200612130095E925 /* UIView+ComponentSubView.h */,
-				40260EC8200612130095E925 /* UIViewController+ComponentUI.h */,
-				40260EC9200612130095E925 /* UIView+ComponentSubView.m */,
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		40260ECA200612130095E925 /* Recognizer */ = {
-			isa = PBXGroup;
-			children = (
-				40260ECB200612130095E925 /* XFModuleReflect.h */,
-				40260ECC200612130095E925 /* XFModuleReflect.m */,
-			);
-			path = Recognizer;
-			sourceTree = "<group>";
-		};
-		40260ECD200612130095E925 /* Component */ = {
-			isa = PBXGroup;
-			children = (
-				40260ECE200612130095E925 /* Express */,
-				40260EDA200612140095E925 /* Manager */,
-				40260EDD200612140095E925 /* WorkBus */,
-				40260EE2200612140095E925 /* Recognizer */,
-				40260EE7200612140095E925 /* Factory */,
-			);
-			path = Component;
-			sourceTree = "<group>";
-		};
-		40260ECE200612130095E925 /* Express */ = {
-			isa = PBXGroup;
-			children = (
-				40260ECF200612130095E925 /* XFRenderItem.m */,
-				40260ED0200612130095E925 /* XFRenderData.m */,
-				40260ED1200612130095E925 /* XFExpressPiece.m */,
-				40260ED2200612130095E925 /* XFExpressPack.m */,
-				40260ED3200612130095E925 /* XFExpressDirver.m */,
-				40260ED4200612130095E925 /* XFExpressPiece.h */,
-				40260ED5200612130095E925 /* XFRenderData.h */,
-				40260ED6200612130095E925 /* XFRenderItem.h */,
-				40260ED7200612130095E925 /* XFExpressPiecePort.h */,
-				40260ED8200612130095E925 /* XFExpressDirver.h */,
-				40260ED9200612130095E925 /* XFExpressPack.h */,
-			);
-			path = Express;
-			sourceTree = "<group>";
-		};
-		40260EDA200612140095E925 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				40260EDB200612140095E925 /* XFComponentManager.m */,
-				40260EDC200612140095E925 /* XFComponentManager.h */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		40260EDD200612140095E925 /* WorkBus */ = {
-			isa = PBXGroup;
-			children = (
-				40260EDE200612140095E925 /* XFEventBus.h */,
-				40260EDF200612140095E925 /* XFUIBus.h */,
-				40260EE0200612140095E925 /* XFEventBus.m */,
-				40260EE1200612140095E925 /* XFUIBus.m */,
-			);
-			path = WorkBus;
-			sourceTree = "<group>";
-		};
-		40260EE2200612140095E925 /* Recognizer */ = {
-			isa = PBXGroup;
-			children = (
-				40260EE3200612140095E925 /* XFComponentHandlerMatcher.h */,
-				40260EE4200612140095E925 /* XFComponentReflect.h */,
-				40260EE5200612140095E925 /* XFComponentHandlerMatcher.m */,
-				40260EE6200612140095E925 /* XFComponentReflect.m */,
-			);
-			path = Recognizer;
-			sourceTree = "<group>";
-		};
-		40260EE7200612140095E925 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				40260EE8200612140095E925 /* XFUInterfaceFactory.h */,
-				40260EE9200612140095E925 /* XFUInterfaceFactory.m */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		40260EEA200612140095E925 /* PlugInterface */ = {
-			isa = PBXGroup;
-			children = (
-				40260EEB200612140095E925 /* XFEventDispatchPort.h */,
-				40260EEC200612140095E925 /* XFURLRoutePlug.h */,
-				40260EED200612140095E925 /* XFComponentHandlerPlug.h */,
-				40260EEE200612140095E925 /* XFComponentRoutable.h */,
-			);
-			path = PlugInterface;
-			sourceTree = "<group>";
-		};
-		40260EEF200612140095E925 /* Extension */ = {
-			isa = PBXGroup;
-			children = (
-				40260EF0200612140095E925 /* Route */,
-				40260EF6200612140095E925 /* Modules */,
-			);
-			path = Extension;
-			sourceTree = "<group>";
-		};
-		40260EF0200612140095E925 /* Route */ = {
-			isa = PBXGroup;
-			children = (
-				40260EF1200612140095E925 /* URLRoute */,
-			);
-			path = Route;
-			sourceTree = "<group>";
-		};
-		40260EF1200612140095E925 /* URLRoute */ = {
-			isa = PBXGroup;
-			children = (
-				40260EF2200612140095E925 /* XFURLParse.h */,
-				40260EF3200612140095E925 /* XFURLRoute.h */,
-				40260EF4200612140095E925 /* XFURLRoute.m */,
-				40260EF5200612140095E925 /* XFURLParse.m */,
-			);
-			path = URLRoute;
-			sourceTree = "<group>";
-		};
-		40260EF6200612140095E925 /* Modules */ = {
-			isa = PBXGroup;
-			children = (
-				40260EF7200612140095E925 /* MVC */,
-				40260F09200612140095E925 /* VIPER */,
-				40260F31200612140095E925 /* MVVM */,
-			);
-			path = Modules;
-			sourceTree = "<group>";
-		};
-		40260EF7200612140095E925 /* MVC */ = {
-			isa = PBXGroup;
-			children = (
-				40260EF8200612140095E925 /* Handler */,
-				40260EFB200612140095E925 /* Runnable */,
-				40260EFD200612140095E925 /* Controller */,
-			);
-			path = MVC;
-			sourceTree = "<group>";
-		};
-		40260EF8200612140095E925 /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-				40260EF9200612140095E925 /* XFControllerHandler.m */,
-				40260EFA200612140095E925 /* XFControllerHandler.h */,
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
-		40260EFB200612140095E925 /* Runnable */ = {
-			isa = PBXGroup;
-			children = (
-				40260EFC200612140095E925 /* XFControllerRunnable.h */,
-			);
-			path = Runnable;
-			sourceTree = "<group>";
-		};
-		40260EFD200612140095E925 /* Controller */ = {
-			isa = PBXGroup;
-			children = (
-				40260EFE200612140095E925 /* Layer */,
-				40260F03200612140095E925 /* Recognizer */,
-				40260F06200612140095E925 /* Factory */,
-			);
-			path = Controller;
-			sourceTree = "<group>";
-		};
-		40260EFE200612140095E925 /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-				40260EFF200612140095E925 /* UIViewController+ComponentBridge.h */,
-				40260F00200612140095E925 /* XFComponentViewController.h */,
-				40260F01200612140095E925 /* XFComponentViewController.m */,
-				40260F02200612140095E925 /* UIViewController+ComponentBridge.m */,
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		40260F03200612140095E925 /* Recognizer */ = {
-			isa = PBXGroup;
-			children = (
-				40260F04200612140095E925 /* XFControllerReflect.m */,
-				40260F05200612140095E925 /* XFControllerReflect.h */,
-			);
-			path = Recognizer;
-			sourceTree = "<group>";
-		};
-		40260F06200612140095E925 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				40260F07200612140095E925 /* XFControllerFactory.m */,
-				40260F08200612140095E925 /* XFControllerFactory.h */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		40260F09200612140095E925 /* VIPER */ = {
-			isa = PBXGroup;
-			children = (
-				40260F0A200612140095E925 /* Handler */,
-				40260F0D200612140095E925 /* Runnable */,
-				40260F0F200612140095E925 /* VIPERModule */,
-			);
-			path = VIPER;
-			sourceTree = "<group>";
-		};
-		40260F0A200612140095E925 /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-				40260F0B200612140095E925 /* XFVIPERModuleHandler.h */,
-				40260F0C200612140095E925 /* XFVIPERModuleHandler.m */,
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
-		40260F0D200612140095E925 /* Runnable */ = {
-			isa = PBXGroup;
-			children = (
-				40260F0E200612140095E925 /* XFVIPERModuleRunnable.h */,
-			);
-			path = Runnable;
-			sourceTree = "<group>";
-		};
-		40260F0F200612140095E925 /* VIPERModule */ = {
-			isa = PBXGroup;
-			children = (
-				40260F10200612140095E925 /* Interface */,
-				40260F17200612140095E925 /* Manager */,
-				40260F1C200612140095E925 /* Layer */,
-				40260F2B200612140095E925 /* Recognizer */,
-				40260F2E200612140095E925 /* Factory */,
-			);
-			path = VIPERModule;
-			sourceTree = "<group>";
-		};
-		40260F10200612140095E925 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				40260F11200612140095E925 /* XFInteractorPort.h */,
-				40260F12200612140095E925 /* XFEventHandlerPort.h */,
-				40260F13200612140095E925 /* XFUIOperatorPort.h */,
-				40260F14200612140095E925 /* XFWireFramePort.h */,
-				40260F15200612140095E925 /* XFDataManagerPort.h */,
-				40260F16200612140095E925 /* XFUserInterfacePort.h */,
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
-		40260F17200612140095E925 /* Manager */ = {
-			isa = PBXGroup;
-			children = (
-				40260F18200612140095E925 /* XFRoutingLinkManager.h */,
-				40260F19200612140095E925 /* XFVIPERModuleAssembly.m */,
-				40260F1A200612140095E925 /* XFVIPERModuleAssembly.h */,
-				40260F1B200612140095E925 /* XFRoutingLinkManager.m */,
-			);
-			path = Manager;
-			sourceTree = "<group>";
-		};
-		40260F1C200612140095E925 /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-				40260F1D200612140095E925 /* XFDataManager.h */,
-				40260F1E200612140095E925 /* XFRouting.m */,
-				40260F1F200612140095E925 /* UIView+XFLego.h */,
-				40260F20200612140095E925 /* XFInteractor.h */,
-				40260F21200612140095E925 /* XFActivity.h */,
-				40260F22200612140095E925 /* XFPresenter.m */,
-				40260F23200612140095E925 /* UIViewController+XFLego.h */,
-				40260F24200612140095E925 /* XFRouting.h */,
-				40260F25200612140095E925 /* XFDataManager.m */,
-				40260F26200612140095E925 /* XFInteractor.m */,
-				40260F27200612140095E925 /* UIView+XFLego.m */,
-				40260F28200612140095E925 /* UIViewController+XFLego.m */,
-				40260F29200612140095E925 /* XFPresenter.h */,
-				40260F2A200612140095E925 /* XFActivity.m */,
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		40260F2B200612140095E925 /* Recognizer */ = {
-			isa = PBXGroup;
-			children = (
-				40260F2C200612140095E925 /* XFVIPERModuleReflect.h */,
-				40260F2D200612140095E925 /* XFVIPERModuleReflect.m */,
-			);
-			path = Recognizer;
-			sourceTree = "<group>";
-		};
-		40260F2E200612140095E925 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				40260F2F200612140095E925 /* XFRoutingFactory.h */,
-				40260F30200612140095E925 /* XFRoutingFactory.m */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		40260F31200612140095E925 /* MVVM */ = {
-			isa = PBXGroup;
-			children = (
-				40260F32200612140095E925 /* MVVMModule */,
-				40260F43200612140095E925 /* Handler */,
-				40260F46200612140095E925 /* Extra */,
-			);
-			path = MVVM;
-			sourceTree = "<group>";
-		};
-		40260F32200612140095E925 /* MVVMModule */ = {
-			isa = PBXGroup;
-			children = (
-				40260F33200612140095E925 /* Interface */,
-				40260F36200612140095E925 /* Layer */,
-				40260F3D200612140095E925 /* Recognizer */,
-				40260F40200612140095E925 /* Factory */,
-			);
-			path = MVVMModule;
-			sourceTree = "<group>";
-		};
-		40260F33200612140095E925 /* Interface */ = {
-			isa = PBXGroup;
-			children = (
-				40260F34200612140095E925 /* LEViewProtocol.h */,
-				40260F35200612140095E925 /* LEDataDriverProtocol.h */,
-			);
-			path = Interface;
-			sourceTree = "<group>";
-		};
-		40260F36200612140095E925 /* Layer */ = {
-			isa = PBXGroup;
-			children = (
-				40260F37200612140095E925 /* LEViewModel.h */,
-				40260F38200612140095E925 /* UIViewController+LEView.m */,
-				40260F39200612140095E925 /* LEViewController.h */,
-				40260F3A200612140095E925 /* LEViewModel.m */,
-				40260F3B200612140095E925 /* UIViewController+LEView.h */,
-				40260F3C200612140095E925 /* LEViewController.m */,
-			);
-			path = Layer;
-			sourceTree = "<group>";
-		};
-		40260F3D200612140095E925 /* Recognizer */ = {
-			isa = PBXGroup;
-			children = (
-				40260F3E200612140095E925 /* LEMVVMModuleReflect.h */,
-				40260F3F200612140095E925 /* LEMVVMModuleReflect.m */,
-			);
-			path = Recognizer;
-			sourceTree = "<group>";
-		};
-		40260F40200612140095E925 /* Factory */ = {
-			isa = PBXGroup;
-			children = (
-				40260F41200612140095E925 /* LEMVVMModuleFactory.h */,
-				40260F42200612140095E925 /* LEMVVMModuleFactory.m */,
-			);
-			path = Factory;
-			sourceTree = "<group>";
-		};
-		40260F43200612140095E925 /* Handler */ = {
-			isa = PBXGroup;
-			children = (
-				40260F44200612140095E925 /* LEMVVMModuleHandler.h */,
-				40260F45200612140095E925 /* LEMVVMModuleHandler.m */,
-			);
-			path = Handler;
-			sourceTree = "<group>";
-		};
-		40260F46200612140095E925 /* Extra */ = {
-			isa = PBXGroup;
-			children = (
-				40260F47200612140095E925 /* LEMVVMNavigationController.m */,
-				40260F48200612140095E925 /* LEMVVMIntent.h */,
-				40260F49200612140095E925 /* LEMVVMConnector.m */,
-				40260F4A200612140095E925 /* LEMVVMNavigationController.h */,
-				40260F4B200612140095E925 /* LEMVVMConnector.h */,
-			);
-			path = Extra;
-			sourceTree = "<group>";
-		};
-		40260F4C200612140095E925 /* Util */ = {
-			isa = PBXGroup;
-			children = (
-				40260F4D200612140095E925 /* NSObject+XFLegoSwizzle.h */,
-				40260F4E200612140095E925 /* NSObject+XFLegoCopy.m */,
-				40260F4F200612140095E925 /* NSObject+XFLegoInvokeMethod.h */,
-				40260F50200612140095E925 /* NSObject+XFLegoSwizzle.m */,
-				40260F51200612140095E925 /* NSObject+XFLegoCopy.h */,
-				40260F52200612140095E925 /* NSObject+XFLegoInvokeMethod.m */,
-			);
-			path = Util;
-			sourceTree = "<group>";
-		};
 		402647821DDD45B3002EDD00 /* 百思不得姐Tests */ = {
 			isa = PBXGroup;
 			children = (
@@ -2733,7 +2298,6 @@
 				40C676611EA09D9800AF6E0C /* Cus */,
 				40C6766C1EA09D9800AF6E0C /* Lib */,
 				40C676FD1EA09D9800AF6E0C /* PluginExtension */,
-				40C677041EA09D9800AF6E0C /* Tool */,
 			);
 			path = Public;
 			sourceTree = "<group>";
@@ -2775,7 +2339,7 @@
 		40C6766C1EA09D9800AF6E0C /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				40260EBE200612130095E925 /* XFLegoVIPER */,
+				40F95C2B2237680C00192F50 /* XFLegoVIPER */,
 				40C6766D1EA09D9800AF6E0C /* HJCornerRadius */,
 			);
 			path = Lib;
@@ -2817,11 +2381,466 @@
 			path = XFSettings;
 			sourceTree = "<group>";
 		};
-		40C677041EA09D9800AF6E0C /* Tool */ = {
+		40F95C2B2237680C00192F50 /* XFLegoVIPER */ = {
 			isa = PBXGroup;
 			children = (
+				40F95C2C2237680C00192F50 /* Core */,
+				40F95C622237680C00192F50 /* Extension */,
+				40F95CC22237680C00192F50 /* Util */,
+				40F95CC92237680C00192F50 /* XFLegoVIPER.h */,
+				40F95CCA2237680C00192F50 /* XFLegoConfig.m */,
+				40F95CCB2237680C00192F50 /* XFLegoConfig.h */,
+				40F95CCC2237680C00192F50 /* XFLegoMarco.h */,
 			);
-			path = Tool;
+			path = XFLegoVIPER;
+			sourceTree = "<group>";
+		};
+		40F95C2C2237680C00192F50 /* Core */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C2D2237680C00192F50 /* LEGOAbsModule */,
+				40F95C3A2237680C00192F50 /* Component */,
+				40F95C5C2237680C00192F50 /* PlugInterface */,
+			);
+			path = Core;
+			sourceTree = "<group>";
+		};
+		40F95C2D2237680C00192F50 /* LEGOAbsModule */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C2E2237680C00192F50 /* Interface */,
+				40F95C322237680C00192F50 /* Layer */,
+				40F95C372237680C00192F50 /* Recognizer */,
+			);
+			path = LEGOAbsModule;
+			sourceTree = "<group>";
+		};
+		40F95C2E2237680C00192F50 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C2F2237680C00192F50 /* XFComponentBindEvent.h */,
+				40F95C302237680C00192F50 /* XFComponentEventResponder.h */,
+				40F95C312237680C00192F50 /* XFComponentUI.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		40F95C322237680C00192F50 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C332237680C00192F50 /* UIViewController+ComponentUI.m */,
+				40F95C342237680C00192F50 /* UIView+ComponentSubView.h */,
+				40F95C352237680C00192F50 /* UIViewController+ComponentUI.h */,
+				40F95C362237680C00192F50 /* UIView+ComponentSubView.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		40F95C372237680C00192F50 /* Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C382237680C00192F50 /* XFModuleReflect.h */,
+				40F95C392237680C00192F50 /* XFModuleReflect.m */,
+			);
+			path = Recognizer;
+			sourceTree = "<group>";
+		};
+		40F95C3A2237680C00192F50 /* Component */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C3B2237680C00192F50 /* Express */,
+				40F95C472237680C00192F50 /* Manager */,
+				40F95C4F2237680C00192F50 /* WorkBus */,
+				40F95C542237680C00192F50 /* Recognizer */,
+				40F95C592237680C00192F50 /* Factory */,
+			);
+			path = Component;
+			sourceTree = "<group>";
+		};
+		40F95C3B2237680C00192F50 /* Express */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C3C2237680C00192F50 /* XFRenderItem.m */,
+				40F95C3D2237680C00192F50 /* XFRenderData.m */,
+				40F95C3E2237680C00192F50 /* XFExpressPiece.m */,
+				40F95C3F2237680C00192F50 /* XFExpressPack.m */,
+				40F95C402237680C00192F50 /* XFExpressDirver.m */,
+				40F95C412237680C00192F50 /* XFExpressPiece.h */,
+				40F95C422237680C00192F50 /* XFRenderData.h */,
+				40F95C432237680C00192F50 /* XFRenderItem.h */,
+				40F95C442237680C00192F50 /* XFExpressPiecePort.h */,
+				40F95C452237680C00192F50 /* XFExpressDirver.h */,
+				40F95C462237680C00192F50 /* XFExpressPack.h */,
+			);
+			path = Express;
+			sourceTree = "<group>";
+		};
+		40F95C472237680C00192F50 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C482237680C00192F50 /* XFPipe.h */,
+				40F95C492237680C00192F50 /* NSObject+XFPipe.h */,
+				40F95C4A2237680C00192F50 /* XFComponentManager.m */,
+				40F95C4B2237680C00192F50 /* XFPipePort.h */,
+				40F95C4C2237680C00192F50 /* XFPipe.m */,
+				40F95C4D2237680C00192F50 /* XFComponentManager.h */,
+				40F95C4E2237680C00192F50 /* NSObject+XFPipe.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		40F95C4F2237680C00192F50 /* WorkBus */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C502237680C00192F50 /* XFEventBus.h */,
+				40F95C512237680C00192F50 /* XFUIBus.h */,
+				40F95C522237680C00192F50 /* XFEventBus.m */,
+				40F95C532237680C00192F50 /* XFUIBus.m */,
+			);
+			path = WorkBus;
+			sourceTree = "<group>";
+		};
+		40F95C542237680C00192F50 /* Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C552237680C00192F50 /* XFComponentHandlerMatcher.h */,
+				40F95C562237680C00192F50 /* XFComponentReflect.h */,
+				40F95C572237680C00192F50 /* XFComponentHandlerMatcher.m */,
+				40F95C582237680C00192F50 /* XFComponentReflect.m */,
+			);
+			path = Recognizer;
+			sourceTree = "<group>";
+		};
+		40F95C592237680C00192F50 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C5A2237680C00192F50 /* XFUInterfaceFactory.h */,
+				40F95C5B2237680C00192F50 /* XFUInterfaceFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		40F95C5C2237680C00192F50 /* PlugInterface */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C5D2237680C00192F50 /* XFEmitterPlug.h */,
+				40F95C5E2237680C00192F50 /* XFEventReceivable.h */,
+				40F95C5F2237680C00192F50 /* XFURLRoutePlug.h */,
+				40F95C602237680C00192F50 /* XFComponentHandlerPlug.h */,
+				40F95C612237680C00192F50 /* XFComponentRoutable.h */,
+			);
+			path = PlugInterface;
+			sourceTree = "<group>";
+		};
+		40F95C622237680C00192F50 /* Extension */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C632237680C00192F50 /* Emitter */,
+				40F95C662237680C00192F50 /* Route */,
+				40F95C6C2237680C00192F50 /* Modules */,
+			);
+			path = Extension;
+			sourceTree = "<group>";
+		};
+		40F95C632237680C00192F50 /* Emitter */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C642237680C00192F50 /* XFApplicationEmitter.h */,
+				40F95C652237680C00192F50 /* XFApplicationEmitter.m */,
+			);
+			path = Emitter;
+			sourceTree = "<group>";
+		};
+		40F95C662237680C00192F50 /* Route */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C672237680C00192F50 /* URLRoute */,
+			);
+			path = Route;
+			sourceTree = "<group>";
+		};
+		40F95C672237680C00192F50 /* URLRoute */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C682237680C00192F50 /* XFURLParse.h */,
+				40F95C692237680C00192F50 /* XFURLRoute.h */,
+				40F95C6A2237680C00192F50 /* XFURLRoute.m */,
+				40F95C6B2237680C00192F50 /* XFURLParse.m */,
+			);
+			path = URLRoute;
+			sourceTree = "<group>";
+		};
+		40F95C6C2237680C00192F50 /* Modules */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C6D2237680C00192F50 /* MVC */,
+				40F95C7F2237680C00192F50 /* VIPER */,
+				40F95CA72237680C00192F50 /* MVVM */,
+			);
+			path = Modules;
+			sourceTree = "<group>";
+		};
+		40F95C6D2237680C00192F50 /* MVC */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C6E2237680C00192F50 /* Handler */,
+				40F95C712237680C00192F50 /* Runnable */,
+				40F95C732237680C00192F50 /* Controller */,
+			);
+			path = MVC;
+			sourceTree = "<group>";
+		};
+		40F95C6E2237680C00192F50 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C6F2237680C00192F50 /* XFControllerHandler.m */,
+				40F95C702237680C00192F50 /* XFControllerHandler.h */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		40F95C712237680C00192F50 /* Runnable */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C722237680C00192F50 /* XFControllerRunnable.h */,
+			);
+			path = Runnable;
+			sourceTree = "<group>";
+		};
+		40F95C732237680C00192F50 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C742237680C00192F50 /* Layer */,
+				40F95C792237680C00192F50 /* Recognizer */,
+				40F95C7C2237680C00192F50 /* Factory */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		40F95C742237680C00192F50 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C752237680C00192F50 /* UIViewController+ComponentBridge.h */,
+				40F95C762237680C00192F50 /* XFComponentViewController.h */,
+				40F95C772237680C00192F50 /* XFComponentViewController.m */,
+				40F95C782237680C00192F50 /* UIViewController+ComponentBridge.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		40F95C792237680C00192F50 /* Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C7A2237680C00192F50 /* XFControllerReflect.m */,
+				40F95C7B2237680C00192F50 /* XFControllerReflect.h */,
+			);
+			path = Recognizer;
+			sourceTree = "<group>";
+		};
+		40F95C7C2237680C00192F50 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C7D2237680C00192F50 /* XFControllerFactory.m */,
+				40F95C7E2237680C00192F50 /* XFControllerFactory.h */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		40F95C7F2237680C00192F50 /* VIPER */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C802237680C00192F50 /* Handler */,
+				40F95C832237680C00192F50 /* Runnable */,
+				40F95C852237680C00192F50 /* VIPERModule */,
+			);
+			path = VIPER;
+			sourceTree = "<group>";
+		};
+		40F95C802237680C00192F50 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C812237680C00192F50 /* XFVIPERModuleHandler.h */,
+				40F95C822237680C00192F50 /* XFVIPERModuleHandler.m */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		40F95C832237680C00192F50 /* Runnable */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C842237680C00192F50 /* XFVIPERModuleRunnable.h */,
+			);
+			path = Runnable;
+			sourceTree = "<group>";
+		};
+		40F95C852237680C00192F50 /* VIPERModule */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C862237680C00192F50 /* Interface */,
+				40F95C8D2237680C00192F50 /* Manager */,
+				40F95C922237680C00192F50 /* Layer */,
+				40F95CA12237680C00192F50 /* Recognizer */,
+				40F95CA42237680C00192F50 /* Factory */,
+			);
+			path = VIPERModule;
+			sourceTree = "<group>";
+		};
+		40F95C862237680C00192F50 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C872237680C00192F50 /* XFInteractorPort.h */,
+				40F95C882237680C00192F50 /* XFEventHandlerPort.h */,
+				40F95C892237680C00192F50 /* XFUIOperatorPort.h */,
+				40F95C8A2237680C00192F50 /* XFWireFramePort.h */,
+				40F95C8B2237680C00192F50 /* XFDataManagerPort.h */,
+				40F95C8C2237680C00192F50 /* XFUserInterfacePort.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		40F95C8D2237680C00192F50 /* Manager */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C8E2237680C00192F50 /* XFRoutingLinkManager.h */,
+				40F95C8F2237680C00192F50 /* XFVIPERModuleAssembly.m */,
+				40F95C902237680C00192F50 /* XFVIPERModuleAssembly.h */,
+				40F95C912237680C00192F50 /* XFRoutingLinkManager.m */,
+			);
+			path = Manager;
+			sourceTree = "<group>";
+		};
+		40F95C922237680C00192F50 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95C932237680C00192F50 /* XFDataManager.h */,
+				40F95C942237680C00192F50 /* XFRouting.m */,
+				40F95C952237680C00192F50 /* UIView+XFLego.h */,
+				40F95C962237680C00192F50 /* XFInteractor.h */,
+				40F95C972237680C00192F50 /* XFActivity.h */,
+				40F95C982237680C00192F50 /* XFPresenter.m */,
+				40F95C992237680C00192F50 /* UIViewController+XFLego.h */,
+				40F95C9A2237680C00192F50 /* XFRouting.h */,
+				40F95C9B2237680C00192F50 /* XFDataManager.m */,
+				40F95C9C2237680C00192F50 /* XFInteractor.m */,
+				40F95C9D2237680C00192F50 /* UIView+XFLego.m */,
+				40F95C9E2237680C00192F50 /* UIViewController+XFLego.m */,
+				40F95C9F2237680C00192F50 /* XFPresenter.h */,
+				40F95CA02237680C00192F50 /* XFActivity.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		40F95CA12237680C00192F50 /* Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CA22237680C00192F50 /* XFVIPERModuleReflect.h */,
+				40F95CA32237680C00192F50 /* XFVIPERModuleReflect.m */,
+			);
+			path = Recognizer;
+			sourceTree = "<group>";
+		};
+		40F95CA42237680C00192F50 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CA52237680C00192F50 /* XFRoutingFactory.h */,
+				40F95CA62237680C00192F50 /* XFRoutingFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		40F95CA72237680C00192F50 /* MVVM */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CA82237680C00192F50 /* MVVMModule */,
+				40F95CB92237680C00192F50 /* Handler */,
+				40F95CBC2237680C00192F50 /* Extra */,
+			);
+			path = MVVM;
+			sourceTree = "<group>";
+		};
+		40F95CA82237680C00192F50 /* MVVMModule */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CA92237680C00192F50 /* Interface */,
+				40F95CAC2237680C00192F50 /* Layer */,
+				40F95CB32237680C00192F50 /* Recognizer */,
+				40F95CB62237680C00192F50 /* Factory */,
+			);
+			path = MVVMModule;
+			sourceTree = "<group>";
+		};
+		40F95CA92237680C00192F50 /* Interface */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CAA2237680C00192F50 /* LEViewProtocol.h */,
+				40F95CAB2237680C00192F50 /* LEDataDriverProtocol.h */,
+			);
+			path = Interface;
+			sourceTree = "<group>";
+		};
+		40F95CAC2237680C00192F50 /* Layer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CAD2237680C00192F50 /* LEViewModel.h */,
+				40F95CAE2237680C00192F50 /* UIViewController+LEView.m */,
+				40F95CAF2237680C00192F50 /* LEViewController.h */,
+				40F95CB02237680C00192F50 /* LEViewModel.m */,
+				40F95CB12237680C00192F50 /* UIViewController+LEView.h */,
+				40F95CB22237680C00192F50 /* LEViewController.m */,
+			);
+			path = Layer;
+			sourceTree = "<group>";
+		};
+		40F95CB32237680C00192F50 /* Recognizer */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CB42237680C00192F50 /* LEMVVMModuleReflect.h */,
+				40F95CB52237680C00192F50 /* LEMVVMModuleReflect.m */,
+			);
+			path = Recognizer;
+			sourceTree = "<group>";
+		};
+		40F95CB62237680C00192F50 /* Factory */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CB72237680C00192F50 /* LEMVVMModuleFactory.h */,
+				40F95CB82237680C00192F50 /* LEMVVMModuleFactory.m */,
+			);
+			path = Factory;
+			sourceTree = "<group>";
+		};
+		40F95CB92237680C00192F50 /* Handler */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CBA2237680C00192F50 /* LEMVVMModuleHandler.h */,
+				40F95CBB2237680C00192F50 /* LEMVVMModuleHandler.m */,
+			);
+			path = Handler;
+			sourceTree = "<group>";
+		};
+		40F95CBC2237680C00192F50 /* Extra */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CBD2237680C00192F50 /* LEMVVMNavigationController.m */,
+				40F95CBE2237680C00192F50 /* LEMVVMIntent.h */,
+				40F95CBF2237680C00192F50 /* LEMVVMConnector.m */,
+				40F95CC02237680C00192F50 /* LEMVVMNavigationController.h */,
+				40F95CC12237680C00192F50 /* LEMVVMConnector.h */,
+			);
+			path = Extra;
+			sourceTree = "<group>";
+		};
+		40F95CC22237680C00192F50 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				40F95CC32237680C00192F50 /* NSObject+XFLegoSwizzle.h */,
+				40F95CC42237680C00192F50 /* NSObject+XFLegoCopy.m */,
+				40F95CC52237680C00192F50 /* NSObject+XFLegoInvokeMethod.h */,
+				40F95CC62237680C00192F50 /* NSObject+XFLegoSwizzle.m */,
+				40F95CC72237680C00192F50 /* NSObject+XFLegoCopy.h */,
+				40F95CC82237680C00192F50 /* NSObject+XFLegoInvokeMethod.m */,
+			);
+			path = Util;
 			sourceTree = "<group>";
 		};
 		81C032B40B4AB21DB0B68124 /* Frameworks */ = {
@@ -2856,8 +2875,6 @@
 				4026477D1DDD45B3002EDD00 /* Sources */,
 				4026477E1DDD45B3002EDD00 /* Frameworks */,
 				4026477F1DDD45B3002EDD00 /* Resources */,
-				1E2F86347BEC4E10EE088615 /* [CP] Embed Pods Frameworks */,
-				BB25353AA5253BDDCF858D6D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -2877,7 +2894,6 @@
 				404873E81DD3515E00388087 /* Sources */,
 				404873E91DD3515E00388087 /* Frameworks */,
 				404873EA1DD3515E00388087 /* Resources */,
-				DAA54EB4ADEF157D3121CBB3 /* [CP] Embed Pods Frameworks */,
 				A1F734F76FA08A190D80B9C8 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
@@ -2967,34 +2983,22 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
-		1E2F86347BEC4E10EE088615 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests-frameworks.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
 		2EDE307886ACAAD279440306 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-百思不得姐-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 		A1F734F76FA08A190D80B9C8 /* [CP] Copy Pods Resources */ = {
@@ -3003,9 +3007,14 @@
 			files = (
 			);
 			inputPaths = (
+				"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-resources.sh",
+				"${PODS_ROOT}/MJRefresh/MJRefresh/MJRefresh.bundle",
+				"${PODS_ROOT}/SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/MJRefresh.bundle",
+				"${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}/SVProgressHUD.bundle",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -3018,43 +3027,16 @@
 			files = (
 			);
 			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
 			);
 			name = "[CP] Check Pods Manifest.lock";
 			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-百思不得姐Tests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		BB25353AA5253BDDCF858D6D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐Tests/Pods-百思不得姐Tests-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		DAA54EB4ADEF157D3121CBB3 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-百思不得姐/Pods-百思不得姐-frameworks.sh\"\n";
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
 			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
@@ -3072,185 +3054,188 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				40260F76200612140095E925 /* XFVIPERModuleReflect.m in Sources */,
-				40260F63200612140095E925 /* XFComponentReflect.m in Sources */,
+				40F95CF42237680C00192F50 /* LEMVVMModuleReflect.m in Sources */,
 				40C677891EA09D9900AF6E0C /* BDJPushGuideLoader.m in Sources */,
+				40F95CE22237680C00192F50 /* UIViewController+ComponentBridge.m in Sources */,
 				40C677831EA09D9900AF6E0C /* BDJPushGuideView.m in Sources */,
 				40C677991EA09D9900AF6E0C /* HJCornerRadius.m in Sources */,
+				40F95CE32237680C00192F50 /* XFControllerReflect.m in Sources */,
 				40C677751EA09D9900AF6E0C /* BDJPublishContentPresenter.m in Sources */,
 				40C677591EA09D9900AF6E0C /* BDJIndexTabInteractor.m in Sources */,
-				40260F7A200612140095E925 /* LEViewController.m in Sources */,
 				40C6775D1EA09D9900AF6E0C /* BDJMeDataManager.m in Sources */,
 				40C677191EA09D9900AF6E0C /* BDJPostFrame.m in Sources */,
 				40C677881EA09D9900AF6E0C /* BDJAPPLoader.m in Sources */,
+				40F95CEE2237680C00192F50 /* XFActivity.m in Sources */,
 				40C677381EA09D9900AF6E0C /* BDJRecommendTagProvider.m in Sources */,
 				40C677051EA09D9800AF6E0C /* BDJHttpRequest.m in Sources */,
 				40C677351EA09D9900AF6E0C /* BDJRecommendTagDataManager.m in Sources */,
 				40C677281EA09D9900AF6E0C /* BDJMetaPostCmtModel.m in Sources */,
-				40260F75200612140095E925 /* XFActivity.m in Sources */,
-				40260F74200612140095E925 /* UIViewController+XFLego.m in Sources */,
 				40C677321EA09D9900AF6E0C /* BDJPostCommentRouting.m in Sources */,
+				40F95CE52237680C00192F50 /* XFVIPERModuleHandler.m in Sources */,
 				40C677761EA09D9900AF6E0C /* BDJPublishContentActivity.m in Sources */,
+				40F95CEA2237680C00192F50 /* XFDataManager.m in Sources */,
 				40C6775F1EA09D9900AF6E0C /* BDJTopicModel.m in Sources */,
+				40F95CF72237680C00192F50 /* LEMVVMNavigationController.m in Sources */,
+				40F95CDD2237680C00192F50 /* XFApplicationEmitter.m in Sources */,
 				40C677941EA09D9900AF6E0C /* XFPHTextField.m in Sources */,
-				40260F5D200612140095E925 /* XFExpressPack.m in Sources */,
-				40260F60200612140095E925 /* XFEventBus.m in Sources */,
+				40F95CD32237680C00192F50 /* XFExpressPack.m in Sources */,
 				40C677791EA09D9900AF6E0C /* BDJPublishContentRouting.m in Sources */,
+				40F95CEC2237680C00192F50 /* UIView+XFLego.m in Sources */,
+				40F95CF22237680C00192F50 /* LEViewModel.m in Sources */,
 				40C677091EA09D9800AF6E0C /* BDJEssenceInteractor.m in Sources */,
 				40C677441EA09D9900AF6E0C /* BDJRecommendCategoryModel.m in Sources */,
 				40C677871EA09D9900AF6E0C /* BDJAppURLRegister.m in Sources */,
 				40C677571EA09D9900AF6E0C /* BDJFriendTrendsRouting.m in Sources */,
 				40C6778D1EA09D9900AF6E0C /* BDJRImage.m in Sources */,
+				40F95CE72237680C00192F50 /* XFRoutingLinkManager.m in Sources */,
+				40F95CF12237680C00192F50 /* UIViewController+LEView.m in Sources */,
 				40C677701EA09D9900AF6E0C /* BDJNewRouting.m in Sources */,
 				40C6778A1EA09D9900AF6E0C /* AppDelegate.m in Sources */,
 				40C677951EA09D9900AF6E0C /* XFPlusTabBar.m in Sources */,
 				40C677811EA09D9900AF6E0C /* BDJTopicService.m in Sources */,
-				40260F5A200612140095E925 /* XFRenderItem.m in Sources */,
+				40F95CD02237680C00192F50 /* XFRenderItem.m in Sources */,
 				40C677981EA09D9900AF6E0C /* XFVerticalButton.m in Sources */,
 				40C6773D1EA09D9900AF6E0C /* BDJRecommendTagActivity.m in Sources */,
 				40C677331EA09D9900AF6E0C /* BDJPostPictureBrowseViewController.m in Sources */,
-				40260F6C200612140095E925 /* XFVIPERModuleHandler.m in Sources */,
+				40F95CFA2237680C00192F50 /* NSObject+XFLegoSwizzle.m in Sources */,
 				40C677731EA09D9900AF6E0C /* BDJPublishContentDataManager.m in Sources */,
 				40C6777A1EA09D9900AF6E0C /* BDJTopicTagTextField.m in Sources */,
+				40F95CDA2237680C00192F50 /* XFComponentHandlerMatcher.m in Sources */,
 				40C677151EA09D9900AF6E0C /* BDJAVPostRenderItem.m in Sources */,
 				40C6772F1EA09D9900AF6E0C /* BDJPostCmtHeaderView.m in Sources */,
 				40C6770B1EA09D9800AF6E0C /* BDJEssenceActivity.m in Sources */,
-				40260F81200612140095E925 /* NSObject+XFLegoSwizzle.m in Sources */,
-				40260F57200612140095E925 /* UIViewController+ComponentUI.m in Sources */,
-				40260F61200612140095E925 /* XFUIBus.m in Sources */,
+				40F95CCD2237680C00192F50 /* UIViewController+ComponentUI.m in Sources */,
+				40F95CDE2237680C00192F50 /* XFURLRoute.m in Sources */,
 				40C6772D1EA09D9900AF6E0C /* BDJPostCmtCell.m in Sources */,
 				40C677211EA09D9900AF6E0C /* BDJPostVideoView.m in Sources */,
 				40C677371EA09D9900AF6E0C /* BDJRecommendTagModel.m in Sources */,
-				40260F77200612140095E925 /* XFRoutingFactory.m in Sources */,
 				40C6772B1EA09D9900AF6E0C /* BDJPostCmtRenderItem.m in Sources */,
-				40260F7F200612140095E925 /* LEMVVMConnector.m in Sources */,
+				40F95CE02237680C00192F50 /* XFControllerHandler.m in Sources */,
 				40C677161EA09D9900AF6E0C /* BDJPicturePostRenderItem.m in Sources */,
+				40F95CE82237680C00192F50 /* XFRouting.m in Sources */,
 				40C6772C1EA09D9900AF6E0C /* BDJPostCommentPresenter.m in Sources */,
-				40260F65200612140095E925 /* XFURLRoute.m in Sources */,
-				40260F66200612140095E925 /* XFURLParse.m in Sources */,
 				40C6776E1EA09D9900AF6E0C /* BDJNewPresenter.m in Sources */,
 				40C677301EA09D9900AF6E0C /* BDJPostCommentActivity.m in Sources */,
+				40F95CD82237680C00192F50 /* XFEventBus.m in Sources */,
 				40C677741EA09D9900AF6E0C /* BDJPublishContentInteractor.m in Sources */,
 				40C6778E1EA09D9900AF6E0C /* BDJRMetric.m in Sources */,
 				40C677131EA09D9900AF6E0C /* BDJPostProvider.m in Sources */,
-				40260F6A200612140095E925 /* XFControllerReflect.m in Sources */,
 				40C677681EA09D9900AF6E0C /* BDJWebBrowserViewController.m in Sources */,
-				40260F82200612140095E925 /* NSObject+XFLegoInvokeMethod.m in Sources */,
-				40260F68200612140095E925 /* XFComponentViewController.m in Sources */,
+				40F95CE42237680C00192F50 /* XFControllerFactory.m in Sources */,
 				40C6771C1EA09D9900AF6E0C /* BDJPostActivity.m in Sources */,
 				40C6771F1EA09D9900AF6E0C /* BDJPostPictureView.m in Sources */,
 				40C6776C1EA09D9900AF6E0C /* BDJNewDataManager.m in Sources */,
-				40260F78200612140095E925 /* UIViewController+LEView.m in Sources */,
 				40C6774F1EA09D9900AF6E0C /* BDJRecommendUserCell.m in Sources */,
 				40C677401EA09D9900AF6E0C /* BDJFriendsRecommentInteractor.m in Sources */,
 				40C677821EA09D9900AF6E0C /* BDJNavigationController.m in Sources */,
 				40C677641EA09D9900AF6E0C /* BDJMePresenter.m in Sources */,
 				40C677361EA09D9900AF6E0C /* BDJRecommendTagInteractor.m in Sources */,
 				40C677511EA09D9900AF6E0C /* BDJFriendsRecommentRouting.m in Sources */,
+				40F95CF82237680C00192F50 /* LEMVVMConnector.m in Sources */,
 				40C677181EA09D9900AF6E0C /* BDJPostExpressPack.m in Sources */,
 				40C6770A1EA09D9800AF6E0C /* BDJEssencePresenter.m in Sources */,
 				40C6772A1EA09D9900AF6E0C /* BDJPostCmtRenderData.m in Sources */,
-				40260F64200612140095E925 /* XFUInterfaceFactory.m in Sources */,
 				40C6775E1EA09D9900AF6E0C /* BDJMeInteractor.m in Sources */,
 				40C677171EA09D9900AF6E0C /* BDJPostCategory.m in Sources */,
 				40C6774D1EA09D9900AF6E0C /* BDJRecommendCategoryCell.m in Sources */,
 				40C6771D1EA09D9900AF6E0C /* BDJPostCell.m in Sources */,
 				40C677251EA09D9900AF6E0C /* BDJPostRouting.m in Sources */,
 				40C677121EA09D9900AF6E0C /* BDJPostModel.m in Sources */,
-				40260F83200612140095E925 /* XFLegoConfig.m in Sources */,
-				40260F80200612140095E925 /* NSObject+XFLegoCopy.m in Sources */,
 				40C677801EA09D9900AF6E0C /* BDJRecommendService.m in Sources */,
 				40C677111EA09D9900AF6E0C /* BDJPostInfo.m in Sources */,
+				40F95CE92237680C00192F50 /* XFPresenter.m in Sources */,
 				40C677661EA09D9900AF6E0C /* BDJMeFooterView.m in Sources */,
 				40C6770C1EA09D9800AF6E0C /* BDJEssenceRouting.m in Sources */,
 				40C677621EA09D9900AF6E0C /* BDJTopicFrame.m in Sources */,
-				40260F71200612140095E925 /* XFDataManager.m in Sources */,
 				40C677C51EA09D9900AF6E0C /* BDJCircleImageCell.m in Sources */,
 				40C6773A1EA09D9900AF6E0C /* BDJRecommendTagPresenter.m in Sources */,
-				40260F7B200612140095E925 /* LEMVVMModuleReflect.m in Sources */,
-				40260F6B200612140095E925 /* XFControllerFactory.m in Sources */,
-				40260F5C200612140095E925 /* XFExpressPiece.m in Sources */,
+				40F95CD22237680C00192F50 /* XFExpressPiece.m in Sources */,
 				40C6770E1EA09D9800AF6E0C /* BDJPostInteractor.m in Sources */,
 				40C677671EA09D9900AF6E0C /* BDJSqaureButton.m in Sources */,
 				40C6776D1EA09D9900AF6E0C /* BDJNewInteractor.m in Sources */,
-				40260F7D200612140095E925 /* LEMVVMModuleHandler.m in Sources */,
+				40F95CFB2237680C00192F50 /* NSObject+XFLegoInvokeMethod.m in Sources */,
 				40C677651EA09D9900AF6E0C /* BDJMeActivity.m in Sources */,
 				40C677491EA09D9900AF6E0C /* BDJFriendsRecommentActivity.m in Sources */,
 				40C677411EA09D9900AF6E0C /* BDJFriendsRecommendProvider.m in Sources */,
 				40C677551EA09D9900AF6E0C /* BDJFriendTrendsActivity.m in Sources */,
 				40C677531EA09D9900AF6E0C /* BDJFriendTrendsInteractor.m in Sources */,
+				40F95CE62237680C00192F50 /* XFVIPERModuleAssembly.m in Sources */,
 				40C677291EA09D9900AF6E0C /* BDJPostCmtProvider.m in Sources */,
 				40C677861EA09D9900AF6E0C /* BDJAPI.m in Sources */,
 				40C6778B1EA09D9900AF6E0C /* main.m in Sources */,
 				40C677391EA09D9900AF6E0C /* BDJRCTagRenderItem.m in Sources */,
-				40260F69200612140095E925 /* UIViewController+ComponentBridge.m in Sources */,
 				40C6777F1EA09D9900AF6E0C /* BDJPostService.m in Sources */,
 				40C6773F1EA09D9900AF6E0C /* BDJFriendsRecommentDataManager.m in Sources */,
 				40C677581EA09D9900AF6E0C /* BDJIndexTabDataManager.m in Sources */,
+				40F95CE12237680C00192F50 /* XFComponentViewController.m in Sources */,
+				40F95CF52237680C00192F50 /* LEMVVMModuleFactory.m in Sources */,
 				40C677631EA09D9900AF6E0C /* BDJTopicRenderItem.m in Sources */,
-				40260F58200612140095E925 /* UIView+ComponentSubView.m in Sources */,
+				40F95CCE2237680C00192F50 /* UIView+ComponentSubView.m in Sources */,
 				40C6778C1EA09D9900AF6E0C /* BDJRColor.m in Sources */,
-				40260F73200612140095E925 /* UIView+XFLego.m in Sources */,
-				40260F7E200612140095E925 /* LEMVVMNavigationController.m in Sources */,
 				40C677771EA09D9900AF6E0C /* BDJTagAccessoryView.m in Sources */,
+				40F95CDF2237680C00192F50 /* XFURLParse.m in Sources */,
 				40C677451EA09D9900AF6E0C /* BDJCategoryRenderItem.m in Sources */,
 				40C677141EA09D9900AF6E0C /* BDJUserModel.m in Sources */,
-				40260F72200612140095E925 /* XFInteractor.m in Sources */,
 				40C677461EA09D9900AF6E0C /* BDJRCUserRenderData.m in Sources */,
+				40F95CEF2237680C00192F50 /* XFVIPERModuleReflect.m in Sources */,
 				40C6776B1EA09D9900AF6E0C /* BDJSettingViewController.m in Sources */,
-				40260F59200612140095E925 /* XFModuleReflect.m in Sources */,
+				40F95CCF2237680C00192F50 /* XFModuleReflect.m in Sources */,
 				40C677421EA09D9900AF6E0C /* BDJRecommandUserGroupModel.m in Sources */,
-				40260F5B200612140095E925 /* XFRenderData.m in Sources */,
+				40F95CD12237680C00192F50 /* XFRenderData.m in Sources */,
 				40C6773E1EA09D9900AF6E0C /* BDJRecommendTagRouting.m in Sources */,
 				40C677611EA09D9900AF6E0C /* BDJTopicExpressPack.m in Sources */,
+				40F95CFC2237680C00192F50 /* XFLegoConfig.m in Sources */,
 				40C677521EA09D9900AF6E0C /* BDJFriendTrendsDataManager.m in Sources */,
+				40F95CEB2237680C00192F50 /* XFInteractor.m in Sources */,
 				40C677C41EA09D9900AF6E0C /* RACSignal+ErrorAlter.m in Sources */,
 				40C677901EA09D9900AF6E0C /* NSDate+Extension.m in Sources */,
+				40F95CF32237680C00192F50 /* LEViewController.m in Sources */,
 				40C6770D1EA09D9800AF6E0C /* BDJPostDataManager.m in Sources */,
 				40C6770F1EA09D9800AF6E0C /* BDJMetaPostModel.m in Sources */,
+				40F95CF92237680C00192F50 /* NSObject+XFLegoCopy.m in Sources */,
 				40C6777B1EA09D9900AF6E0C /* BDJTopicTagViewController.m in Sources */,
 				40C677081EA09D9800AF6E0C /* BDJEssenceDataManager.m in Sources */,
 				40C6775C1EA09D9900AF6E0C /* BDJIndexTabRouting.m in Sources */,
 				40C677071EA09D9800AF6E0C /* BDJProgressView.m in Sources */,
 				40C6771A1EA09D9900AF6E0C /* BDJPostRenderItem.m in Sources */,
 				40C6777D1EA09D9900AF6E0C /* BDJSignInViewController.m in Sources */,
-				40260F5E200612140095E925 /* XFExpressDirver.m in Sources */,
-				40260F70200612140095E925 /* XFPresenter.m in Sources */,
-				40260F62200612140095E925 /* XFComponentHandlerMatcher.m in Sources */,
+				40F95CF62237680C00192F50 /* LEMVVMModuleHandler.m in Sources */,
+				40F95CD42237680C00192F50 /* XFExpressDirver.m in Sources */,
 				40C677231EA09D9900AF6E0C /* BDJPostVoiceView.m in Sources */,
 				40C6773B1EA09D9900AF6E0C /* BDJRCTagCell.m in Sources */,
-				40260F6D200612140095E925 /* XFVIPERModuleAssembly.m in Sources */,
 				40C677471EA09D9900AF6E0C /* BDJRCUserRenderItem.m in Sources */,
+				40F95CDC2237680C00192F50 /* XFUInterfaceFactory.m in Sources */,
 				40C677261EA09D9900AF6E0C /* BDJPostCommentDataManager.m in Sources */,
 				40C677971EA09D9900AF6E0C /* XFTextView.m in Sources */,
+				40F95CD92237680C00192F50 /* XFUIBus.m in Sources */,
 				40C677431EA09D9900AF6E0C /* BDJRecommandUserModel.m in Sources */,
+				40F95CED2237680C00192F50 /* UIViewController+XFLego.m in Sources */,
 				40C677271EA09D9900AF6E0C /* BDJPostCommentInteractor.m in Sources */,
 				40C677851EA09D9900AF6E0C /* BDJEventNotiKey.m in Sources */,
 				40C6775B1EA09D9900AF6E0C /* BDJIndexTabActivity.m in Sources */,
 				40C677601EA09D9900AF6E0C /* BDJTopicProvider.m in Sources */,
-				40260F7C200612140095E925 /* LEMVVMModuleFactory.m in Sources */,
 				40C6771B1EA09D9900AF6E0C /* BDJPostPresenter.m in Sources */,
+				40F95CF02237680C00192F50 /* XFRoutingFactory.m in Sources */,
 				40C6776A1EA09D9900AF6E0C /* BDJMeRouting.m in Sources */,
-				40260F6E200612140095E925 /* XFRoutingLinkManager.m in Sources */,
-				40260F5F200612140095E925 /* XFComponentManager.m in Sources */,
+				40F95CD62237680C00192F50 /* XFPipe.m in Sources */,
+				40F95CD52237680C00192F50 /* XFComponentManager.m in Sources */,
 				40C677061EA09D9800AF6E0C /* UIImageView+BDJExtension.m in Sources */,
 				40C6778F1EA09D9900AF6E0C /* CALayer+Player.m in Sources */,
 				40C6774B1EA09D9900AF6E0C /* BDJRCCategoryTableView.m in Sources */,
 				40C677911EA09D9900AF6E0C /* UIBarButtonItem+BDJExtension.m in Sources */,
-				40260F67200612140095E925 /* XFControllerHandler.m in Sources */,
 				40C6777C1EA09D9900AF6E0C /* BDJTopicTagViewModel.m in Sources */,
 				40C6774C1EA09D9900AF6E0C /* BDJRCUserTableView.m in Sources */,
 				40C677961EA09D9900AF6E0C /* XFStatWindow.m in Sources */,
 				40C6775A1EA09D9900AF6E0C /* BDJIndexTabPresenter.m in Sources */,
 				40C677711EA09D9900AF6E0C /* BDJPublishViewController.m in Sources */,
+				40F95CD72237680C00192F50 /* NSObject+XFPipe.m in Sources */,
+				40F95CDB2237680C00192F50 /* XFComponentReflect.m in Sources */,
 				40C677481EA09D9900AF6E0C /* BDJFriendsRecommentPresenter.m in Sources */,
 				40C677931EA09D9900AF6E0C /* UIView+Extention.m in Sources */,
-				40260F79200612140095E925 /* LEViewModel.m in Sources */,
 				40C677101EA09D9900AF6E0C /* BDJPostCmtModel.m in Sources */,
 				40C677921EA09D9900AF6E0C /* UIImage+Size.m in Sources */,
 				40C6776F1EA09D9900AF6E0C /* BDJNewActivity.m in Sources */,
 				40C677541EA09D9900AF6E0C /* BDJFriendTrendsPresenter.m in Sources */,
-				40260F6F200612140095E925 /* XFRouting.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

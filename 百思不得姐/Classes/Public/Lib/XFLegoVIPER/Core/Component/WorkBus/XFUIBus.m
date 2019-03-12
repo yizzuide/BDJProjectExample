@@ -111,10 +111,6 @@
         [XFUIBus _transmitURLParams:params nextInterface:nextInterface nextComponent:component];
         subComponent = component;
     }];
-    // 添加子组件到容器，为了不妨碍父组件的跟踪功能，使用延后处理
-    LEGORunAfter0_015({
-        [XFComponentManager addComponent:subComponent enableLog:NO];
-    })
     return subComponent;
 }
 
@@ -194,11 +190,30 @@
 
 - (void)popComponent
 {
+    [self popComponent:nil animated:YES];
+}
+
+- (void)popComponent:(nullable NSString *)componentName animated:(BOOL)animated
+{
+    UIViewController *targetUInterface;
+    if (componentName != nil && ![componentName isEqualToString:@""]) {
+        id<XFComponentRoutable> component = [XFComponentManager findComponentForName:componentName];
+        targetUInterface = [XFComponentReflect uInterfaceForComponent:component];
+    }
+    
     [self removeComponentWithTransitionBlock:^(Activity *thisInterface, Activity *nextInterface, TransitionCompletionBlock completionBlock) {
-        [CATransaction begin];
-        [CATransaction setCompletionBlock:completionBlock];
-        [thisInterface.navigationController popViewControllerAnimated:YES];
-        [CATransaction commit];
+        if (animated) {
+            [CATransaction begin];
+            [CATransaction setCompletionBlock:completionBlock];
+        }
+        if (targetUInterface) {
+            [thisInterface.navigationController popToViewController:targetUInterface animated:animated];
+        } else {
+            [thisInterface.navigationController popViewControllerAnimated:animated];
+        }
+        if (animated) {
+            [CATransaction commit];
+        }
     }];
 }
 

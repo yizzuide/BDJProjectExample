@@ -9,7 +9,7 @@
 #import "XFComponentReflect.h"
 #import "XFComponentUI.h"
 #import "XFUIBus.h"
-#import "XFEventDispatchPort.h"
+#import "XFEventReceivable.h"
 
 // 注册键盘弹出通知
 #define XF_RegisterKeyboardNotifaction \
@@ -41,7 +41,7 @@ XF_EventIs_(UIKeyboardWillChangeFrameNotification, { \
  *  一个组件可运行接口
  */
 NS_ASSUME_NONNULL_BEGIN
-@protocol XFComponentRoutable <XFEventDispatchPort>
+@protocol XFComponentRoutable <XFEventReceivable>
 
 @optional
 
@@ -86,6 +86,11 @@ NS_ASSUME_NONNULL_BEGIN
  *  组件将失去焦点
  */
 - (void)componentWillResignFocus;
+
+/**
+ * 定时器循环运行方法
+ */
+- (void)run;
 
 @end
 NS_ASSUME_NONNULL_END
